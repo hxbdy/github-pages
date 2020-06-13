@@ -1,0 +1,224 @@
+\hypertarget{apilib_8h}{}\doxysection{E\+:/\+Documents/emu84/\+Src/apilib.h File Reference}
+\label{apilib_8h}\index{E:/Documents/emu84/Src/apilib.h@{E:/Documents/emu84/Src/apilib.h}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{apilib_8h_a4dd7566dc4a8f4d93a4e4ae357500231}{api\+\_\+putchar}} (int c)
+\item 
+void \mbox{\hyperlink{apilib_8h_af73b71034391b78e6e7973d201eca509}{api\+\_\+putstr0}} (char $\ast$s)
+\item 
+void \mbox{\hyperlink{apilib_8h_aad31de21c5e19d21891894191023c134}{api\+\_\+putstr1}} (char $\ast$s, int l)
+\item 
+void \mbox{\hyperlink{apilib_8h_ad75f3bbaa1d5c628c07566f9eba2dba3}{api\+\_\+end}} (void)
+\item 
+int \mbox{\hyperlink{apilib_8h_afdd7af308e25e9174f9a5d8544a5874a}{api\+\_\+openwin}} (char $\ast$buf, int xsiz, int ysiz, int col\+\_\+inv, char $\ast$title)
+\item 
+void \mbox{\hyperlink{apilib_8h_a0f22d2c11b8765707b2f30f188eb659c}{api\+\_\+putstrwin}} (int win, int x, int y, int col, int len, char $\ast$str)
+\item 
+void \mbox{\hyperlink{apilib_8h_aeb90139a38ff3dcdc979ba44ad1837b9}{api\+\_\+boxfilwin}} (int win, int x0, int y0, int x1, int y1, int col)
+\item 
+void \mbox{\hyperlink{apilib_8h_a2441c5574e36da0c19e2c0a47aea295e}{api\+\_\+initmalloc}} (void)
+\item 
+char $\ast$ \mbox{\hyperlink{apilib_8h_a0179a3e4366c71d17f9bdbf27042f6ec}{api\+\_\+malloc}} (int size)
+\item 
+void \mbox{\hyperlink{apilib_8h_a12623aee50de3bafb6f8b498a9d4a3dc}{api\+\_\+free}} (char $\ast$addr, int size)
+\item 
+void \mbox{\hyperlink{apilib_8h_abe8db6906a558f3e5bcfd87b33ce723f}{api\+\_\+point}} (int win, int x, int y, int col)
+\item 
+void \mbox{\hyperlink{apilib_8h_a18d54e0d52c16733738a357e44c4e22c}{api\+\_\+refreshwin}} (int win, int x0, int y0, int x1, int y1)
+\item 
+void \mbox{\hyperlink{apilib_8h_a2b593e4e5ea81664266fb89778be10a5}{api\+\_\+linewin}} (int win, int x0, int y0, int x1, int y1, int col)
+\item 
+void \mbox{\hyperlink{apilib_8h_aed5545eaba9d012e841709fa8349407f}{api\+\_\+closewin}} (int win)
+\item 
+int \mbox{\hyperlink{apilib_8h_a3140d6ff11e61bca4fb683b070bfd836}{api\+\_\+getkey}} (int mode)
+\item 
+int \mbox{\hyperlink{apilib_8h_a7281fa22543ded51848051b846503a4a}{api\+\_\+alloctimer}} (void)
+\item 
+void \mbox{\hyperlink{apilib_8h_ad3724dfdc6e74ecd81e767d46f83ea95}{api\+\_\+inittimer}} (int timer, int data)
+\item 
+void \mbox{\hyperlink{apilib_8h_adad7e0777138ab2d73e913e837823576}{api\+\_\+settimer}} (int timer, int time)
+\item 
+void \mbox{\hyperlink{apilib_8h_a1341df6422cd2c2bef830297f42cfd7b}{api\+\_\+freetimer}} (int timer)
+\item 
+void \mbox{\hyperlink{apilib_8h_a6720e7ce2a56bf3453a951bda7e1c8c5}{api\+\_\+beep}} (int tone)
+\item 
+int \mbox{\hyperlink{apilib_8h_a155758bfd8c2b64c8e6d765143be6c84}{api\+\_\+fopen}} (char $\ast$fname)
+\item 
+void \mbox{\hyperlink{apilib_8h_a18d60de48f71d49a1a27e773efedbd02}{api\+\_\+fclose}} (int fhandle)
+\item 
+void \mbox{\hyperlink{apilib_8h_ac658bf48e9e4a51c11655e3440003b08}{api\+\_\+fseek}} (int fhandle, int offset, int mode)
+\item 
+int \mbox{\hyperlink{apilib_8h_ad3b6b9b3cca8d46f06862b8cd7820ed2}{api\+\_\+fsize}} (int fhandle, int mode)
+\item 
+int \mbox{\hyperlink{apilib_8h_a7d1641cc295ecdcb06e69af9391a6b85}{api\+\_\+fread}} (char $\ast$buf, int maxsize, int fhandle)
+\item 
+int \mbox{\hyperlink{apilib_8h_ac8bc75d7141e66f2637c025f84047776}{api\+\_\+cmdline}} (char $\ast$buf, int maxsize)
+\item 
+int \mbox{\hyperlink{apilib_8h_a870f813d01b59733542e973ddea889a3}{api\+\_\+getlang}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{apilib_8h_a7281fa22543ded51848051b846503a4a}\label{apilib_8h_a7281fa22543ded51848051b846503a4a}} 
+\index{apilib.h@{apilib.h}!api\_alloctimer@{api\_alloctimer}}
+\index{api\_alloctimer@{api\_alloctimer}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_alloctimer()}{api\_alloctimer()}}
+{\footnotesize\ttfamily int api\+\_\+alloctimer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a6720e7ce2a56bf3453a951bda7e1c8c5}\label{apilib_8h_a6720e7ce2a56bf3453a951bda7e1c8c5}} 
+\index{apilib.h@{apilib.h}!api\_beep@{api\_beep}}
+\index{api\_beep@{api\_beep}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_beep()}{api\_beep()}}
+{\footnotesize\ttfamily void api\+\_\+beep (\begin{DoxyParamCaption}\item[{int}]{tone }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_aeb90139a38ff3dcdc979ba44ad1837b9}\label{apilib_8h_aeb90139a38ff3dcdc979ba44ad1837b9}} 
+\index{apilib.h@{apilib.h}!api\_boxfilwin@{api\_boxfilwin}}
+\index{api\_boxfilwin@{api\_boxfilwin}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_boxfilwin()}{api\_boxfilwin()}}
+{\footnotesize\ttfamily void api\+\_\+boxfilwin (\begin{DoxyParamCaption}\item[{int}]{win,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_aed5545eaba9d012e841709fa8349407f}\label{apilib_8h_aed5545eaba9d012e841709fa8349407f}} 
+\index{apilib.h@{apilib.h}!api\_closewin@{api\_closewin}}
+\index{api\_closewin@{api\_closewin}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_closewin()}{api\_closewin()}}
+{\footnotesize\ttfamily void api\+\_\+closewin (\begin{DoxyParamCaption}\item[{int}]{win }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_ac8bc75d7141e66f2637c025f84047776}\label{apilib_8h_ac8bc75d7141e66f2637c025f84047776}} 
+\index{apilib.h@{apilib.h}!api\_cmdline@{api\_cmdline}}
+\index{api\_cmdline@{api\_cmdline}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_cmdline()}{api\_cmdline()}}
+{\footnotesize\ttfamily int api\+\_\+cmdline (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{maxsize }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_ad75f3bbaa1d5c628c07566f9eba2dba3}\label{apilib_8h_ad75f3bbaa1d5c628c07566f9eba2dba3}} 
+\index{apilib.h@{apilib.h}!api\_end@{api\_end}}
+\index{api\_end@{api\_end}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_end()}{api\_end()}}
+{\footnotesize\ttfamily void api\+\_\+end (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a18d60de48f71d49a1a27e773efedbd02}\label{apilib_8h_a18d60de48f71d49a1a27e773efedbd02}} 
+\index{apilib.h@{apilib.h}!api\_fclose@{api\_fclose}}
+\index{api\_fclose@{api\_fclose}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_fclose()}{api\_fclose()}}
+{\footnotesize\ttfamily void api\+\_\+fclose (\begin{DoxyParamCaption}\item[{int}]{fhandle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a155758bfd8c2b64c8e6d765143be6c84}\label{apilib_8h_a155758bfd8c2b64c8e6d765143be6c84}} 
+\index{apilib.h@{apilib.h}!api\_fopen@{api\_fopen}}
+\index{api\_fopen@{api\_fopen}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_fopen()}{api\_fopen()}}
+{\footnotesize\ttfamily int api\+\_\+fopen (\begin{DoxyParamCaption}\item[{char $\ast$}]{fname }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a7d1641cc295ecdcb06e69af9391a6b85}\label{apilib_8h_a7d1641cc295ecdcb06e69af9391a6b85}} 
+\index{apilib.h@{apilib.h}!api\_fread@{api\_fread}}
+\index{api\_fread@{api\_fread}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_fread()}{api\_fread()}}
+{\footnotesize\ttfamily int api\+\_\+fread (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{maxsize,  }\item[{int}]{fhandle }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a12623aee50de3bafb6f8b498a9d4a3dc}\label{apilib_8h_a12623aee50de3bafb6f8b498a9d4a3dc}} 
+\index{apilib.h@{apilib.h}!api\_free@{api\_free}}
+\index{api\_free@{api\_free}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_free()}{api\_free()}}
+{\footnotesize\ttfamily void api\+\_\+free (\begin{DoxyParamCaption}\item[{char $\ast$}]{addr,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a1341df6422cd2c2bef830297f42cfd7b}\label{apilib_8h_a1341df6422cd2c2bef830297f42cfd7b}} 
+\index{apilib.h@{apilib.h}!api\_freetimer@{api\_freetimer}}
+\index{api\_freetimer@{api\_freetimer}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_freetimer()}{api\_freetimer()}}
+{\footnotesize\ttfamily void api\+\_\+freetimer (\begin{DoxyParamCaption}\item[{int}]{timer }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_ac658bf48e9e4a51c11655e3440003b08}\label{apilib_8h_ac658bf48e9e4a51c11655e3440003b08}} 
+\index{apilib.h@{apilib.h}!api\_fseek@{api\_fseek}}
+\index{api\_fseek@{api\_fseek}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_fseek()}{api\_fseek()}}
+{\footnotesize\ttfamily void api\+\_\+fseek (\begin{DoxyParamCaption}\item[{int}]{fhandle,  }\item[{int}]{offset,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_ad3b6b9b3cca8d46f06862b8cd7820ed2}\label{apilib_8h_ad3b6b9b3cca8d46f06862b8cd7820ed2}} 
+\index{apilib.h@{apilib.h}!api\_fsize@{api\_fsize}}
+\index{api\_fsize@{api\_fsize}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_fsize()}{api\_fsize()}}
+{\footnotesize\ttfamily int api\+\_\+fsize (\begin{DoxyParamCaption}\item[{int}]{fhandle,  }\item[{int}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a3140d6ff11e61bca4fb683b070bfd836}\label{apilib_8h_a3140d6ff11e61bca4fb683b070bfd836}} 
+\index{apilib.h@{apilib.h}!api\_getkey@{api\_getkey}}
+\index{api\_getkey@{api\_getkey}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_getkey()}{api\_getkey()}}
+{\footnotesize\ttfamily int api\+\_\+getkey (\begin{DoxyParamCaption}\item[{int}]{mode }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a870f813d01b59733542e973ddea889a3}\label{apilib_8h_a870f813d01b59733542e973ddea889a3}} 
+\index{apilib.h@{apilib.h}!api\_getlang@{api\_getlang}}
+\index{api\_getlang@{api\_getlang}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_getlang()}{api\_getlang()}}
+{\footnotesize\ttfamily int api\+\_\+getlang (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a2441c5574e36da0c19e2c0a47aea295e}\label{apilib_8h_a2441c5574e36da0c19e2c0a47aea295e}} 
+\index{apilib.h@{apilib.h}!api\_initmalloc@{api\_initmalloc}}
+\index{api\_initmalloc@{api\_initmalloc}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_initmalloc()}{api\_initmalloc()}}
+{\footnotesize\ttfamily void api\+\_\+initmalloc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_ad3724dfdc6e74ecd81e767d46f83ea95}\label{apilib_8h_ad3724dfdc6e74ecd81e767d46f83ea95}} 
+\index{apilib.h@{apilib.h}!api\_inittimer@{api\_inittimer}}
+\index{api\_inittimer@{api\_inittimer}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_inittimer()}{api\_inittimer()}}
+{\footnotesize\ttfamily void api\+\_\+inittimer (\begin{DoxyParamCaption}\item[{int}]{timer,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a2b593e4e5ea81664266fb89778be10a5}\label{apilib_8h_a2b593e4e5ea81664266fb89778be10a5}} 
+\index{apilib.h@{apilib.h}!api\_linewin@{api\_linewin}}
+\index{api\_linewin@{api\_linewin}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_linewin()}{api\_linewin()}}
+{\footnotesize\ttfamily void api\+\_\+linewin (\begin{DoxyParamCaption}\item[{int}]{win,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a0179a3e4366c71d17f9bdbf27042f6ec}\label{apilib_8h_a0179a3e4366c71d17f9bdbf27042f6ec}} 
+\index{apilib.h@{apilib.h}!api\_malloc@{api\_malloc}}
+\index{api\_malloc@{api\_malloc}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_malloc()}{api\_malloc()}}
+{\footnotesize\ttfamily char$\ast$ api\+\_\+malloc (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_afdd7af308e25e9174f9a5d8544a5874a}\label{apilib_8h_afdd7af308e25e9174f9a5d8544a5874a}} 
+\index{apilib.h@{apilib.h}!api\_openwin@{api\_openwin}}
+\index{api\_openwin@{api\_openwin}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_openwin()}{api\_openwin()}}
+{\footnotesize\ttfamily int api\+\_\+openwin (\begin{DoxyParamCaption}\item[{char $\ast$}]{buf,  }\item[{int}]{xsiz,  }\item[{int}]{ysiz,  }\item[{int}]{col\+\_\+inv,  }\item[{char $\ast$}]{title }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_abe8db6906a558f3e5bcfd87b33ce723f}\label{apilib_8h_abe8db6906a558f3e5bcfd87b33ce723f}} 
+\index{apilib.h@{apilib.h}!api\_point@{api\_point}}
+\index{api\_point@{api\_point}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_point()}{api\_point()}}
+{\footnotesize\ttfamily void api\+\_\+point (\begin{DoxyParamCaption}\item[{int}]{win,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a4dd7566dc4a8f4d93a4e4ae357500231}\label{apilib_8h_a4dd7566dc4a8f4d93a4e4ae357500231}} 
+\index{apilib.h@{apilib.h}!api\_putchar@{api\_putchar}}
+\index{api\_putchar@{api\_putchar}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_putchar()}{api\_putchar()}}
+{\footnotesize\ttfamily void api\+\_\+putchar (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_af73b71034391b78e6e7973d201eca509}\label{apilib_8h_af73b71034391b78e6e7973d201eca509}} 
+\index{apilib.h@{apilib.h}!api\_putstr0@{api\_putstr0}}
+\index{api\_putstr0@{api\_putstr0}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_putstr0()}{api\_putstr0()}}
+{\footnotesize\ttfamily void api\+\_\+putstr0 (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_aad31de21c5e19d21891894191023c134}\label{apilib_8h_aad31de21c5e19d21891894191023c134}} 
+\index{apilib.h@{apilib.h}!api\_putstr1@{api\_putstr1}}
+\index{api\_putstr1@{api\_putstr1}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_putstr1()}{api\_putstr1()}}
+{\footnotesize\ttfamily void api\+\_\+putstr1 (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a0f22d2c11b8765707b2f30f188eb659c}\label{apilib_8h_a0f22d2c11b8765707b2f30f188eb659c}} 
+\index{apilib.h@{apilib.h}!api\_putstrwin@{api\_putstrwin}}
+\index{api\_putstrwin@{api\_putstrwin}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_putstrwin()}{api\_putstrwin()}}
+{\footnotesize\ttfamily void api\+\_\+putstrwin (\begin{DoxyParamCaption}\item[{int}]{win,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{col,  }\item[{int}]{len,  }\item[{char $\ast$}]{str }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_a18d54e0d52c16733738a357e44c4e22c}\label{apilib_8h_a18d54e0d52c16733738a357e44c4e22c}} 
+\index{apilib.h@{apilib.h}!api\_refreshwin@{api\_refreshwin}}
+\index{api\_refreshwin@{api\_refreshwin}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_refreshwin()}{api\_refreshwin()}}
+{\footnotesize\ttfamily void api\+\_\+refreshwin (\begin{DoxyParamCaption}\item[{int}]{win,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{apilib_8h_adad7e0777138ab2d73e913e837823576}\label{apilib_8h_adad7e0777138ab2d73e913e837823576}} 
+\index{apilib.h@{apilib.h}!api\_settimer@{api\_settimer}}
+\index{api\_settimer@{api\_settimer}!apilib.h@{apilib.h}}
+\doxysubsubsection{\texorpdfstring{api\_settimer()}{api\_settimer()}}
+{\footnotesize\ttfamily void api\+\_\+settimer (\begin{DoxyParamCaption}\item[{int}]{timer,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
