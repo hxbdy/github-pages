@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -22,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">emu84
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.0.0.1</span>
    </div>
   </td>
  </tr>
@@ -46,6 +50,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('apilib_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,11 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">関数</a>  </div>
@@ -87,59 +103,84 @@ $(function() {
 <tr class="memdesc:af73b71034391b78e6e7973d201eca509"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列表示する  <a href="apilib_8h.html#af73b71034391b78e6e7973d201eca509">[詳解]</a><br /></td></tr>
 <tr class="separator:af73b71034391b78e6e7973d201eca509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad31de21c5e19d21891894191023c134"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#aad31de21c5e19d21891894191023c134">api_putstr1</a> (char *s, int l)</td></tr>
+<tr class="memdesc:aad31de21c5e19d21891894191023c134"><td class="mdescLeft">&#160;</td><td class="mdescRight">文字列sの先頭からl字だけ表示する  <a href="apilib_8h.html#aad31de21c5e19d21891894191023c134">[詳解]</a><br /></td></tr>
 <tr class="separator:aad31de21c5e19d21891894191023c134"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad75f3bbaa1d5c628c07566f9eba2dba3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#ad75f3bbaa1d5c628c07566f9eba2dba3">api_end</a> (void)</td></tr>
 <tr class="memdesc:ad75f3bbaa1d5c628c07566f9eba2dba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">終了API  <a href="apilib_8h.html#ad75f3bbaa1d5c628c07566f9eba2dba3">[詳解]</a><br /></td></tr>
 <tr class="separator:ad75f3bbaa1d5c628c07566f9eba2dba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdd7af308e25e9174f9a5d8544a5874a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#afdd7af308e25e9174f9a5d8544a5874a">api_openwin</a> (char *buf, int xsiz, int ysiz, int col_inv, char *title)</td></tr>
+<tr class="memdesc:afdd7af308e25e9174f9a5d8544a5874a"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウインドウを生成する  <a href="apilib_8h.html#afdd7af308e25e9174f9a5d8544a5874a">[詳解]</a><br /></td></tr>
 <tr class="separator:afdd7af308e25e9174f9a5d8544a5874a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f22d2c11b8765707b2f30f188eb659c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a0f22d2c11b8765707b2f30f188eb659c">api_putstrwin</a> (int win, int x, int y, int col, int len, char *str)</td></tr>
+<tr class="memdesc:a0f22d2c11b8765707b2f30f188eb659c"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ウインドウに文字列を表示する  <a href="apilib_8h.html#a0f22d2c11b8765707b2f30f188eb659c">[詳解]</a><br /></td></tr>
 <tr class="separator:a0f22d2c11b8765707b2f30f188eb659c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb90139a38ff3dcdc979ba44ad1837b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#aeb90139a38ff3dcdc979ba44ad1837b9">api_boxfilwin</a> (int win, int x0, int y0, int x1, int y1, int col)</td></tr>
+<tr class="memdesc:aeb90139a38ff3dcdc979ba44ad1837b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定ウインドウに四角形を描画する  <a href="apilib_8h.html#aeb90139a38ff3dcdc979ba44ad1837b9">[詳解]</a><br /></td></tr>
 <tr class="separator:aeb90139a38ff3dcdc979ba44ad1837b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2441c5574e36da0c19e2c0a47aea295e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a2441c5574e36da0c19e2c0a47aea295e">api_initmalloc</a> (void)</td></tr>
+<tr class="memdesc:a2441c5574e36da0c19e2c0a47aea295e"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリマネージャの初期化を行う  <a href="apilib_8h.html#a2441c5574e36da0c19e2c0a47aea295e">[詳解]</a><br /></td></tr>
 <tr class="separator:a2441c5574e36da0c19e2c0a47aea295e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0179a3e4366c71d17f9bdbf27042f6ec"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a0179a3e4366c71d17f9bdbf27042f6ec">api_malloc</a> (int size)</td></tr>
+<tr class="memdesc:a0179a3e4366c71d17f9bdbf27042f6ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定サイズのメモリを確保する  <a href="apilib_8h.html#a0179a3e4366c71d17f9bdbf27042f6ec">[詳解]</a><br /></td></tr>
 <tr class="separator:a0179a3e4366c71d17f9bdbf27042f6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12623aee50de3bafb6f8b498a9d4a3dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a12623aee50de3bafb6f8b498a9d4a3dc">api_free</a> (char *addr, int size)</td></tr>
+<tr class="memdesc:a12623aee50de3bafb6f8b498a9d4a3dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">メモリ開放する  <a href="apilib_8h.html#a12623aee50de3bafb6f8b498a9d4a3dc">[詳解]</a><br /></td></tr>
 <tr class="separator:a12623aee50de3bafb6f8b498a9d4a3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe8db6906a558f3e5bcfd87b33ce723f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#abe8db6906a558f3e5bcfd87b33ce723f">api_point</a> (int win, int x, int y, int col)</td></tr>
+<tr class="memdesc:abe8db6906a558f3e5bcfd87b33ce723f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウインドウに点を打つ  <a href="apilib_8h.html#abe8db6906a558f3e5bcfd87b33ce723f">[詳解]</a><br /></td></tr>
 <tr class="separator:abe8db6906a558f3e5bcfd87b33ce723f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18d54e0d52c16733738a357e44c4e22c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a18d54e0d52c16733738a357e44c4e22c">api_refreshwin</a> (int win, int x0, int y0, int x1, int y1)</td></tr>
+<tr class="memdesc:a18d54e0d52c16733738a357e44c4e22c"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウインドウのリフレッシュを行う オートリフレッシュ無効時にはこの関数でマニュアルリフレッシュを行ってください オートリフレッシュ無効化の方法はウインドウIDをインクリメントしてください  <a href="apilib_8h.html#a18d54e0d52c16733738a357e44c4e22c">[詳解]</a><br /></td></tr>
 <tr class="separator:a18d54e0d52c16733738a357e44c4e22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b593e4e5ea81664266fb89778be10a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a2b593e4e5ea81664266fb89778be10a5">api_linewin</a> (int win, int x0, int y0, int x1, int y1, int col)</td></tr>
+<tr class="memdesc:a2b593e4e5ea81664266fb89778be10a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウインドウに線を引きます  <a href="apilib_8h.html#a2b593e4e5ea81664266fb89778be10a5">[詳解]</a><br /></td></tr>
 <tr class="separator:a2b593e4e5ea81664266fb89778be10a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed5545eaba9d012e841709fa8349407f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#aed5545eaba9d012e841709fa8349407f">api_closewin</a> (int win)</td></tr>
+<tr class="memdesc:aed5545eaba9d012e841709fa8349407f"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウインドウを閉じます  <a href="apilib_8h.html#aed5545eaba9d012e841709fa8349407f">[詳解]</a><br /></td></tr>
 <tr class="separator:aed5545eaba9d012e841709fa8349407f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3140d6ff11e61bca4fb683b070bfd836"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a3140d6ff11e61bca4fb683b070bfd836">api_getkey</a> (int mode)</td></tr>
+<tr class="memdesc:a3140d6ff11e61bca4fb683b070bfd836"><td class="mdescLeft">&#160;</td><td class="mdescRight">キー入力を受け付けます  <a href="apilib_8h.html#a3140d6ff11e61bca4fb683b070bfd836">[詳解]</a><br /></td></tr>
 <tr class="separator:a3140d6ff11e61bca4fb683b070bfd836"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7281fa22543ded51848051b846503a4a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a7281fa22543ded51848051b846503a4a">api_alloctimer</a> (void)</td></tr>
+<tr class="memdesc:a7281fa22543ded51848051b846503a4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマを取得します  <a href="apilib_8h.html#a7281fa22543ded51848051b846503a4a">[詳解]</a><br /></td></tr>
 <tr class="separator:a7281fa22543ded51848051b846503a4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3724dfdc6e74ecd81e767d46f83ea95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#ad3724dfdc6e74ecd81e767d46f83ea95">api_inittimer</a> (int timer, int data)</td></tr>
+<tr class="memdesc:ad3724dfdc6e74ecd81e767d46f83ea95"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマの送信データ設定を行います タイムアウト時に送信データを送信します  <a href="apilib_8h.html#ad3724dfdc6e74ecd81e767d46f83ea95">[詳解]</a><br /></td></tr>
 <tr class="separator:ad3724dfdc6e74ecd81e767d46f83ea95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adad7e0777138ab2d73e913e837823576"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#adad7e0777138ab2d73e913e837823576">api_settimer</a> (int timer, int time)</td></tr>
+<tr class="memdesc:adad7e0777138ab2d73e913e837823576"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマの発火時間を設定します  <a href="apilib_8h.html#adad7e0777138ab2d73e913e837823576">[詳解]</a><br /></td></tr>
 <tr class="separator:adad7e0777138ab2d73e913e837823576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1341df6422cd2c2bef830297f42cfd7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a1341df6422cd2c2bef830297f42cfd7b">api_freetimer</a> (int timer)</td></tr>
+<tr class="memdesc:a1341df6422cd2c2bef830297f42cfd7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">タイマを開放します  <a href="apilib_8h.html#a1341df6422cd2c2bef830297f42cfd7b">[詳解]</a><br /></td></tr>
 <tr class="separator:a1341df6422cd2c2bef830297f42cfd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6720e7ce2a56bf3453a951bda7e1c8c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a6720e7ce2a56bf3453a951bda7e1c8c5">api_beep</a> (int tone)</td></tr>
+<tr class="memdesc:a6720e7ce2a56bf3453a951bda7e1c8c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">BEEPサウンドを使用して音を鳴らします QEMUにはBEEPサウンドエミュレーション機能はないことに注意してください PITクロックは1.19318[MHz]を前提としています  <a href="apilib_8h.html#a6720e7ce2a56bf3453a951bda7e1c8c5">[詳解]</a><br /></td></tr>
 <tr class="separator:a6720e7ce2a56bf3453a951bda7e1c8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a155758bfd8c2b64c8e6d765143be6c84"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a155758bfd8c2b64c8e6d765143be6c84">api_fopen</a> (char *fname)</td></tr>
+<tr class="memdesc:a155758bfd8c2b64c8e6d765143be6c84"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをオープンします  <a href="apilib_8h.html#a155758bfd8c2b64c8e6d765143be6c84">[詳解]</a><br /></td></tr>
 <tr class="separator:a155758bfd8c2b64c8e6d765143be6c84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18d60de48f71d49a1a27e773efedbd02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a18d60de48f71d49a1a27e773efedbd02">api_fclose</a> (int fhandle)</td></tr>
+<tr class="memdesc:a18d60de48f71d49a1a27e773efedbd02"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをクローズします  <a href="apilib_8h.html#a18d60de48f71d49a1a27e773efedbd02">[詳解]</a><br /></td></tr>
 <tr class="separator:a18d60de48f71d49a1a27e773efedbd02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac658bf48e9e4a51c11655e3440003b08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#ac658bf48e9e4a51c11655e3440003b08">api_fseek</a> (int fhandle, int offset, int mode)</td></tr>
+<tr class="memdesc:ac658bf48e9e4a51c11655e3440003b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルをシークします  <a href="apilib_8h.html#ac658bf48e9e4a51c11655e3440003b08">[詳解]</a><br /></td></tr>
 <tr class="separator:ac658bf48e9e4a51c11655e3440003b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3b6b9b3cca8d46f06862b8cd7820ed2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#ad3b6b9b3cca8d46f06862b8cd7820ed2">api_fsize</a> (int fhandle, int mode)</td></tr>
+<tr class="memdesc:ad3b6b9b3cca8d46f06862b8cd7820ed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルサイズを取得します  <a href="apilib_8h.html#ad3b6b9b3cca8d46f06862b8cd7820ed2">[詳解]</a><br /></td></tr>
 <tr class="separator:ad3b6b9b3cca8d46f06862b8cd7820ed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d1641cc295ecdcb06e69af9391a6b85"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a7d1641cc295ecdcb06e69af9391a6b85">api_fread</a> (char *buf, int maxsize, int fhandle)</td></tr>
+<tr class="memdesc:a7d1641cc295ecdcb06e69af9391a6b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">ファイルを読み込みます  <a href="apilib_8h.html#a7d1641cc295ecdcb06e69af9391a6b85">[詳解]</a><br /></td></tr>
 <tr class="separator:a7d1641cc295ecdcb06e69af9391a6b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8bc75d7141e66f2637c025f84047776"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#ac8bc75d7141e66f2637c025f84047776">api_cmdline</a> (char *buf, int maxsize)</td></tr>
+<tr class="memdesc:ac8bc75d7141e66f2637c025f84047776"><td class="mdescLeft">&#160;</td><td class="mdescRight">コマンドラインの取得を行います  <a href="apilib_8h.html#ac8bc75d7141e66f2637c025f84047776">[詳解]</a><br /></td></tr>
 <tr class="separator:ac8bc75d7141e66f2637c025f84047776"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a870f813d01b59733542e973ddea889a3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="apilib_8h.html#a870f813d01b59733542e973ddea889a3">api_getlang</a> (void)</td></tr>
+<tr class="memdesc:a870f813d01b59733542e973ddea889a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">現在の言語モードを表示します  <a href="apilib_8h.html#a870f813d01b59733542e973ddea889a3">[詳解]</a><br /></td></tr>
 <tr class="separator:a870f813d01b59733542e973ddea889a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>定義はアセンブラで記述されています </p>
+<p>hrb_api()でAPIの識別と処理を行っています </p>
 
 <p class="definition"> <a class="el" href="apilib_8h_source.html">apilib.h</a> に定義があります。</p>
 </div><h2 class="groupheader">関数詳解</h2>
@@ -159,6 +200,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>タイマを取得します </p>
+<dl class="section return"><dt>戻り値</dt><dd>int タイマID </dd></dl>
+
 </div>
 </div>
 <a id="a6720e7ce2a56bf3453a951bda7e1c8c5"></a>
@@ -176,6 +220,14 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>BEEPサウンドを使用して音を鳴らします QEMUにはBEEPサウンドエミュレーション機能はないことに注意してください PITクロックは1.19318[MHz]を前提としています </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tone</td><td>周波数[mHz],0を指定するとミュートになります </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -229,6 +281,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>指定ウインドウに四角形を描画する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>ウインドウID </td></tr>
+    <tr><td class="paramname">x0</td><td>始点x </td></tr>
+    <tr><td class="paramname">y0</td><td>始点y </td></tr>
+    <tr><td class="paramname">x1</td><td>終点x </td></tr>
+    <tr><td class="paramname">y1</td><td>終点y </td></tr>
+    <tr><td class="paramname">col</td><td>色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="aed5545eaba9d012e841709fa8349407f"></a>
@@ -246,6 +311,14 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ウインドウを閉じます </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>ウインドウID </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -274,6 +347,16 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>コマンドラインの取得を行います </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>コマンドライン格納番地 </td></tr>
+    <tr><td class="paramname">maxsize</td><td>何バイトまで格納できるか </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int 格納したバイト数 </dd></dl>
 
 </div>
 </div>
@@ -314,6 +397,14 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>ファイルをクローズします </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fhandle</td><td>ファイルハンドル </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a155758bfd8c2b64c8e6d765143be6c84"></a>
@@ -331,6 +422,15 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ファイルをオープンします </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fname</td><td>ファイル名 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int ファイルハンドル </dd></dl>
 
 </div>
 </div>
@@ -366,6 +466,17 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>ファイルを読み込みます </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>バッファ番地 </td></tr>
+    <tr><td class="paramname">maxsize</td><td>最大読み込むバイト数 </td></tr>
+    <tr><td class="paramname">fhandle</td><td>ファイルハンドル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int 今回読み込んだバイト数 </dd></dl>
+
 </div>
 </div>
 <a id="a12623aee50de3bafb6f8b498a9d4a3dc"></a>
@@ -394,6 +505,15 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>メモリ開放する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>開放するメモリ番地 </td></tr>
+    <tr><td class="paramname">size</td><td>開放するバイト数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a1341df6422cd2c2bef830297f42cfd7b"></a>
@@ -411,6 +531,14 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>タイマを開放します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>タイマID </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -446,6 +574,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>ファイルをシークします </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fhandle</td><td>ファイルハンドル </td></tr>
+    <tr><td class="paramname">offset</td><td>シーク量 </td></tr>
+    <tr><td class="paramname">mode</td><td>シークモード 0:シーク原点をファイル先頭にセット 1:シーク原点を現在のアクセス位置にセット 2:シーク原点をファイルの終端にセット </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ad3b6b9b3cca8d46f06862b8cd7820ed2"></a>
@@ -474,6 +612,16 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>ファイルサイズを取得します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fhandle</td><td>ファイルハンドル </td></tr>
+    <tr><td class="paramname">mode</td><td>ファイルサイズ取得モード 0:一般ファイルサイズ 1:現在の読み込み位置がファイル先頭から何バイト目か 2:ファイル終端からみた現在位置までのバイト数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int ファイルサイズ </dd></dl>
+
 </div>
 </div>
 <a id="a3140d6ff11e61bca4fb683b070bfd836"></a>
@@ -491,6 +639,15 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>キー入力を受け付けます </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>0:キー入力が無ければ-1を返し,スリープは行いません 1:キー入力があるまでスリープします </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int 入力された文字コード </dd></dl>
 
 </div>
 </div>
@@ -510,6 +667,9 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>現在の言語モードを表示します </p>
+<dl class="section return"><dt>戻り値</dt><dd>int 0:English ASCII 1:Japanese Shift-JIS 2:Japanese EUC </dd></dl>
+
 </div>
 </div>
 <a id="a2441c5574e36da0c19e2c0a47aea295e"></a>
@@ -527,6 +687,8 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>メモリマネージャの初期化を行う </p>
 
 </div>
 </div>
@@ -555,6 +717,15 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>タイマの送信データ設定を行います タイムアウト時に送信データを送信します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>タイマID </td></tr>
+    <tr><td class="paramname">data</td><td>送信データ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -608,6 +779,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>ウインドウに線を引きます </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>ウインドウID </td></tr>
+    <tr><td class="paramname">x0</td><td>始点x </td></tr>
+    <tr><td class="paramname">y0</td><td>始点y </td></tr>
+    <tr><td class="paramname">x1</td><td>終点x </td></tr>
+    <tr><td class="paramname">y1</td><td>終点y </td></tr>
+    <tr><td class="paramname">col</td><td>色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a0179a3e4366c71d17f9bdbf27042f6ec"></a>
@@ -625,6 +809,15 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>指定サイズのメモリを確保する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>要求バイト数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>char* 確保したメモリ番地 </dd></dl>
 
 </div>
 </div>
@@ -672,6 +865,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>ウインドウを生成する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>ウインドウのバッファ </td></tr>
+    <tr><td class="paramname">xsiz</td><td>x方向の大きさ </td></tr>
+    <tr><td class="paramname">ysiz</td><td>y方向の大きさ </td></tr>
+    <tr><td class="paramname">col_inv</td><td>透明にする色 </td></tr>
+    <tr><td class="paramname">title</td><td>ウインドウタイトル </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>int ウインドウID </dd></dl>
+
 </div>
 </div>
 <a id="abe8db6906a558f3e5bcfd87b33ce723f"></a>
@@ -711,6 +917,17 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>ウインドウに点を打つ </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>ウインドウID </td></tr>
+    <tr><td class="paramname">x</td><td>表示x </td></tr>
+    <tr><td class="paramname">y</td><td>表示y </td></tr>
+    <tr><td class="paramname">col</td><td>色 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -759,7 +976,7 @@ $(function() {
 <p>文字列表示する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">s</td><td>文字列の先頭ポインタ </td></tr>
+    <tr><td class="paramname">s</td><td>文字列 </td></tr>
   </table>
   </dd>
 </dl>
@@ -791,10 +1008,12 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>文字列sの先頭からl字だけ表示する </p>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">s</td><td></td></tr>
-    <tr><td class="paramname">l</td><td></td></tr>
+    <tr><td class="paramname">s</td><td>文字列 </td></tr>
+    <tr><td class="paramname">l</td><td>表示する文字数 </td></tr>
   </table>
   </dd>
 </dl>
@@ -851,6 +1070,19 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>指定ウインドウに文字列を表示する </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>ウインドウID </td></tr>
+    <tr><td class="paramname">x</td><td>文字列表示位置x </td></tr>
+    <tr><td class="paramname">y</td><td>文字列表示位置y </td></tr>
+    <tr><td class="paramname">col</td><td>文字色 </td></tr>
+    <tr><td class="paramname">len</td><td>文字列の長さ </td></tr>
+    <tr><td class="paramname">str</td><td>文字列 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a18d54e0d52c16733738a357e44c4e22c"></a>
@@ -897,6 +1129,18 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>ウインドウのリフレッシュを行う オートリフレッシュ無効時にはこの関数でマニュアルリフレッシュを行ってください オートリフレッシュ無効化の方法はウインドウIDをインクリメントしてください </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>ウインドウID </td></tr>
+    <tr><td class="paramname">x0</td><td>始点x </td></tr>
+    <tr><td class="paramname">y0</td><td>始点y </td></tr>
+    <tr><td class="paramname">x1</td><td>終点x </td></tr>
+    <tr><td class="paramname">y1</td><td>終点y </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="adad7e0777138ab2d73e913e837823576"></a>
@@ -925,14 +1169,27 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p>タイマの発火時間を設定します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>タイマID </td></tr>
+    <tr><td class="paramname">time</td><td>発火時間[100=1sec] </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-構築: &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="apilib_8h.html">apilib.h</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>
