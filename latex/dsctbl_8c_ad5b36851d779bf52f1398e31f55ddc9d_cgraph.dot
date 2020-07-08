@@ -1,0 +1,28 @@
+digraph "init_gdtidt"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="init_gdtidt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="asm_hrb_api",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a3f0b9e8bde51dc3ed58642ff2f653454",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="asm_inthandler0c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#abcbe6ab7de11ead7c369c41cac634237",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="asm_inthandler0d",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a5dd851eafcfb3598ee2526eacb19bce9",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="asm_inthandler20",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#abf9da88d9dae08dab301bc337996ca87",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="asm_inthandler21",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a2f5878aef3f695aa18bea63f08d516c5",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="asm_inthandler2c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a6b3fdc28ef34e450937c94e90d3d003b",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="load_gdtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a90cc934e88e02161c8d0a52cc39025f3",tooltip=" "];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="load_idtr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a97b93121cbb4ac660389d9943e7a6928",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="set_gatedesc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5",tooltip=" "];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="set_segmdesc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dsctbl_8c.html#a3d51340647ade1a89f63e7b841e48176",tooltip=" "];
+}

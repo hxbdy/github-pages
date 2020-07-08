@@ -1,0 +1,102 @@
+\hypertarget{gview_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/gview/gview.c ファイル}
+\label{gview_8c}\index{E:/Documents/emu84/Src/gview/gview.c@{E:/Documents/emu84/Src/gview/gview.c}}
+{\ttfamily \#include \char`\"{}apilib.\+h\char`\"{}}\newline
+gview.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}}
+\item 
+struct \mbox{\hyperlink{struct_r_g_b}{R\+GB}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{gview_8c_aae114105346e63558a99ac8a2d9e0e08}{info\+\_\+\+B\+MP}} (struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$env, int $\ast$info, int size, char $\ast$fp)
+\item 
+int \mbox{\hyperlink{gview_8c_a3585ad1e0fa63407150e75fcb7e7fc24}{decode0\+\_\+\+B\+MP}} (struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$env, int size, char $\ast$fp, int b\+\_\+type, char $\ast$buf, int skip)
+\item 
+int \mbox{\hyperlink{gview_8c_a0222edbc04000402d7d6a3e59f13eb4d}{info\+\_\+\+J\+P\+EG}} (struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$env, int $\ast$info, int size, char $\ast$fp)
+\item 
+int \mbox{\hyperlink{gview_8c_a41f088bba1e23a95f409fc99c7dcef95}{decode0\+\_\+\+J\+P\+EG}} (struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$env, int size, char $\ast$fp, int b\+\_\+type, char $\ast$buf, int skip)
+\item 
+unsigned char \mbox{\hyperlink{gview_8c_a79d5f64d7613c048765fea8bdd591b32}{rgb2pal}} (int r, int g, int b, int x, int y)
+\item 
+void \mbox{\hyperlink{gview_8c_a42c6b1edc1bd763019f0eb5edce18793}{error}} (char $\ast$s)
+\item 
+void \mbox{\hyperlink{gview_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}{Hari\+Main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{gview_8c_a3585ad1e0fa63407150e75fcb7e7fc24}\label{gview_8c_a3585ad1e0fa63407150e75fcb7e7fc24}} 
+\index{gview.c@{gview.c}!decode0\_BMP@{decode0\_BMP}}
+\index{decode0\_BMP@{decode0\_BMP}!gview.c@{gview.c}}
+\doxysubsubsection{\texorpdfstring{decode0\_BMP()}{decode0\_BMP()}}
+{\footnotesize\ttfamily int decode0\+\_\+\+B\+MP (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$}]{env,  }\item[{int}]{size,  }\item[{char $\ast$}]{fp,  }\item[{int}]{b\+\_\+type,  }\item[{char $\ast$}]{buf,  }\item[{int}]{skip }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{gview_8c_a41f088bba1e23a95f409fc99c7dcef95}\label{gview_8c_a41f088bba1e23a95f409fc99c7dcef95}} 
+\index{gview.c@{gview.c}!decode0\_JPEG@{decode0\_JPEG}}
+\index{decode0\_JPEG@{decode0\_JPEG}!gview.c@{gview.c}}
+\doxysubsubsection{\texorpdfstring{decode0\_JPEG()}{decode0\_JPEG()}}
+{\footnotesize\ttfamily int decode0\+\_\+\+J\+P\+EG (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$}]{env,  }\item[{int}]{size,  }\item[{char $\ast$}]{fp,  }\item[{int}]{b\+\_\+type,  }\item[{char $\ast$}]{buf,  }\item[{int}]{skip }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{gview_8c_a42c6b1edc1bd763019f0eb5edce18793}\label{gview_8c_a42c6b1edc1bd763019f0eb5edce18793}} 
+\index{gview.c@{gview.c}!error@{error}}
+\index{error@{error}!gview.c@{gview.c}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+ gview.\+c の 117 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{gview_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}\label{gview_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}} 
+\index{gview.c@{gview.c}!HariMain@{HariMain}}
+\index{HariMain@{HariMain}!gview.c@{gview.c}}
+\doxysubsubsection{\texorpdfstring{HariMain()}{HariMain()}}
+{\footnotesize\ttfamily void Hari\+Main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ gview.\+c の 22 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{gview_8c_aae114105346e63558a99ac8a2d9e0e08}\label{gview_8c_aae114105346e63558a99ac8a2d9e0e08}} 
+\index{gview.c@{gview.c}!info\_BMP@{info\_BMP}}
+\index{info\_BMP@{info\_BMP}!gview.c@{gview.c}}
+\doxysubsubsection{\texorpdfstring{info\_BMP()}{info\_BMP()}}
+{\footnotesize\ttfamily int info\+\_\+\+B\+MP (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$}]{env,  }\item[{int $\ast$}]{info,  }\item[{int}]{size,  }\item[{char $\ast$}]{fp }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{gview_8c_a0222edbc04000402d7d6a3e59f13eb4d}\label{gview_8c_a0222edbc04000402d7d6a3e59f13eb4d}} 
+\index{gview.c@{gview.c}!info\_JPEG@{info\_JPEG}}
+\index{info\_JPEG@{info\_JPEG}!gview.c@{gview.c}}
+\doxysubsubsection{\texorpdfstring{info\_JPEG()}{info\_JPEG()}}
+{\footnotesize\ttfamily int info\+\_\+\+J\+P\+EG (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$}]{env,  }\item[{int $\ast$}]{info,  }\item[{int}]{size,  }\item[{char $\ast$}]{fp }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{gview_8c_a79d5f64d7613c048765fea8bdd591b32}\label{gview_8c_a79d5f64d7613c048765fea8bdd591b32}} 
+\index{gview.c@{gview.c}!rgb2pal@{rgb2pal}}
+\index{rgb2pal@{rgb2pal}!gview.c@{gview.c}}
+\doxysubsubsection{\texorpdfstring{rgb2pal()}{rgb2pal()}}
+{\footnotesize\ttfamily unsigned char rgb2pal (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+ gview.\+c の 101 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8

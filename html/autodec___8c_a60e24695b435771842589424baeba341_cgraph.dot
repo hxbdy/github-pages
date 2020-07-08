@@ -1,0 +1,44 @@
+digraph "autodecomp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="autodecomp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="tek_decode1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a33eeed225ccff7762e2dc545fcd50769",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="tek_getnum_s7s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a5faa80891359abc566502563e97e6761",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="tek_lzrestore_stk1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#aedfa1c45aeeb79cdd7b3c7c0edd3518d",tooltip=" "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="tek_decode2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a97a1b097510e1fc930bbc999823b0579",tooltip=" "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="tek_lzrestore_stk2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#ac54cea4e34e29455707af40560399747",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="tek_getnum_s7",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a6c0b499ae2034799059f68d80fb61d01",tooltip=" "];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="tek_decode5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#abe13430f4fcd8e23761dfecbdcdd74e7",tooltip=" "];
+  Node8 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="tek_lzrestore_tek5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#adf0a0994681380da1f81b7bfb5ca44db",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="tek_decmain5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#af1af9649c0ff434aafce5fa4ac0c120d",tooltip=" "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="tek_getlen5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a62bff5997b4c8b44edd54cde4d0ed647",tooltip=" "];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="tek_rdget0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#acbe7c667aa9821c570ff3f9f892c885d",tooltip=" "];
+  Node11 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="tek_rdget1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#ad47117a8e15ddb593559472bfd1a913f",tooltip=" "];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="tek_setbm5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a6dccddf1b7cc7d769e8074a44e204172",tooltip=" "];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="tek_revbit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#aef039e6537565330cab9657b27960b23",tooltip=" "];
+  Node10 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

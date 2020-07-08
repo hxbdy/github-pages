@@ -1,0 +1,33 @@
+digraph "cmd_mem"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="cmd_mem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="cons_putstr0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#a6a3da535464b8bd88457538ad73058e1",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="cons_putchar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#a4197ccd3ce2053ca0c778fed7da81252",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="cons_newline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#ac3fc0a555ac1405cc89bc6eb62641b54",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="sheet_refreshsub",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#a0016600e2d7feeb0a12089156b9307a4",tooltip=" "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="task_now",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a72a85d580d503d9c2743398e78ab612b",tooltip=" "];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="putfonts8_asc_sht",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a67ab2e7cce8565ab4247b2a4ec063a18",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="boxfill8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8db7fb68501f39701e4b0801364a2e1c",tooltip=" "];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="putfonts8_asc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#aa7cde0dce2ebf81ad62c6be604c4007e",tooltip=" "];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="putfont8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic_8c.html#a1a869fa1f63a9363adbd268a4453ee65",tooltip=" "];
+  Node10 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="memman_total",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#ac82886c8091f3a36903241216bc48ace",tooltip=" "];
+}

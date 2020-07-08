@@ -1,0 +1,115 @@
+\hypertarget{mouse_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/mouse.c ファイル}
+\label{mouse_8c}\index{E:/Documents/emu84/Src/haribote/mouse.c@{E:/Documents/emu84/Src/haribote/mouse.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+mouse.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{mouse_8c_a57804c5d20761a9c150e76e4007e88e0}{K\+E\+Y\+C\+M\+D\+\_\+\+S\+E\+N\+D\+T\+O\+\_\+\+M\+O\+U\+SE}}~0xd4
+\item 
+\#define \mbox{\hyperlink{mouse_8c_adb0b2b20b6a3796574c3fd7c3c22f549}{M\+O\+U\+S\+E\+C\+M\+D\+\_\+\+E\+N\+A\+B\+LE}}~0xf4
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mouse_8c_aa89ae3554e7c9ac3e95fee1a96d3f56a}{inthandler2c}} (int $\ast$esp)
+\item 
+void \mbox{\hyperlink{mouse_8c_a42740b291ad8258327a7334c89f1fe6a}{enable\+\_\+mouse}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int data0, struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}} $\ast$mdec)
+\item 
+int \mbox{\hyperlink{mouse_8c_a4da7c7903cdc3169e5b21f70236d76d5}{mouse\+\_\+decode}} (struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}} $\ast$mdec, unsigned char dat)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$ \mbox{\hyperlink{mouse_8c_a08c2412ba9bd01c17de956594c7ca3b7}{mousefifo}}
+\item 
+int \mbox{\hyperlink{mouse_8c_a8c6023b6e16f329e3ab8417e659da34c}{mousedata0}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{mouse_8c_a57804c5d20761a9c150e76e4007e88e0}\label{mouse_8c_a57804c5d20761a9c150e76e4007e88e0}} 
+\index{mouse.c@{mouse.c}!KEYCMD\_SENDTO\_MOUSE@{KEYCMD\_SENDTO\_MOUSE}}
+\index{KEYCMD\_SENDTO\_MOUSE@{KEYCMD\_SENDTO\_MOUSE}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{KEYCMD\_SENDTO\_MOUSE}{KEYCMD\_SENDTO\_MOUSE}}
+{\footnotesize\ttfamily \#define K\+E\+Y\+C\+M\+D\+\_\+\+S\+E\+N\+D\+T\+O\+\_\+\+M\+O\+U\+SE~0xd4}
+
+
+
+ mouse.\+c の 20 行目に定義があります。
+
+\mbox{\Hypertarget{mouse_8c_adb0b2b20b6a3796574c3fd7c3c22f549}\label{mouse_8c_adb0b2b20b6a3796574c3fd7c3c22f549}} 
+\index{mouse.c@{mouse.c}!MOUSECMD\_ENABLE@{MOUSECMD\_ENABLE}}
+\index{MOUSECMD\_ENABLE@{MOUSECMD\_ENABLE}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{MOUSECMD\_ENABLE}{MOUSECMD\_ENABLE}}
+{\footnotesize\ttfamily \#define M\+O\+U\+S\+E\+C\+M\+D\+\_\+\+E\+N\+A\+B\+LE~0xf4}
+
+
+
+ mouse.\+c の 21 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{mouse_8c_a42740b291ad8258327a7334c89f1fe6a}\label{mouse_8c_a42740b291ad8258327a7334c89f1fe6a}} 
+\index{mouse.c@{mouse.c}!enable\_mouse@{enable\_mouse}}
+\index{enable\_mouse@{enable\_mouse}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{enable\_mouse()}{enable\_mouse()}}
+{\footnotesize\ttfamily void enable\+\_\+mouse (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{data0,  }\item[{struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}} $\ast$}]{mdec }\end{DoxyParamCaption})}
+
+
+
+ mouse.\+c の 22 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{mouse_8c_aa89ae3554e7c9ac3e95fee1a96d3f56a}\label{mouse_8c_aa89ae3554e7c9ac3e95fee1a96d3f56a}} 
+\index{mouse.c@{mouse.c}!inthandler2c@{inthandler2c}}
+\index{inthandler2c@{inthandler2c}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{inthandler2c()}{inthandler2c()}}
+{\footnotesize\ttfamily void inthandler2c (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ mouse.\+c の 8 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{mouse_8c_a4da7c7903cdc3169e5b21f70236d76d5}\label{mouse_8c_a4da7c7903cdc3169e5b21f70236d76d5}} 
+\index{mouse.c@{mouse.c}!mouse\_decode@{mouse\_decode}}
+\index{mouse\_decode@{mouse\_decode}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mouse\_decode()}{mouse\_decode()}}
+{\footnotesize\ttfamily int mouse\+\_\+decode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}} $\ast$}]{mdec,  }\item[{unsigned char}]{dat }\end{DoxyParamCaption})}
+
+
+
+ mouse.\+c の 37 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{mouse_8c_a8c6023b6e16f329e3ab8417e659da34c}\label{mouse_8c_a8c6023b6e16f329e3ab8417e659da34c}} 
+\index{mouse.c@{mouse.c}!mousedata0@{mousedata0}}
+\index{mousedata0@{mousedata0}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mousedata0}{mousedata0}}
+{\footnotesize\ttfamily int mousedata0}
+
+
+
+ mouse.\+c の 6 行目に定義があります。
+
+\mbox{\Hypertarget{mouse_8c_a08c2412ba9bd01c17de956594c7ca3b7}\label{mouse_8c_a08c2412ba9bd01c17de956594c7ca3b7}} 
+\index{mouse.c@{mouse.c}!mousefifo@{mousefifo}}
+\index{mousefifo@{mousefifo}!mouse.c@{mouse.c}}
+\doxysubsubsection{\texorpdfstring{mousefifo}{mousefifo}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}}$\ast$ mousefifo}
+
+
+
+ mouse.\+c の 5 行目に定義があります。
+

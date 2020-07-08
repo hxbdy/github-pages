@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/notrec/notrec.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('notrec_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">notrec.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="notrec_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="apilib_8h.html">apilib.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="notrec_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0">    3</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="notrec_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0">HariMain</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">int</span> win;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">char</span> buf[150 * 70];</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    win = <a class="code" href="apilib_8h.html#afdd7af308e25e9174f9a5d8544a5874a">api_openwin</a>(buf, 150, 70, 255, <span class="stringliteral">&quot;notrec&quot;</span>);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="apilib_8h.html#aeb90139a38ff3dcdc979ba44ad1837b9">api_boxfilwin</a>(win,   0, 50,  34, 69, 255);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="apilib_8h.html#aeb90139a38ff3dcdc979ba44ad1837b9">api_boxfilwin</a>(win, 115, 50, 149, 69, 255);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="apilib_8h.html#aeb90139a38ff3dcdc979ba44ad1837b9">api_boxfilwin</a>(win,  50, 30,  99, 49, 255);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">for</span> (;;) {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="apilib_8h.html#a3140d6ff11e61bca4fb683b070bfd836">api_getkey</a>(1) == 0x0a) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="keywordflow">break</span>; <span class="comment">/* Enterならbreak; */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="apilib_8h.html#ad75f3bbaa1d5c628c07566f9eba2dba3">api_end</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="aapilib_8h_html_aeb90139a38ff3dcdc979ba44ad1837b9"><div class="ttname"><a href="apilib_8h.html#aeb90139a38ff3dcdc979ba44ad1837b9">api_boxfilwin</a></div><div class="ttdeci">void api_boxfilwin(int win, int x0, int y0, int x1, int y1, int col)</div><div class="ttdoc">指定ウインドウに四角形を描画する</div></div>
+<div class="ttc" id="aapilib_8h_html_afdd7af308e25e9174f9a5d8544a5874a"><div class="ttname"><a href="apilib_8h.html#afdd7af308e25e9174f9a5d8544a5874a">api_openwin</a></div><div class="ttdeci">int api_openwin(char *buf, int xsiz, int ysiz, int col_inv, char *title)</div><div class="ttdoc">ウインドウを生成する</div></div>
+<div class="ttc" id="aapilib_8h_html"><div class="ttname"><a href="apilib_8h.html">apilib.h</a></div><div class="ttdoc">定義はアセンブラで記述されています</div></div>
+<div class="ttc" id="aapilib_8h_html_a3140d6ff11e61bca4fb683b070bfd836"><div class="ttname"><a href="apilib_8h.html#a3140d6ff11e61bca4fb683b070bfd836">api_getkey</a></div><div class="ttdeci">int api_getkey(int mode)</div><div class="ttdoc">キー入力を受け付けます</div></div>
+<div class="ttc" id="aapilib_8h_html_ad75f3bbaa1d5c628c07566f9eba2dba3"><div class="ttname"><a href="apilib_8h.html#ad75f3bbaa1d5c628c07566f9eba2dba3">api_end</a></div><div class="ttdeci">void api_end(void)</div><div class="ttdoc">終了API</div></div>
+<div class="ttc" id="anotrec_8c_html_a3bfd04b86eb41bd7301c75a3df6a89e0"><div class="ttname"><a href="notrec_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0">HariMain</a></div><div class="ttdeci">void HariMain(void)</div><div class="ttdef"><b>Definition:</b> <a href="notrec_8c_source.html#l00003">notrec.c:3</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_4a22e4fb6ebdedbadc6fafdeb6faab9b.html">notrec</a></li><li class="navelem"><a class="el" href="notrec_8c.html">notrec.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

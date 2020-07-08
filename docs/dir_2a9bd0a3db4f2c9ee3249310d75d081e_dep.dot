@@ -1,0 +1,11 @@
+digraph "E:/Documents/emu84/Src/tek" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_70617a7689e3ba1052ef75efeabd00df {
+    graph [ bgcolor="#ddddee", pencolor="black", label="Src" fontname="Helvetica", fontsize="10", URL="dir_70617a7689e3ba1052ef75efeabd00df.html"]
+  dir_2a9bd0a3db4f2c9ee3249310d75d081e [shape=box, label="tek", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_2a9bd0a3db4f2c9ee3249310d75d081e.html"];
+  }
+  dir_5ac131f68e424deb31069477f492d10b [shape=box label="haribote" URL="dir_5ac131f68e424deb31069477f492d10b.html"];
+  dir_2a9bd0a3db4f2c9ee3249310d75d081e->dir_5ac131f68e424deb31069477f492d10b [headlabel="1", labeldistance=1.5 headhref="dir_000011_000010.html"];
+}

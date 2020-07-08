@@ -1,0 +1,35 @@
+digraph "tek_decode5"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="tek_decode5",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="tek_getnum_s7s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="tek_lzrestore_tek5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#adf0a0994681380da1f81b7bfb5ca44db",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="memman_alloc_4k",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a0b2b807ae567c0c3a0f5878b6ea95383",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="memman_alloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory_8c.html#a3a44e2ae3c434e982c7b906e00af831a",tooltip=" "];
+  Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="memman_free_4k",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#acad1337e14f758731d8241ee094d1a86",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="memman_free",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory_8c.html#a4d14a01ac8b137a266aafe80c5102a52",tooltip=" "];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="tek_decmain5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#af1af9649c0ff434aafce5fa4ac0c120d",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="tek_getlen5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#a62bff5997b4c8b44edd54cde4d0ed647",tooltip=" "];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="tek_rdget0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#acbe7c667aa9821c570ff3f9f892c885d",tooltip=" "];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="tek_rdget1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f",tooltip=" "];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="tek_setbm5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#a6dccddf1b7cc7d769e8074a44e204172",tooltip=" "];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="tek_revbit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#aef039e6537565330cab9657b27960b23",tooltip=" "];
+  Node8 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

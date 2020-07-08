@@ -1,0 +1,1023 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/tek/autodec_.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('autodec___8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">autodec_.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;setjmp.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+autodec_.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c__incl.png" border="0" usemap="#_e_1_2_documents_2emu84_2_src_2tek_2autodec___8c" alt=""/></div>
+</div>
+</div>
+<p><a href="autodec___8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtek___s_t_r___p_r_b.html">tek_STR_PRB</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html">tek_STR_PRB::tek_STR_PRB_PB</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html">tek_STR_PRB::tek_STR_PRB_PB::tek_STR_PRB_PBST</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html">tek_STR_PRB::tek_STR_PRB_ST</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a4f4bb67531a9bf6f0b9c6ad76aeba587"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a></td></tr>
+<tr class="separator:a4f4bb67531a9bf6f0b9c6ad76aeba587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1e6edbbc26d6fbc71a90190d0266018"><td class="memItemLeft" align="right" valign="top">typedef unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a></td></tr>
+<tr class="separator:ae1e6edbbc26d6fbc71a90190d0266018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade9db6e3c24e2cf05a8cb1be281736b5"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a></td></tr>
+<tr class="separator:ade9db6e3c24e2cf05a8cb1be281736b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a33eeed225ccff7762e2dc545fcd50769"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#a33eeed225ccff7762e2dc545fcd50769">tek_decode1</a> (int siz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</td></tr>
+<tr class="separator:a33eeed225ccff7762e2dc545fcd50769"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97a1b097510e1fc930bbc999823b0579"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#a97a1b097510e1fc930bbc999823b0579">tek_decode2</a> (int siz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</td></tr>
+<tr class="separator:a97a1b097510e1fc930bbc999823b0579"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe13430f4fcd8e23761dfecbdcdd74e7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#abe13430f4fcd8e23761dfecbdcdd74e7">tek_decode5</a> (int siz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</td></tr>
+<tr class="separator:abe13430f4fcd8e23761dfecbdcdd74e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5faa80891359abc566502563e97e6761"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a> (<a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> **pp)</td></tr>
+<tr class="separator:a5faa80891359abc566502563e97e6761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e24695b435771842589424baeba341"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#a60e24695b435771842589424baeba341">autodecomp</a> (int siz0, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p0, int siz)</td></tr>
+<tr class="separator:a60e24695b435771842589424baeba341"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedfa1c45aeeb79cdd7b3c7c0edd3518d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#aedfa1c45aeeb79cdd7b3c7c0edd3518d">tek_lzrestore_stk1</a> (int srcsiz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, int outsiz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</td></tr>
+<tr class="separator:aedfa1c45aeeb79cdd7b3c7c0edd3518d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c0b499ae2034799059f68d80fb61d01"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#a6c0b499ae2034799059f68d80fb61d01">tek_getnum_s7</a> (<a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> **pp)</td></tr>
+<tr class="separator:a6c0b499ae2034799059f68d80fb61d01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac54cea4e34e29455707af40560399747"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#ac54cea4e34e29455707af40560399747">tek_lzrestore_stk2</a> (int srcsiz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, int outsiz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</td></tr>
+<tr class="separator:ac54cea4e34e29455707af40560399747"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1af9649c0ff434aafce5fa4ac0c120d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#af1af9649c0ff434aafce5fa4ac0c120d">tek_decmain5</a> (int *work, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, int osiz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q, int lc, int pb, int lp, int flags)</td></tr>
+<tr class="separator:af1af9649c0ff434aafce5fa4ac0c120d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf0a0994681380da1f81b7bfb5ca44db"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#adf0a0994681380da1f81b7bfb5ca44db">tek_lzrestore_tek5</a> (int srcsiz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, int outsiz, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *outbuf)</td></tr>
+<tr class="separator:adf0a0994681380da1f81b7bfb5ca44db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dccddf1b7cc7d769e8074a44e204172"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#a6dccddf1b7cc7d769e8074a44e204172">tek_setbm5</a> (struct <a class="el" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> *bm, int t, int m)</td></tr>
+<tr class="separator:a6dccddf1b7cc7d769e8074a44e204172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbe7c667aa9821c570ff3f9f892c885d"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#acbe7c667aa9821c570ff3f9f892c885d">tek_rdget0</a> (struct <a class="el" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *rd, int n, int i)</td></tr>
+<tr class="separator:acbe7c667aa9821c570ff3f9f892c885d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad47117a8e15ddb593559472bfd1a913f"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a> (struct <a class="el" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *rd, <a class="el" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> *prob0, int n, int j, struct <a class="el" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> *bm)</td></tr>
+<tr class="separator:ad47117a8e15ddb593559472bfd1a913f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef039e6537565330cab9657b27960b23"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#aef039e6537565330cab9657b27960b23">tek_revbit</a> (<a class="el" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> data, int len)</td></tr>
+<tr class="separator:aef039e6537565330cab9657b27960b23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62bff5997b4c8b44edd54cde4d0ed647"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="autodec___8c.html#a62bff5997b4c8b44edd54cde4d0ed647">tek_getlen5</a> (struct <a class="el" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *rd, int m, int s_pos, int stk)</td></tr>
+<tr class="separator:a62bff5997b4c8b44edd54cde4d0ed647"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="ade9db6e3c24e2cf05a8cb1be281736b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade9db6e3c24e2cf05a8cb1be281736b5">&#9670;&nbsp;</a></span>tek_TPRB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> <a class="el" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00007">7</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4f4bb67531a9bf6f0b9c6ad76aeba587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4bb67531a9bf6f0b9c6ad76aeba587">&#9670;&nbsp;</a></span>UCHAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00005">5</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae1e6edbbc26d6fbc71a90190d0266018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1e6edbbc26d6fbc71a90190d0266018">&#9670;&nbsp;</a></span>UINT32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned int <a class="el" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00006">6</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a60e24695b435771842589424baeba341"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e24695b435771842589424baeba341">&#9670;&nbsp;</a></span>autodecomp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int autodecomp </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>siz0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>p0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>siz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00027">27</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a60e24695b435771842589424baeba341_cgraph.png" border="0" usemap="#autodec___8c_a60e24695b435771842589424baeba341_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af1af9649c0ff434aafce5fa4ac0c120d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1af9649c0ff434aafce5fa4ac0c120d">&#9670;&nbsp;</a></span>tek_decmain5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_decmain5 </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>work</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>osiz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>q</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00451">451</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_af1af9649c0ff434aafce5fa4ac0c120d_cgraph.png" border="0" usemap="#autodec___8c_af1af9649c0ff434aafce5fa4ac0c120d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_af1af9649c0ff434aafce5fa4ac0c120d_icgraph.png" border="0" usemap="#autodec___8c_af1af9649c0ff434aafce5fa4ac0c120d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a33eeed225ccff7762e2dc545fcd50769"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33eeed225ccff7762e2dc545fcd50769">&#9670;&nbsp;</a></span>tek_decode1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_decode1 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>siz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00104">104</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a33eeed225ccff7762e2dc545fcd50769_cgraph.png" border="0" usemap="#autodec___8c_a33eeed225ccff7762e2dc545fcd50769_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a33eeed225ccff7762e2dc545fcd50769_icgraph.png" border="0" usemap="#autodec___8c_a33eeed225ccff7762e2dc545fcd50769_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a97a1b097510e1fc930bbc999823b0579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97a1b097510e1fc930bbc999823b0579">&#9670;&nbsp;</a></span>tek_decode2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_decode2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>siz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00231">231</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a97a1b097510e1fc930bbc999823b0579_cgraph.png" border="0" usemap="#autodec___8c_a97a1b097510e1fc930bbc999823b0579_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a97a1b097510e1fc930bbc999823b0579_icgraph.png" border="0" usemap="#autodec___8c_a97a1b097510e1fc930bbc999823b0579_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="abe13430f4fcd8e23761dfecbdcdd74e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe13430f4fcd8e23761dfecbdcdd74e7">&#9670;&nbsp;</a></span>tek_decode5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int tek_decode5 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>siz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00631">631</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_abe13430f4fcd8e23761dfecbdcdd74e7_cgraph.png" border="0" usemap="#autodec___8c_abe13430f4fcd8e23761dfecbdcdd74e7_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_abe13430f4fcd8e23761dfecbdcdd74e7_icgraph.png" border="0" usemap="#autodec___8c_abe13430f4fcd8e23761dfecbdcdd74e7_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a62bff5997b4c8b44edd54cde4d0ed647"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62bff5997b4c8b44edd54cde4d0ed647">&#9670;&nbsp;</a></span>tek_getlen5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_getlen5 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *&#160;</td>
+          <td class="paramname"><em>rd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>s_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>stk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00429">429</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a62bff5997b4c8b44edd54cde4d0ed647_cgraph.png" border="0" usemap="#autodec___8c_a62bff5997b4c8b44edd54cde4d0ed647_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a62bff5997b4c8b44edd54cde4d0ed647_icgraph.png" border="0" usemap="#autodec___8c_a62bff5997b4c8b44edd54cde4d0ed647_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6c0b499ae2034799059f68d80fb61d01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c0b499ae2034799059f68d80fb61d01">&#9670;&nbsp;</a></span>tek_getnum_s7()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static unsigned int tek_getnum_s7 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> **&#160;</td>
+          <td class="paramname"><em>pp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00123">123</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a6c0b499ae2034799059f68d80fb61d01_icgraph.png" border="0" usemap="#autodec___8c_a6c0b499ae2034799059f68d80fb61d01_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5faa80891359abc566502563e97e6761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5faa80891359abc566502563e97e6761">&#9670;&nbsp;</a></span>tek_getnum_s7s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static unsigned int tek_getnum_s7s </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> **&#160;</td>
+          <td class="paramname"><em>pp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00013">13</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a5faa80891359abc566502563e97e6761_icgraph.png" border="0" usemap="#autodec___8c_a5faa80891359abc566502563e97e6761_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aedfa1c45aeeb79cdd7b3c7c0edd3518d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedfa1c45aeeb79cdd7b3c7c0edd3518d">&#9670;&nbsp;</a></span>tek_lzrestore_stk1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_lzrestore_stk1 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcsiz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>outsiz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00060">60</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_aedfa1c45aeeb79cdd7b3c7c0edd3518d_cgraph.png" border="0" usemap="#autodec___8c_aedfa1c45aeeb79cdd7b3c7c0edd3518d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_aedfa1c45aeeb79cdd7b3c7c0edd3518d_icgraph.png" border="0" usemap="#autodec___8c_aedfa1c45aeeb79cdd7b3c7c0edd3518d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac54cea4e34e29455707af40560399747"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac54cea4e34e29455707af40560399747">&#9670;&nbsp;</a></span>tek_lzrestore_stk2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_lzrestore_stk2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcsiz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>outsiz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00140">140</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_ac54cea4e34e29455707af40560399747_cgraph.png" border="0" usemap="#autodec___8c_ac54cea4e34e29455707af40560399747_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_ac54cea4e34e29455707af40560399747_icgraph.png" border="0" usemap="#autodec___8c_ac54cea4e34e29455707af40560399747_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="adf0a0994681380da1f81b7bfb5ca44db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf0a0994681380da1f81b7bfb5ca44db">&#9670;&nbsp;</a></span>tek_lzrestore_tek5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_lzrestore_tek5 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>srcsiz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>outsiz</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>outbuf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00250">250</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_adf0a0994681380da1f81b7bfb5ca44db_cgraph.png" border="0" usemap="#autodec___8c_adf0a0994681380da1f81b7bfb5ca44db_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_adf0a0994681380da1f81b7bfb5ca44db_icgraph.png" border="0" usemap="#autodec___8c_adf0a0994681380da1f81b7bfb5ca44db_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="acbe7c667aa9821c570ff3f9f892c885d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbe7c667aa9821c570ff3f9f892c885d">&#9670;&nbsp;</a></span>tek_rdget0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_rdget0 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *&#160;</td>
+          <td class="paramname"><em>rd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00341">341</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_acbe7c667aa9821c570ff3f9f892c885d_icgraph.png" border="0" usemap="#autodec___8c_acbe7c667aa9821c570ff3f9f892c885d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad47117a8e15ddb593559472bfd1a913f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad47117a8e15ddb593559472bfd1a913f">&#9670;&nbsp;</a></span>tek_rdget1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int tek_rdget1 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *&#160;</td>
+          <td class="paramname"><em>rd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> *&#160;</td>
+          <td class="paramname"><em>prob0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>j</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> *&#160;</td>
+          <td class="paramname"><em>bm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00358">358</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_ad47117a8e15ddb593559472bfd1a913f_cgraph.png" border="0" usemap="#autodec___8c_ad47117a8e15ddb593559472bfd1a913f_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_ad47117a8e15ddb593559472bfd1a913f_icgraph.png" border="0" usemap="#autodec___8c_ad47117a8e15ddb593559472bfd1a913f_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aef039e6537565330cab9657b27960b23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef039e6537565330cab9657b27960b23">&#9670;&nbsp;</a></span>tek_revbit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> tek_revbit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00419">419</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_aef039e6537565330cab9657b27960b23_icgraph.png" border="0" usemap="#autodec___8c_aef039e6537565330cab9657b27960b23_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6dccddf1b7cc7d769e8074a44e204172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dccddf1b7cc7d769e8074a44e204172">&#9670;&nbsp;</a></span>tek_setbm5()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void tek_setbm5 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> *&#160;</td>
+          <td class="paramname"><em>bm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="autodec___8c_source.html">autodec_.c</a> の <a class="el" href="autodec___8c_source.html#l00327">327</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="autodec___8c_a6dccddf1b7cc7d769e8074a44e204172_icgraph.png" border="0" usemap="#autodec___8c_a6dccddf1b7cc7d769e8074a44e204172_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_2a9bd0a3db4f2c9ee3249310d75d081e.html">tek</a></li><li class="navelem"><a class="el" href="autodec___8c.html">autodec_.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

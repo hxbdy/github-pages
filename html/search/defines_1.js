@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['col8_5f000000_1014',['COL8_000000',['../bootpack_8h.html#a0b6fbedbdc8619d132edc7ec1996f31a',1,'bootpack.h']]],
+  ['col8_5f000084_1015',['COL8_000084',['../bootpack_8h.html#a73de5aab01328d281d8d59ff5c8063f9',1,'bootpack.h']]],
+  ['col8_5f0000ff_1016',['COL8_0000FF',['../bootpack_8h.html#a55ba59aee1ee69aefa0769e8cd42d83a',1,'bootpack.h']]],
+  ['col8_5f008400_1017',['COL8_008400',['../bootpack_8h.html#a7b8bd99e500673677fd341e6cb3dbbd6',1,'bootpack.h']]],
+  ['col8_5f008484_1018',['COL8_008484',['../bootpack_8h.html#affe93fa27d66a471f55bdde1f1f2a8bf',1,'bootpack.h']]],
+  ['col8_5f00ff00_1019',['COL8_00FF00',['../bootpack_8h.html#a3d0801eae550ae16bada14fd41c96b5e',1,'bootpack.h']]],
+  ['col8_5f00ffff_1020',['COL8_00FFFF',['../bootpack_8h.html#afe8bf9dd074a937c9086c011b2927131',1,'bootpack.h']]],
+  ['col8_5f840000_1021',['COL8_840000',['../bootpack_8h.html#a83c6125fa4b55945f721c430ad37a00e',1,'bootpack.h']]],
+  ['col8_5f840084_1022',['COL8_840084',['../bootpack_8h.html#a10d48775755fdb0bafe65ca34cc45624',1,'bootpack.h']]],
+  ['col8_5f848400_1023',['COL8_848400',['../bootpack_8h.html#a894d61e9360d396e5aade88229ae80dd',1,'bootpack.h']]],
+  ['col8_5f848484_1024',['COL8_848484',['../bootpack_8h.html#a8b8b32f6b529f7f1a71b6ee254ee4221',1,'bootpack.h']]],
+  ['col8_5fc6c6c6_1025',['COL8_C6C6C6',['../bootpack_8h.html#a0eb939ea8a29d75ded97f55e31be5f58',1,'bootpack.h']]],
+  ['col8_5fff0000_1026',['COL8_FF0000',['../bootpack_8h.html#a32ba9fb36808b76a564c9c49fc8e1546',1,'bootpack.h']]],
+  ['col8_5fff00ff_1027',['COL8_FF00FF',['../bootpack_8h.html#a7a5c32be159caa1a3f89a1d04c765b92',1,'bootpack.h']]],
+  ['col8_5fffff00_1028',['COL8_FFFF00',['../bootpack_8h.html#a4882845a5488731426127b661819358b',1,'bootpack.h']]],
+  ['col8_5fffffff_1029',['COL8_FFFFFF',['../bootpack_8h.html#aa04bcd8f40ae8fc9ef4cff14359819a0',1,'bootpack.h']]],
+  ['cr0_5fcache_5fdisable_1030',['CR0_CACHE_DISABLE',['../memory_8c.html#aa4f66a4fbbc03e7c8ce7dfe56d3184a7',1,'memory.c']]]
+];

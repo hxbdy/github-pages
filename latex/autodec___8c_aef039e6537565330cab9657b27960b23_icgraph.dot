@@ -1,0 +1,16 @@
+digraph "tek_revbit"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="tek_revbit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="tek_decmain5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#af1af9649c0ff434aafce5fa4ac0c120d",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="tek_lzrestore_tek5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#adf0a0994681380da1f81b7bfb5ca44db",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="tek_decode5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#abe13430f4fcd8e23761dfecbdcdd74e7",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="autodecomp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a60e24695b435771842589424baeba341",tooltip=" "];
+}

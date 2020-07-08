@@ -1,0 +1,18 @@
+digraph "api_refreshwin"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="api_refreshwin",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="ウインドウのリフレッシュを行う オートリフレッシュ無効時にはこの関数でマニュアルリフレッシュを行ってください オートリフレッシュ無効化の方法はウインドウIDをインクリメントしてください"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$color_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="putstr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$invader_8c.html#a8d9ae17bc05a74225369a502436d2d23",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$invader_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="textview",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tview_8c.html#a54a9ebd4dc8e09f17793c9b8930b95fe",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tview_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+}

@@ -1,0 +1,183 @@
+\hypertarget{sheet_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/sheet.c ファイル}
+\label{sheet_8c}\index{E:/Documents/emu84/Src/haribote/sheet.c@{E:/Documents/emu84/Src/haribote/sheet.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+sheet.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sheet_8c_af6fd9945ea407e2d6c2d9a87d8528490}{S\+H\+E\+E\+T\+\_\+\+U\+SE}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ \mbox{\hyperlink{sheet_8c_a36f9284550ad0030f5dd64154a04a7d8}{shtctl\+\_\+init}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$memman, unsigned char $\ast$vram, int xsize, int ysize)
+\begin{DoxyCompactList}\small\item\em シートコントロールの初期化を行います \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$ \mbox{\hyperlink{sheet_8c_a543661af64ed9055c819e0dd7b61d01e}{sheet\+\_\+alloc}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ctl)
+\item 
+void \mbox{\hyperlink{sheet_8c_a6c14343c7c0566620635e9ccd17e21e0}{sheet\+\_\+setbuf}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, unsigned char $\ast$buf, int xsize, int ysize, int col\+\_\+inv)
+\item 
+void \mbox{\hyperlink{sheet_8c_a5fb2b9d999b1c516858b5a0d1bfdd55c}{sheet\+\_\+refreshmap}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ctl, int vx0, int vy0, int vx1, int vy1, int h0)
+\item 
+void \mbox{\hyperlink{sheet_8c_a0016600e2d7feeb0a12089156b9307a4}{sheet\+\_\+refreshsub}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ctl, int vx0, int vy0, int vx1, int vy1, int h0, int h1)
+\item 
+void \mbox{\hyperlink{sheet_8c_ad590bf68e2aa06a5fe99c03ad4c56785}{sheet\+\_\+updown}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int height)
+\item 
+void \mbox{\hyperlink{sheet_8c_a8befd8f5c365aec65bfa164d00e140ca}{sheet\+\_\+refresh}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int bx0, int by0, int bx1, int by1)
+\item 
+void \mbox{\hyperlink{sheet_8c_aca08bb322ec0c2110e2a071e383832de}{sheet\+\_\+slide}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int vx0, int vy0)
+\item 
+void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+free}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{sheet_8c_af6fd9945ea407e2d6c2d9a87d8528490}\label{sheet_8c_af6fd9945ea407e2d6c2d9a87d8528490}} 
+\index{sheet.c@{sheet.c}!SHEET\_USE@{SHEET\_USE}}
+\index{SHEET\_USE@{SHEET\_USE}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{SHEET\_USE}{SHEET\_USE}}
+{\footnotesize\ttfamily \#define S\+H\+E\+E\+T\+\_\+\+U\+SE~1}
+
+
+
+ sheet.\+c の 6 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{sheet_8c_a543661af64ed9055c819e0dd7b61d01e}\label{sheet_8c_a543661af64ed9055c819e0dd7b61d01e}} 
+\index{sheet.c@{sheet.c}!sheet\_alloc@{sheet\_alloc}}
+\index{sheet\_alloc@{sheet\_alloc}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{sheet\_alloc()}{sheet\_alloc()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}}$\ast$ sheet\+\_\+alloc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$}]{ctl }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 32 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{sheet_8c_ac3586d30712a7294662c6588175348e0}\label{sheet_8c_ac3586d30712a7294662c6588175348e0}} 
+\index{sheet.c@{sheet.c}!sheet\_free@{sheet\_free}}
+\index{sheet\_free@{sheet\_free}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{sheet\_free()}{sheet\_free()}}
+{\footnotesize\ttfamily void sheet\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 284 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{sheet_8c_a8befd8f5c365aec65bfa164d00e140ca}\label{sheet_8c_a8befd8f5c365aec65bfa164d00e140ca}} 
+\index{sheet.c@{sheet.c}!sheet\_refresh@{sheet\_refresh}}
+\index{sheet\_refresh@{sheet\_refresh}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{sheet\_refresh()}{sheet\_refresh()}}
+{\footnotesize\ttfamily void sheet\+\_\+refresh (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{bx0,  }\item[{int}]{by0,  }\item[{int}]{bx1,  }\item[{int}]{by1 }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 261 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 4
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{sheet_8c_a5fb2b9d999b1c516858b5a0d1bfdd55c}\label{sheet_8c_a5fb2b9d999b1c516858b5a0d1bfdd55c}} 
+\index{sheet.c@{sheet.c}!sheet\_refreshmap@{sheet\_refreshmap}}
+\index{sheet\_refreshmap@{sheet\_refreshmap}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{sheet\_refreshmap()}{sheet\_refreshmap()}}
+{\footnotesize\ttfamily void sheet\+\_\+refreshmap (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$}]{ctl,  }\item[{int}]{vx0,  }\item[{int}]{vy0,  }\item[{int}]{vx1,  }\item[{int}]{vy1,  }\item[{int}]{h0 }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 57 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{sheet_8c_a0016600e2d7feeb0a12089156b9307a4}\label{sheet_8c_a0016600e2d7feeb0a12089156b9307a4}} 
+\index{sheet.c@{sheet.c}!sheet\_refreshsub@{sheet\_refreshsub}}
+\index{sheet\_refreshsub@{sheet\_refreshsub}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{sheet\_refreshsub()}{sheet\_refreshsub()}}
+{\footnotesize\ttfamily void sheet\+\_\+refreshsub (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$}]{ctl,  }\item[{int}]{vx0,  }\item[{int}]{vy0,  }\item[{int}]{vx1,  }\item[{int}]{vy1,  }\item[{int}]{h0,  }\item[{int}]{h1 }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 117 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{sheet_8c_a6c14343c7c0566620635e9ccd17e21e0}\label{sheet_8c_a6c14343c7c0566620635e9ccd17e21e0}} 
+\index{sheet.c@{sheet.c}!sheet\_setbuf@{sheet\_setbuf}}
+\index{sheet\_setbuf@{sheet\_setbuf}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{sheet\_setbuf()}{sheet\_setbuf()}}
+{\footnotesize\ttfamily void sheet\+\_\+setbuf (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{xsize,  }\item[{int}]{ysize,  }\item[{int}]{col\+\_\+inv }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 48 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{sheet_8c_aca08bb322ec0c2110e2a071e383832de}\label{sheet_8c_aca08bb322ec0c2110e2a071e383832de}} 
+\index{sheet.c@{sheet.c}!sheet\_slide@{sheet\_slide}}
+\index{sheet\_slide@{sheet\_slide}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{sheet\_slide()}{sheet\_slide()}}
+{\footnotesize\ttfamily void sheet\+\_\+slide (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{vx0,  }\item[{int}]{vy0 }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 269 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{sheet_8c_ad590bf68e2aa06a5fe99c03ad4c56785}\label{sheet_8c_ad590bf68e2aa06a5fe99c03ad4c56785}} 
+\index{sheet.c@{sheet.c}!sheet\_updown@{sheet\_updown}}
+\index{sheet\_updown@{sheet\_updown}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{sheet\_updown()}{sheet\_updown()}}
+{\footnotesize\ttfamily void sheet\+\_\+updown (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 201 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{sheet_8c_a36f9284550ad0030f5dd64154a04a7d8}\label{sheet_8c_a36f9284550ad0030f5dd64154a04a7d8}} 
+\index{sheet.c@{sheet.c}!shtctl\_init@{shtctl\_init}}
+\index{shtctl\_init@{shtctl\_init}!sheet.c@{sheet.c}}
+\doxysubsubsection{\texorpdfstring{shtctl\_init()}{shtctl\_init()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}}$\ast$ shtctl\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{memman,  }\item[{unsigned char $\ast$}]{vram,  }\item[{int}]{xsize,  }\item[{int}]{ysize }\end{DoxyParamCaption})}
+
+
+
+シートコントロールの初期化を行います 
+
+
+\begin{DoxyParams}{引数}
+{\em memman} & メモリマネージャのポインタ \\
+\hline
+{\em vram} & vramのポインタ \\
+\hline
+{\em xsize} & x方向の大きさ \\
+\hline
+{\em ysize} & y方向の大きさ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+S\+H\+T\+C\+T\+L$\ast$ シートコントロールポインタ 
+\end{DoxyReturn}
+
+
+ sheet.\+c の 7 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 13
+被呼び出し関係図\+:
+% FIG 14

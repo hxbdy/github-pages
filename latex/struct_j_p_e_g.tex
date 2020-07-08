@@ -1,0 +1,420 @@
+\hypertarget{struct_j_p_e_g}{}\doxysection{J\+P\+EG 構造体}
+\label{struct_j_p_e_g}\index{JPEG@{JPEG}}
+
+
+J\+P\+EG 連携図
+% FIG 0
+\doxysubsection*{フィールド}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a2474a5474cbff19523a51eb1de01cda4}{width}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ad12fc34ce789bce6c8a05d8a17138534}{height}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ad326b9e6d5b82d45692714f97fc7a90f}{mcu\+\_\+width}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a21f6833221423a7315fb7a4789c47201}{mcu\+\_\+height}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a3d41cf2176a047cfb27676651e527a14}{max\+\_\+h}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ac017e2112f5df000db7aabc776bbd21d}{max\+\_\+v}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a6caf917cba778bbecba3a17212300743}{compo\+\_\+count}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ad61939df87b421a1d11090a2b8fbbf58}{compo\+\_\+id}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a18d57cd501b7796bb9d47729cbcd5c23}{compo\+\_\+sample}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ac4bc6779e92c3909cb59d3c6e39f13d9}{compo\+\_\+h}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ad735f88c1d31fe0e7c6f1035ce227c23}{compo\+\_\+v}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ab9503b57fd202fb382137bf8ee5bf939}{compo\+\_\+qt}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_aa90722ad4eb39e381935853aff5941ab}{scan\+\_\+count}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_abd55999550a84d4ed2b4b4ce7bb32823}{scan\+\_\+id}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ae18451fb466e6435e502dc644e889858}{scan\+\_\+ac}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a0b3839c95a69e7e7caff27a09cab8dc2}{scan\+\_\+dc}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_abbee7bb071d0cd838fcda0c1cbf82030}{scan\+\_\+h}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_acc9a88cc60233e9fc9fd9f93eab1d2bb}{scan\+\_\+v}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a1f2991118ad557a3729554a030f1424c}{scan\+\_\+qt}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ae0c690118932b32ef40a74bb6a259acd}{interval}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a27de71848dbafed897dc3dd7d1918403}{mcu\+\_\+buf}} \mbox{[}32 $\ast$32 $\ast$4\mbox{]}
+\item 
+int $\ast$ \mbox{\hyperlink{struct_j_p_e_g_acbec682e6d066b063be4a14a8e8a8b6b}{mcu\+\_\+yuv}} \mbox{[}4\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a999b4d4134cc7b74d530aa69ff931fc7}{mcu\+\_\+pre\+DC}} \mbox{[}3\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a55d3b36a15d142f5c8edcf789e52c3d2}{dqt}} \mbox{[}3\mbox{]}\mbox{[}64\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a74dcc3d7d4cadfab99ebcb84176183a3}{n\+\_\+dqt}}
+\item 
+\mbox{\hyperlink{struct_h_u_f_f}{H\+U\+FF}} \mbox{\hyperlink{struct_j_p_e_g_ae002c19536f3e40843ad20587f94203b}{huff}} \mbox{[}2\mbox{]}\mbox{[}3\mbox{]}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{struct_j_p_e_g_ad84b82c9e3c118a1072f0116c684ebfa}{fp}}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{struct_j_p_e_g_abf0cf51d7fb071ee85a409d627671e90}{fp1}}
+\item 
+unsigned long \mbox{\hyperlink{struct_j_p_e_g_ada95fca7d109a70b79a31f6fcefb37fe}{bit\+\_\+buff}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_aa19bd53f7d90f70c6728ee3bd06babcf}{bit\+\_\+remain}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_ac2092155f270156fea145ebdadbbd80a}{width\+\_\+buf}}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a2e912b69ba487c2a9b7d0a1de751016f}{base\+\_\+img}} \mbox{[}64\mbox{]}\mbox{[}64\mbox{]}
+\item 
+int \mbox{\hyperlink{struct_j_p_e_g_a79408ff27fa2196903bf7b2160676010}{dummy}} \mbox{[}64\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+
+
+ jpeg.\+c の 27 行目に定義があります。
+
+
+
+\doxysubsection{フィールド詳解}
+\mbox{\Hypertarget{struct_j_p_e_g_a2e912b69ba487c2a9b7d0a1de751016f}\label{struct_j_p_e_g_a2e912b69ba487c2a9b7d0a1de751016f}} 
+\index{JPEG@{JPEG}!base\_img@{base\_img}}
+\index{base\_img@{base\_img}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{base\_img}{base\_img}}
+{\footnotesize\ttfamily int base\+\_\+img\mbox{[}64\mbox{]}\mbox{[}64\mbox{]}}
+
+
+
+ jpeg.\+c の 74 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ada95fca7d109a70b79a31f6fcefb37fe}\label{struct_j_p_e_g_ada95fca7d109a70b79a31f6fcefb37fe}} 
+\index{JPEG@{JPEG}!bit\_buff@{bit\_buff}}
+\index{bit\_buff@{bit\_buff}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{bit\_buff}{bit\_buff}}
+{\footnotesize\ttfamily unsigned long bit\+\_\+buff}
+
+
+
+ jpeg.\+c の 70 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_aa19bd53f7d90f70c6728ee3bd06babcf}\label{struct_j_p_e_g_aa19bd53f7d90f70c6728ee3bd06babcf}} 
+\index{JPEG@{JPEG}!bit\_remain@{bit\_remain}}
+\index{bit\_remain@{bit\_remain}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{bit\_remain}{bit\_remain}}
+{\footnotesize\ttfamily int bit\+\_\+remain}
+
+
+
+ jpeg.\+c の 71 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a6caf917cba778bbecba3a17212300743}\label{struct_j_p_e_g_a6caf917cba778bbecba3a17212300743}} 
+\index{JPEG@{JPEG}!compo\_count@{compo\_count}}
+\index{compo\_count@{compo\_count}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{compo\_count}{compo\_count}}
+{\footnotesize\ttfamily int compo\+\_\+count}
+
+
+
+ jpeg.\+c の 37 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ac4bc6779e92c3909cb59d3c6e39f13d9}\label{struct_j_p_e_g_ac4bc6779e92c3909cb59d3c6e39f13d9}} 
+\index{JPEG@{JPEG}!compo\_h@{compo\_h}}
+\index{compo\_h@{compo\_h}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{compo\_h}{compo\_h}}
+{\footnotesize\ttfamily int compo\+\_\+h\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 40 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ad61939df87b421a1d11090a2b8fbbf58}\label{struct_j_p_e_g_ad61939df87b421a1d11090a2b8fbbf58}} 
+\index{JPEG@{JPEG}!compo\_id@{compo\_id}}
+\index{compo\_id@{compo\_id}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{compo\_id}{compo\_id}}
+{\footnotesize\ttfamily int compo\+\_\+id\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 38 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ab9503b57fd202fb382137bf8ee5bf939}\label{struct_j_p_e_g_ab9503b57fd202fb382137bf8ee5bf939}} 
+\index{JPEG@{JPEG}!compo\_qt@{compo\_qt}}
+\index{compo\_qt@{compo\_qt}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{compo\_qt}{compo\_qt}}
+{\footnotesize\ttfamily int compo\+\_\+qt\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 42 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a18d57cd501b7796bb9d47729cbcd5c23}\label{struct_j_p_e_g_a18d57cd501b7796bb9d47729cbcd5c23}} 
+\index{JPEG@{JPEG}!compo\_sample@{compo\_sample}}
+\index{compo\_sample@{compo\_sample}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{compo\_sample}{compo\_sample}}
+{\footnotesize\ttfamily int compo\+\_\+sample\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 39 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ad735f88c1d31fe0e7c6f1035ce227c23}\label{struct_j_p_e_g_ad735f88c1d31fe0e7c6f1035ce227c23}} 
+\index{JPEG@{JPEG}!compo\_v@{compo\_v}}
+\index{compo\_v@{compo\_v}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{compo\_v}{compo\_v}}
+{\footnotesize\ttfamily int compo\+\_\+v\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 41 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a55d3b36a15d142f5c8edcf789e52c3d2}\label{struct_j_p_e_g_a55d3b36a15d142f5c8edcf789e52c3d2}} 
+\index{JPEG@{JPEG}!dqt@{dqt}}
+\index{dqt@{dqt}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{dqt}{dqt}}
+{\footnotesize\ttfamily int dqt\mbox{[}3\mbox{]}\mbox{[}64\mbox{]}}
+
+
+
+ jpeg.\+c の 61 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a79408ff27fa2196903bf7b2160676010}\label{struct_j_p_e_g_a79408ff27fa2196903bf7b2160676010}} 
+\index{JPEG@{JPEG}!dummy@{dummy}}
+\index{dummy@{dummy}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{dummy}{dummy}}
+{\footnotesize\ttfamily int dummy\mbox{[}64\mbox{]}}
+
+
+
+ jpeg.\+c の 80 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ad84b82c9e3c118a1072f0116c684ebfa}\label{struct_j_p_e_g_ad84b82c9e3c118a1072f0116c684ebfa}} 
+\index{JPEG@{JPEG}!fp@{fp}}
+\index{fp@{fp}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{fp}{fp}}
+{\footnotesize\ttfamily unsigned char$\ast$ fp}
+
+
+
+ jpeg.\+c の 69 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_abf0cf51d7fb071ee85a409d627671e90}\label{struct_j_p_e_g_abf0cf51d7fb071ee85a409d627671e90}} 
+\index{JPEG@{JPEG}!fp1@{fp1}}
+\index{fp1@{fp1}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{fp1}{fp1}}
+{\footnotesize\ttfamily unsigned char $\ast$ fp1}
+
+
+
+ jpeg.\+c の 69 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ad12fc34ce789bce6c8a05d8a17138534}\label{struct_j_p_e_g_ad12fc34ce789bce6c8a05d8a17138534}} 
+\index{JPEG@{JPEG}!height@{height}}
+\index{height@{height}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int height}
+
+
+
+ jpeg.\+c の 31 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ae002c19536f3e40843ad20587f94203b}\label{struct_j_p_e_g_ae002c19536f3e40843ad20587f94203b}} 
+\index{JPEG@{JPEG}!huff@{huff}}
+\index{huff@{huff}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{huff}{huff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_h_u_f_f}{H\+U\+FF}} huff\mbox{[}2\mbox{]}\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 65 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ae0c690118932b32ef40a74bb6a259acd}\label{struct_j_p_e_g_ae0c690118932b32ef40a74bb6a259acd}} 
+\index{JPEG@{JPEG}!interval@{interval}}
+\index{interval@{interval}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{interval}{interval}}
+{\footnotesize\ttfamily int interval}
+
+
+
+ jpeg.\+c の 54 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a3d41cf2176a047cfb27676651e527a14}\label{struct_j_p_e_g_a3d41cf2176a047cfb27676651e527a14}} 
+\index{JPEG@{JPEG}!max\_h@{max\_h}}
+\index{max\_h@{max\_h}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{max\_h}{max\_h}}
+{\footnotesize\ttfamily int max\+\_\+h}
+
+
+
+ jpeg.\+c の 36 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ac017e2112f5df000db7aabc776bbd21d}\label{struct_j_p_e_g_ac017e2112f5df000db7aabc776bbd21d}} 
+\index{JPEG@{JPEG}!max\_v@{max\_v}}
+\index{max\_v@{max\_v}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{max\_v}{max\_v}}
+{\footnotesize\ttfamily int max\+\_\+v}
+
+
+
+ jpeg.\+c の 36 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a27de71848dbafed897dc3dd7d1918403}\label{struct_j_p_e_g_a27de71848dbafed897dc3dd7d1918403}} 
+\index{JPEG@{JPEG}!mcu\_buf@{mcu\_buf}}
+\index{mcu\_buf@{mcu\_buf}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{mcu\_buf}{mcu\_buf}}
+{\footnotesize\ttfamily int mcu\+\_\+buf\mbox{[}32 $\ast$32 $\ast$4\mbox{]}}
+
+
+
+ jpeg.\+c の 56 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a21f6833221423a7315fb7a4789c47201}\label{struct_j_p_e_g_a21f6833221423a7315fb7a4789c47201}} 
+\index{JPEG@{JPEG}!mcu\_height@{mcu\_height}}
+\index{mcu\_height@{mcu\_height}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{mcu\_height}{mcu\_height}}
+{\footnotesize\ttfamily int mcu\+\_\+height}
+
+
+
+ jpeg.\+c の 34 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a999b4d4134cc7b74d530aa69ff931fc7}\label{struct_j_p_e_g_a999b4d4134cc7b74d530aa69ff931fc7}} 
+\index{JPEG@{JPEG}!mcu\_preDC@{mcu\_preDC}}
+\index{mcu\_preDC@{mcu\_preDC}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{mcu\_preDC}{mcu\_preDC}}
+{\footnotesize\ttfamily int mcu\+\_\+pre\+DC\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 58 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ad326b9e6d5b82d45692714f97fc7a90f}\label{struct_j_p_e_g_ad326b9e6d5b82d45692714f97fc7a90f}} 
+\index{JPEG@{JPEG}!mcu\_width@{mcu\_width}}
+\index{mcu\_width@{mcu\_width}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{mcu\_width}{mcu\_width}}
+{\footnotesize\ttfamily int mcu\+\_\+width}
+
+
+
+ jpeg.\+c の 33 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_acbec682e6d066b063be4a14a8e8a8b6b}\label{struct_j_p_e_g_acbec682e6d066b063be4a14a8e8a8b6b}} 
+\index{JPEG@{JPEG}!mcu\_yuv@{mcu\_yuv}}
+\index{mcu\_yuv@{mcu\_yuv}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{mcu\_yuv}{mcu\_yuv}}
+{\footnotesize\ttfamily int$\ast$ mcu\+\_\+yuv\mbox{[}4\mbox{]}}
+
+
+
+ jpeg.\+c の 57 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a74dcc3d7d4cadfab99ebcb84176183a3}\label{struct_j_p_e_g_a74dcc3d7d4cadfab99ebcb84176183a3}} 
+\index{JPEG@{JPEG}!n\_dqt@{n\_dqt}}
+\index{n\_dqt@{n\_dqt}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{n\_dqt}{n\_dqt}}
+{\footnotesize\ttfamily int n\+\_\+dqt}
+
+
+
+ jpeg.\+c の 62 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ae18451fb466e6435e502dc644e889858}\label{struct_j_p_e_g_ae18451fb466e6435e502dc644e889858}} 
+\index{JPEG@{JPEG}!scan\_ac@{scan\_ac}}
+\index{scan\_ac@{scan\_ac}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{scan\_ac}{scan\_ac}}
+{\footnotesize\ttfamily int scan\+\_\+ac\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 47 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_aa90722ad4eb39e381935853aff5941ab}\label{struct_j_p_e_g_aa90722ad4eb39e381935853aff5941ab}} 
+\index{JPEG@{JPEG}!scan\_count@{scan\_count}}
+\index{scan\_count@{scan\_count}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{scan\_count}{scan\_count}}
+{\footnotesize\ttfamily int scan\+\_\+count}
+
+
+
+ jpeg.\+c の 45 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a0b3839c95a69e7e7caff27a09cab8dc2}\label{struct_j_p_e_g_a0b3839c95a69e7e7caff27a09cab8dc2}} 
+\index{JPEG@{JPEG}!scan\_dc@{scan\_dc}}
+\index{scan\_dc@{scan\_dc}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{scan\_dc}{scan\_dc}}
+{\footnotesize\ttfamily int scan\+\_\+dc\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 48 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_abbee7bb071d0cd838fcda0c1cbf82030}\label{struct_j_p_e_g_abbee7bb071d0cd838fcda0c1cbf82030}} 
+\index{JPEG@{JPEG}!scan\_h@{scan\_h}}
+\index{scan\_h@{scan\_h}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{scan\_h}{scan\_h}}
+{\footnotesize\ttfamily int scan\+\_\+h\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 49 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_abd55999550a84d4ed2b4b4ce7bb32823}\label{struct_j_p_e_g_abd55999550a84d4ed2b4b4ce7bb32823}} 
+\index{JPEG@{JPEG}!scan\_id@{scan\_id}}
+\index{scan\_id@{scan\_id}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{scan\_id}{scan\_id}}
+{\footnotesize\ttfamily int scan\+\_\+id\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 46 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a1f2991118ad557a3729554a030f1424c}\label{struct_j_p_e_g_a1f2991118ad557a3729554a030f1424c}} 
+\index{JPEG@{JPEG}!scan\_qt@{scan\_qt}}
+\index{scan\_qt@{scan\_qt}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{scan\_qt}{scan\_qt}}
+{\footnotesize\ttfamily int scan\+\_\+qt\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 51 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_acc9a88cc60233e9fc9fd9f93eab1d2bb}\label{struct_j_p_e_g_acc9a88cc60233e9fc9fd9f93eab1d2bb}} 
+\index{JPEG@{JPEG}!scan\_v@{scan\_v}}
+\index{scan\_v@{scan\_v}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{scan\_v}{scan\_v}}
+{\footnotesize\ttfamily int scan\+\_\+v\mbox{[}3\mbox{]}}
+
+
+
+ jpeg.\+c の 50 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_a2474a5474cbff19523a51eb1de01cda4}\label{struct_j_p_e_g_a2474a5474cbff19523a51eb1de01cda4}} 
+\index{JPEG@{JPEG}!width@{width}}
+\index{width@{width}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int width}
+
+
+
+ jpeg.\+c の 30 行目に定義があります。
+
+\mbox{\Hypertarget{struct_j_p_e_g_ac2092155f270156fea145ebdadbbd80a}\label{struct_j_p_e_g_ac2092155f270156fea145ebdadbbd80a}} 
+\index{JPEG@{JPEG}!width\_buf@{width\_buf}}
+\index{width\_buf@{width\_buf}!JPEG@{JPEG}}
+\doxysubsubsection{\texorpdfstring{width\_buf}{width\_buf}}
+{\footnotesize\ttfamily int width\+\_\+buf}
+
+
+
+ jpeg.\+c の 72 行目に定義があります。
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/emu84/\+Src/gview/\mbox{\hyperlink{jpeg_8c}{jpeg.\+c}}\end{DoxyCompactItemize}

@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/haribote/dsctbl.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dsctbl_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">dsctbl.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="dsctbl_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* GDTやIDTなどの、 descriptor table 関係 */</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bootpack_8h.html">bootpack.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="dsctbl_8c.html#ad5b36851d779bf52f1398e31f55ddc9d">    5</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="dsctbl_8c.html#ad5b36851d779bf52f1398e31f55ddc9d">init_gdtidt</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html">SEGMENT_DESCRIPTOR</a> *gdt = (<span class="keyword">struct </span><a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html">SEGMENT_DESCRIPTOR</a> *) <a class="code" href="bootpack_8h.html#ad00465035496ab39b0d1770c33b0d797">ADR_GDT</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">struct </span><a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html">GATE_DESCRIPTOR</a>    *idt = (<span class="keyword">struct </span><a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html">GATE_DESCRIPTOR</a>    *) <a class="code" href="bootpack_8h.html#a67caec251af0f017fb3b502eee5db4f4">ADR_IDT</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="comment">/* GDTの初期化 */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt;= <a class="code" href="bootpack_8h.html#a9e762b010f5bf967e1525ef9c9a48e63">LIMIT_GDT</a> / 8; i++) {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="dsctbl_8c.html#a3d51340647ade1a89f63e7b841e48176">set_segmdesc</a>(gdt + i, 0, 0, 0);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="dsctbl_8c.html#a3d51340647ade1a89f63e7b841e48176">set_segmdesc</a>(gdt + 1, 0xffffffff,   0x00000000, <a class="code" href="bootpack_8h.html#aae7bf000c9b2347034d3019c449969a7">AR_DATA32_RW</a>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="dsctbl_8c.html#a3d51340647ade1a89f63e7b841e48176">set_segmdesc</a>(gdt + 2, <a class="code" href="bootpack_8h.html#a1c4ed4d9a23955c3c4e12dc8b7feec3d">LIMIT_BOTPAK</a>, <a class="code" href="bootpack_8h.html#a5db4ad5a5a496ce866b0b0243fe51b37">ADR_BOTPAK</a>, <a class="code" href="bootpack_8h.html#ae2ebac5babbdd2c341a976d85515f725">AR_CODE32_ER</a>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="bootpack_8h.html#a90cc934e88e02161c8d0a52cc39025f3">load_gdtr</a>(<a class="code" href="bootpack_8h.html#a9e762b010f5bf967e1525ef9c9a48e63">LIMIT_GDT</a>, <a class="code" href="bootpack_8h.html#ad00465035496ab39b0d1770c33b0d797">ADR_GDT</a>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/* IDTの初期化 */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt;= <a class="code" href="bootpack_8h.html#ae2025f6f65e319f1a13cf84b8b435d08">LIMIT_IDT</a> / 8; i++) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a>(idt + i, 0, 0, 0);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="bootpack_8h.html#a97b93121cbb4ac660389d9943e7a6928">load_idtr</a>(<a class="code" href="bootpack_8h.html#ae2025f6f65e319f1a13cf84b8b435d08">LIMIT_IDT</a>, <a class="code" href="bootpack_8h.html#a67caec251af0f017fb3b502eee5db4f4">ADR_IDT</a>);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">/* IDTの設定 */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a>(idt + 0x0c, (<span class="keywordtype">int</span>) <a class="code" href="bootpack_8h.html#abcbe6ab7de11ead7c369c41cac634237">asm_inthandler0c</a>, 2 * 8, <a class="code" href="bootpack_8h.html#a2238997b8add9a8597ab9022519d2296">AR_INTGATE32</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a>(idt + 0x0d, (<span class="keywordtype">int</span>) <a class="code" href="bootpack_8h.html#a5dd851eafcfb3598ee2526eacb19bce9">asm_inthandler0d</a>, 2 * 8, <a class="code" href="bootpack_8h.html#a2238997b8add9a8597ab9022519d2296">AR_INTGATE32</a>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a>(idt + 0x20, (<span class="keywordtype">int</span>) <a class="code" href="bootpack_8h.html#abf9da88d9dae08dab301bc337996ca87">asm_inthandler20</a>, 2 * 8, <a class="code" href="bootpack_8h.html#a2238997b8add9a8597ab9022519d2296">AR_INTGATE32</a>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a>(idt + 0x21, (<span class="keywordtype">int</span>) <a class="code" href="bootpack_8h.html#a2f5878aef3f695aa18bea63f08d516c5">asm_inthandler21</a>, 2 * 8, <a class="code" href="bootpack_8h.html#a2238997b8add9a8597ab9022519d2296">AR_INTGATE32</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a>(idt + 0x2c, (<span class="keywordtype">int</span>) <a class="code" href="bootpack_8h.html#a6b3fdc28ef34e450937c94e90d3d003b">asm_inthandler2c</a>, 2 * 8, <a class="code" href="bootpack_8h.html#a2238997b8add9a8597ab9022519d2296">AR_INTGATE32</a>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a>(idt + 0x40, (<span class="keywordtype">int</span>) <a class="code" href="bootpack_8h.html#a3f0b9e8bde51dc3ed58642ff2f653454">asm_hrb_api</a>,      2 * 8, <a class="code" href="bootpack_8h.html#a2238997b8add9a8597ab9022519d2296">AR_INTGATE32</a> + 0x60);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="dsctbl_8c.html#a3d51340647ade1a89f63e7b841e48176">   36</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="dsctbl_8c.html#a3d51340647ade1a89f63e7b841e48176">set_segmdesc</a>(<span class="keyword">struct</span> <a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html">SEGMENT_DESCRIPTOR</a> *sd, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> limit, <span class="keywordtype">int</span> base, <span class="keywordtype">int</span> ar)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span> (limit &gt; 0xfffff) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        ar |= 0x8000; <span class="comment">/* G_bit = 1 */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        limit /= 0x1000;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    sd-&gt;<a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#a73e3e56c8f4a6e0c0bf62963f5a86852">limit_low</a>    = limit &amp; 0xffff;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    sd-&gt;<a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#a4c2fb52d75d24569f1c4b3e75582209a">base_low</a>     = base &amp; 0xffff;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    sd-&gt;<a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#ab705f9c0d8a6d82efd7207792fbe1309">base_mid</a>     = (base &gt;&gt; 16) &amp; 0xff;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    sd-&gt;<a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#ab191c608f0b6f7551e53d585b1a49e15">access_right</a> = ar &amp; 0xff;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    sd-&gt;<a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#a66c2acd1b7556b195df021dc1be6f68b">limit_high</a>   = ((limit &gt;&gt; 16) &amp; 0x0f) | ((ar &gt;&gt; 8) &amp; 0xf0);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    sd-&gt;<a class="code" href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#ae3e64989a1ab185b191752833787c0d3">base_high</a>    = (base &gt;&gt; 24) &amp; 0xff;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">   51</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a>(<span class="keyword">struct</span> <a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html">GATE_DESCRIPTOR</a> *gd, <span class="keywordtype">int</span> offset, <span class="keywordtype">int</span> <a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#ad5d6c3c777c110175afe6c9d34d66b64">selector</a>, <span class="keywordtype">int</span> ar)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;{</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    gd-&gt;<a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#aa29a6551d16faa8c479dcd16bdcd716b">offset_low</a>   = offset &amp; 0xffff;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    gd-&gt;<a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#ad5d6c3c777c110175afe6c9d34d66b64">selector</a>     = <a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#ad5d6c3c777c110175afe6c9d34d66b64">selector</a>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    gd-&gt;<a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#a4cab7f3312248dddab25c504f07a2542">dw_count</a>     = (ar &gt;&gt; 8) &amp; 0xff;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    gd-&gt;<a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#ab191c608f0b6f7551e53d585b1a49e15">access_right</a> = ar &amp; 0xff;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    gd-&gt;<a class="code" href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#a1f7c53b04646f0090e857ab45cd5bca4">offset_high</a>  = (offset &gt;&gt; 16) &amp; 0xffff;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="abootpack_8h_html_a97b93121cbb4ac660389d9943e7a6928"><div class="ttname"><a href="bootpack_8h.html#a97b93121cbb4ac660389d9943e7a6928">load_idtr</a></div><div class="ttdeci">void load_idtr(int limit, int addr)</div></div>
+<div class="ttc" id="astruct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r_html_ae3e64989a1ab185b191752833787c0d3"><div class="ttname"><a href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#ae3e64989a1ab185b191752833787c0d3">SEGMENT_DESCRIPTOR::base_high</a></div><div class="ttdeci">char base_high</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00086">bootpack.h:86</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a1c4ed4d9a23955c3c4e12dc8b7feec3d"><div class="ttname"><a href="bootpack_8h.html#a1c4ed4d9a23955c3c4e12dc8b7feec3d">LIMIT_BOTPAK</a></div><div class="ttdeci">#define LIMIT_BOTPAK</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00102">bootpack.h:101</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a2f5878aef3f695aa18bea63f08d516c5"><div class="ttname"><a href="bootpack_8h.html#a2f5878aef3f695aa18bea63f08d516c5">asm_inthandler21</a></div><div class="ttdeci">void asm_inthandler21(void)</div></div>
+<div class="ttc" id="adsctbl_8c_html_ad5b36851d779bf52f1398e31f55ddc9d"><div class="ttname"><a href="dsctbl_8c.html#ad5b36851d779bf52f1398e31f55ddc9d">init_gdtidt</a></div><div class="ttdeci">void init_gdtidt(void)</div><div class="ttdef"><b>Definition:</b> <a href="dsctbl_8c_source.html#l00005">dsctbl.c:5</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a5db4ad5a5a496ce866b0b0243fe51b37"><div class="ttname"><a href="bootpack_8h.html#a5db4ad5a5a496ce866b0b0243fe51b37">ADR_BOTPAK</a></div><div class="ttdeci">#define ADR_BOTPAK</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00101">bootpack.h:100</a></div></div>
+<div class="ttc" id="abootpack_8h_html_ad00465035496ab39b0d1770c33b0d797"><div class="ttname"><a href="bootpack_8h.html#ad00465035496ab39b0d1770c33b0d797">ADR_GDT</a></div><div class="ttdeci">#define ADR_GDT</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00099">bootpack.h:98</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a90cc934e88e02161c8d0a52cc39025f3"><div class="ttname"><a href="bootpack_8h.html#a90cc934e88e02161c8d0a52cc39025f3">load_gdtr</a></div><div class="ttdeci">void load_gdtr(int limit, int addr)</div></div>
+<div class="ttc" id="abootpack_8h_html_a9e762b010f5bf967e1525ef9c9a48e63"><div class="ttname"><a href="bootpack_8h.html#a9e762b010f5bf967e1525ef9c9a48e63">LIMIT_GDT</a></div><div class="ttdeci">#define LIMIT_GDT</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00100">bootpack.h:99</a></div></div>
+<div class="ttc" id="astruct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r_html_a73e3e56c8f4a6e0c0bf62963f5a86852"><div class="ttname"><a href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#a73e3e56c8f4a6e0c0bf62963f5a86852">SEGMENT_DESCRIPTOR::limit_low</a></div><div class="ttdeci">short limit_low</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00084">bootpack.h:84</a></div></div>
+<div class="ttc" id="abootpack_8h_html_ae2ebac5babbdd2c341a976d85515f725"><div class="ttname"><a href="bootpack_8h.html#ae2ebac5babbdd2c341a976d85515f725">AR_CODE32_ER</a></div><div class="ttdeci">#define AR_CODE32_ER</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00104">bootpack.h:103</a></div></div>
+<div class="ttc" id="astruct_g_a_t_e___d_e_s_c_r_i_p_t_o_r_html_a4cab7f3312248dddab25c504f07a2542"><div class="ttname"><a href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#a4cab7f3312248dddab25c504f07a2542">GATE_DESCRIPTOR::dw_count</a></div><div class="ttdeci">char dw_count</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00090">bootpack.h:90</a></div></div>
+<div class="ttc" id="astruct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r_html_ab705f9c0d8a6d82efd7207792fbe1309"><div class="ttname"><a href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#ab705f9c0d8a6d82efd7207792fbe1309">SEGMENT_DESCRIPTOR::base_mid</a></div><div class="ttdeci">char base_mid</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00085">bootpack.h:85</a></div></div>
+<div class="ttc" id="astruct_g_a_t_e___d_e_s_c_r_i_p_t_o_r_html_aa29a6551d16faa8c479dcd16bdcd716b"><div class="ttname"><a href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#aa29a6551d16faa8c479dcd16bdcd716b">GATE_DESCRIPTOR::offset_low</a></div><div class="ttdeci">short offset_low</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00089">bootpack.h:89</a></div></div>
+<div class="ttc" id="astruct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r_html_a66c2acd1b7556b195df021dc1be6f68b"><div class="ttname"><a href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#a66c2acd1b7556b195df021dc1be6f68b">SEGMENT_DESCRIPTOR::limit_high</a></div><div class="ttdeci">char limit_high</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00086">bootpack.h:86</a></div></div>
+<div class="ttc" id="astruct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html">SEGMENT_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00083">bootpack.h:83</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a67caec251af0f017fb3b502eee5db4f4"><div class="ttname"><a href="bootpack_8h.html#a67caec251af0f017fb3b502eee5db4f4">ADR_IDT</a></div><div class="ttdeci">#define ADR_IDT</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00097">bootpack.h:96</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a3f0b9e8bde51dc3ed58642ff2f653454"><div class="ttname"><a href="bootpack_8h.html#a3f0b9e8bde51dc3ed58642ff2f653454">asm_hrb_api</a></div><div class="ttdeci">void asm_hrb_api(void)</div></div>
+<div class="ttc" id="abootpack_8h_html"><div class="ttname"><a href="bootpack_8h.html">bootpack.h</a></div><div class="ttdoc">OS本体</div></div>
+<div class="ttc" id="astruct_g_a_t_e___d_e_s_c_r_i_p_t_o_r_html_a1f7c53b04646f0090e857ab45cd5bca4"><div class="ttname"><a href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#a1f7c53b04646f0090e857ab45cd5bca4">GATE_DESCRIPTOR::offset_high</a></div><div class="ttdeci">short offset_high</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00091">bootpack.h:91</a></div></div>
+<div class="ttc" id="adsctbl_8c_html_ac34fd5deede8babe82f6f858378bc3b5"><div class="ttname"><a href="dsctbl_8c.html#ac34fd5deede8babe82f6f858378bc3b5">set_gatedesc</a></div><div class="ttdeci">void set_gatedesc(struct GATE_DESCRIPTOR *gd, int offset, int selector, int ar)</div><div class="ttdef"><b>Definition:</b> <a href="dsctbl_8c_source.html#l00051">dsctbl.c:51</a></div></div>
+<div class="ttc" id="adsctbl_8c_html_a3d51340647ade1a89f63e7b841e48176"><div class="ttname"><a href="dsctbl_8c.html#a3d51340647ade1a89f63e7b841e48176">set_segmdesc</a></div><div class="ttdeci">void set_segmdesc(struct SEGMENT_DESCRIPTOR *sd, unsigned int limit, int base, int ar)</div><div class="ttdef"><b>Definition:</b> <a href="dsctbl_8c_source.html#l00036">dsctbl.c:36</a></div></div>
+<div class="ttc" id="abootpack_8h_html_ae2025f6f65e319f1a13cf84b8b435d08"><div class="ttname"><a href="bootpack_8h.html#ae2025f6f65e319f1a13cf84b8b435d08">LIMIT_IDT</a></div><div class="ttdeci">#define LIMIT_IDT</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00098">bootpack.h:97</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a2238997b8add9a8597ab9022519d2296"><div class="ttname"><a href="bootpack_8h.html#a2238997b8add9a8597ab9022519d2296">AR_INTGATE32</a></div><div class="ttdeci">#define AR_INTGATE32</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00107">bootpack.h:106</a></div></div>
+<div class="ttc" id="astruct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r_html_ab191c608f0b6f7551e53d585b1a49e15"><div class="ttname"><a href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#ab191c608f0b6f7551e53d585b1a49e15">SEGMENT_DESCRIPTOR::access_right</a></div><div class="ttdeci">char access_right</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00085">bootpack.h:85</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a5dd851eafcfb3598ee2526eacb19bce9"><div class="ttname"><a href="bootpack_8h.html#a5dd851eafcfb3598ee2526eacb19bce9">asm_inthandler0d</a></div><div class="ttdeci">void asm_inthandler0d(void)</div></div>
+<div class="ttc" id="astruct_g_a_t_e___d_e_s_c_r_i_p_t_o_r_html_ab191c608f0b6f7551e53d585b1a49e15"><div class="ttname"><a href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#ab191c608f0b6f7551e53d585b1a49e15">GATE_DESCRIPTOR::access_right</a></div><div class="ttdeci">char access_right</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00090">bootpack.h:90</a></div></div>
+<div class="ttc" id="abootpack_8h_html_abf9da88d9dae08dab301bc337996ca87"><div class="ttname"><a href="bootpack_8h.html#abf9da88d9dae08dab301bc337996ca87">asm_inthandler20</a></div><div class="ttdeci">void asm_inthandler20(void)</div></div>
+<div class="ttc" id="astruct_g_a_t_e___d_e_s_c_r_i_p_t_o_r_html_ad5d6c3c777c110175afe6c9d34d66b64"><div class="ttname"><a href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html#ad5d6c3c777c110175afe6c9d34d66b64">GATE_DESCRIPTOR::selector</a></div><div class="ttdeci">short selector</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00089">bootpack.h:89</a></div></div>
+<div class="ttc" id="astruct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r_html_a4c2fb52d75d24569f1c4b3e75582209a"><div class="ttname"><a href="struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html#a4c2fb52d75d24569f1c4b3e75582209a">SEGMENT_DESCRIPTOR::base_low</a></div><div class="ttdeci">short base_low</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00084">bootpack.h:84</a></div></div>
+<div class="ttc" id="astruct_g_a_t_e___d_e_s_c_r_i_p_t_o_r_html"><div class="ttname"><a href="struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r.html">GATE_DESCRIPTOR</a></div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00088">bootpack.h:88</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a6b3fdc28ef34e450937c94e90d3d003b"><div class="ttname"><a href="bootpack_8h.html#a6b3fdc28ef34e450937c94e90d3d003b">asm_inthandler2c</a></div><div class="ttdeci">void asm_inthandler2c(void)</div></div>
+<div class="ttc" id="abootpack_8h_html_abcbe6ab7de11ead7c369c41cac634237"><div class="ttname"><a href="bootpack_8h.html#abcbe6ab7de11ead7c369c41cac634237">asm_inthandler0c</a></div><div class="ttdeci">void asm_inthandler0c(void)</div></div>
+<div class="ttc" id="abootpack_8h_html_aae7bf000c9b2347034d3019c449969a7"><div class="ttname"><a href="bootpack_8h.html#aae7bf000c9b2347034d3019c449969a7">AR_DATA32_RW</a></div><div class="ttdeci">#define AR_DATA32_RW</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00103">bootpack.h:102</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_5ac131f68e424deb31069477f492d10b.html">haribote</a></li><li class="navelem"><a class="el" href="dsctbl_8c.html">dsctbl.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

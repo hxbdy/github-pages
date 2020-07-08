@@ -1,0 +1,16 @@
+digraph "HariMain"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="api_end",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#ad75f3bbaa1d5c628c07566f9eba2dba3",tooltip="終了API"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="api_initmalloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a2441c5574e36da0c19e2c0a47aea295e",tooltip="メモリマネージャの初期化を行う"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="api_malloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a0179a3e4366c71d17f9bdbf27042f6ec",tooltip="指定サイズのメモリを確保する"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="api_putstr0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#af73b71034391b78e6e7973d201eca509",tooltip="文字列表示する"];
+}

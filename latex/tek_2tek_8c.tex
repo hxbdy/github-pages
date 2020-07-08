@@ -1,0 +1,334 @@
+\hypertarget{tek_2tek_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/tek/tek.c ファイル}
+\label{tek_2tek_8c}\index{E:/Documents/emu84/Src/tek/tek.c@{E:/Documents/emu84/Src/tek/tek.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$setjmp.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+tek.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structtek___s_t_r___b_i_t_m_o_d_e_l}{tek\+\_\+\+S\+T\+R\+\_\+\+B\+I\+T\+M\+O\+D\+EL}}
+\item 
+struct \mbox{\hyperlink{structtek___s_t_r___p_r_b}{tek\+\_\+\+S\+T\+R\+\_\+\+P\+RB}}
+\item 
+struct \mbox{\hyperlink{structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b}{tek\+\_\+\+S\+T\+R\+\_\+\+P\+R\+B\+::tek\+\_\+\+S\+T\+R\+\_\+\+P\+R\+B\+\_\+\+PB}}
+\item 
+struct \mbox{\hyperlink{structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t}{tek\+\_\+\+S\+T\+R\+\_\+\+P\+R\+B\+::tek\+\_\+\+S\+T\+R\+\_\+\+P\+R\+B\+\_\+\+P\+B\+::tek\+\_\+\+S\+T\+R\+\_\+\+P\+R\+B\+\_\+\+P\+B\+ST}}
+\item 
+struct \mbox{\hyperlink{structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t}{tek\+\_\+\+S\+T\+R\+\_\+\+P\+R\+B\+::tek\+\_\+\+S\+T\+R\+\_\+\+P\+R\+B\+\_\+\+ST}}
+\item 
+struct \mbox{\hyperlink{structtek___s_t_r___r_n_g_d_e_c}{tek\+\_\+\+S\+T\+R\+\_\+\+R\+N\+G\+D\+EC}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{tek_2tek_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{tek_2tek_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}
+\item 
+typedef unsigned int \mbox{\hyperlink{tek_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}
+\item 
+typedef \mbox{\hyperlink{haribote_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{tek_2tek_8c_ade9db6e3c24e2cf05a8cb1be281736b5}{tek\+\_\+\+T\+P\+RB}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_a33eeed225ccff7762e2dc545fcd50769}{tek\+\_\+decode1}} (int siz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$p, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$q)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_a97a1b097510e1fc930bbc999823b0579}{tek\+\_\+decode2}} (int siz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$p, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$q)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_aeae25a1f7899cfaee256d7ebd0f53d82}{tek\+\_\+decode5}} (int siz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$p, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$q)
+\item 
+static unsigned int \mbox{\hyperlink{tek_2tek_8c_a5faa80891359abc566502563e97e6761}{tek\+\_\+getnum\+\_\+s7s}} (\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$$\ast$pp)
+\item 
+int \mbox{\hyperlink{tek_2tek_8c_aa88ef0b8b73e80fbcdf4e9a3d5da3844}{tek\+\_\+getsize}} (unsigned char $\ast$p)
+\item 
+int \mbox{\hyperlink{tek_2tek_8c_a65ad1e05ea04302ba9c7a2b8b2b2bf99}{tek\+\_\+decomp}} (unsigned char $\ast$p, char $\ast$q, int size)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_aedfa1c45aeeb79cdd7b3c7c0edd3518d}{tek\+\_\+lzrestore\+\_\+stk1}} (int srcsiz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$src, int outsiz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$q)
+\item 
+static unsigned int \mbox{\hyperlink{tek_2tek_8c_a6c0b499ae2034799059f68d80fb61d01}{tek\+\_\+getnum\+\_\+s7}} (\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$$\ast$pp)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_ac54cea4e34e29455707af40560399747}{tek\+\_\+lzrestore\+\_\+stk2}} (int srcsiz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$src, int outsiz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$q)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_af1af9649c0ff434aafce5fa4ac0c120d}{tek\+\_\+decmain5}} (int $\ast$work, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$src, int osiz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$q, int lc, int pb, int lp, int flags)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_adf0a0994681380da1f81b7bfb5ca44db}{tek\+\_\+lzrestore\+\_\+tek5}} (int srcsiz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$src, int outsiz, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$outbuf)
+\item 
+static void \mbox{\hyperlink{tek_2tek_8c_a6dccddf1b7cc7d769e8074a44e204172}{tek\+\_\+setbm5}} (struct \mbox{\hyperlink{structtek___s_t_r___b_i_t_m_o_d_e_l}{tek\+\_\+\+S\+T\+R\+\_\+\+B\+I\+T\+M\+O\+D\+EL}} $\ast$bm, int t, int m)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_acbe7c667aa9821c570ff3f9f892c885d}{tek\+\_\+rdget0}} (struct \mbox{\hyperlink{structtek___s_t_r___r_n_g_d_e_c}{tek\+\_\+\+S\+T\+R\+\_\+\+R\+N\+G\+D\+EC}} $\ast$rd, int n, int i)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_ad47117a8e15ddb593559472bfd1a913f}{tek\+\_\+rdget1}} (struct \mbox{\hyperlink{structtek___s_t_r___r_n_g_d_e_c}{tek\+\_\+\+S\+T\+R\+\_\+\+R\+N\+G\+D\+EC}} $\ast$rd, \mbox{\hyperlink{haribote_2tek_8c_ade9db6e3c24e2cf05a8cb1be281736b5}{tek\+\_\+\+T\+P\+RB}} $\ast$prob0, int n, int j, struct \mbox{\hyperlink{structtek___s_t_r___b_i_t_m_o_d_e_l}{tek\+\_\+\+S\+T\+R\+\_\+\+B\+I\+T\+M\+O\+D\+EL}} $\ast$bm)
+\item 
+static \mbox{\hyperlink{haribote_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{tek_2tek_8c_aef039e6537565330cab9657b27960b23}{tek\+\_\+revbit}} (\mbox{\hyperlink{haribote_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} data, int len)
+\item 
+static int \mbox{\hyperlink{tek_2tek_8c_a62bff5997b4c8b44edd54cde4d0ed647}{tek\+\_\+getlen5}} (struct \mbox{\hyperlink{structtek___s_t_r___r_n_g_d_e_c}{tek\+\_\+\+S\+T\+R\+\_\+\+R\+N\+G\+D\+EC}} $\ast$rd, int m, int s\+\_\+pos, int stk)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{tek_2tek_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}\label{tek_2tek_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}} 
+\index{tek.c@{tek.c}!NULL@{NULL}}
+\index{NULL@{NULL}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{NULL}{NULL}}
+{\footnotesize\ttfamily \#define N\+U\+LL~0}
+
+
+
+ tek.\+c の 5 行目に定義があります。
+
+
+
+\doxysubsection{型定義詳解}
+\mbox{\Hypertarget{tek_2tek_8c_ade9db6e3c24e2cf05a8cb1be281736b5}\label{tek_2tek_8c_ade9db6e3c24e2cf05a8cb1be281736b5}} 
+\index{tek.c@{tek.c}!tek\_TPRB@{tek\_TPRB}}
+\index{tek\_TPRB@{tek\_TPRB}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_TPRB}{tek\_TPRB}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{haribote_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} \mbox{\hyperlink{haribote_2tek_8c_ade9db6e3c24e2cf05a8cb1be281736b5}{tek\+\_\+\+T\+P\+RB}}}
+
+
+
+ tek.\+c の 8 行目に定義があります。
+
+\mbox{\Hypertarget{tek_2tek_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}\label{tek_2tek_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}} 
+\index{tek.c@{tek.c}!UCHAR@{UCHAR}}
+\index{UCHAR@{UCHAR}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{UCHAR}{UCHAR}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}}
+
+
+
+ tek.\+c の 6 行目に定義があります。
+
+\mbox{\Hypertarget{tek_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}\label{tek_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}} 
+\index{tek.c@{tek.c}!UINT32@{UINT32}}
+\index{UINT32@{UINT32}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{UINT32}{UINT32}}
+{\footnotesize\ttfamily typedef unsigned int \mbox{\hyperlink{haribote_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}
+
+
+
+ tek.\+c の 7 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{tek_2tek_8c_af1af9649c0ff434aafce5fa4ac0c120d}\label{tek_2tek_8c_af1af9649c0ff434aafce5fa4ac0c120d}} 
+\index{tek.c@{tek.c}!tek\_decmain5@{tek\_decmain5}}
+\index{tek\_decmain5@{tek\_decmain5}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_decmain5()}{tek\_decmain5()}}
+{\footnotesize\ttfamily static int tek\+\_\+decmain5 (\begin{DoxyParamCaption}\item[{int $\ast$}]{work,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{src,  }\item[{int}]{osiz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{q,  }\item[{int}]{lc,  }\item[{int}]{pb,  }\item[{int}]{lp,  }\item[{int}]{flags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 448 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{tek_2tek_8c_a33eeed225ccff7762e2dc545fcd50769}\label{tek_2tek_8c_a33eeed225ccff7762e2dc545fcd50769}} 
+\index{tek.c@{tek.c}!tek\_decode1@{tek\_decode1}}
+\index{tek\_decode1@{tek\_decode1}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_decode1()}{tek\_decode1()}}
+{\footnotesize\ttfamily static int tek\+\_\+decode1 (\begin{DoxyParamCaption}\item[{int}]{siz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 101 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{tek_2tek_8c_a97a1b097510e1fc930bbc999823b0579}\label{tek_2tek_8c_a97a1b097510e1fc930bbc999823b0579}} 
+\index{tek.c@{tek.c}!tek\_decode2@{tek\_decode2}}
+\index{tek\_decode2@{tek\_decode2}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_decode2()}{tek\_decode2()}}
+{\footnotesize\ttfamily static int tek\+\_\+decode2 (\begin{DoxyParamCaption}\item[{int}]{siz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 228 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{tek_2tek_8c_aeae25a1f7899cfaee256d7ebd0f53d82}\label{tek_2tek_8c_aeae25a1f7899cfaee256d7ebd0f53d82}} 
+\index{tek.c@{tek.c}!tek\_decode5@{tek\_decode5}}
+\index{tek\_decode5@{tek\_decode5}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_decode5()}{tek\_decode5()}}
+{\footnotesize\ttfamily static int tek\+\_\+decode5 (\begin{DoxyParamCaption}\item[{int}]{siz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{p,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 628 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{tek_2tek_8c_a65ad1e05ea04302ba9c7a2b8b2b2bf99}\label{tek_2tek_8c_a65ad1e05ea04302ba9c7a2b8b2b2bf99}} 
+\index{tek.c@{tek.c}!tek\_decomp@{tek\_decomp}}
+\index{tek\_decomp@{tek\_decomp}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_decomp()}{tek\_decomp()}}
+{\footnotesize\ttfamily int tek\+\_\+decomp (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{p,  }\item[{char $\ast$}]{q,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+ tek.\+c の 41 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{tek_2tek_8c_a62bff5997b4c8b44edd54cde4d0ed647}\label{tek_2tek_8c_a62bff5997b4c8b44edd54cde4d0ed647}} 
+\index{tek.c@{tek.c}!tek\_getlen5@{tek\_getlen5}}
+\index{tek\_getlen5@{tek\_getlen5}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_getlen5()}{tek\_getlen5()}}
+{\footnotesize\ttfamily static int tek\+\_\+getlen5 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtek___s_t_r___r_n_g_d_e_c}{tek\+\_\+\+S\+T\+R\+\_\+\+R\+N\+G\+D\+EC}} $\ast$}]{rd,  }\item[{int}]{m,  }\item[{int}]{s\+\_\+pos,  }\item[{int}]{stk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 426 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{tek_2tek_8c_a6c0b499ae2034799059f68d80fb61d01}\label{tek_2tek_8c_a6c0b499ae2034799059f68d80fb61d01}} 
+\index{tek.c@{tek.c}!tek\_getnum\_s7@{tek\_getnum\_s7}}
+\index{tek\_getnum\_s7@{tek\_getnum\_s7}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_getnum\_s7()}{tek\_getnum\_s7()}}
+{\footnotesize\ttfamily static unsigned int tek\+\_\+getnum\+\_\+s7 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$$\ast$}]{pp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 120 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 13
+\mbox{\Hypertarget{tek_2tek_8c_a5faa80891359abc566502563e97e6761}\label{tek_2tek_8c_a5faa80891359abc566502563e97e6761}} 
+\index{tek.c@{tek.c}!tek\_getnum\_s7s@{tek\_getnum\_s7s}}
+\index{tek\_getnum\_s7s@{tek\_getnum\_s7s}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_getnum\_s7s()}{tek\_getnum\_s7s()}}
+{\footnotesize\ttfamily static unsigned int tek\+\_\+getnum\+\_\+s7s (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$$\ast$}]{pp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 14 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 14
+\mbox{\Hypertarget{tek_2tek_8c_aa88ef0b8b73e80fbcdf4e9a3d5da3844}\label{tek_2tek_8c_aa88ef0b8b73e80fbcdf4e9a3d5da3844}} 
+\index{tek.c@{tek.c}!tek\_getsize@{tek\_getsize}}
+\index{tek\_getsize@{tek\_getsize}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_getsize()}{tek\_getsize()}}
+{\footnotesize\ttfamily int tek\+\_\+getsize (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+ tek.\+c の 28 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 15
+被呼び出し関係図\+:
+% FIG 16
+\mbox{\Hypertarget{tek_2tek_8c_aedfa1c45aeeb79cdd7b3c7c0edd3518d}\label{tek_2tek_8c_aedfa1c45aeeb79cdd7b3c7c0edd3518d}} 
+\index{tek.c@{tek.c}!tek\_lzrestore\_stk1@{tek\_lzrestore\_stk1}}
+\index{tek\_lzrestore\_stk1@{tek\_lzrestore\_stk1}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_lzrestore\_stk1()}{tek\_lzrestore\_stk1()}}
+{\footnotesize\ttfamily static int tek\+\_\+lzrestore\+\_\+stk1 (\begin{DoxyParamCaption}\item[{int}]{srcsiz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{src,  }\item[{int}]{outsiz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 57 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 17
+被呼び出し関係図\+:
+% FIG 18
+\mbox{\Hypertarget{tek_2tek_8c_ac54cea4e34e29455707af40560399747}\label{tek_2tek_8c_ac54cea4e34e29455707af40560399747}} 
+\index{tek.c@{tek.c}!tek\_lzrestore\_stk2@{tek\_lzrestore\_stk2}}
+\index{tek\_lzrestore\_stk2@{tek\_lzrestore\_stk2}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_lzrestore\_stk2()}{tek\_lzrestore\_stk2()}}
+{\footnotesize\ttfamily static int tek\+\_\+lzrestore\+\_\+stk2 (\begin{DoxyParamCaption}\item[{int}]{srcsiz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{src,  }\item[{int}]{outsiz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 137 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 19
+被呼び出し関係図\+:
+% FIG 20
+\mbox{\Hypertarget{tek_2tek_8c_adf0a0994681380da1f81b7bfb5ca44db}\label{tek_2tek_8c_adf0a0994681380da1f81b7bfb5ca44db}} 
+\index{tek.c@{tek.c}!tek\_lzrestore\_tek5@{tek\_lzrestore\_tek5}}
+\index{tek\_lzrestore\_tek5@{tek\_lzrestore\_tek5}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_lzrestore\_tek5()}{tek\_lzrestore\_tek5()}}
+{\footnotesize\ttfamily static int tek\+\_\+lzrestore\+\_\+tek5 (\begin{DoxyParamCaption}\item[{int}]{srcsiz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{src,  }\item[{int}]{outsiz,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{outbuf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 247 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 21
+被呼び出し関係図\+:
+% FIG 22
+\mbox{\Hypertarget{tek_2tek_8c_acbe7c667aa9821c570ff3f9f892c885d}\label{tek_2tek_8c_acbe7c667aa9821c570ff3f9f892c885d}} 
+\index{tek.c@{tek.c}!tek\_rdget0@{tek\_rdget0}}
+\index{tek\_rdget0@{tek\_rdget0}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_rdget0()}{tek\_rdget0()}}
+{\footnotesize\ttfamily static int tek\+\_\+rdget0 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtek___s_t_r___r_n_g_d_e_c}{tek\+\_\+\+S\+T\+R\+\_\+\+R\+N\+G\+D\+EC}} $\ast$}]{rd,  }\item[{int}]{n,  }\item[{int}]{i }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 338 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 23
+\mbox{\Hypertarget{tek_2tek_8c_ad47117a8e15ddb593559472bfd1a913f}\label{tek_2tek_8c_ad47117a8e15ddb593559472bfd1a913f}} 
+\index{tek.c@{tek.c}!tek\_rdget1@{tek\_rdget1}}
+\index{tek\_rdget1@{tek\_rdget1}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_rdget1()}{tek\_rdget1()}}
+{\footnotesize\ttfamily static int tek\+\_\+rdget1 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtek___s_t_r___r_n_g_d_e_c}{tek\+\_\+\+S\+T\+R\+\_\+\+R\+N\+G\+D\+EC}} $\ast$}]{rd,  }\item[{\mbox{\hyperlink{haribote_2tek_8c_ade9db6e3c24e2cf05a8cb1be281736b5}{tek\+\_\+\+T\+P\+RB}} $\ast$}]{prob0,  }\item[{int}]{n,  }\item[{int}]{j,  }\item[{struct \mbox{\hyperlink{structtek___s_t_r___b_i_t_m_o_d_e_l}{tek\+\_\+\+S\+T\+R\+\_\+\+B\+I\+T\+M\+O\+D\+EL}} $\ast$}]{bm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 355 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 24
+被呼び出し関係図\+:
+% FIG 25
+\mbox{\Hypertarget{tek_2tek_8c_aef039e6537565330cab9657b27960b23}\label{tek_2tek_8c_aef039e6537565330cab9657b27960b23}} 
+\index{tek.c@{tek.c}!tek\_revbit@{tek\_revbit}}
+\index{tek\_revbit@{tek\_revbit}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_revbit()}{tek\_revbit()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{haribote_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}} tek\+\_\+revbit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{haribote_2tek_8c_ae1e6edbbc26d6fbc71a90190d0266018}{U\+I\+N\+T32}}}]{data,  }\item[{int}]{len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 416 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 26
+\mbox{\Hypertarget{tek_2tek_8c_a6dccddf1b7cc7d769e8074a44e204172}\label{tek_2tek_8c_a6dccddf1b7cc7d769e8074a44e204172}} 
+\index{tek.c@{tek.c}!tek\_setbm5@{tek\_setbm5}}
+\index{tek\_setbm5@{tek\_setbm5}!tek.c@{tek.c}}
+\doxysubsubsection{\texorpdfstring{tek\_setbm5()}{tek\_setbm5()}}
+{\footnotesize\ttfamily static void tek\+\_\+setbm5 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{structtek___s_t_r___b_i_t_m_o_d_e_l}{tek\+\_\+\+S\+T\+R\+\_\+\+B\+I\+T\+M\+O\+D\+EL}} $\ast$}]{bm,  }\item[{int}]{t,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+ tek.\+c の 324 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 27

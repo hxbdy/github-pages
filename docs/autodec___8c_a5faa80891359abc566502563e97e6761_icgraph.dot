@@ -1,0 +1,25 @@
+digraph "tek_getnum_s7s"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="tek_getnum_s7s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="autodecomp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a60e24695b435771842589424baeba341",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="tek_decode1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a33eeed225ccff7762e2dc545fcd50769",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="tek_decode2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#a97a1b097510e1fc930bbc999823b0579",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="tek_decode5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#abe13430f4fcd8e23761dfecbdcdd74e7",tooltip=" "];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="tek_lzrestore_stk1",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#aedfa1c45aeeb79cdd7b3c7c0edd3518d",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="tek_lzrestore_stk2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$autodec___8c.html#ac54cea4e34e29455707af40560399747",tooltip=" "];
+  Node7 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

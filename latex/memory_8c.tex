@@ -1,0 +1,145 @@
+\hypertarget{memory_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/memory.c ファイル}
+\label{memory_8c}\index{E:/Documents/emu84/Src/haribote/memory.c@{E:/Documents/emu84/Src/haribote/memory.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+memory.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{memory_8c_ae69f0d6aa30520463a508eb1f9bab3d3}{E\+F\+L\+A\+G\+S\+\_\+\+A\+C\+\_\+\+B\+IT}}~0x00040000
+\item 
+\#define \mbox{\hyperlink{memory_8c_aa4f66a4fbbc03e7c8ce7dfe56d3184a7}{C\+R0\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+I\+S\+A\+B\+LE}}~0x60000000
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{memory_8c_a457da672ff618c99ae94b1227d45119b}{memtest}} (unsigned int start, unsigned int \mbox{\hyperlink{mmlplay_8c_a0834e80e6e6a203821e54e48a1ddeeff}{end}})
+\item 
+void \mbox{\hyperlink{memory_8c_a8b80d84323d02134be3ecc3f5d7cbcd2}{memman\+\_\+init}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man)
+\item 
+unsigned int \mbox{\hyperlink{memory_8c_ac82886c8091f3a36903241216bc48ace}{memman\+\_\+total}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man)
+\item 
+unsigned int \mbox{\hyperlink{memory_8c_a3a44e2ae3c434e982c7b906e00af831a}{memman\+\_\+alloc}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man, unsigned int size)
+\item 
+int \mbox{\hyperlink{memory_8c_a4d14a01ac8b137a266aafe80c5102a52}{memman\+\_\+free}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man, unsigned int addr, unsigned int size)
+\item 
+unsigned int \mbox{\hyperlink{memory_8c_a0b2b807ae567c0c3a0f5878b6ea95383}{memman\+\_\+alloc\+\_\+4k}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man, unsigned int size)
+\item 
+int \mbox{\hyperlink{memory_8c_acad1337e14f758731d8241ee094d1a86}{memman\+\_\+free\+\_\+4k}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man, unsigned int addr, unsigned int size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{memory_8c_aa4f66a4fbbc03e7c8ce7dfe56d3184a7}\label{memory_8c_aa4f66a4fbbc03e7c8ce7dfe56d3184a7}} 
+\index{memory.c@{memory.c}!CR0\_CACHE\_DISABLE@{CR0\_CACHE\_DISABLE}}
+\index{CR0\_CACHE\_DISABLE@{CR0\_CACHE\_DISABLE}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{CR0\_CACHE\_DISABLE}{CR0\_CACHE\_DISABLE}}
+{\footnotesize\ttfamily \#define C\+R0\+\_\+\+C\+A\+C\+H\+E\+\_\+\+D\+I\+S\+A\+B\+LE~0x60000000}
+
+
+
+ memory.\+c の 7 行目に定義があります。
+
+\mbox{\Hypertarget{memory_8c_ae69f0d6aa30520463a508eb1f9bab3d3}\label{memory_8c_ae69f0d6aa30520463a508eb1f9bab3d3}} 
+\index{memory.c@{memory.c}!EFLAGS\_AC\_BIT@{EFLAGS\_AC\_BIT}}
+\index{EFLAGS\_AC\_BIT@{EFLAGS\_AC\_BIT}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{EFLAGS\_AC\_BIT}{EFLAGS\_AC\_BIT}}
+{\footnotesize\ttfamily \#define E\+F\+L\+A\+G\+S\+\_\+\+A\+C\+\_\+\+B\+IT~0x00040000}
+
+
+
+ memory.\+c の 6 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{memory_8c_a3a44e2ae3c434e982c7b906e00af831a}\label{memory_8c_a3a44e2ae3c434e982c7b906e00af831a}} 
+\index{memory.c@{memory.c}!memman\_alloc@{memman\_alloc}}
+\index{memman\_alloc@{memman\_alloc}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{memman\_alloc()}{memman\_alloc()}}
+{\footnotesize\ttfamily unsigned int memman\+\_\+alloc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 60 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{memory_8c_a0b2b807ae567c0c3a0f5878b6ea95383}\label{memory_8c_a0b2b807ae567c0c3a0f5878b6ea95383}} 
+\index{memory.c@{memory.c}!memman\_alloc\_4k@{memman\_alloc\_4k}}
+\index{memman\_alloc\_4k@{memman\_alloc\_4k}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{memman\_alloc\_4k()}{memman\_alloc\_4k()}}
+{\footnotesize\ttfamily unsigned int memman\+\_\+alloc\+\_\+4k (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 146 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{memory_8c_a4d14a01ac8b137a266aafe80c5102a52}\label{memory_8c_a4d14a01ac8b137a266aafe80c5102a52}} 
+\index{memory.c@{memory.c}!memman\_free@{memman\_free}}
+\index{memman\_free@{memman\_free}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{memman\_free()}{memman\_free()}}
+{\footnotesize\ttfamily int memman\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man,  }\item[{unsigned int}]{addr,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 83 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{memory_8c_acad1337e14f758731d8241ee094d1a86}\label{memory_8c_acad1337e14f758731d8241ee094d1a86}} 
+\index{memory.c@{memory.c}!memman\_free\_4k@{memman\_free\_4k}}
+\index{memman\_free\_4k@{memman\_free\_4k}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{memman\_free\_4k()}{memman\_free\_4k()}}
+{\footnotesize\ttfamily int memman\+\_\+free\+\_\+4k (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man,  }\item[{unsigned int}]{addr,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 154 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{memory_8c_a8b80d84323d02134be3ecc3f5d7cbcd2}\label{memory_8c_a8b80d84323d02134be3ecc3f5d7cbcd2}} 
+\index{memory.c@{memory.c}!memman\_init@{memman\_init}}
+\index{memman\_init@{memman\_init}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{memman\_init()}{memman\_init()}}
+{\footnotesize\ttfamily void memman\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 41 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{memory_8c_ac82886c8091f3a36903241216bc48ace}\label{memory_8c_ac82886c8091f3a36903241216bc48ace}} 
+\index{memory.c@{memory.c}!memman\_total@{memman\_total}}
+\index{memman\_total@{memman\_total}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{memman\_total()}{memman\_total()}}
+{\footnotesize\ttfamily unsigned int memman\+\_\+total (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 50 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{memory_8c_a457da672ff618c99ae94b1227d45119b}\label{memory_8c_a457da672ff618c99ae94b1227d45119b}} 
+\index{memory.c@{memory.c}!memtest@{memtest}}
+\index{memtest@{memtest}!memory.c@{memory.c}}
+\doxysubsubsection{\texorpdfstring{memtest()}{memtest()}}
+{\footnotesize\ttfamily unsigned int memtest (\begin{DoxyParamCaption}\item[{unsigned int}]{start,  }\item[{unsigned int}]{end }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 8 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10

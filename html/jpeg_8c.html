@@ -1,0 +1,949 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/gview/jpeg.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('jpeg_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">jpeg.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="jpeg_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_d_l_l___s_t_r_p_i_c_e_n_v.html">DLL_STRPICENV</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_h_u_f_f.html">HUFF</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_j_p_e_g.html">JPEG</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:a3497e28fe0b8e4e7e04e6263a36be1f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a3497e28fe0b8e4e7e04e6263a36be1f1">PIXEL16</a>(r,  g,  b)&#160;&#160;&#160;((r) &lt;&lt; 11 | (g) &lt;&lt; 5 | (b))</td></tr>
+<tr class="separator:a3497e28fe0b8e4e7e04e6263a36be1f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9329e0db9dcff6eee5e675f1279b015"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ab9329e0db9dcff6eee5e675f1279b015">INIT_ZTABLE</a>(i,  b0,  b1,  b2,  b3)&#160;&#160;&#160;*(int *) &amp;zigzag_table[i] = b0 | b1 &lt;&lt; 8 | b2 &lt;&lt; 16 | b3 &lt;&lt; 24</td></tr>
+<tr class="separator:ab9329e0db9dcff6eee5e675f1279b015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:a4f4bb67531a9bf6f0b9c6ad76aeba587"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a></td></tr>
+<tr class="separator:a4f4bb67531a9bf6f0b9c6ad76aeba587"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a8b131e24e842265c14236b5293550b76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a8b131e24e842265c14236b5293550b76">info_JPEG</a> (struct <a class="el" href="struct_d_l_l___s_t_r_p_i_c_e_n_v.html">DLL_STRPICENV</a> *env, int *info, int size, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *fp)</td></tr>
+<tr class="separator:a8b131e24e842265c14236b5293550b76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32ac7167599fca6c65d46e1ffe1d6dfa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a32ac7167599fca6c65d46e1ffe1d6dfa">decode0_JPEG</a> (struct <a class="el" href="struct_d_l_l___s_t_r_p_i_c_e_n_v.html">DLL_STRPICENV</a> *env, int size, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *fp, int b_type, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *buf, int skip)</td></tr>
+<tr class="separator:a32ac7167599fca6c65d46e1ffe1d6dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85865d3501ff7e4f5ebf979c0d40ceb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#af85865d3501ff7e4f5ebf979c0d40ceb">jpeg_idct_init</a> (int base_img[64][64])</td></tr>
+<tr class="separator:af85865d3501ff7e4f5ebf979c0d40ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9661fc9579081c3d1e51504aae7cfdc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ac9661fc9579081c3d1e51504aae7cfdc">jpeg_init</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg)</td></tr>
+<tr class="separator:ac9661fc9579081c3d1e51504aae7cfdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac729f2057265bb901ddf65cc027250aa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ac729f2057265bb901ddf65cc027250aa">jpeg_decode</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg, unsigned char *rgb, int b_type)</td></tr>
+<tr class="separator:ac729f2057265bb901ddf65cc027250aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5f2c953e7c9d3bbd8d1b245be937e6"><td class="memItemLeft" align="right" valign="top">unsigned short&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a5e5f2c953e7c9d3bbd8d1b245be937e6">get_bits</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg, int bit)</td></tr>
+<tr class="separator:a5e5f2c953e7c9d3bbd8d1b245be937e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee495fc3d68cda768a72c0a5a1ff2ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#aeee495fc3d68cda768a72c0a5a1ff2ae">jpeg_sof</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg)</td></tr>
+<tr class="separator:aeee495fc3d68cda768a72c0a5a1ff2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b1daac36e4cafa54f028934996a4bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a95b1daac36e4cafa54f028934996a4bf">jpeg_dqt</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg)</td></tr>
+<tr class="separator:a95b1daac36e4cafa54f028934996a4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8b721d3ab2f23c9f6b6717a9eb2f3e1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ae8b721d3ab2f23c9f6b6717a9eb2f3e1">jpeg_dht</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg)</td></tr>
+<tr class="separator:ae8b721d3ab2f23c9f6b6717a9eb2f3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b2c79c816f7c1d55b1521ff227876b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a2b2c79c816f7c1d55b1521ff227876b1">jpeg_decode_init</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg)</td></tr>
+<tr class="separator:a2b2c79c816f7c1d55b1521ff227876b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8d38b1bdc16675a81d34df57ff80b03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ac8d38b1bdc16675a81d34df57ff80b03">jpeg_huff_decode</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg, int tc, int th)</td></tr>
+<tr class="separator:ac8d38b1bdc16675a81d34df57ff80b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1649d2a0a66453a0ba60c272c9168c65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a1649d2a0a66453a0ba60c272c9168c65">jpeg_idct</a> (int *block, int *dest, int base_img[64][64])</td></tr>
+<tr class="separator:a1649d2a0a66453a0ba60c272c9168c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af26bd2b95cb2e237382509718ebaeb4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#af26bd2b95cb2e237382509718ebaeb4b">jpeg_get_value</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg, int size)</td></tr>
+<tr class="separator:af26bd2b95cb2e237382509718ebaeb4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca23fc32257a1e5319c28a6c4759801c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#aca23fc32257a1e5319c28a6c4759801c">jpeg_decode_huff</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg, int scan, int *block, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *zigzag_table)</td></tr>
+<tr class="separator:aca23fc32257a1e5319c28a6c4759801c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e09240185c87c51b0a584e0342ecd85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a9e09240185c87c51b0a584e0342ecd85">jpeg_mcu_bitblt</a> (int *src, int *dest, int width, int x0, int y0, int x1, int y1)</td></tr>
+<tr class="separator:a9e09240185c87c51b0a584e0342ecd85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a399a92d992352ac542f103d2a7563456"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#a399a92d992352ac542f103d2a7563456">jpeg_decode_mcu</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg, <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *zigzag_table)</td></tr>
+<tr class="separator:a399a92d992352ac542f103d2a7563456"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8993dd486f5921708720053e0c1101b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="jpeg_8c.html#ab8993dd486f5921708720053e0c1101b">jpeg_decode_yuv</a> (<a class="el" href="struct_j_p_e_g.html">JPEG</a> *jpeg, int h, int v, unsigned char *rgb, int b_type)</td></tr>
+<tr class="separator:ab8993dd486f5921708720053e0c1101b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="ab9329e0db9dcff6eee5e675f1279b015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9329e0db9dcff6eee5e675f1279b015">&#9670;&nbsp;</a></span>INIT_ZTABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INIT_ZTABLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">i, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b3&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;*(int *) &amp;zigzag_table[i] = b0 | b1 &lt;&lt; 8 | b2 &lt;&lt; 16 | b3 &lt;&lt; 24</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00709">709</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a3497e28fe0b8e4e7e04e6263a36be1f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3497e28fe0b8e4e7e04e6263a36be1f1">&#9670;&nbsp;</a></span>PIXEL16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIXEL16</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">r, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">g, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">b&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((r) &lt;&lt; 11 | (g) &lt;&lt; 5 | (b))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00087">87</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">型定義詳解</h2>
+<a id="a4f4bb67531a9bf6f0b9c6ad76aeba587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f4bb67531a9bf6f0b9c6ad76aeba587">&#9670;&nbsp;</a></span>UCHAR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00015">15</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a32ac7167599fca6c65d46e1ffe1d6dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32ac7167599fca6c65d46e1ffe1d6dfa">&#9670;&nbsp;</a></span>decode0_JPEG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int decode0_JPEG </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_d_l_l___s_t_r_p_i_c_e_n_v.html">DLL_STRPICENV</a> *&#160;</td>
+          <td class="paramname"><em>env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>skip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00125">125</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a32ac7167599fca6c65d46e1ffe1d6dfa_cgraph.png" border="0" usemap="#jpeg_8c_a32ac7167599fca6c65d46e1ffe1d6dfa_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5e5f2c953e7c9d3bbd8d1b245be937e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5f2c953e7c9d3bbd8d1b245be937e6">&#9670;&nbsp;</a></span>get_bits()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned short get_bits </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00148">148</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a5e5f2c953e7c9d3bbd8d1b245be937e6_icgraph.png" border="0" usemap="#jpeg_8c_a5e5f2c953e7c9d3bbd8d1b245be937e6_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a8b131e24e842265c14236b5293550b76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b131e24e842265c14236b5293550b76">&#9670;&nbsp;</a></span>info_JPEG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int info_JPEG </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_d_l_l___s_t_r_p_i_c_e_n_v.html">DLL_STRPICENV</a> *&#160;</td>
+          <td class="paramname"><em>env</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>fp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00100">100</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a8b131e24e842265c14236b5293550b76_cgraph.png" border="0" usemap="#jpeg_8c_a8b131e24e842265c14236b5293550b76_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac729f2057265bb901ddf65cc027250aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac729f2057265bb901ddf65cc027250aa">&#9670;&nbsp;</a></span>jpeg_decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jpeg_decode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>rgb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00710">710</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_ac729f2057265bb901ddf65cc027250aa_cgraph.png" border="0" usemap="#jpeg_8c_ac729f2057265bb901ddf65cc027250aa_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_ac729f2057265bb901ddf65cc027250aa_icgraph.png" border="0" usemap="#jpeg_8c_ac729f2057265bb901ddf65cc027250aa_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aca23fc32257a1e5319c28a6c4759801c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca23fc32257a1e5319c28a6c4759801c">&#9670;&nbsp;</a></span>jpeg_decode_huff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_decode_huff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>scan</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>zigzag_table</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00538">538</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_aca23fc32257a1e5319c28a6c4759801c_cgraph.png" border="0" usemap="#jpeg_8c_aca23fc32257a1e5319c28a6c4759801c_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_aca23fc32257a1e5319c28a6c4759801c_icgraph.png" border="0" usemap="#jpeg_8c_aca23fc32257a1e5319c28a6c4759801c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2b2c79c816f7c1d55b1521ff227876b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b2c79c816f7c1d55b1521ff227876b1">&#9670;&nbsp;</a></span>jpeg_decode_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jpeg_decode_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00404">404</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a2b2c79c816f7c1d55b1521ff227876b1_icgraph.png" border="0" usemap="#jpeg_8c_a2b2c79c816f7c1d55b1521ff227876b1_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a399a92d992352ac542f103d2a7563456"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a399a92d992352ac542f103d2a7563456">&#9670;&nbsp;</a></span>jpeg_decode_mcu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_decode_mcu </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *&#160;</td>
+          <td class="paramname"><em>zigzag_table</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00605">605</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a399a92d992352ac542f103d2a7563456_cgraph.png" border="0" usemap="#jpeg_8c_a399a92d992352ac542f103d2a7563456_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a399a92d992352ac542f103d2a7563456_icgraph.png" border="0" usemap="#jpeg_8c_a399a92d992352ac542f103d2a7563456_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab8993dd486f5921708720053e0c1101b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8993dd486f5921708720053e0c1101b">&#9670;&nbsp;</a></span>jpeg_decode_yuv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_decode_yuv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>rgb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>b_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00642">642</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_ab8993dd486f5921708720053e0c1101b_icgraph.png" border="0" usemap="#jpeg_8c_ab8993dd486f5921708720053e0c1101b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae8b721d3ab2f23c9f6b6717a9eb2f3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8b721d3ab2f23c9f6b6717a9eb2f3e1">&#9670;&nbsp;</a></span>jpeg_dht()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_dht </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00263">263</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_ae8b721d3ab2f23c9f6b6717a9eb2f3e1_icgraph.png" border="0" usemap="#jpeg_8c_ae8b721d3ab2f23c9f6b6717a9eb2f3e1_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a95b1daac36e4cafa54f028934996a4bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b1daac36e4cafa54f028934996a4bf">&#9670;&nbsp;</a></span>jpeg_dqt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_dqt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00223">223</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a95b1daac36e4cafa54f028934996a4bf_icgraph.png" border="0" usemap="#jpeg_8c_a95b1daac36e4cafa54f028934996a4bf_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af26bd2b95cb2e237382509718ebaeb4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af26bd2b95cb2e237382509718ebaeb4b">&#9670;&nbsp;</a></span>jpeg_get_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_get_value </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00523">523</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_af26bd2b95cb2e237382509718ebaeb4b_cgraph.png" border="0" usemap="#jpeg_8c_af26bd2b95cb2e237382509718ebaeb4b_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_af26bd2b95cb2e237382509718ebaeb4b_icgraph.png" border="0" usemap="#jpeg_8c_af26bd2b95cb2e237382509718ebaeb4b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac8d38b1bdc16675a81d34df57ff80b03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8d38b1bdc16675a81d34df57ff80b03">&#9670;&nbsp;</a></span>jpeg_huff_decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_huff_decode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>th</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00434">434</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_ac8d38b1bdc16675a81d34df57ff80b03_cgraph.png" border="0" usemap="#jpeg_8c_ac8d38b1bdc16675a81d34df57ff80b03_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_ac8d38b1bdc16675a81d34df57ff80b03_icgraph.png" border="0" usemap="#jpeg_8c_ac8d38b1bdc16675a81d34df57ff80b03_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a1649d2a0a66453a0ba60c272c9168c65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1649d2a0a66453a0ba60c272c9168c65">&#9670;&nbsp;</a></span>jpeg_idct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jpeg_idct </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>block</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>base_img</em>[64][64]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00501">501</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a1649d2a0a66453a0ba60c272c9168c65_icgraph.png" border="0" usemap="#jpeg_8c_a1649d2a0a66453a0ba60c272c9168c65_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af85865d3501ff7e4f5ebf979c0d40ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85865d3501ff7e4f5ebf979c0d40ceb">&#9670;&nbsp;</a></span>jpeg_idct_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jpeg_idct_init </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>base_img</em>[64][64]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00460">460</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_af85865d3501ff7e4f5ebf979c0d40ceb_icgraph.png" border="0" usemap="#jpeg_8c_af85865d3501ff7e4f5ebf979c0d40ceb_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac9661fc9579081c3d1e51504aae7cfdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9661fc9579081c3d1e51504aae7cfdc">&#9670;&nbsp;</a></span>jpeg_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00325">325</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_ac9661fc9579081c3d1e51504aae7cfdc_cgraph.png" border="0" usemap="#jpeg_8c_ac9661fc9579081c3d1e51504aae7cfdc_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_ac9661fc9579081c3d1e51504aae7cfdc_icgraph.png" border="0" usemap="#jpeg_8c_ac9661fc9579081c3d1e51504aae7cfdc_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9e09240185c87c51b0a584e0342ecd85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e09240185c87c51b0a584e0342ecd85">&#9670;&nbsp;</a></span>jpeg_mcu_bitblt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jpeg_mcu_bitblt </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>src</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>dest</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00586">586</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_a9e09240185c87c51b0a584e0342ecd85_icgraph.png" border="0" usemap="#jpeg_8c_a9e09240185c87c51b0a584e0342ecd85_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aeee495fc3d68cda768a72c0a5a1ff2ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee495fc3d68cda768a72c0a5a1ff2ae">&#9670;&nbsp;</a></span>jpeg_sof()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int jpeg_sof </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_j_p_e_g.html">JPEG</a> *&#160;</td>
+          <td class="paramname"><em>jpeg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="jpeg_8c_source.html">jpeg.c</a> の <a class="el" href="jpeg_8c_source.html#l00186">186</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="jpeg_8c_aeee495fc3d68cda768a72c0a5a1ff2ae_icgraph.png" border="0" usemap="#jpeg_8c_aeee495fc3d68cda768a72c0a5a1ff2ae_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_e243e4e770b3a31f6bc6e1be76afb315.html">gview</a></li><li class="navelem"><a class="el" href="jpeg_8c.html">jpeg.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+\hypertarget{struct_s_h_e_e_t}{}\doxysection{S\+H\+E\+ET 構造体}
+\label{struct_s_h_e_e_t}\index{SHEET@{SHEET}}
+
+
+シート構造体  
+
+
+
+
+{\ttfamily \#include $<$bootpack.\+h$>$}
+
+
+
+S\+H\+E\+ET 連携図
+% FIG 0
+\doxysubsection*{フィールド}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{struct_s_h_e_e_t_ac8ed9b9edf72a0bbde1ba01f0c67ef73}{buf}}
+\begin{DoxyCompactList}\small\item\em ウインドウの描画内容を記憶する番地 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_s_h_e_e_t_a2da0ec9e51df17af96ce210a6657c520}{bxsize}}
+\begin{DoxyCompactList}\small\item\em ウインドウ全体の大きさは bxsize $\ast$ bysize \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_s_h_e_e_t_a571cd501397caae1d1abda3ceb6c8baf}{bysize}}
+\item 
+int \mbox{\hyperlink{struct_s_h_e_e_t_a26a0c886dd275476e0c69941d2f8ce51}{vx0}}
+\begin{DoxyCompactList}\small\item\em ウインドウのグローバル座標 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_s_h_e_e_t_a855e91c744b0e0cefe5197683a74ddc0}{vy0}}
+\item 
+int \mbox{\hyperlink{struct_s_h_e_e_t_a9b8e66300a22384e4588358221ec6e53}{col\+\_\+inv}}
+\begin{DoxyCompactList}\small\item\em 透明色番号 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_s_h_e_e_t_ad12fc34ce789bce6c8a05d8a17138534}{height}}
+\begin{DoxyCompactList}\small\item\em ウインドウの高さ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_s_h_e_e_t_ac8bf36fe0577cba66bccda3a6f7e80a4}{flags}}
+\begin{DoxyCompactList}\small\item\em 各種フラグ \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ \mbox{\hyperlink{struct_s_h_e_e_t_ad82b949cf9dbb14eaf239fce1f99e0e4}{ctl}}
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{struct_s_h_e_e_t_a7fe1ff75994f750d6033e66517438109}{task}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+シート構造体 
+
+ bootpack.\+h の 169 行目に定義があります。
+
+
+
+\doxysubsection{フィールド詳解}
+\mbox{\Hypertarget{struct_s_h_e_e_t_ac8ed9b9edf72a0bbde1ba01f0c67ef73}\label{struct_s_h_e_e_t_ac8ed9b9edf72a0bbde1ba01f0c67ef73}} 
+\index{SHEET@{SHEET}!buf@{buf}}
+\index{buf@{buf}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily unsigned char$\ast$ buf}
+
+
+
+ウインドウの描画内容を記憶する番地 
+
+
+
+ bootpack.\+h の 171 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_a2da0ec9e51df17af96ce210a6657c520}\label{struct_s_h_e_e_t_a2da0ec9e51df17af96ce210a6657c520}} 
+\index{SHEET@{SHEET}!bxsize@{bxsize}}
+\index{bxsize@{bxsize}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{bxsize}{bxsize}}
+{\footnotesize\ttfamily int bxsize}
+
+
+
+ウインドウ全体の大きさは bxsize $\ast$ bysize 
+
+
+
+ bootpack.\+h の 173 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_a571cd501397caae1d1abda3ceb6c8baf}\label{struct_s_h_e_e_t_a571cd501397caae1d1abda3ceb6c8baf}} 
+\index{SHEET@{SHEET}!bysize@{bysize}}
+\index{bysize@{bysize}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{bysize}{bysize}}
+{\footnotesize\ttfamily int bysize}
+
+
+
+ bootpack.\+h の 173 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_a9b8e66300a22384e4588358221ec6e53}\label{struct_s_h_e_e_t_a9b8e66300a22384e4588358221ec6e53}} 
+\index{SHEET@{SHEET}!col\_inv@{col\_inv}}
+\index{col\_inv@{col\_inv}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{col\_inv}{col\_inv}}
+{\footnotesize\ttfamily int col\+\_\+inv}
+
+
+
+透明色番号 
+
+
+
+ bootpack.\+h の 177 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_ad82b949cf9dbb14eaf239fce1f99e0e4}\label{struct_s_h_e_e_t_ad82b949cf9dbb14eaf239fce1f99e0e4}} 
+\index{SHEET@{SHEET}!ctl@{ctl}}
+\index{ctl@{ctl}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{ctl}{ctl}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}}$\ast$ ctl}
+
+
+
+ bootpack.\+h の 182 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_ac8bf36fe0577cba66bccda3a6f7e80a4}\label{struct_s_h_e_e_t_ac8bf36fe0577cba66bccda3a6f7e80a4}} 
+\index{SHEET@{SHEET}!flags@{flags}}
+\index{flags@{flags}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily int flags}
+
+
+
+各種フラグ 
+
+
+
+ bootpack.\+h の 181 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_ad12fc34ce789bce6c8a05d8a17138534}\label{struct_s_h_e_e_t_ad12fc34ce789bce6c8a05d8a17138534}} 
+\index{SHEET@{SHEET}!height@{height}}
+\index{height@{height}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int height}
+
+
+
+ウインドウの高さ 
+
+
+
+ bootpack.\+h の 179 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_a7fe1ff75994f750d6033e66517438109}\label{struct_s_h_e_e_t_a7fe1ff75994f750d6033e66517438109}} 
+\index{SHEET@{SHEET}!task@{task}}
+\index{task@{task}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{task}{task}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ task}
+
+
+
+ bootpack.\+h の 183 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_a26a0c886dd275476e0c69941d2f8ce51}\label{struct_s_h_e_e_t_a26a0c886dd275476e0c69941d2f8ce51}} 
+\index{SHEET@{SHEET}!vx0@{vx0}}
+\index{vx0@{vx0}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{vx0}{vx0}}
+{\footnotesize\ttfamily int vx0}
+
+
+
+ウインドウのグローバル座標 
+
+
+
+ bootpack.\+h の 175 行目に定義があります。
+
+\mbox{\Hypertarget{struct_s_h_e_e_t_a855e91c744b0e0cefe5197683a74ddc0}\label{struct_s_h_e_e_t_a855e91c744b0e0cefe5197683a74ddc0}} 
+\index{SHEET@{SHEET}!vy0@{vy0}}
+\index{vy0@{vy0}!SHEET@{SHEET}}
+\doxysubsubsection{\texorpdfstring{vy0}{vy0}}
+{\footnotesize\ttfamily int vy0}
+
+
+
+ bootpack.\+h の 175 行目に定義があります。
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/emu84/\+Src/haribote/\mbox{\hyperlink{bootpack_8h}{bootpack.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,315 @@
+\hypertarget{jpeg_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/gview/jpeg.c ファイル}
+\label{jpeg_8c}\index{E:/Documents/emu84/Src/gview/jpeg.c@{E:/Documents/emu84/Src/gview/jpeg.c}}
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}}
+\item 
+struct \mbox{\hyperlink{struct_h_u_f_f}{H\+U\+FF}}
+\item 
+struct \mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{jpeg_8c_a3497e28fe0b8e4e7e04e6263a36be1f1}{P\+I\+X\+E\+L16}}(r,  g,  b)~((r) $<$$<$ 11 $\vert$ (g) $<$$<$ 5 $\vert$ (b))
+\item 
+\#define \mbox{\hyperlink{jpeg_8c_ab9329e0db9dcff6eee5e675f1279b015}{I\+N\+I\+T\+\_\+\+Z\+T\+A\+B\+LE}}(i,  b0,  b1,  b2,  b3)~$\ast$(int $\ast$) \&zigzag\+\_\+table\mbox{[}i\mbox{]} = b0 $\vert$ b1 $<$$<$ 8 $\vert$ b2 $<$$<$ 16 $\vert$ b3 $<$$<$ 24
+\end{DoxyCompactItemize}
+\doxysubsection*{型定義}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{jpeg_8c_a8b131e24e842265c14236b5293550b76}{info\+\_\+\+J\+P\+EG}} (struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$env, int $\ast$info, int size, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$fp)
+\item 
+int \mbox{\hyperlink{jpeg_8c_a32ac7167599fca6c65d46e1ffe1d6dfa}{decode0\+\_\+\+J\+P\+EG}} (struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$env, int size, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$fp, int b\+\_\+type, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$buf, int skip)
+\item 
+void \mbox{\hyperlink{jpeg_8c_af85865d3501ff7e4f5ebf979c0d40ceb}{jpeg\+\_\+idct\+\_\+init}} (int base\+\_\+img\mbox{[}64\mbox{]}\mbox{[}64\mbox{]})
+\item 
+int \mbox{\hyperlink{jpeg_8c_ac9661fc9579081c3d1e51504aae7cfdc}{jpeg\+\_\+init}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg)
+\item 
+void \mbox{\hyperlink{jpeg_8c_ac729f2057265bb901ddf65cc027250aa}{jpeg\+\_\+decode}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg, unsigned char $\ast$rgb, int b\+\_\+type)
+\item 
+unsigned short \mbox{\hyperlink{jpeg_8c_a5e5f2c953e7c9d3bbd8d1b245be937e6}{get\+\_\+bits}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg, int bit)
+\item 
+int \mbox{\hyperlink{jpeg_8c_aeee495fc3d68cda768a72c0a5a1ff2ae}{jpeg\+\_\+sof}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg)
+\item 
+int \mbox{\hyperlink{jpeg_8c_a95b1daac36e4cafa54f028934996a4bf}{jpeg\+\_\+dqt}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg)
+\item 
+int \mbox{\hyperlink{jpeg_8c_ae8b721d3ab2f23c9f6b6717a9eb2f3e1}{jpeg\+\_\+dht}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg)
+\item 
+void \mbox{\hyperlink{jpeg_8c_a2b2c79c816f7c1d55b1521ff227876b1}{jpeg\+\_\+decode\+\_\+init}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg)
+\item 
+int \mbox{\hyperlink{jpeg_8c_ac8d38b1bdc16675a81d34df57ff80b03}{jpeg\+\_\+huff\+\_\+decode}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg, int tc, int th)
+\item 
+void \mbox{\hyperlink{jpeg_8c_a1649d2a0a66453a0ba60c272c9168c65}{jpeg\+\_\+idct}} (int $\ast$block, int $\ast$dest, int base\+\_\+img\mbox{[}64\mbox{]}\mbox{[}64\mbox{]})
+\item 
+int \mbox{\hyperlink{jpeg_8c_af26bd2b95cb2e237382509718ebaeb4b}{jpeg\+\_\+get\+\_\+value}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg, int size)
+\item 
+int \mbox{\hyperlink{jpeg_8c_aca23fc32257a1e5319c28a6c4759801c}{jpeg\+\_\+decode\+\_\+huff}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg, int scan, int $\ast$block, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$zigzag\+\_\+table)
+\item 
+void \mbox{\hyperlink{jpeg_8c_a9e09240185c87c51b0a584e0342ecd85}{jpeg\+\_\+mcu\+\_\+bitblt}} (int $\ast$src, int $\ast$dest, int width, int x0, int y0, int x1, int y1)
+\item 
+int \mbox{\hyperlink{jpeg_8c_a399a92d992352ac542f103d2a7563456}{jpeg\+\_\+decode\+\_\+mcu}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg, \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$zigzag\+\_\+table)
+\item 
+int \mbox{\hyperlink{jpeg_8c_ab8993dd486f5921708720053e0c1101b}{jpeg\+\_\+decode\+\_\+yuv}} (\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$jpeg, int h, int v, unsigned char $\ast$rgb, int b\+\_\+type)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{jpeg_8c_ab9329e0db9dcff6eee5e675f1279b015}\label{jpeg_8c_ab9329e0db9dcff6eee5e675f1279b015}} 
+\index{jpeg.c@{jpeg.c}!INIT\_ZTABLE@{INIT\_ZTABLE}}
+\index{INIT\_ZTABLE@{INIT\_ZTABLE}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{INIT\_ZTABLE}{INIT\_ZTABLE}}
+{\footnotesize\ttfamily \#define I\+N\+I\+T\+\_\+\+Z\+T\+A\+B\+LE(\begin{DoxyParamCaption}\item[{}]{i,  }\item[{}]{b0,  }\item[{}]{b1,  }\item[{}]{b2,  }\item[{}]{b3 }\end{DoxyParamCaption})~$\ast$(int $\ast$) \&zigzag\+\_\+table\mbox{[}i\mbox{]} = b0 $\vert$ b1 $<$$<$ 8 $\vert$ b2 $<$$<$ 16 $\vert$ b3 $<$$<$ 24}
+
+
+
+ jpeg.\+c の 709 行目に定義があります。
+
+\mbox{\Hypertarget{jpeg_8c_a3497e28fe0b8e4e7e04e6263a36be1f1}\label{jpeg_8c_a3497e28fe0b8e4e7e04e6263a36be1f1}} 
+\index{jpeg.c@{jpeg.c}!PIXEL16@{PIXEL16}}
+\index{PIXEL16@{PIXEL16}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{PIXEL16}{PIXEL16}}
+{\footnotesize\ttfamily \#define P\+I\+X\+E\+L16(\begin{DoxyParamCaption}\item[{}]{r,  }\item[{}]{g,  }\item[{}]{b }\end{DoxyParamCaption})~((r) $<$$<$ 11 $\vert$ (g) $<$$<$ 5 $\vert$ (b))}
+
+
+
+ jpeg.\+c の 87 行目に定義があります。
+
+
+
+\doxysubsection{型定義詳解}
+\mbox{\Hypertarget{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}\label{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}} 
+\index{jpeg.c@{jpeg.c}!UCHAR@{UCHAR}}
+\index{UCHAR@{UCHAR}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{UCHAR}{UCHAR}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}}}
+
+
+
+ jpeg.\+c の 15 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{jpeg_8c_a32ac7167599fca6c65d46e1ffe1d6dfa}\label{jpeg_8c_a32ac7167599fca6c65d46e1ffe1d6dfa}} 
+\index{jpeg.c@{jpeg.c}!decode0\_JPEG@{decode0\_JPEG}}
+\index{decode0\_JPEG@{decode0\_JPEG}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{decode0\_JPEG()}{decode0\_JPEG()}}
+{\footnotesize\ttfamily int decode0\+\_\+\+J\+P\+EG (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$}]{env,  }\item[{int}]{size,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{fp,  }\item[{int}]{b\+\_\+type,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{buf,  }\item[{int}]{skip }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 125 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 0
+\mbox{\Hypertarget{jpeg_8c_a5e5f2c953e7c9d3bbd8d1b245be937e6}\label{jpeg_8c_a5e5f2c953e7c9d3bbd8d1b245be937e6}} 
+\index{jpeg.c@{jpeg.c}!get\_bits@{get\_bits}}
+\index{get\_bits@{get\_bits}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{get\_bits()}{get\_bits()}}
+{\footnotesize\ttfamily unsigned short get\+\_\+bits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg,  }\item[{int}]{bit }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 148 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{jpeg_8c_a8b131e24e842265c14236b5293550b76}\label{jpeg_8c_a8b131e24e842265c14236b5293550b76}} 
+\index{jpeg.c@{jpeg.c}!info\_JPEG@{info\_JPEG}}
+\index{info\_JPEG@{info\_JPEG}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{info\_JPEG()}{info\_JPEG()}}
+{\footnotesize\ttfamily int info\+\_\+\+J\+P\+EG (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_d_l_l___s_t_r_p_i_c_e_n_v}{D\+L\+L\+\_\+\+S\+T\+R\+P\+I\+C\+E\+NV}} $\ast$}]{env,  }\item[{int $\ast$}]{info,  }\item[{int}]{size,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 100 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{jpeg_8c_ac729f2057265bb901ddf65cc027250aa}\label{jpeg_8c_ac729f2057265bb901ddf65cc027250aa}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_decode@{jpeg\_decode}}
+\index{jpeg\_decode@{jpeg\_decode}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_decode()}{jpeg\_decode()}}
+{\footnotesize\ttfamily void jpeg\+\_\+decode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg,  }\item[{unsigned char $\ast$}]{rgb,  }\item[{int}]{b\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 710 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{jpeg_8c_aca23fc32257a1e5319c28a6c4759801c}\label{jpeg_8c_aca23fc32257a1e5319c28a6c4759801c}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_decode\_huff@{jpeg\_decode\_huff}}
+\index{jpeg\_decode\_huff@{jpeg\_decode\_huff}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_decode\_huff()}{jpeg\_decode\_huff()}}
+{\footnotesize\ttfamily int jpeg\+\_\+decode\+\_\+huff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg,  }\item[{int}]{scan,  }\item[{int $\ast$}]{block,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{zigzag\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 538 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{jpeg_8c_a2b2c79c816f7c1d55b1521ff227876b1}\label{jpeg_8c_a2b2c79c816f7c1d55b1521ff227876b1}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_decode\_init@{jpeg\_decode\_init}}
+\index{jpeg\_decode\_init@{jpeg\_decode\_init}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_decode\_init()}{jpeg\_decode\_init()}}
+{\footnotesize\ttfamily void jpeg\+\_\+decode\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 404 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{jpeg_8c_a399a92d992352ac542f103d2a7563456}\label{jpeg_8c_a399a92d992352ac542f103d2a7563456}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_decode\_mcu@{jpeg\_decode\_mcu}}
+\index{jpeg\_decode\_mcu@{jpeg\_decode\_mcu}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_decode\_mcu()}{jpeg\_decode\_mcu()}}
+{\footnotesize\ttfamily int jpeg\+\_\+decode\+\_\+mcu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg,  }\item[{\mbox{\hyperlink{jpeg_8c_a4f4bb67531a9bf6f0b9c6ad76aeba587}{U\+C\+H\+AR}} $\ast$}]{zigzag\+\_\+table }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 605 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{jpeg_8c_ab8993dd486f5921708720053e0c1101b}\label{jpeg_8c_ab8993dd486f5921708720053e0c1101b}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_decode\_yuv@{jpeg\_decode\_yuv}}
+\index{jpeg\_decode\_yuv@{jpeg\_decode\_yuv}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_decode\_yuv()}{jpeg\_decode\_yuv()}}
+{\footnotesize\ttfamily int jpeg\+\_\+decode\+\_\+yuv (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg,  }\item[{int}]{h,  }\item[{int}]{v,  }\item[{unsigned char $\ast$}]{rgb,  }\item[{int}]{b\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 642 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{jpeg_8c_ae8b721d3ab2f23c9f6b6717a9eb2f3e1}\label{jpeg_8c_ae8b721d3ab2f23c9f6b6717a9eb2f3e1}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_dht@{jpeg\_dht}}
+\index{jpeg\_dht@{jpeg\_dht}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_dht()}{jpeg\_dht()}}
+{\footnotesize\ttfamily int jpeg\+\_\+dht (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 263 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{jpeg_8c_a95b1daac36e4cafa54f028934996a4bf}\label{jpeg_8c_a95b1daac36e4cafa54f028934996a4bf}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_dqt@{jpeg\_dqt}}
+\index{jpeg\_dqt@{jpeg\_dqt}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_dqt()}{jpeg\_dqt()}}
+{\footnotesize\ttfamily int jpeg\+\_\+dqt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 223 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{jpeg_8c_af26bd2b95cb2e237382509718ebaeb4b}\label{jpeg_8c_af26bd2b95cb2e237382509718ebaeb4b}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_get\_value@{jpeg\_get\_value}}
+\index{jpeg\_get\_value@{jpeg\_get\_value}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_get\_value()}{jpeg\_get\_value()}}
+{\footnotesize\ttfamily int jpeg\+\_\+get\+\_\+value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 523 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 13
+被呼び出し関係図\+:
+% FIG 14
+\mbox{\Hypertarget{jpeg_8c_ac8d38b1bdc16675a81d34df57ff80b03}\label{jpeg_8c_ac8d38b1bdc16675a81d34df57ff80b03}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_huff\_decode@{jpeg\_huff\_decode}}
+\index{jpeg\_huff\_decode@{jpeg\_huff\_decode}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_huff\_decode()}{jpeg\_huff\_decode()}}
+{\footnotesize\ttfamily int jpeg\+\_\+huff\+\_\+decode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg,  }\item[{int}]{tc,  }\item[{int}]{th }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 434 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 15
+被呼び出し関係図\+:
+% FIG 16
+\mbox{\Hypertarget{jpeg_8c_a1649d2a0a66453a0ba60c272c9168c65}\label{jpeg_8c_a1649d2a0a66453a0ba60c272c9168c65}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_idct@{jpeg\_idct}}
+\index{jpeg\_idct@{jpeg\_idct}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_idct()}{jpeg\_idct()}}
+{\footnotesize\ttfamily void jpeg\+\_\+idct (\begin{DoxyParamCaption}\item[{int $\ast$}]{block,  }\item[{int $\ast$}]{dest,  }\item[{int}]{base\+\_\+img\mbox{[}64\mbox{]}\mbox{[}64\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 501 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 17
+\mbox{\Hypertarget{jpeg_8c_af85865d3501ff7e4f5ebf979c0d40ceb}\label{jpeg_8c_af85865d3501ff7e4f5ebf979c0d40ceb}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_idct\_init@{jpeg\_idct\_init}}
+\index{jpeg\_idct\_init@{jpeg\_idct\_init}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_idct\_init()}{jpeg\_idct\_init()}}
+{\footnotesize\ttfamily void jpeg\+\_\+idct\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{base\+\_\+img\mbox{[}64\mbox{]}\mbox{[}64\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 460 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 18
+\mbox{\Hypertarget{jpeg_8c_ac9661fc9579081c3d1e51504aae7cfdc}\label{jpeg_8c_ac9661fc9579081c3d1e51504aae7cfdc}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_init@{jpeg\_init}}
+\index{jpeg\_init@{jpeg\_init}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_init()}{jpeg\_init()}}
+{\footnotesize\ttfamily int jpeg\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 325 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 19
+被呼び出し関係図\+:
+% FIG 20
+\mbox{\Hypertarget{jpeg_8c_a9e09240185c87c51b0a584e0342ecd85}\label{jpeg_8c_a9e09240185c87c51b0a584e0342ecd85}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_mcu\_bitblt@{jpeg\_mcu\_bitblt}}
+\index{jpeg\_mcu\_bitblt@{jpeg\_mcu\_bitblt}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_mcu\_bitblt()}{jpeg\_mcu\_bitblt()}}
+{\footnotesize\ttfamily void jpeg\+\_\+mcu\+\_\+bitblt (\begin{DoxyParamCaption}\item[{int $\ast$}]{src,  }\item[{int $\ast$}]{dest,  }\item[{int}]{width,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 586 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 21
+\mbox{\Hypertarget{jpeg_8c_aeee495fc3d68cda768a72c0a5a1ff2ae}\label{jpeg_8c_aeee495fc3d68cda768a72c0a5a1ff2ae}} 
+\index{jpeg.c@{jpeg.c}!jpeg\_sof@{jpeg\_sof}}
+\index{jpeg\_sof@{jpeg\_sof}!jpeg.c@{jpeg.c}}
+\doxysubsubsection{\texorpdfstring{jpeg\_sof()}{jpeg\_sof()}}
+{\footnotesize\ttfamily int jpeg\+\_\+sof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_j_p_e_g}{J\+P\+EG}} $\ast$}]{jpeg }\end{DoxyParamCaption})}
+
+
+
+ jpeg.\+c の 186 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 22

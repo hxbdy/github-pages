@@ -1,0 +1,96 @@
+\hypertarget{tview_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/tview/tview.c ファイル}
+\label{tview_8c}\index{E:/Documents/emu84/Src/tview/tview.c@{E:/Documents/emu84/Src/tview/tview.c}}
+{\ttfamily \#include \char`\"{}apilib.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+tview.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{tview_8c_a7418ba78f60266251451ba514438fb26}{strtol}} (char $\ast$s, char $\ast$$\ast$endp, int base)
+\item 
+char $\ast$ \mbox{\hyperlink{tview_8c_acb434f56082da1ca2df92ef0ef5d1cca}{skipspace}} (char $\ast$p)
+\item 
+void \mbox{\hyperlink{tview_8c_a54a9ebd4dc8e09f17793c9b8930b95fe}{textview}} (int win, int w, int h, int xskip, char $\ast$p, int tab, int lang)
+\item 
+char $\ast$ \mbox{\hyperlink{tview_8c_a6c56d48bc6780d78d31c05ebed51ac1e}{lineview}} (int win, int w, int y, int xskip, unsigned char $\ast$p, int tab, int lang)
+\item 
+int \mbox{\hyperlink{tview_8c_a5dfcef88838300f8bc90cedf2f1c01cb}{puttab}} (int x, int w, int xskip, char $\ast$s, int tab)
+\item 
+void \mbox{\hyperlink{tview_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}{Hari\+Main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{tview_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}\label{tview_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}} 
+\index{tview.c@{tview.c}!HariMain@{HariMain}}
+\index{HariMain@{HariMain}!tview.c@{tview.c}}
+\doxysubsubsection{\texorpdfstring{HariMain()}{HariMain()}}
+{\footnotesize\ttfamily void Hari\+Main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ tview.\+c の 12 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{tview_8c_a6c56d48bc6780d78d31c05ebed51ac1e}\label{tview_8c_a6c56d48bc6780d78d31c05ebed51ac1e}} 
+\index{tview.c@{tview.c}!lineview@{lineview}}
+\index{lineview@{lineview}!tview.c@{tview.c}}
+\doxysubsubsection{\texorpdfstring{lineview()}{lineview()}}
+{\footnotesize\ttfamily char $\ast$ lineview (\begin{DoxyParamCaption}\item[{int}]{win,  }\item[{int}]{w,  }\item[{int}]{y,  }\item[{int}]{xskip,  }\item[{unsigned char $\ast$}]{p,  }\item[{int}]{tab,  }\item[{int}]{lang }\end{DoxyParamCaption})}
+
+
+
+ tview.\+c の 178 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{tview_8c_a5dfcef88838300f8bc90cedf2f1c01cb}\label{tview_8c_a5dfcef88838300f8bc90cedf2f1c01cb}} 
+\index{tview.c@{tview.c}!puttab@{puttab}}
+\index{puttab@{puttab}!tview.c@{tview.c}}
+\doxysubsubsection{\texorpdfstring{puttab()}{puttab()}}
+{\footnotesize\ttfamily int puttab (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{w,  }\item[{int}]{xskip,  }\item[{char $\ast$}]{s,  }\item[{int}]{tab }\end{DoxyParamCaption})}
+
+
+
+ tview.\+c の 264 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{tview_8c_acb434f56082da1ca2df92ef0ef5d1cca}\label{tview_8c_acb434f56082da1ca2df92ef0ef5d1cca}} 
+\index{tview.c@{tview.c}!skipspace@{skipspace}}
+\index{skipspace@{skipspace}!tview.c@{tview.c}}
+\doxysubsubsection{\texorpdfstring{skipspace()}{skipspace()}}
+{\footnotesize\ttfamily char$\ast$ skipspace (\begin{DoxyParamCaption}\item[{char $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+ tview.\+c の 161 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{tview_8c_a7418ba78f60266251451ba514438fb26}\label{tview_8c_a7418ba78f60266251451ba514438fb26}} 
+\index{tview.c@{tview.c}!strtol@{strtol}}
+\index{strtol@{strtol}!tview.c@{tview.c}}
+\doxysubsubsection{\texorpdfstring{strtol()}{strtol()}}
+{\footnotesize\ttfamily int strtol (\begin{DoxyParamCaption}\item[{char $\ast$}]{s,  }\item[{char $\ast$$\ast$}]{endp,  }\item[{int}]{base }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{tview_8c_a54a9ebd4dc8e09f17793c9b8930b95fe}\label{tview_8c_a54a9ebd4dc8e09f17793c9b8930b95fe}} 
+\index{tview.c@{tview.c}!textview@{textview}}
+\index{textview@{textview}!tview.c@{tview.c}}
+\doxysubsubsection{\texorpdfstring{textview()}{textview()}}
+{\footnotesize\ttfamily void textview (\begin{DoxyParamCaption}\item[{int}]{win,  }\item[{int}]{w,  }\item[{int}]{h,  }\item[{int}]{xskip,  }\item[{char $\ast$}]{p,  }\item[{int}]{tab,  }\item[{int}]{lang }\end{DoxyParamCaption})}
+
+
+
+ tview.\+c の 167 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8

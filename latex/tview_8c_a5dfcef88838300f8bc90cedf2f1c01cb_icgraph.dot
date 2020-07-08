@@ -1,0 +1,14 @@
+digraph "puttab"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="puttab",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="lineview",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tview_8c.html#a6c56d48bc6780d78d31c05ebed51ac1e",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="textview",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tview_8c.html#a54a9ebd4dc8e09f17793c9b8930b95fe",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$tview_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+}

@@ -1,0 +1,19 @@
+digraph "end"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="end",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mmlplay_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="memtest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory_8c.html#a457da672ff618c99ae94b1227d45119b",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="set_palette",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic_8c.html#a78bbb55ac088109aba6d34f9ffc0523a",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="init_palette",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic_8c.html#a42a564ae1340c89e85f7ef58c6f8e46e",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

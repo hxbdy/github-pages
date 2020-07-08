@@ -1,0 +1,28 @@
+digraph "SHEET"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="SHEET",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="シート構造体"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" task" ];
+  Node2 [label="TASK",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_a_s_k.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fhandle" ];
+  Node3 [label="FILEHANDLE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_f_i_l_e_h_a_n_d_l_e.html",tooltip=" "];
+  Node4 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cons" ];
+  Node4 [label="CONSOLE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_c_o_n_s_o_l_e.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sht" ];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" timer" ];
+  Node5 [label="TIMER",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_i_m_e_r.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fifo" ];
+  Node6 [label="FIFO32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_f_i_f_o32.html",tooltip=" "];
+  Node2 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" task" ];
+  Node5 -> Node5 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" next" ];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ldt" ];
+  Node7 [label="SEGMENT_DESCRIPTOR",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r.html",tooltip=" "];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" fifo" ];
+  Node8 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" tss" ];
+  Node8 [label="TSS32",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_t_s_s32.html",tooltip=" "];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" ctl" ];
+  Node9 [label="SHTCTL",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_s_h_t_c_t_l.html",tooltip="シートコントロール構造体"];
+  Node1 -> Node9 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sheets0\nsheets" ];
+}

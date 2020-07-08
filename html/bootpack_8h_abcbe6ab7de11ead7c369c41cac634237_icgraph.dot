@@ -1,0 +1,12 @@
+digraph "asm_inthandler0c"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="asm_inthandler0c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="init_gdtidt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dsctbl_8c.html#ad5b36851d779bf52f1398e31f55ddc9d",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+}

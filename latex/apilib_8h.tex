@@ -5,6 +5,8 @@
 定義はアセンブラで記述されています  
 
 
+被依存関係図\+:
+% FIG 0
 \doxysubsection*{関数}
 \begin{DoxyCompactItemize}
 \item 
@@ -67,7 +69,7 @@ int \mbox{\hyperlink{apilib_8h_a870f813d01b59733542e973ddea889a3}{api\+\_\+getla
 \doxysubsection{詳解}
 定義はアセンブラで記述されています 
 
-hrb\+\_\+api()で\+A\+P\+Iの識別と処理を行っています 
+\mbox{\hyperlink{bootpack_8h_ae3a2b95ac62166efc071caeb9e7b0db1}{hrb\+\_\+api()}}で\+A\+P\+Iの識別と処理を行っています 
 
 \doxysubsection{関数詳解}
 \mbox{\Hypertarget{apilib_8h_a7281fa22543ded51848051b846503a4a}\label{apilib_8h_a7281fa22543ded51848051b846503a4a}} 
@@ -83,6 +85,8 @@ hrb\+\_\+api()で\+A\+P\+Iの識別と処理を行っています
 \begin{DoxyReturn}{戻り値}
 int タイマ\+ID 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 1
 \mbox{\Hypertarget{apilib_8h_a6720e7ce2a56bf3453a951bda7e1c8c5}\label{apilib_8h_a6720e7ce2a56bf3453a951bda7e1c8c5}} 
 \index{apilib.h@{apilib.h}!api\_beep@{api\_beep}}
 \index{api\_beep@{api\_beep}!apilib.h@{apilib.h}}
@@ -98,6 +102,8 @@ B\+E\+E\+Pサウンドを使用して音を鳴らします Q\+E\+M\+Uには\+B\+
 {\em tone} & 周波数\mbox{[}m\+Hz\mbox{]},0を指定するとミュートになります \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 2
 \mbox{\Hypertarget{apilib_8h_aeb90139a38ff3dcdc979ba44ad1837b9}\label{apilib_8h_aeb90139a38ff3dcdc979ba44ad1837b9}} 
 \index{apilib.h@{apilib.h}!api\_boxfilwin@{api\_boxfilwin}}
 \index{api\_boxfilwin@{api\_boxfilwin}!apilib.h@{apilib.h}}
@@ -123,6 +129,8 @@ B\+E\+E\+Pサウンドを使用して音を鳴らします Q\+E\+M\+Uには\+B\+
 {\em col} & 色 \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 3
 \mbox{\Hypertarget{apilib_8h_aed5545eaba9d012e841709fa8349407f}\label{apilib_8h_aed5545eaba9d012e841709fa8349407f}} 
 \index{apilib.h@{apilib.h}!api\_closewin@{api\_closewin}}
 \index{api\_closewin@{api\_closewin}!apilib.h@{apilib.h}}
@@ -138,6 +146,8 @@ B\+E\+E\+Pサウンドを使用して音を鳴らします Q\+E\+M\+Uには\+B\+
 {\em win} & ウインドウ\+ID \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 4
 \mbox{\Hypertarget{apilib_8h_ac8bc75d7141e66f2637c025f84047776}\label{apilib_8h_ac8bc75d7141e66f2637c025f84047776}} 
 \index{apilib.h@{apilib.h}!api\_cmdline@{api\_cmdline}}
 \index{api\_cmdline@{api\_cmdline}!apilib.h@{apilib.h}}
@@ -158,6 +168,8 @@ B\+E\+E\+Pサウンドを使用して音を鳴らします Q\+E\+M\+Uには\+B\+
 \begin{DoxyReturn}{戻り値}
 int 格納したバイト数 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 5
 \mbox{\Hypertarget{apilib_8h_ad75f3bbaa1d5c628c07566f9eba2dba3}\label{apilib_8h_ad75f3bbaa1d5c628c07566f9eba2dba3}} 
 \index{apilib.h@{apilib.h}!api\_end@{api\_end}}
 \index{api\_end@{api\_end}!apilib.h@{apilib.h}}
@@ -171,6 +183,8 @@ int 格納したバイト数
 \begin{DoxyNote}{覚え書き}
 A\+P\+Iが0以外を返す場合アプリを強制終了する 
 \end{DoxyNote}
+被呼び出し関係図\+:
+% FIG 6
 \mbox{\Hypertarget{apilib_8h_a18d60de48f71d49a1a27e773efedbd02}\label{apilib_8h_a18d60de48f71d49a1a27e773efedbd02}} 
 \index{apilib.h@{apilib.h}!api\_fclose@{api\_fclose}}
 \index{api\_fclose@{api\_fclose}!apilib.h@{apilib.h}}
@@ -186,6 +200,8 @@ A\+P\+Iが0以外を返す場合アプリを強制終了する
 {\em fhandle} & ファイルハンドル \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 7
 \mbox{\Hypertarget{apilib_8h_a155758bfd8c2b64c8e6d765143be6c84}\label{apilib_8h_a155758bfd8c2b64c8e6d765143be6c84}} 
 \index{apilib.h@{apilib.h}!api\_fopen@{api\_fopen}}
 \index{api\_fopen@{api\_fopen}!apilib.h@{apilib.h}}
@@ -204,6 +220,8 @@ A\+P\+Iが0以外を返す場合アプリを強制終了する
 \begin{DoxyReturn}{戻り値}
 int ファイルハンドル 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 8
 \mbox{\Hypertarget{apilib_8h_a7d1641cc295ecdcb06e69af9391a6b85}\label{apilib_8h_a7d1641cc295ecdcb06e69af9391a6b85}} 
 \index{apilib.h@{apilib.h}!api\_fread@{api\_fread}}
 \index{api\_fread@{api\_fread}!apilib.h@{apilib.h}}
@@ -226,6 +244,8 @@ int ファイルハンドル
 \begin{DoxyReturn}{戻り値}
 int 今回読み込んだバイト数 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 9
 \mbox{\Hypertarget{apilib_8h_a12623aee50de3bafb6f8b498a9d4a3dc}\label{apilib_8h_a12623aee50de3bafb6f8b498a9d4a3dc}} 
 \index{apilib.h@{apilib.h}!api\_free@{api\_free}}
 \index{api\_free@{api\_free}!apilib.h@{apilib.h}}
@@ -297,6 +317,8 @@ int 今回読み込んだバイト数
 \begin{DoxyReturn}{戻り値}
 int ファイルサイズ 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 10
 \mbox{\Hypertarget{apilib_8h_a3140d6ff11e61bca4fb683b070bfd836}\label{apilib_8h_a3140d6ff11e61bca4fb683b070bfd836}} 
 \index{apilib.h@{apilib.h}!api\_getkey@{api\_getkey}}
 \index{api\_getkey@{api\_getkey}!apilib.h@{apilib.h}}
@@ -315,6 +337,8 @@ int ファイルサイズ
 \begin{DoxyReturn}{戻り値}
 int 入力された文字コード 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 11
 \mbox{\Hypertarget{apilib_8h_a870f813d01b59733542e973ddea889a3}\label{apilib_8h_a870f813d01b59733542e973ddea889a3}} 
 \index{apilib.h@{apilib.h}!api\_getlang@{api\_getlang}}
 \index{api\_getlang@{api\_getlang}!apilib.h@{apilib.h}}
@@ -328,6 +352,8 @@ int 入力された文字コード
 \begin{DoxyReturn}{戻り値}
 int 0\+:English A\+S\+C\+II 1\+:Japanese Shift-\/\+J\+IS 2\+:Japanese E\+UC 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 12
 \mbox{\Hypertarget{apilib_8h_a2441c5574e36da0c19e2c0a47aea295e}\label{apilib_8h_a2441c5574e36da0c19e2c0a47aea295e}} 
 \index{apilib.h@{apilib.h}!api\_initmalloc@{api\_initmalloc}}
 \index{api\_initmalloc@{api\_initmalloc}!apilib.h@{apilib.h}}
@@ -338,6 +364,8 @@ int 0\+:English A\+S\+C\+II 1\+:Japanese Shift-\/\+J\+IS 2\+:Japanese E\+UC
 
 メモリマネージャの初期化を行う 
 
+被呼び出し関係図\+:
+% FIG 13
 \mbox{\Hypertarget{apilib_8h_ad3724dfdc6e74ecd81e767d46f83ea95}\label{apilib_8h_ad3724dfdc6e74ecd81e767d46f83ea95}} 
 \index{apilib.h@{apilib.h}!api\_inittimer@{api\_inittimer}}
 \index{api\_inittimer@{api\_inittimer}!apilib.h@{apilib.h}}
@@ -355,6 +383,8 @@ int 0\+:English A\+S\+C\+II 1\+:Japanese Shift-\/\+J\+IS 2\+:Japanese E\+UC
 {\em data} & 送信データ \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 14
 \mbox{\Hypertarget{apilib_8h_a2b593e4e5ea81664266fb89778be10a5}\label{apilib_8h_a2b593e4e5ea81664266fb89778be10a5}} 
 \index{apilib.h@{apilib.h}!api\_linewin@{api\_linewin}}
 \index{api\_linewin@{api\_linewin}!apilib.h@{apilib.h}}
@@ -380,6 +410,8 @@ int 0\+:English A\+S\+C\+II 1\+:Japanese Shift-\/\+J\+IS 2\+:Japanese E\+UC
 {\em col} & 色 \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 15
 \mbox{\Hypertarget{apilib_8h_a0179a3e4366c71d17f9bdbf27042f6ec}\label{apilib_8h_a0179a3e4366c71d17f9bdbf27042f6ec}} 
 \index{apilib.h@{apilib.h}!api\_malloc@{api\_malloc}}
 \index{api\_malloc@{api\_malloc}!apilib.h@{apilib.h}}
@@ -398,6 +430,8 @@ int 0\+:English A\+S\+C\+II 1\+:Japanese Shift-\/\+J\+IS 2\+:Japanese E\+UC
 \begin{DoxyReturn}{戻り値}
 char$\ast$ 確保したメモリ番地 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 16
 \mbox{\Hypertarget{apilib_8h_afdd7af308e25e9174f9a5d8544a5874a}\label{apilib_8h_afdd7af308e25e9174f9a5d8544a5874a}} 
 \index{apilib.h@{apilib.h}!api\_openwin@{api\_openwin}}
 \index{api\_openwin@{api\_openwin}!apilib.h@{apilib.h}}
@@ -424,6 +458,8 @@ char$\ast$ 確保したメモリ番地
 \begin{DoxyReturn}{戻り値}
 int ウインドウ\+ID 
 \end{DoxyReturn}
+被呼び出し関係図\+:
+% FIG 17
 \mbox{\Hypertarget{apilib_8h_abe8db6906a558f3e5bcfd87b33ce723f}\label{apilib_8h_abe8db6906a558f3e5bcfd87b33ce723f}} 
 \index{apilib.h@{apilib.h}!api\_point@{api\_point}}
 \index{api\_point@{api\_point}!apilib.h@{apilib.h}}
@@ -445,6 +481,8 @@ int ウインドウ\+ID
 {\em col} & 色 \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 18
 \mbox{\Hypertarget{apilib_8h_a4dd7566dc4a8f4d93a4e4ae357500231}\label{apilib_8h_a4dd7566dc4a8f4d93a4e4ae357500231}} 
 \index{apilib.h@{apilib.h}!api\_putchar@{api\_putchar}}
 \index{api\_putchar@{api\_putchar}!apilib.h@{apilib.h}}
@@ -460,6 +498,8 @@ int ウインドウ\+ID
 {\em c} & A\+S\+C\+I\+I文字コード \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 19
 \mbox{\Hypertarget{apilib_8h_af73b71034391b78e6e7973d201eca509}\label{apilib_8h_af73b71034391b78e6e7973d201eca509}} 
 \index{apilib.h@{apilib.h}!api\_putstr0@{api\_putstr0}}
 \index{api\_putstr0@{api\_putstr0}!apilib.h@{apilib.h}}
@@ -475,6 +515,8 @@ int ウインドウ\+ID
 {\em s} & 文字列 \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 20
 \mbox{\Hypertarget{apilib_8h_aad31de21c5e19d21891894191023c134}\label{apilib_8h_aad31de21c5e19d21891894191023c134}} 
 \index{apilib.h@{apilib.h}!api\_putstr1@{api\_putstr1}}
 \index{api\_putstr1@{api\_putstr1}!apilib.h@{apilib.h}}
@@ -492,6 +534,8 @@ int ウインドウ\+ID
 {\em l} & 表示する文字数 \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 21
 \mbox{\Hypertarget{apilib_8h_a0f22d2c11b8765707b2f30f188eb659c}\label{apilib_8h_a0f22d2c11b8765707b2f30f188eb659c}} 
 \index{apilib.h@{apilib.h}!api\_putstrwin@{api\_putstrwin}}
 \index{api\_putstrwin@{api\_putstrwin}!apilib.h@{apilib.h}}
@@ -517,6 +561,8 @@ int ウインドウ\+ID
 {\em str} & 文字列 \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 22
 \mbox{\Hypertarget{apilib_8h_a18d54e0d52c16733738a357e44c4e22c}\label{apilib_8h_a18d54e0d52c16733738a357e44c4e22c}} 
 \index{apilib.h@{apilib.h}!api\_refreshwin@{api\_refreshwin}}
 \index{api\_refreshwin@{api\_refreshwin}!apilib.h@{apilib.h}}
@@ -540,6 +586,8 @@ int ウインドウ\+ID
 {\em y1} & 終点y \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 23
 \mbox{\Hypertarget{apilib_8h_adad7e0777138ab2d73e913e837823576}\label{apilib_8h_adad7e0777138ab2d73e913e837823576}} 
 \index{apilib.h@{apilib.h}!api\_settimer@{api\_settimer}}
 \index{api\_settimer@{api\_settimer}!apilib.h@{apilib.h}}
@@ -557,3 +605,5 @@ int ウインドウ\+ID
 {\em time} & 発火時間\mbox{[}100=1sec\mbox{]} \\
 \hline
 \end{DoxyParams}
+被呼び出し関係図\+:
+% FIG 24

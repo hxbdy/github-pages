@@ -1,0 +1,141 @@
+\hypertarget{keyboard_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/keyboard.c ファイル}
+\label{keyboard_8c}\index{E:/Documents/emu84/Src/haribote/keyboard.c@{E:/Documents/emu84/Src/haribote/keyboard.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+keyboard.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{keyboard_8c_aecbeb49435311e470e44e1ef33e1e0dc}{P\+O\+R\+T\+\_\+\+K\+E\+Y\+S\+TA}}~0x0064
+\item 
+\#define \mbox{\hyperlink{keyboard_8c_a76542314fe11eb39b22f93ff8187b08f}{K\+E\+Y\+S\+T\+A\+\_\+\+S\+E\+N\+D\+\_\+\+N\+O\+T\+R\+E\+A\+DY}}~0x02
+\item 
+\#define \mbox{\hyperlink{keyboard_8c_a1c7cab517e1c1b2f4c280715c07d6df2}{K\+E\+Y\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+O\+DE}}~0x60
+\item 
+\#define \mbox{\hyperlink{keyboard_8c_a4b408031943644b59d1a7f94218477b6}{K\+B\+C\+\_\+\+M\+O\+DE}}~0x47
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{keyboard_8c_a6bf05bd24f3dc98e872a0653a13a3e3b}{inthandler21}} (int $\ast$esp)
+\item 
+void \mbox{\hyperlink{keyboard_8c_a04ae938de161573bab61a7d806704cd8}{wait\+\_\+\+K\+B\+C\+\_\+sendready}} (void)
+\item 
+void \mbox{\hyperlink{keyboard_8c_acd24e074d17cc0f29ae3808498b6d012}{init\+\_\+keyboard}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int data0)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$ \mbox{\hyperlink{keyboard_8c_a986fa656e412a3f692a4a9f2ff071f50}{keyfifo}}
+\item 
+int \mbox{\hyperlink{keyboard_8c_afb9b53f331177823bdd6dfaabb34aaf6}{keydata0}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{keyboard_8c_a4b408031943644b59d1a7f94218477b6}\label{keyboard_8c_a4b408031943644b59d1a7f94218477b6}} 
+\index{keyboard.c@{keyboard.c}!KBC\_MODE@{KBC\_MODE}}
+\index{KBC\_MODE@{KBC\_MODE}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{KBC\_MODE}{KBC\_MODE}}
+{\footnotesize\ttfamily \#define K\+B\+C\+\_\+\+M\+O\+DE~0x47}
+
+
+
+ keyboard.\+c の 21 行目に定義があります。
+
+\mbox{\Hypertarget{keyboard_8c_a1c7cab517e1c1b2f4c280715c07d6df2}\label{keyboard_8c_a1c7cab517e1c1b2f4c280715c07d6df2}} 
+\index{keyboard.c@{keyboard.c}!KEYCMD\_WRITE\_MODE@{KEYCMD\_WRITE\_MODE}}
+\index{KEYCMD\_WRITE\_MODE@{KEYCMD\_WRITE\_MODE}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{KEYCMD\_WRITE\_MODE}{KEYCMD\_WRITE\_MODE}}
+{\footnotesize\ttfamily \#define K\+E\+Y\+C\+M\+D\+\_\+\+W\+R\+I\+T\+E\+\_\+\+M\+O\+DE~0x60}
+
+
+
+ keyboard.\+c の 20 行目に定義があります。
+
+\mbox{\Hypertarget{keyboard_8c_a76542314fe11eb39b22f93ff8187b08f}\label{keyboard_8c_a76542314fe11eb39b22f93ff8187b08f}} 
+\index{keyboard.c@{keyboard.c}!KEYSTA\_SEND\_NOTREADY@{KEYSTA\_SEND\_NOTREADY}}
+\index{KEYSTA\_SEND\_NOTREADY@{KEYSTA\_SEND\_NOTREADY}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{KEYSTA\_SEND\_NOTREADY}{KEYSTA\_SEND\_NOTREADY}}
+{\footnotesize\ttfamily \#define K\+E\+Y\+S\+T\+A\+\_\+\+S\+E\+N\+D\+\_\+\+N\+O\+T\+R\+E\+A\+DY~0x02}
+
+
+
+ keyboard.\+c の 19 行目に定義があります。
+
+\mbox{\Hypertarget{keyboard_8c_aecbeb49435311e470e44e1ef33e1e0dc}\label{keyboard_8c_aecbeb49435311e470e44e1ef33e1e0dc}} 
+\index{keyboard.c@{keyboard.c}!PORT\_KEYSTA@{PORT\_KEYSTA}}
+\index{PORT\_KEYSTA@{PORT\_KEYSTA}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{PORT\_KEYSTA}{PORT\_KEYSTA}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+K\+E\+Y\+S\+TA~0x0064}
+
+
+
+ keyboard.\+c の 18 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{keyboard_8c_acd24e074d17cc0f29ae3808498b6d012}\label{keyboard_8c_acd24e074d17cc0f29ae3808498b6d012}} 
+\index{keyboard.c@{keyboard.c}!init\_keyboard@{init\_keyboard}}
+\index{init\_keyboard@{init\_keyboard}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{init\_keyboard()}{init\_keyboard()}}
+{\footnotesize\ttfamily void init\+\_\+keyboard (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{data0 }\end{DoxyParamCaption})}
+
+
+
+ keyboard.\+c の 33 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{keyboard_8c_a6bf05bd24f3dc98e872a0653a13a3e3b}\label{keyboard_8c_a6bf05bd24f3dc98e872a0653a13a3e3b}} 
+\index{keyboard.c@{keyboard.c}!inthandler21@{inthandler21}}
+\index{inthandler21@{inthandler21}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{inthandler21()}{inthandler21()}}
+{\footnotesize\ttfamily void inthandler21 (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ keyboard.\+c の 8 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{keyboard_8c_a04ae938de161573bab61a7d806704cd8}\label{keyboard_8c_a04ae938de161573bab61a7d806704cd8}} 
+\index{keyboard.c@{keyboard.c}!wait\_KBC\_sendready@{wait\_KBC\_sendready}}
+\index{wait\_KBC\_sendready@{wait\_KBC\_sendready}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{wait\_KBC\_sendready()}{wait\_KBC\_sendready()}}
+{\footnotesize\ttfamily void wait\+\_\+\+K\+B\+C\+\_\+sendready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ keyboard.\+c の 22 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 4
+被呼び出し関係図\+:
+% FIG 5
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{keyboard_8c_afb9b53f331177823bdd6dfaabb34aaf6}\label{keyboard_8c_afb9b53f331177823bdd6dfaabb34aaf6}} 
+\index{keyboard.c@{keyboard.c}!keydata0@{keydata0}}
+\index{keydata0@{keydata0}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{keydata0}{keydata0}}
+{\footnotesize\ttfamily int keydata0}
+
+
+
+ keyboard.\+c の 6 行目に定義があります。
+
+\mbox{\Hypertarget{keyboard_8c_a986fa656e412a3f692a4a9f2ff071f50}\label{keyboard_8c_a986fa656e412a3f692a4a9f2ff071f50}} 
+\index{keyboard.c@{keyboard.c}!keyfifo@{keyfifo}}
+\index{keyfifo@{keyfifo}!keyboard.c@{keyboard.c}}
+\doxysubsubsection{\texorpdfstring{keyfifo}{keyfifo}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}}$\ast$ keyfifo}
+
+
+
+ keyboard.\+c の 5 行目に定義があります。
+

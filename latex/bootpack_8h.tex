@@ -1,0 +1,2209 @@
+\hypertarget{bootpack_8h}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/bootpack.h ファイル}
+\label{bootpack_8h}\index{E:/Documents/emu84/Src/haribote/bootpack.h@{E:/Documents/emu84/Src/haribote/bootpack.h}}
+
+
+O\+S本体  
+
+
+被依存関係図\+:
+% FIG 0
+\doxysubsection*{データ構造}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_b_o_o_t_i_n_f_o}{B\+O\+O\+T\+I\+N\+FO}}
+\item 
+struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}}
+\item 
+struct \mbox{\hyperlink{struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r}{S\+E\+G\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\item 
+struct \mbox{\hyperlink{struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r}{G\+A\+T\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}}
+\item 
+struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}}
+\item 
+struct \mbox{\hyperlink{struct_f_r_e_e_i_n_f_o}{F\+R\+E\+E\+I\+N\+FO}}
+\item 
+struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}}
+\item 
+struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}}
+\begin{DoxyCompactList}\small\item\em シート構造体 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}}
+\begin{DoxyCompactList}\small\item\em シートコントロール構造体 \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}}
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_r_c_t_l}{T\+I\+M\+E\+R\+C\+TL}}
+\item 
+struct \mbox{\hyperlink{struct_t_s_s32}{T\+S\+S32}}
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k_l_e_v_e_l}{T\+A\+S\+K\+L\+E\+V\+EL}}
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k_c_t_l}{T\+A\+S\+K\+C\+TL}}
+\item 
+struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}}
+\item 
+struct \mbox{\hyperlink{struct_f_i_l_e_h_a_n_d_l_e}{F\+I\+L\+E\+H\+A\+N\+D\+LE}}
+\item 
+struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}}
+\end{DoxyCompactItemize}
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a5a280b726f2402ee5bd238168f122e95}{A\+D\+R\+\_\+\+B\+O\+O\+T\+I\+N\+FO}}~0x00000ff0
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a1ac3202dcb006596db87b8a5005afdf8}{A\+D\+R\+\_\+\+D\+I\+S\+K\+I\+MG}}~0x00100000
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a0b6fbedbdc8619d132edc7ec1996f31a}{C\+O\+L8\+\_\+000000}}~0
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a32ba9fb36808b76a564c9c49fc8e1546}{C\+O\+L8\+\_\+\+F\+F0000}}~1
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a3d0801eae550ae16bada14fd41c96b5e}{C\+O\+L8\+\_\+00\+F\+F00}}~2
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a4882845a5488731426127b661819358b}{C\+O\+L8\+\_\+\+F\+F\+F\+F00}}~3
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a55ba59aee1ee69aefa0769e8cd42d83a}{C\+O\+L8\+\_\+0000\+FF}}~4
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a7a5c32be159caa1a3f89a1d04c765b92}{C\+O\+L8\+\_\+\+F\+F00\+FF}}~5
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_afe8bf9dd074a937c9086c011b2927131}{C\+O\+L8\+\_\+00\+F\+F\+FF}}~6
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_aa04bcd8f40ae8fc9ef4cff14359819a0}{C\+O\+L8\+\_\+\+F\+F\+F\+F\+FF}}~7
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a0eb939ea8a29d75ded97f55e31be5f58}{C\+O\+L8\+\_\+\+C6\+C6\+C6}}~8
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a83c6125fa4b55945f721c430ad37a00e}{C\+O\+L8\+\_\+840000}}~9
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a7b8bd99e500673677fd341e6cb3dbbd6}{C\+O\+L8\+\_\+008400}}~10
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a894d61e9360d396e5aade88229ae80dd}{C\+O\+L8\+\_\+848400}}~11
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a73de5aab01328d281d8d59ff5c8063f9}{C\+O\+L8\+\_\+000084}}~12
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a10d48775755fdb0bafe65ca34cc45624}{C\+O\+L8\+\_\+840084}}~13
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_affe93fa27d66a471f55bdde1f1f2a8bf}{C\+O\+L8\+\_\+008484}}~14
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a8b8b32f6b529f7f1a71b6ee254ee4221}{C\+O\+L8\+\_\+848484}}~15
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a67caec251af0f017fb3b502eee5db4f4}{A\+D\+R\+\_\+\+I\+DT}}~0x0026f800
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_ae2025f6f65e319f1a13cf84b8b435d08}{L\+I\+M\+I\+T\+\_\+\+I\+DT}}~0x000007ff
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_ad00465035496ab39b0d1770c33b0d797}{A\+D\+R\+\_\+\+G\+DT}}~0x00270000
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a9e762b010f5bf967e1525ef9c9a48e63}{L\+I\+M\+I\+T\+\_\+\+G\+DT}}~0x0000ffff
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a5db4ad5a5a496ce866b0b0243fe51b37}{A\+D\+R\+\_\+\+B\+O\+T\+P\+AK}}~0x00280000
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a1c4ed4d9a23955c3c4e12dc8b7feec3d}{L\+I\+M\+I\+T\+\_\+\+B\+O\+T\+P\+AK}}~0x0007ffff
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_aae7bf000c9b2347034d3019c449969a7}{A\+R\+\_\+\+D\+A\+T\+A32\+\_\+\+RW}}~0x4092
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_ae2ebac5babbdd2c341a976d85515f725}{A\+R\+\_\+\+C\+O\+D\+E32\+\_\+\+ER}}~0x409a
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a025237d5cd4d2f2241dea5156b53c4de}{A\+R\+\_\+\+L\+DT}}~0x0082
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a7c854924c39a9b1ebafbc92b16db4740}{A\+R\+\_\+\+T\+S\+S32}}~0x0089
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a2238997b8add9a8597ab9022519d2296}{A\+R\+\_\+\+I\+N\+T\+G\+A\+T\+E32}}~0x008e
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a2848d27ae631e5ea166a047b10968eff}{P\+I\+C0\+\_\+\+I\+C\+W1}}~0x0020
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_ad634cb61f109eb41b718c8002dc1415c}{P\+I\+C0\+\_\+\+O\+C\+W2}}~0x0020
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_ab78c32730c3c70d2d478f24a7c0735f4}{P\+I\+C0\+\_\+\+I\+MR}}~0x0021
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a9878464c631c46a1c2aaab9e5912c790}{P\+I\+C0\+\_\+\+I\+C\+W2}}~0x0021
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a85a058cafc12a4d99dba78a17595adeb}{P\+I\+C0\+\_\+\+I\+C\+W3}}~0x0021
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_adfbedb8dab608ce26852e3f436b3b2d7}{P\+I\+C0\+\_\+\+I\+C\+W4}}~0x0021
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_ab38487cc1695aff0e2c8ff9d8098ee7f}{P\+I\+C1\+\_\+\+I\+C\+W1}}~0x00a0
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a13c1baed1a4823c4f568e25b062310cd}{P\+I\+C1\+\_\+\+O\+C\+W2}}~0x00a0
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_adfb8ad9cdb4b01794bb0d7c946873b29}{P\+I\+C1\+\_\+\+I\+MR}}~0x00a1
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_af24f58d2f0bd1231506ed65caa0b9e6b}{P\+I\+C1\+\_\+\+I\+C\+W2}}~0x00a1
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a9ba782100f085a722f323d6f4f5f96f9}{P\+I\+C1\+\_\+\+I\+C\+W3}}~0x00a1
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a32cc107ef3e1d0e2daaf9775c4bd30e6}{P\+I\+C1\+\_\+\+I\+C\+W4}}~0x00a1
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a26e8797f8769f99f2e3d1d23807b9681}{P\+O\+R\+T\+\_\+\+K\+E\+Y\+D\+AT}}~0x0060
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a4284ba61f1d5d637083da21127ee4bff}{P\+O\+R\+T\+\_\+\+K\+E\+Y\+C\+MD}}~0x0064
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_ae9fd3b81084ba8e0fa3ded06aec23e16}{M\+E\+M\+M\+A\+N\+\_\+\+F\+R\+E\+ES}}~4090	/$\ast$ これで約32\+KB $\ast$/
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a0d0528cedf002a015b8e2d8b049c0e92}{M\+E\+M\+M\+A\+N\+\_\+\+A\+D\+DR}}~0x003c0000
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a36e712ba6f12d0bf65a0c94c7a9f2bdb}{M\+A\+X\+\_\+\+S\+H\+E\+E\+TS}}~256
+\begin{DoxyCompactList}\small\item\em シートの最大数 \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{bootpack_8h_a631a00e0b5343d37814e14770345ff9b}{M\+A\+X\+\_\+\+T\+I\+M\+ER}}~500
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_aac747bed84189f8cfa509b94d488e622}{M\+A\+X\+\_\+\+T\+A\+S\+KS}}~1000	/$\ast$ 最大タスク数 $\ast$/
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a7818e433921c6a96d266ee7532ebebff}{T\+A\+S\+K\+\_\+\+G\+D\+T0}}~3		/$\ast$ T\+S\+Sを\+G\+D\+Tの何番から割り当てるのか $\ast$/
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_ada01b6f549d112a19310a5effc4b8697}{M\+A\+X\+\_\+\+T\+A\+S\+K\+S\+\_\+\+LV}}~100
+\item 
+\#define \mbox{\hyperlink{bootpack_8h_a1e8ee66be0f1bde2a59cdcc86b04c03a}{M\+A\+X\+\_\+\+T\+A\+S\+K\+L\+E\+V\+E\+LS}}~10
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bootpack_8h_a222d3c048b8f4192d8ef949249849aa0}{io\+\_\+hlt}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a8efff3df95d8ca5965876fe8949f99ae}{io\+\_\+cli}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a2c79d0d7b1caa7fe6260a55e5136872e}{io\+\_\+sti}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ac8abfd05dc0cedb7d36cc9975ce04d65}{io\+\_\+stihlt}} (void)
+\item 
+int \mbox{\hyperlink{bootpack_8h_abe410220cdaf6d701275a5d75f07acd0}{io\+\_\+in8}} (int port)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a23ae700e52c0cde96d20fc539826d532}{io\+\_\+out8}} (int port, int data)
+\item 
+int \mbox{\hyperlink{bootpack_8h_acf007bdb6d8bea64314996b7d7b01470}{io\+\_\+load\+\_\+eflags}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_aac4f8e3e6b71a465592bdf1f5d4202ac}{io\+\_\+store\+\_\+eflags}} (int eflags)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a90cc934e88e02161c8d0a52cc39025f3}{load\+\_\+gdtr}} (int limit, int addr)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a97b93121cbb4ac660389d9943e7a6928}{load\+\_\+idtr}} (int limit, int addr)
+\item 
+int \mbox{\hyperlink{bootpack_8h_a5af6367bea7c14ca17c3956914276d64}{load\+\_\+cr0}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_aa03f03af26a7eb548dfae56f16423a17}{store\+\_\+cr0}} (int cr0)
+\item 
+void \mbox{\hyperlink{bootpack_8h_af86d882069635e9f7c41451cf77b0422}{load\+\_\+tr}} (int tr)
+\item 
+void \mbox{\hyperlink{bootpack_8h_abcbe6ab7de11ead7c369c41cac634237}{asm\+\_\+inthandler0c}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a5dd851eafcfb3598ee2526eacb19bce9}{asm\+\_\+inthandler0d}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_abf9da88d9dae08dab301bc337996ca87}{asm\+\_\+inthandler20}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a2f5878aef3f695aa18bea63f08d516c5}{asm\+\_\+inthandler21}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a6b3fdc28ef34e450937c94e90d3d003b}{asm\+\_\+inthandler2c}} (void)
+\item 
+unsigned int \mbox{\hyperlink{bootpack_8h_abe4d8e01aed1f1d87ab91d9be984b6d5}{memtest\+\_\+sub}} (unsigned int start, unsigned int \mbox{\hyperlink{mmlplay_8c_a0834e80e6e6a203821e54e48a1ddeeff}{end}})
+\item 
+void \mbox{\hyperlink{bootpack_8h_a0c42a9b5531e7052d27e7389223cdf98}{farjmp}} (int eip, int cs)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a153397c5f6d250fa239a444ea2f18902}{farcall}} (int eip, int cs)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a3f0b9e8bde51dc3ed58642ff2f653454}{asm\+\_\+hrb\+\_\+api}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a568f37f8f793128215d42dbf50d88229}{start\+\_\+app}} (int eip, int cs, int esp, int ds, int $\ast$tss\+\_\+esp0)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a64acf4b04a5ff493c4ecb7c433f2885a}{asm\+\_\+end\+\_\+app}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a4eac38701a0d14f4ccd26e777acbb173}{fifo32\+\_\+init}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int size, int $\ast$buf, struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task)
+\item 
+int \mbox{\hyperlink{bootpack_8h_a5c1bea596c94c2a89840d555c98abb84}{fifo32\+\_\+put}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int data)
+\item 
+int \mbox{\hyperlink{bootpack_8h_aa5d8708f8d80c1950641ce7db6b846bd}{fifo32\+\_\+get}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo)
+\item 
+int \mbox{\hyperlink{bootpack_8h_addecf769f44a7f17a964e2ce5ba3f255}{fifo32\+\_\+status}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a42a564ae1340c89e85f7ef58c6f8e46e}{init\+\_\+palette}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a78bbb55ac088109aba6d34f9ffc0523a}{set\+\_\+palette}} (int start, int \mbox{\hyperlink{mmlplay_8c_a0834e80e6e6a203821e54e48a1ddeeff}{end}}, unsigned char $\ast$rgb)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a8db7fb68501f39701e4b0801364a2e1c}{boxfill8}} (unsigned char $\ast$vram, int xsize, unsigned char c, int x0, int y0, int x1, int y1)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a080c9dc05b60bc16c1b06437e995b970}{init\+\_\+screen8}} (char $\ast$vram, int x, int y)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a1a869fa1f63a9363adbd268a4453ee65}{putfont8}} (char $\ast$vram, int xsize, int x, int y, char c, char $\ast$font)
+\item 
+void \mbox{\hyperlink{bootpack_8h_aa7cde0dce2ebf81ad62c6be604c4007e}{putfonts8\+\_\+asc}} (char $\ast$vram, int xsize, int x, int y, char c, unsigned char $\ast$s)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a335989fd7a070b4772b6640dcf82d23e}{init\+\_\+mouse\+\_\+cursor8}} (char $\ast$mouse, char bc)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a373c3523045a675d4e322aaa8ac68f4f}{putblock8\+\_\+8}} (char $\ast$vram, int vxsize, int pxsize, int pysize, int px0, int py0, char $\ast$buf, int bxsize)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ad5b36851d779bf52f1398e31f55ddc9d}{init\+\_\+gdtidt}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a3d51340647ade1a89f63e7b841e48176}{set\+\_\+segmdesc}} (struct \mbox{\hyperlink{struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r}{S\+E\+G\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}} $\ast$sd, unsigned int limit, int base, int ar)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ac34fd5deede8babe82f6f858378bc3b5}{set\+\_\+gatedesc}} (struct \mbox{\hyperlink{struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r}{G\+A\+T\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}} $\ast$gd, int offset, int selector, int ar)
+\item 
+void \mbox{\hyperlink{bootpack_8h_afbc0dbef6f15e2df21b38724ea38c483}{init\+\_\+pic}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a6bf05bd24f3dc98e872a0653a13a3e3b}{inthandler21}} (int $\ast$esp)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a04ae938de161573bab61a7d806704cd8}{wait\+\_\+\+K\+B\+C\+\_\+sendready}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_acd24e074d17cc0f29ae3808498b6d012}{init\+\_\+keyboard}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int data0)
+\item 
+void \mbox{\hyperlink{bootpack_8h_aa89ae3554e7c9ac3e95fee1a96d3f56a}{inthandler2c}} (int $\ast$esp)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a42740b291ad8258327a7334c89f1fe6a}{enable\+\_\+mouse}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int data0, struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}} $\ast$mdec)
+\item 
+int \mbox{\hyperlink{bootpack_8h_a4da7c7903cdc3169e5b21f70236d76d5}{mouse\+\_\+decode}} (struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}} $\ast$mdec, unsigned char dat)
+\item 
+unsigned int \mbox{\hyperlink{bootpack_8h_a457da672ff618c99ae94b1227d45119b}{memtest}} (unsigned int start, unsigned int \mbox{\hyperlink{mmlplay_8c_a0834e80e6e6a203821e54e48a1ddeeff}{end}})
+\item 
+void \mbox{\hyperlink{bootpack_8h_a8b80d84323d02134be3ecc3f5d7cbcd2}{memman\+\_\+init}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man)
+\item 
+unsigned int \mbox{\hyperlink{bootpack_8h_ac82886c8091f3a36903241216bc48ace}{memman\+\_\+total}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man)
+\item 
+unsigned int \mbox{\hyperlink{bootpack_8h_a3a44e2ae3c434e982c7b906e00af831a}{memman\+\_\+alloc}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man, unsigned int size)
+\item 
+int \mbox{\hyperlink{bootpack_8h_a4d14a01ac8b137a266aafe80c5102a52}{memman\+\_\+free}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man, unsigned int addr, unsigned int size)
+\item 
+unsigned int \mbox{\hyperlink{bootpack_8h_a0b2b807ae567c0c3a0f5878b6ea95383}{memman\+\_\+alloc\+\_\+4k}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man, unsigned int size)
+\item 
+int \mbox{\hyperlink{bootpack_8h_acad1337e14f758731d8241ee094d1a86}{memman\+\_\+free\+\_\+4k}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$man, unsigned int addr, unsigned int size)
+\item 
+struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ \mbox{\hyperlink{bootpack_8h_a36f9284550ad0030f5dd64154a04a7d8}{shtctl\+\_\+init}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$memman, unsigned char $\ast$vram, int xsize, int ysize)
+\begin{DoxyCompactList}\small\item\em シートコントロールの初期化を行います \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$ \mbox{\hyperlink{bootpack_8h_a543661af64ed9055c819e0dd7b61d01e}{sheet\+\_\+alloc}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ctl)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a6c14343c7c0566620635e9ccd17e21e0}{sheet\+\_\+setbuf}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, unsigned char $\ast$buf, int xsize, int ysize, int col\+\_\+inv)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ad590bf68e2aa06a5fe99c03ad4c56785}{sheet\+\_\+updown}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int height)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a8befd8f5c365aec65bfa164d00e140ca}{sheet\+\_\+refresh}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int bx0, int by0, int bx1, int by1)
+\item 
+void \mbox{\hyperlink{bootpack_8h_aca08bb322ec0c2110e2a071e383832de}{sheet\+\_\+slide}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int vx0, int vy0)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+free}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht)
+\item 
+void \mbox{\hyperlink{bootpack_8h_afb4e76c5cfcf522b4cf2949cc2d5539f}{init\+\_\+pit}} (void)
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$ \mbox{\hyperlink{bootpack_8h_ab0f52af01219a71c6f77624f30ca0a0f}{timer\+\_\+alloc}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a7450be2dc8158869f3e10567e7c18af6}{timer\+\_\+free}} (struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$timer)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a5c90527d6444de7f7aaf2aaa9e41a55c}{timer\+\_\+init}} (struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$timer, struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int data)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ac5f2d07311b1c8c2a0e050060cbd4570}{timer\+\_\+settime}} (struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$timer, unsigned int timeout)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a79570c81cf0a60bde51271245ac85897}{inthandler20}} (int $\ast$esp)
+\item 
+int \mbox{\hyperlink{bootpack_8h_ac6cae52d128dc87c24e060c6b4ba6e58}{timer\+\_\+cancel}} (struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$timer)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a9e8c4c0b106b605665e385fb682aac16}{timer\+\_\+cancelall}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo)
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{bootpack_8h_a72a85d580d503d9c2743398e78ab612b}{task\+\_\+now}} (void)
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{bootpack_8h_a9f9404be472fb9fc3aa79501f67190a1}{task\+\_\+init}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$memman)
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{bootpack_8h_a97fa93dab5b91ea18765b460e3b81663}{task\+\_\+alloc}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a579117953072527527cd89b4ebc929ef}{task\+\_\+run}} (struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task, int level, int priority)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a729b1ba05c140e25a5aae86006e709fe}{task\+\_\+switch}} (void)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ad8d41e312627e0054a1a9d61ca173ff1}{task\+\_\+sleep}} (struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task)
+\item 
+void \mbox{\hyperlink{bootpack_8h_aa2e5c7ff789a55c98bf695241272bc16}{make\+\_\+window8}} (unsigned char $\ast$buf, int xsize, int ysize, char $\ast$title, char act)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a67ab2e7cce8565ab4247b2a4ec063a18}{putfonts8\+\_\+asc\+\_\+sht}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int x, int y, int c, int b, char $\ast$s, int l)
+\item 
+void \mbox{\hyperlink{bootpack_8h_aa8d3e4458a5d7b5318dfb3cdf2010a58}{make\+\_\+textbox8}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int x0, int y0, int sx, int sy, int c)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a7624d2de5f9aef85e89e2a12375cf40d}{make\+\_\+wtitle8}} (unsigned char $\ast$buf, int xsize, char $\ast$title, char act)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a6e510ccd9bc95ae7e7e0adbd39e4b512}{change\+\_\+wtitle8}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, char act)
+\item 
+void \mbox{\hyperlink{bootpack_8h_acf7b570f866fb6b0880a9fb988393e69}{console\+\_\+task}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sheet, int memtotal)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a4197ccd3ce2053ca0c778fed7da81252}{cons\+\_\+putchar}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int chr, char move)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ac3fc0a555ac1405cc89bc6eb62641b54}{cons\+\_\+newline}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a6a3da535464b8bd88457538ad73058e1}{cons\+\_\+putstr0}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$s)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a5793ef68f2d9b7f6767c51112109fdf9}{cons\+\_\+putstr1}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$s, int l)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a7be2f98778674111de60be8c7f0a3e62}{cons\+\_\+runcmd}} (char $\ast$cmdline, struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int $\ast$fat, int memtotal)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a7beea0ecae31c20285e08ce9c992c24d}{cmd\+\_\+mem}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int memtotal)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a2cfd9d5784f0117d7e54462ee9cd62d6}{cmd\+\_\+cls}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a6fae3dc411d4d283fd16ef02602475a4}{cmd\+\_\+dir}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons)
+\item 
+void \mbox{\hyperlink{bootpack_8h_aa1ae787d73bbace090cbce5194ac0824}{cmd\+\_\+exit}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int $\ast$fat)
+\item 
+void \mbox{\hyperlink{bootpack_8h_af8d7dae21f111aecc555ba5e14df4265}{cmd\+\_\+start}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$cmdline, int memtotal)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a3f08f092f66404d51c2af42f76237980}{cmd\+\_\+ncst}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$cmdline, int memtotal)
+\item 
+void \mbox{\hyperlink{bootpack_8h_ae4b5e634ac4512b6cbc40729a6732bc1}{cmd\+\_\+langmode}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$cmdline)
+\item 
+int \mbox{\hyperlink{bootpack_8h_ac543899ee5ce9621fa024d0ee3098f3d}{cmd\+\_\+app}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int $\ast$fat, char $\ast$cmdline)
+\item 
+int $\ast$ \mbox{\hyperlink{bootpack_8h_ae3a2b95ac62166efc071caeb9e7b0db1}{hrb\+\_\+api}} (int edi, int esi, int ebp, int esp, int ebx, int edx, int ecx, int eax)
+\item 
+int $\ast$ \mbox{\hyperlink{bootpack_8h_abc45130af020e3d17361636094ba1619}{inthandler0d}} (int $\ast$esp)
+\item 
+int $\ast$ \mbox{\hyperlink{bootpack_8h_ab1e502d332a2ad9588075aed1aca1541}{inthandler0c}} (int $\ast$esp)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a3ad481c373bdda4ed8e6c74affa44099}{hrb\+\_\+api\+\_\+linewin}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int x0, int y0, int x1, int y1, int col)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a53fcda0d66b498de64fda0ddfd041002}{file\+\_\+readfat}} (int $\ast$fat, unsigned char $\ast$img)
+\item 
+void \mbox{\hyperlink{bootpack_8h_a42bc90f073a4c6e4402de1ccbf1747bd}{file\+\_\+loadfile}} (int clustno, int size, char $\ast$buf, int $\ast$fat, char $\ast$img)
+\item 
+struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}} $\ast$ \mbox{\hyperlink{bootpack_8h_a351fe46d5dd8d8fa194636c54ff2acaf}{file\+\_\+search}} (char $\ast$name, struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}} $\ast$finfo, int max)
+\item 
+char $\ast$ \mbox{\hyperlink{bootpack_8h_a33cd1c9ec67b310356d3e8a71868c156}{file\+\_\+loadfile2}} (int clustno, int $\ast$psize, int $\ast$fat)
+\item 
+int \mbox{\hyperlink{bootpack_8h_aa88ef0b8b73e80fbcdf4e9a3d5da3844}{tek\+\_\+getsize}} (unsigned char $\ast$p)
+\item 
+int \mbox{\hyperlink{bootpack_8h_a65ad1e05ea04302ba9c7a2b8b2b2bf99}{tek\+\_\+decomp}} (unsigned char $\ast$p, char $\ast$q, int size)
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{bootpack_8h_a79280c7e465953eeaa972574fce486ed}{open\+\_\+constask}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, unsigned int memtotal)
+\item 
+struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$ \mbox{\hyperlink{bootpack_8h_a6a7720c122ae0f96494e98c38c6e365e}{open\+\_\+console}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$shtctl, unsigned int memtotal)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_r_c_t_l}{T\+I\+M\+E\+R\+C\+TL}} \mbox{\hyperlink{bootpack_8h_af3246f199811ad6fdc6d9cb1cfe33c68}{timerctl}}
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k_c_t_l}{T\+A\+S\+K\+C\+TL}} $\ast$ \mbox{\hyperlink{bootpack_8h_adf35d00bd0784095d09912fb2a58b879}{taskctl}}
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$ \mbox{\hyperlink{bootpack_8h_ab9aec37224286b959e292ae540a5c06c}{task\+\_\+timer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+O\+S本体 
+
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{bootpack_8h_a5a280b726f2402ee5bd238168f122e95}\label{bootpack_8h_a5a280b726f2402ee5bd238168f122e95}} 
+\index{bootpack.h@{bootpack.h}!ADR\_BOOTINFO@{ADR\_BOOTINFO}}
+\index{ADR\_BOOTINFO@{ADR\_BOOTINFO}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{ADR\_BOOTINFO}{ADR\_BOOTINFO}}
+{\footnotesize\ttfamily \#define A\+D\+R\+\_\+\+B\+O\+O\+T\+I\+N\+FO~0x00000ff0}
+
+
+
+ bootpack.\+h の 16 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a5db4ad5a5a496ce866b0b0243fe51b37}\label{bootpack_8h_a5db4ad5a5a496ce866b0b0243fe51b37}} 
+\index{bootpack.h@{bootpack.h}!ADR\_BOTPAK@{ADR\_BOTPAK}}
+\index{ADR\_BOTPAK@{ADR\_BOTPAK}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{ADR\_BOTPAK}{ADR\_BOTPAK}}
+{\footnotesize\ttfamily \#define A\+D\+R\+\_\+\+B\+O\+T\+P\+AK~0x00280000}
+
+
+
+ bootpack.\+h の 101 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a1ac3202dcb006596db87b8a5005afdf8}\label{bootpack_8h_a1ac3202dcb006596db87b8a5005afdf8}} 
+\index{bootpack.h@{bootpack.h}!ADR\_DISKIMG@{ADR\_DISKIMG}}
+\index{ADR\_DISKIMG@{ADR\_DISKIMG}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{ADR\_DISKIMG}{ADR\_DISKIMG}}
+{\footnotesize\ttfamily \#define A\+D\+R\+\_\+\+D\+I\+S\+K\+I\+MG~0x00100000}
+
+
+
+ bootpack.\+h の 17 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_ad00465035496ab39b0d1770c33b0d797}\label{bootpack_8h_ad00465035496ab39b0d1770c33b0d797}} 
+\index{bootpack.h@{bootpack.h}!ADR\_GDT@{ADR\_GDT}}
+\index{ADR\_GDT@{ADR\_GDT}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{ADR\_GDT}{ADR\_GDT}}
+{\footnotesize\ttfamily \#define A\+D\+R\+\_\+\+G\+DT~0x00270000}
+
+
+
+ bootpack.\+h の 99 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a67caec251af0f017fb3b502eee5db4f4}\label{bootpack_8h_a67caec251af0f017fb3b502eee5db4f4}} 
+\index{bootpack.h@{bootpack.h}!ADR\_IDT@{ADR\_IDT}}
+\index{ADR\_IDT@{ADR\_IDT}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{ADR\_IDT}{ADR\_IDT}}
+{\footnotesize\ttfamily \#define A\+D\+R\+\_\+\+I\+DT~0x0026f800}
+
+
+
+ bootpack.\+h の 97 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_ae2ebac5babbdd2c341a976d85515f725}\label{bootpack_8h_ae2ebac5babbdd2c341a976d85515f725}} 
+\index{bootpack.h@{bootpack.h}!AR\_CODE32\_ER@{AR\_CODE32\_ER}}
+\index{AR\_CODE32\_ER@{AR\_CODE32\_ER}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{AR\_CODE32\_ER}{AR\_CODE32\_ER}}
+{\footnotesize\ttfamily \#define A\+R\+\_\+\+C\+O\+D\+E32\+\_\+\+ER~0x409a}
+
+
+
+ bootpack.\+h の 104 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_aae7bf000c9b2347034d3019c449969a7}\label{bootpack_8h_aae7bf000c9b2347034d3019c449969a7}} 
+\index{bootpack.h@{bootpack.h}!AR\_DATA32\_RW@{AR\_DATA32\_RW}}
+\index{AR\_DATA32\_RW@{AR\_DATA32\_RW}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{AR\_DATA32\_RW}{AR\_DATA32\_RW}}
+{\footnotesize\ttfamily \#define A\+R\+\_\+\+D\+A\+T\+A32\+\_\+\+RW~0x4092}
+
+
+
+ bootpack.\+h の 103 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a2238997b8add9a8597ab9022519d2296}\label{bootpack_8h_a2238997b8add9a8597ab9022519d2296}} 
+\index{bootpack.h@{bootpack.h}!AR\_INTGATE32@{AR\_INTGATE32}}
+\index{AR\_INTGATE32@{AR\_INTGATE32}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{AR\_INTGATE32}{AR\_INTGATE32}}
+{\footnotesize\ttfamily \#define A\+R\+\_\+\+I\+N\+T\+G\+A\+T\+E32~0x008e}
+
+
+
+ bootpack.\+h の 107 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a025237d5cd4d2f2241dea5156b53c4de}\label{bootpack_8h_a025237d5cd4d2f2241dea5156b53c4de}} 
+\index{bootpack.h@{bootpack.h}!AR\_LDT@{AR\_LDT}}
+\index{AR\_LDT@{AR\_LDT}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{AR\_LDT}{AR\_LDT}}
+{\footnotesize\ttfamily \#define A\+R\+\_\+\+L\+DT~0x0082}
+
+
+
+ bootpack.\+h の 105 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a7c854924c39a9b1ebafbc92b16db4740}\label{bootpack_8h_a7c854924c39a9b1ebafbc92b16db4740}} 
+\index{bootpack.h@{bootpack.h}!AR\_TSS32@{AR\_TSS32}}
+\index{AR\_TSS32@{AR\_TSS32}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{AR\_TSS32}{AR\_TSS32}}
+{\footnotesize\ttfamily \#define A\+R\+\_\+\+T\+S\+S32~0x0089}
+
+
+
+ bootpack.\+h の 106 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a0b6fbedbdc8619d132edc7ec1996f31a}\label{bootpack_8h_a0b6fbedbdc8619d132edc7ec1996f31a}} 
+\index{bootpack.h@{bootpack.h}!COL8\_000000@{COL8\_000000}}
+\index{COL8\_000000@{COL8\_000000}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_000000}{COL8\_000000}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+000000~0}
+
+
+
+ bootpack.\+h の 66 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a73de5aab01328d281d8d59ff5c8063f9}\label{bootpack_8h_a73de5aab01328d281d8d59ff5c8063f9}} 
+\index{bootpack.h@{bootpack.h}!COL8\_000084@{COL8\_000084}}
+\index{COL8\_000084@{COL8\_000084}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_000084}{COL8\_000084}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+000084~12}
+
+
+
+ bootpack.\+h の 78 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a55ba59aee1ee69aefa0769e8cd42d83a}\label{bootpack_8h_a55ba59aee1ee69aefa0769e8cd42d83a}} 
+\index{bootpack.h@{bootpack.h}!COL8\_0000FF@{COL8\_0000FF}}
+\index{COL8\_0000FF@{COL8\_0000FF}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_0000FF}{COL8\_0000FF}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+0000\+FF~4}
+
+
+
+ bootpack.\+h の 70 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a7b8bd99e500673677fd341e6cb3dbbd6}\label{bootpack_8h_a7b8bd99e500673677fd341e6cb3dbbd6}} 
+\index{bootpack.h@{bootpack.h}!COL8\_008400@{COL8\_008400}}
+\index{COL8\_008400@{COL8\_008400}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_008400}{COL8\_008400}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+008400~10}
+
+
+
+ bootpack.\+h の 76 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_affe93fa27d66a471f55bdde1f1f2a8bf}\label{bootpack_8h_affe93fa27d66a471f55bdde1f1f2a8bf}} 
+\index{bootpack.h@{bootpack.h}!COL8\_008484@{COL8\_008484}}
+\index{COL8\_008484@{COL8\_008484}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_008484}{COL8\_008484}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+008484~14}
+
+
+
+ bootpack.\+h の 80 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a3d0801eae550ae16bada14fd41c96b5e}\label{bootpack_8h_a3d0801eae550ae16bada14fd41c96b5e}} 
+\index{bootpack.h@{bootpack.h}!COL8\_00FF00@{COL8\_00FF00}}
+\index{COL8\_00FF00@{COL8\_00FF00}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_00FF00}{COL8\_00FF00}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+00\+F\+F00~2}
+
+
+
+ bootpack.\+h の 68 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_afe8bf9dd074a937c9086c011b2927131}\label{bootpack_8h_afe8bf9dd074a937c9086c011b2927131}} 
+\index{bootpack.h@{bootpack.h}!COL8\_00FFFF@{COL8\_00FFFF}}
+\index{COL8\_00FFFF@{COL8\_00FFFF}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_00FFFF}{COL8\_00FFFF}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+00\+F\+F\+FF~6}
+
+
+
+ bootpack.\+h の 72 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a83c6125fa4b55945f721c430ad37a00e}\label{bootpack_8h_a83c6125fa4b55945f721c430ad37a00e}} 
+\index{bootpack.h@{bootpack.h}!COL8\_840000@{COL8\_840000}}
+\index{COL8\_840000@{COL8\_840000}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_840000}{COL8\_840000}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+840000~9}
+
+
+
+ bootpack.\+h の 75 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a10d48775755fdb0bafe65ca34cc45624}\label{bootpack_8h_a10d48775755fdb0bafe65ca34cc45624}} 
+\index{bootpack.h@{bootpack.h}!COL8\_840084@{COL8\_840084}}
+\index{COL8\_840084@{COL8\_840084}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_840084}{COL8\_840084}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+840084~13}
+
+
+
+ bootpack.\+h の 79 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a894d61e9360d396e5aade88229ae80dd}\label{bootpack_8h_a894d61e9360d396e5aade88229ae80dd}} 
+\index{bootpack.h@{bootpack.h}!COL8\_848400@{COL8\_848400}}
+\index{COL8\_848400@{COL8\_848400}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_848400}{COL8\_848400}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+848400~11}
+
+
+
+ bootpack.\+h の 77 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a8b8b32f6b529f7f1a71b6ee254ee4221}\label{bootpack_8h_a8b8b32f6b529f7f1a71b6ee254ee4221}} 
+\index{bootpack.h@{bootpack.h}!COL8\_848484@{COL8\_848484}}
+\index{COL8\_848484@{COL8\_848484}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_848484}{COL8\_848484}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+848484~15}
+
+
+
+ bootpack.\+h の 81 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a0eb939ea8a29d75ded97f55e31be5f58}\label{bootpack_8h_a0eb939ea8a29d75ded97f55e31be5f58}} 
+\index{bootpack.h@{bootpack.h}!COL8\_C6C6C6@{COL8\_C6C6C6}}
+\index{COL8\_C6C6C6@{COL8\_C6C6C6}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_C6C6C6}{COL8\_C6C6C6}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+\+C6\+C6\+C6~8}
+
+
+
+ bootpack.\+h の 74 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a32ba9fb36808b76a564c9c49fc8e1546}\label{bootpack_8h_a32ba9fb36808b76a564c9c49fc8e1546}} 
+\index{bootpack.h@{bootpack.h}!COL8\_FF0000@{COL8\_FF0000}}
+\index{COL8\_FF0000@{COL8\_FF0000}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_FF0000}{COL8\_FF0000}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+\+F\+F0000~1}
+
+
+
+ bootpack.\+h の 67 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a7a5c32be159caa1a3f89a1d04c765b92}\label{bootpack_8h_a7a5c32be159caa1a3f89a1d04c765b92}} 
+\index{bootpack.h@{bootpack.h}!COL8\_FF00FF@{COL8\_FF00FF}}
+\index{COL8\_FF00FF@{COL8\_FF00FF}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_FF00FF}{COL8\_FF00FF}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+\+F\+F00\+FF~5}
+
+
+
+ bootpack.\+h の 71 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a4882845a5488731426127b661819358b}\label{bootpack_8h_a4882845a5488731426127b661819358b}} 
+\index{bootpack.h@{bootpack.h}!COL8\_FFFF00@{COL8\_FFFF00}}
+\index{COL8\_FFFF00@{COL8\_FFFF00}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_FFFF00}{COL8\_FFFF00}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+\+F\+F\+F\+F00~3}
+
+
+
+ bootpack.\+h の 69 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_aa04bcd8f40ae8fc9ef4cff14359819a0}\label{bootpack_8h_aa04bcd8f40ae8fc9ef4cff14359819a0}} 
+\index{bootpack.h@{bootpack.h}!COL8\_FFFFFF@{COL8\_FFFFFF}}
+\index{COL8\_FFFFFF@{COL8\_FFFFFF}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{COL8\_FFFFFF}{COL8\_FFFFFF}}
+{\footnotesize\ttfamily \#define C\+O\+L8\+\_\+\+F\+F\+F\+F\+FF~7}
+
+
+
+ bootpack.\+h の 73 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a1c4ed4d9a23955c3c4e12dc8b7feec3d}\label{bootpack_8h_a1c4ed4d9a23955c3c4e12dc8b7feec3d}} 
+\index{bootpack.h@{bootpack.h}!LIMIT\_BOTPAK@{LIMIT\_BOTPAK}}
+\index{LIMIT\_BOTPAK@{LIMIT\_BOTPAK}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{LIMIT\_BOTPAK}{LIMIT\_BOTPAK}}
+{\footnotesize\ttfamily \#define L\+I\+M\+I\+T\+\_\+\+B\+O\+T\+P\+AK~0x0007ffff}
+
+
+
+ bootpack.\+h の 102 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a9e762b010f5bf967e1525ef9c9a48e63}\label{bootpack_8h_a9e762b010f5bf967e1525ef9c9a48e63}} 
+\index{bootpack.h@{bootpack.h}!LIMIT\_GDT@{LIMIT\_GDT}}
+\index{LIMIT\_GDT@{LIMIT\_GDT}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{LIMIT\_GDT}{LIMIT\_GDT}}
+{\footnotesize\ttfamily \#define L\+I\+M\+I\+T\+\_\+\+G\+DT~0x0000ffff}
+
+
+
+ bootpack.\+h の 100 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_ae2025f6f65e319f1a13cf84b8b435d08}\label{bootpack_8h_ae2025f6f65e319f1a13cf84b8b435d08}} 
+\index{bootpack.h@{bootpack.h}!LIMIT\_IDT@{LIMIT\_IDT}}
+\index{LIMIT\_IDT@{LIMIT\_IDT}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{LIMIT\_IDT}{LIMIT\_IDT}}
+{\footnotesize\ttfamily \#define L\+I\+M\+I\+T\+\_\+\+I\+DT~0x000007ff}
+
+
+
+ bootpack.\+h の 98 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a36e712ba6f12d0bf65a0c94c7a9f2bdb}\label{bootpack_8h_a36e712ba6f12d0bf65a0c94c7a9f2bdb}} 
+\index{bootpack.h@{bootpack.h}!MAX\_SHEETS@{MAX\_SHEETS}}
+\index{MAX\_SHEETS@{MAX\_SHEETS}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_SHEETS}{MAX\_SHEETS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+S\+H\+E\+E\+TS~256}
+
+
+
+シートの最大数 
+
+
+
+ bootpack.\+h の 164 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a1e8ee66be0f1bde2a59cdcc86b04c03a}\label{bootpack_8h_a1e8ee66be0f1bde2a59cdcc86b04c03a}} 
+\index{bootpack.h@{bootpack.h}!MAX\_TASKLEVELS@{MAX\_TASKLEVELS}}
+\index{MAX\_TASKLEVELS@{MAX\_TASKLEVELS}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_TASKLEVELS}{MAX\_TASKLEVELS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+A\+S\+K\+L\+E\+V\+E\+LS~10}
+
+
+
+ bootpack.\+h の 247 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_aac747bed84189f8cfa509b94d488e622}\label{bootpack_8h_aac747bed84189f8cfa509b94d488e622}} 
+\index{bootpack.h@{bootpack.h}!MAX\_TASKS@{MAX\_TASKS}}
+\index{MAX\_TASKS@{MAX\_TASKS}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_TASKS}{MAX\_TASKS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+A\+S\+KS~1000	/$\ast$ 最大タスク数 $\ast$/}
+
+
+
+ bootpack.\+h の 244 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_ada01b6f549d112a19310a5effc4b8697}\label{bootpack_8h_ada01b6f549d112a19310a5effc4b8697}} 
+\index{bootpack.h@{bootpack.h}!MAX\_TASKS\_LV@{MAX\_TASKS\_LV}}
+\index{MAX\_TASKS\_LV@{MAX\_TASKS\_LV}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_TASKS\_LV}{MAX\_TASKS\_LV}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+A\+S\+K\+S\+\_\+\+LV~100}
+
+
+
+ bootpack.\+h の 246 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a631a00e0b5343d37814e14770345ff9b}\label{bootpack_8h_a631a00e0b5343d37814e14770345ff9b}} 
+\index{bootpack.h@{bootpack.h}!MAX\_TIMER@{MAX\_TIMER}}
+\index{MAX\_TIMER@{MAX\_TIMER}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_TIMER}{MAX\_TIMER}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+T\+I\+M\+ER~500}
+
+
+
+ bootpack.\+h の 220 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a0d0528cedf002a015b8e2d8b049c0e92}\label{bootpack_8h_a0d0528cedf002a015b8e2d8b049c0e92}} 
+\index{bootpack.h@{bootpack.h}!MEMMAN\_ADDR@{MEMMAN\_ADDR}}
+\index{MEMMAN\_ADDR@{MEMMAN\_ADDR}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{MEMMAN\_ADDR}{MEMMAN\_ADDR}}
+{\footnotesize\ttfamily \#define M\+E\+M\+M\+A\+N\+\_\+\+A\+D\+DR~0x003c0000}
+
+
+
+ bootpack.\+h の 142 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_ae9fd3b81084ba8e0fa3ded06aec23e16}\label{bootpack_8h_ae9fd3b81084ba8e0fa3ded06aec23e16}} 
+\index{bootpack.h@{bootpack.h}!MEMMAN\_FREES@{MEMMAN\_FREES}}
+\index{MEMMAN\_FREES@{MEMMAN\_FREES}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{MEMMAN\_FREES}{MEMMAN\_FREES}}
+{\footnotesize\ttfamily \#define M\+E\+M\+M\+A\+N\+\_\+\+F\+R\+E\+ES~4090	/$\ast$ これで約32\+KB $\ast$/}
+
+
+
+ bootpack.\+h の 141 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a2848d27ae631e5ea166a047b10968eff}\label{bootpack_8h_a2848d27ae631e5ea166a047b10968eff}} 
+\index{bootpack.h@{bootpack.h}!PIC0\_ICW1@{PIC0\_ICW1}}
+\index{PIC0\_ICW1@{PIC0\_ICW1}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC0\_ICW1}{PIC0\_ICW1}}
+{\footnotesize\ttfamily \#define P\+I\+C0\+\_\+\+I\+C\+W1~0x0020}
+
+
+
+ bootpack.\+h の 111 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a9878464c631c46a1c2aaab9e5912c790}\label{bootpack_8h_a9878464c631c46a1c2aaab9e5912c790}} 
+\index{bootpack.h@{bootpack.h}!PIC0\_ICW2@{PIC0\_ICW2}}
+\index{PIC0\_ICW2@{PIC0\_ICW2}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC0\_ICW2}{PIC0\_ICW2}}
+{\footnotesize\ttfamily \#define P\+I\+C0\+\_\+\+I\+C\+W2~0x0021}
+
+
+
+ bootpack.\+h の 114 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a85a058cafc12a4d99dba78a17595adeb}\label{bootpack_8h_a85a058cafc12a4d99dba78a17595adeb}} 
+\index{bootpack.h@{bootpack.h}!PIC0\_ICW3@{PIC0\_ICW3}}
+\index{PIC0\_ICW3@{PIC0\_ICW3}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC0\_ICW3}{PIC0\_ICW3}}
+{\footnotesize\ttfamily \#define P\+I\+C0\+\_\+\+I\+C\+W3~0x0021}
+
+
+
+ bootpack.\+h の 115 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_adfbedb8dab608ce26852e3f436b3b2d7}\label{bootpack_8h_adfbedb8dab608ce26852e3f436b3b2d7}} 
+\index{bootpack.h@{bootpack.h}!PIC0\_ICW4@{PIC0\_ICW4}}
+\index{PIC0\_ICW4@{PIC0\_ICW4}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC0\_ICW4}{PIC0\_ICW4}}
+{\footnotesize\ttfamily \#define P\+I\+C0\+\_\+\+I\+C\+W4~0x0021}
+
+
+
+ bootpack.\+h の 116 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_ab78c32730c3c70d2d478f24a7c0735f4}\label{bootpack_8h_ab78c32730c3c70d2d478f24a7c0735f4}} 
+\index{bootpack.h@{bootpack.h}!PIC0\_IMR@{PIC0\_IMR}}
+\index{PIC0\_IMR@{PIC0\_IMR}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC0\_IMR}{PIC0\_IMR}}
+{\footnotesize\ttfamily \#define P\+I\+C0\+\_\+\+I\+MR~0x0021}
+
+
+
+ bootpack.\+h の 113 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_ad634cb61f109eb41b718c8002dc1415c}\label{bootpack_8h_ad634cb61f109eb41b718c8002dc1415c}} 
+\index{bootpack.h@{bootpack.h}!PIC0\_OCW2@{PIC0\_OCW2}}
+\index{PIC0\_OCW2@{PIC0\_OCW2}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC0\_OCW2}{PIC0\_OCW2}}
+{\footnotesize\ttfamily \#define P\+I\+C0\+\_\+\+O\+C\+W2~0x0020}
+
+
+
+ bootpack.\+h の 112 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_ab38487cc1695aff0e2c8ff9d8098ee7f}\label{bootpack_8h_ab38487cc1695aff0e2c8ff9d8098ee7f}} 
+\index{bootpack.h@{bootpack.h}!PIC1\_ICW1@{PIC1\_ICW1}}
+\index{PIC1\_ICW1@{PIC1\_ICW1}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC1\_ICW1}{PIC1\_ICW1}}
+{\footnotesize\ttfamily \#define P\+I\+C1\+\_\+\+I\+C\+W1~0x00a0}
+
+
+
+ bootpack.\+h の 117 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_af24f58d2f0bd1231506ed65caa0b9e6b}\label{bootpack_8h_af24f58d2f0bd1231506ed65caa0b9e6b}} 
+\index{bootpack.h@{bootpack.h}!PIC1\_ICW2@{PIC1\_ICW2}}
+\index{PIC1\_ICW2@{PIC1\_ICW2}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC1\_ICW2}{PIC1\_ICW2}}
+{\footnotesize\ttfamily \#define P\+I\+C1\+\_\+\+I\+C\+W2~0x00a1}
+
+
+
+ bootpack.\+h の 120 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a9ba782100f085a722f323d6f4f5f96f9}\label{bootpack_8h_a9ba782100f085a722f323d6f4f5f96f9}} 
+\index{bootpack.h@{bootpack.h}!PIC1\_ICW3@{PIC1\_ICW3}}
+\index{PIC1\_ICW3@{PIC1\_ICW3}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC1\_ICW3}{PIC1\_ICW3}}
+{\footnotesize\ttfamily \#define P\+I\+C1\+\_\+\+I\+C\+W3~0x00a1}
+
+
+
+ bootpack.\+h の 121 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a32cc107ef3e1d0e2daaf9775c4bd30e6}\label{bootpack_8h_a32cc107ef3e1d0e2daaf9775c4bd30e6}} 
+\index{bootpack.h@{bootpack.h}!PIC1\_ICW4@{PIC1\_ICW4}}
+\index{PIC1\_ICW4@{PIC1\_ICW4}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC1\_ICW4}{PIC1\_ICW4}}
+{\footnotesize\ttfamily \#define P\+I\+C1\+\_\+\+I\+C\+W4~0x00a1}
+
+
+
+ bootpack.\+h の 122 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_adfb8ad9cdb4b01794bb0d7c946873b29}\label{bootpack_8h_adfb8ad9cdb4b01794bb0d7c946873b29}} 
+\index{bootpack.h@{bootpack.h}!PIC1\_IMR@{PIC1\_IMR}}
+\index{PIC1\_IMR@{PIC1\_IMR}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC1\_IMR}{PIC1\_IMR}}
+{\footnotesize\ttfamily \#define P\+I\+C1\+\_\+\+I\+MR~0x00a1}
+
+
+
+ bootpack.\+h の 119 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a13c1baed1a4823c4f568e25b062310cd}\label{bootpack_8h_a13c1baed1a4823c4f568e25b062310cd}} 
+\index{bootpack.h@{bootpack.h}!PIC1\_OCW2@{PIC1\_OCW2}}
+\index{PIC1\_OCW2@{PIC1\_OCW2}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PIC1\_OCW2}{PIC1\_OCW2}}
+{\footnotesize\ttfamily \#define P\+I\+C1\+\_\+\+O\+C\+W2~0x00a0}
+
+
+
+ bootpack.\+h の 118 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a4284ba61f1d5d637083da21127ee4bff}\label{bootpack_8h_a4284ba61f1d5d637083da21127ee4bff}} 
+\index{bootpack.h@{bootpack.h}!PORT\_KEYCMD@{PORT\_KEYCMD}}
+\index{PORT\_KEYCMD@{PORT\_KEYCMD}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_KEYCMD}{PORT\_KEYCMD}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+K\+E\+Y\+C\+MD~0x0064}
+
+
+
+ bootpack.\+h の 129 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a26e8797f8769f99f2e3d1d23807b9681}\label{bootpack_8h_a26e8797f8769f99f2e3d1d23807b9681}} 
+\index{bootpack.h@{bootpack.h}!PORT\_KEYDAT@{PORT\_KEYDAT}}
+\index{PORT\_KEYDAT@{PORT\_KEYDAT}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{PORT\_KEYDAT}{PORT\_KEYDAT}}
+{\footnotesize\ttfamily \#define P\+O\+R\+T\+\_\+\+K\+E\+Y\+D\+AT~0x0060}
+
+
+
+ bootpack.\+h の 128 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a7818e433921c6a96d266ee7532ebebff}\label{bootpack_8h_a7818e433921c6a96d266ee7532ebebff}} 
+\index{bootpack.h@{bootpack.h}!TASK\_GDT0@{TASK\_GDT0}}
+\index{TASK\_GDT0@{TASK\_GDT0}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{TASK\_GDT0}{TASK\_GDT0}}
+{\footnotesize\ttfamily \#define T\+A\+S\+K\+\_\+\+G\+D\+T0~3		/$\ast$ T\+S\+Sを\+G\+D\+Tの何番から割り当てるのか $\ast$/}
+
+
+
+ bootpack.\+h の 245 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{bootpack_8h_a64acf4b04a5ff493c4ecb7c433f2885a}\label{bootpack_8h_a64acf4b04a5ff493c4ecb7c433f2885a}} 
+\index{bootpack.h@{bootpack.h}!asm\_end\_app@{asm\_end\_app}}
+\index{asm\_end\_app@{asm\_end\_app}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{asm\_end\_app()}{asm\_end\_app()}}
+{\footnotesize\ttfamily void asm\+\_\+end\+\_\+app (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{bootpack_8h_a3f0b9e8bde51dc3ed58642ff2f653454}\label{bootpack_8h_a3f0b9e8bde51dc3ed58642ff2f653454}} 
+\index{bootpack.h@{bootpack.h}!asm\_hrb\_api@{asm\_hrb\_api}}
+\index{asm\_hrb\_api@{asm\_hrb\_api}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{asm\_hrb\_api()}{asm\_hrb\_api()}}
+{\footnotesize\ttfamily void asm\+\_\+hrb\+\_\+api (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{bootpack_8h_abcbe6ab7de11ead7c369c41cac634237}\label{bootpack_8h_abcbe6ab7de11ead7c369c41cac634237}} 
+\index{bootpack.h@{bootpack.h}!asm\_inthandler0c@{asm\_inthandler0c}}
+\index{asm\_inthandler0c@{asm\_inthandler0c}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{asm\_inthandler0c()}{asm\_inthandler0c()}}
+{\footnotesize\ttfamily void asm\+\_\+inthandler0c (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{bootpack_8h_a5dd851eafcfb3598ee2526eacb19bce9}\label{bootpack_8h_a5dd851eafcfb3598ee2526eacb19bce9}} 
+\index{bootpack.h@{bootpack.h}!asm\_inthandler0d@{asm\_inthandler0d}}
+\index{asm\_inthandler0d@{asm\_inthandler0d}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{asm\_inthandler0d()}{asm\_inthandler0d()}}
+{\footnotesize\ttfamily void asm\+\_\+inthandler0d (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{bootpack_8h_abf9da88d9dae08dab301bc337996ca87}\label{bootpack_8h_abf9da88d9dae08dab301bc337996ca87}} 
+\index{bootpack.h@{bootpack.h}!asm\_inthandler20@{asm\_inthandler20}}
+\index{asm\_inthandler20@{asm\_inthandler20}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{asm\_inthandler20()}{asm\_inthandler20()}}
+{\footnotesize\ttfamily void asm\+\_\+inthandler20 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{bootpack_8h_a2f5878aef3f695aa18bea63f08d516c5}\label{bootpack_8h_a2f5878aef3f695aa18bea63f08d516c5}} 
+\index{bootpack.h@{bootpack.h}!asm\_inthandler21@{asm\_inthandler21}}
+\index{asm\_inthandler21@{asm\_inthandler21}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{asm\_inthandler21()}{asm\_inthandler21()}}
+{\footnotesize\ttfamily void asm\+\_\+inthandler21 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{bootpack_8h_a6b3fdc28ef34e450937c94e90d3d003b}\label{bootpack_8h_a6b3fdc28ef34e450937c94e90d3d003b}} 
+\index{bootpack.h@{bootpack.h}!asm\_inthandler2c@{asm\_inthandler2c}}
+\index{asm\_inthandler2c@{asm\_inthandler2c}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{asm\_inthandler2c()}{asm\_inthandler2c()}}
+{\footnotesize\ttfamily void asm\+\_\+inthandler2c (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{bootpack_8h_a8db7fb68501f39701e4b0801364a2e1c}\label{bootpack_8h_a8db7fb68501f39701e4b0801364a2e1c}} 
+\index{bootpack.h@{bootpack.h}!boxfill8@{boxfill8}}
+\index{boxfill8@{boxfill8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{boxfill8()}{boxfill8()}}
+{\footnotesize\ttfamily void boxfill8 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{vram,  }\item[{int}]{xsize,  }\item[{unsigned char}]{c,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 57 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{bootpack_8h_a6e510ccd9bc95ae7e7e0adbd39e4b512}\label{bootpack_8h_a6e510ccd9bc95ae7e7e0adbd39e4b512}} 
+\index{bootpack.h@{bootpack.h}!change\_wtitle8@{change\_wtitle8}}
+\index{change\_wtitle8@{change\_wtitle8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{change\_wtitle8()}{change\_wtitle8()}}
+{\footnotesize\ttfamily void change\+\_\+wtitle8 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{char}]{act }\end{DoxyParamCaption})}
+
+
+
+ window.\+c の 96 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{bootpack_8h_ac543899ee5ce9621fa024d0ee3098f3d}\label{bootpack_8h_ac543899ee5ce9621fa024d0ee3098f3d}} 
+\index{bootpack.h@{bootpack.h}!cmd\_app@{cmd\_app}}
+\index{cmd\_app@{cmd\_app}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cmd\_app()}{cmd\_app()}}
+{\footnotesize\ttfamily int cmd\+\_\+app (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int $\ast$}]{fat,  }\item[{char $\ast$}]{cmdline }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 345 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{bootpack_8h_a2cfd9d5784f0117d7e54462ee9cd62d6}\label{bootpack_8h_a2cfd9d5784f0117d7e54462ee9cd62d6}} 
+\index{bootpack.h@{bootpack.h}!cmd\_cls@{cmd\_cls}}
+\index{cmd\_cls@{cmd\_cls}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cmd\_cls()}{cmd\_cls()}}
+{\footnotesize\ttfamily void cmd\+\_\+cls (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 239 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 13
+被呼び出し関係図\+:
+% FIG 14
+\mbox{\Hypertarget{bootpack_8h_a6fae3dc411d4d283fd16ef02602475a4}\label{bootpack_8h_a6fae3dc411d4d283fd16ef02602475a4}} 
+\index{bootpack.h@{bootpack.h}!cmd\_dir@{cmd\_dir}}
+\index{cmd\_dir@{cmd\_dir}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cmd\_dir()}{cmd\_dir()}}
+{\footnotesize\ttfamily void cmd\+\_\+dir (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 253 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 15
+被呼び出し関係図\+:
+% FIG 16
+\mbox{\Hypertarget{bootpack_8h_aa1ae787d73bbace090cbce5194ac0824}\label{bootpack_8h_aa1ae787d73bbace090cbce5194ac0824}} 
+\index{bootpack.h@{bootpack.h}!cmd\_exit@{cmd\_exit}}
+\index{cmd\_exit@{cmd\_exit}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cmd\_exit()}{cmd\_exit()}}
+{\footnotesize\ttfamily void cmd\+\_\+exit (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int $\ast$}]{fat }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 279 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 17
+被呼び出し関係図\+:
+% FIG 18
+\mbox{\Hypertarget{bootpack_8h_ae4b5e634ac4512b6cbc40729a6732bc1}\label{bootpack_8h_ae4b5e634ac4512b6cbc40729a6732bc1}} 
+\index{bootpack.h@{bootpack.h}!cmd\_langmode@{cmd\_langmode}}
+\index{cmd\_langmode@{cmd\_langmode}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cmd\_langmode()}{cmd\_langmode()}}
+{\footnotesize\ttfamily void cmd\+\_\+langmode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{cmdline }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 332 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 19
+被呼び出し関係図\+:
+% FIG 20
+\mbox{\Hypertarget{bootpack_8h_a7beea0ecae31c20285e08ce9c992c24d}\label{bootpack_8h_a7beea0ecae31c20285e08ce9c992c24d}} 
+\index{bootpack.h@{bootpack.h}!cmd\_mem@{cmd\_mem}}
+\index{cmd\_mem@{cmd\_mem}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cmd\_mem()}{cmd\_mem()}}
+{\footnotesize\ttfamily void cmd\+\_\+mem (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 230 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 21
+被呼び出し関係図\+:
+% FIG 22
+\mbox{\Hypertarget{bootpack_8h_a3f08f092f66404d51c2af42f76237980}\label{bootpack_8h_a3f08f092f66404d51c2af42f76237980}} 
+\index{bootpack.h@{bootpack.h}!cmd\_ncst@{cmd\_ncst}}
+\index{cmd\_ncst@{cmd\_ncst}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cmd\_ncst()}{cmd\_ncst()}}
+{\footnotesize\ttfamily void cmd\+\_\+ncst (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{cmdline,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 318 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 23
+被呼び出し関係図\+:
+% FIG 24
+\mbox{\Hypertarget{bootpack_8h_af8d7dae21f111aecc555ba5e14df4265}\label{bootpack_8h_af8d7dae21f111aecc555ba5e14df4265}} 
+\index{bootpack.h@{bootpack.h}!cmd\_start@{cmd\_start}}
+\index{cmd\_start@{cmd\_start}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cmd\_start()}{cmd\_start()}}
+{\footnotesize\ttfamily void cmd\+\_\+start (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{cmdline,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 301 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 25
+被呼び出し関係図\+:
+% FIG 26
+\mbox{\Hypertarget{bootpack_8h_ac3fc0a555ac1405cc89bc6eb62641b54}\label{bootpack_8h_ac3fc0a555ac1405cc89bc6eb62641b54}} 
+\index{bootpack.h@{bootpack.h}!cons\_newline@{cons\_newline}}
+\index{cons\_newline@{cons\_newline}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cons\_newline()}{cons\_newline()}}
+{\footnotesize\ttfamily void cons\+\_\+newline (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 158 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 27
+被呼び出し関係図\+:
+% FIG 28
+\mbox{\Hypertarget{bootpack_8h_a4197ccd3ce2053ca0c778fed7da81252}\label{bootpack_8h_a4197ccd3ce2053ca0c778fed7da81252}} 
+\index{bootpack.h@{bootpack.h}!cons\_putchar@{cons\_putchar}}
+\index{cons\_putchar@{cons\_putchar}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cons\_putchar()}{cons\_putchar()}}
+{\footnotesize\ttfamily void cons\+\_\+putchar (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int}]{chr,  }\item[{char}]{move }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 121 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 29
+被呼び出し関係図\+:
+% FIG 30
+\mbox{\Hypertarget{bootpack_8h_a6a3da535464b8bd88457538ad73058e1}\label{bootpack_8h_a6a3da535464b8bd88457538ad73058e1}} 
+\index{bootpack.h@{bootpack.h}!cons\_putstr0@{cons\_putstr0}}
+\index{cons\_putstr0@{cons\_putstr0}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cons\_putstr0()}{cons\_putstr0()}}
+{\footnotesize\ttfamily void cons\+\_\+putstr0 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 188 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 31
+被呼び出し関係図\+:
+% FIG 32
+\mbox{\Hypertarget{bootpack_8h_a5793ef68f2d9b7f6767c51112109fdf9}\label{bootpack_8h_a5793ef68f2d9b7f6767c51112109fdf9}} 
+\index{bootpack.h@{bootpack.h}!cons\_putstr1@{cons\_putstr1}}
+\index{cons\_putstr1@{cons\_putstr1}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cons\_putstr1()}{cons\_putstr1()}}
+{\footnotesize\ttfamily void cons\+\_\+putstr1 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{s,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 196 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 33
+被呼び出し関係図\+:
+% FIG 34
+\mbox{\Hypertarget{bootpack_8h_a7be2f98778674111de60be8c7f0a3e62}\label{bootpack_8h_a7be2f98778674111de60be8c7f0a3e62}} 
+\index{bootpack.h@{bootpack.h}!cons\_runcmd@{cons\_runcmd}}
+\index{cons\_runcmd@{cons\_runcmd}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{cons\_runcmd()}{cons\_runcmd()}}
+{\footnotesize\ttfamily void cons\+\_\+runcmd (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmdline,  }\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int $\ast$}]{fat,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 205 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 35
+被呼び出し関係図\+:
+% FIG 36
+\mbox{\Hypertarget{bootpack_8h_acf7b570f866fb6b0880a9fb988393e69}\label{bootpack_8h_acf7b570f866fb6b0880a9fb988393e69}} 
+\index{bootpack.h@{bootpack.h}!console\_task@{console\_task}}
+\index{console\_task@{console\_task}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{console\_task()}{console\_task()}}
+{\footnotesize\ttfamily void console\+\_\+task (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sheet,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 7 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 37
+被呼び出し関係図\+:
+% FIG 38
+\mbox{\Hypertarget{bootpack_8h_a42740b291ad8258327a7334c89f1fe6a}\label{bootpack_8h_a42740b291ad8258327a7334c89f1fe6a}} 
+\index{bootpack.h@{bootpack.h}!enable\_mouse@{enable\_mouse}}
+\index{enable\_mouse@{enable\_mouse}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{enable\_mouse()}{enable\_mouse()}}
+{\footnotesize\ttfamily void enable\+\_\+mouse (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{data0,  }\item[{struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}} $\ast$}]{mdec }\end{DoxyParamCaption})}
+
+
+
+ mouse.\+c の 22 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 39
+被呼び出し関係図\+:
+% FIG 40
+\mbox{\Hypertarget{bootpack_8h_a153397c5f6d250fa239a444ea2f18902}\label{bootpack_8h_a153397c5f6d250fa239a444ea2f18902}} 
+\index{bootpack.h@{bootpack.h}!farcall@{farcall}}
+\index{farcall@{farcall}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{farcall()}{farcall()}}
+{\footnotesize\ttfamily void farcall (\begin{DoxyParamCaption}\item[{int}]{eip,  }\item[{int}]{cs }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{bootpack_8h_a0c42a9b5531e7052d27e7389223cdf98}\label{bootpack_8h_a0c42a9b5531e7052d27e7389223cdf98}} 
+\index{bootpack.h@{bootpack.h}!farjmp@{farjmp}}
+\index{farjmp@{farjmp}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{farjmp()}{farjmp()}}
+{\footnotesize\ttfamily void farjmp (\begin{DoxyParamCaption}\item[{int}]{eip,  }\item[{int}]{cs }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 41
+\mbox{\Hypertarget{bootpack_8h_aa5d8708f8d80c1950641ce7db6b846bd}\label{bootpack_8h_aa5d8708f8d80c1950641ce7db6b846bd}} 
+\index{bootpack.h@{bootpack.h}!fifo32\_get@{fifo32\_get}}
+\index{fifo32\_get@{fifo32\_get}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{fifo32\_get()}{fifo32\_get()}}
+{\footnotesize\ttfamily int fifo32\+\_\+get (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo }\end{DoxyParamCaption})}
+
+
+
+ fifo.\+c の 42 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 42
+\mbox{\Hypertarget{bootpack_8h_a4eac38701a0d14f4ccd26e777acbb173}\label{bootpack_8h_a4eac38701a0d14f4ccd26e777acbb173}} 
+\index{bootpack.h@{bootpack.h}!fifo32\_init@{fifo32\_init}}
+\index{fifo32\_init@{fifo32\_init}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{fifo32\_init()}{fifo32\_init()}}
+{\footnotesize\ttfamily void fifo32\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{size,  }\item[{int $\ast$}]{buf,  }\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+
+ fifo.\+c の 7 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 43
+\mbox{\Hypertarget{bootpack_8h_a5c1bea596c94c2a89840d555c98abb84}\label{bootpack_8h_a5c1bea596c94c2a89840d555c98abb84}} 
+\index{bootpack.h@{bootpack.h}!fifo32\_put@{fifo32\_put}}
+\index{fifo32\_put@{fifo32\_put}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{fifo32\_put()}{fifo32\_put()}}
+{\footnotesize\ttfamily int fifo32\+\_\+put (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+ fifo.\+c の 20 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 44
+被呼び出し関係図\+:
+% FIG 45
+\mbox{\Hypertarget{bootpack_8h_addecf769f44a7f17a964e2ce5ba3f255}\label{bootpack_8h_addecf769f44a7f17a964e2ce5ba3f255}} 
+\index{bootpack.h@{bootpack.h}!fifo32\_status@{fifo32\_status}}
+\index{fifo32\_status@{fifo32\_status}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{fifo32\_status()}{fifo32\_status()}}
+{\footnotesize\ttfamily int fifo32\+\_\+status (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo }\end{DoxyParamCaption})}
+
+
+
+ fifo.\+c の 59 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 46
+\mbox{\Hypertarget{bootpack_8h_a42bc90f073a4c6e4402de1ccbf1747bd}\label{bootpack_8h_a42bc90f073a4c6e4402de1ccbf1747bd}} 
+\index{bootpack.h@{bootpack.h}!file\_loadfile@{file\_loadfile}}
+\index{file\_loadfile@{file\_loadfile}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{file\_loadfile()}{file\_loadfile()}}
+{\footnotesize\ttfamily void file\+\_\+loadfile (\begin{DoxyParamCaption}\item[{int}]{clustno,  }\item[{int}]{size,  }\item[{char $\ast$}]{buf,  }\item[{int $\ast$}]{fat,  }\item[{char $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ file.\+c の 17 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 47
+\mbox{\Hypertarget{bootpack_8h_a33cd1c9ec67b310356d3e8a71868c156}\label{bootpack_8h_a33cd1c9ec67b310356d3e8a71868c156}} 
+\index{bootpack.h@{bootpack.h}!file\_loadfile2@{file\_loadfile2}}
+\index{file\_loadfile2@{file\_loadfile2}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{file\_loadfile2()}{file\_loadfile2()}}
+{\footnotesize\ttfamily char$\ast$ file\+\_\+loadfile2 (\begin{DoxyParamCaption}\item[{int}]{clustno,  }\item[{int $\ast$}]{psize,  }\item[{int $\ast$}]{fat }\end{DoxyParamCaption})}
+
+
+
+ file.\+c の 76 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 48
+被呼び出し関係図\+:
+% FIG 49
+\mbox{\Hypertarget{bootpack_8h_a53fcda0d66b498de64fda0ddfd041002}\label{bootpack_8h_a53fcda0d66b498de64fda0ddfd041002}} 
+\index{bootpack.h@{bootpack.h}!file\_readfat@{file\_readfat}}
+\index{file\_readfat@{file\_readfat}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{file\_readfat()}{file\_readfat()}}
+{\footnotesize\ttfamily void file\+\_\+readfat (\begin{DoxyParamCaption}\item[{int $\ast$}]{fat,  }\item[{unsigned char $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ file.\+c の 5 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 50
+\mbox{\Hypertarget{bootpack_8h_a351fe46d5dd8d8fa194636c54ff2acaf}\label{bootpack_8h_a351fe46d5dd8d8fa194636c54ff2acaf}} 
+\index{bootpack.h@{bootpack.h}!file\_search@{file\_search}}
+\index{file\_search@{file\_search}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{file\_search()}{file\_search()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}}$\ast$ file\+\_\+search (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}} $\ast$}]{finfo,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+ file.\+c の 37 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 51
+\mbox{\Hypertarget{bootpack_8h_ae3a2b95ac62166efc071caeb9e7b0db1}\label{bootpack_8h_ae3a2b95ac62166efc071caeb9e7b0db1}} 
+\index{bootpack.h@{bootpack.h}!hrb\_api@{hrb\_api}}
+\index{hrb\_api@{hrb\_api}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{hrb\_api()}{hrb\_api()}}
+{\footnotesize\ttfamily int$\ast$ hrb\+\_\+api (\begin{DoxyParamCaption}\item[{int}]{edi,  }\item[{int}]{esi,  }\item[{int}]{ebp,  }\item[{int}]{esp,  }\item[{int}]{ebx,  }\item[{int}]{edx,  }\item[{int}]{ecx,  }\item[{int}]{eax }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 421 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 52
+\mbox{\Hypertarget{bootpack_8h_a3ad481c373bdda4ed8e6c74affa44099}\label{bootpack_8h_a3ad481c373bdda4ed8e6c74affa44099}} 
+\index{bootpack.h@{bootpack.h}!hrb\_api\_linewin@{hrb\_api\_linewin}}
+\index{hrb\_api\_linewin@{hrb\_api\_linewin}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{hrb\_api\_linewin()}{hrb\_api\_linewin()}}
+{\footnotesize\ttfamily void hrb\+\_\+api\+\_\+linewin (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 659 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 53
+\mbox{\Hypertarget{bootpack_8h_ad5b36851d779bf52f1398e31f55ddc9d}\label{bootpack_8h_ad5b36851d779bf52f1398e31f55ddc9d}} 
+\index{bootpack.h@{bootpack.h}!init\_gdtidt@{init\_gdtidt}}
+\index{init\_gdtidt@{init\_gdtidt}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{init\_gdtidt()}{init\_gdtidt()}}
+{\footnotesize\ttfamily void init\+\_\+gdtidt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ dsctbl.\+c の 5 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 54
+被呼び出し関係図\+:
+% FIG 55
+\mbox{\Hypertarget{bootpack_8h_acd24e074d17cc0f29ae3808498b6d012}\label{bootpack_8h_acd24e074d17cc0f29ae3808498b6d012}} 
+\index{bootpack.h@{bootpack.h}!init\_keyboard@{init\_keyboard}}
+\index{init\_keyboard@{init\_keyboard}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{init\_keyboard()}{init\_keyboard()}}
+{\footnotesize\ttfamily void init\+\_\+keyboard (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{data0 }\end{DoxyParamCaption})}
+
+
+
+ keyboard.\+c の 33 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 56
+被呼び出し関係図\+:
+% FIG 57
+\mbox{\Hypertarget{bootpack_8h_a335989fd7a070b4772b6640dcf82d23e}\label{bootpack_8h_a335989fd7a070b4772b6640dcf82d23e}} 
+\index{bootpack.h@{bootpack.h}!init\_mouse\_cursor8@{init\_mouse\_cursor8}}
+\index{init\_mouse\_cursor8@{init\_mouse\_cursor8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{init\_mouse\_cursor8()}{init\_mouse\_cursor8()}}
+{\footnotesize\ttfamily void init\+\_\+mouse\+\_\+cursor8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{mouse,  }\item[{char}]{bc }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 172 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 58
+\mbox{\Hypertarget{bootpack_8h_a42a564ae1340c89e85f7ef58c6f8e46e}\label{bootpack_8h_a42a564ae1340c89e85f7ef58c6f8e46e}} 
+\index{bootpack.h@{bootpack.h}!init\_palette@{init\_palette}}
+\index{init\_palette@{init\_palette}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{init\_palette()}{init\_palette()}}
+{\footnotesize\ttfamily void init\+\_\+palette (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 5 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 59
+被呼び出し関係図\+:
+% FIG 60
+\mbox{\Hypertarget{bootpack_8h_afbc0dbef6f15e2df21b38724ea38c483}\label{bootpack_8h_afbc0dbef6f15e2df21b38724ea38c483}} 
+\index{bootpack.h@{bootpack.h}!init\_pic@{init\_pic}}
+\index{init\_pic@{init\_pic}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{init\_pic()}{init\_pic()}}
+{\footnotesize\ttfamily void init\+\_\+pic (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ int.\+c の 6 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 61
+被呼び出し関係図\+:
+% FIG 62
+\mbox{\Hypertarget{bootpack_8h_afb4e76c5cfcf522b4cf2949cc2d5539f}\label{bootpack_8h_afb4e76c5cfcf522b4cf2949cc2d5539f}} 
+\index{bootpack.h@{bootpack.h}!init\_pit@{init\_pit}}
+\index{init\_pit@{init\_pit}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{init\_pit()}{init\_pit()}}
+{\footnotesize\ttfamily void init\+\_\+pit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 13 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 63
+被呼び出し関係図\+:
+% FIG 64
+\mbox{\Hypertarget{bootpack_8h_a080c9dc05b60bc16c1b06437e995b970}\label{bootpack_8h_a080c9dc05b60bc16c1b06437e995b970}} 
+\index{bootpack.h@{bootpack.h}!init\_screen8@{init\_screen8}}
+\index{init\_screen8@{init\_screen8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{init\_screen8()}{init\_screen8()}}
+{\footnotesize\ttfamily void init\+\_\+screen8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{vram,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 67 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 65
+被呼び出し関係図\+:
+% FIG 66
+\mbox{\Hypertarget{bootpack_8h_ab1e502d332a2ad9588075aed1aca1541}\label{bootpack_8h_ab1e502d332a2ad9588075aed1aca1541}} 
+\index{bootpack.h@{bootpack.h}!inthandler0c@{inthandler0c}}
+\index{inthandler0c@{inthandler0c}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{inthandler0c()}{inthandler0c()}}
+{\footnotesize\ttfamily int$\ast$ inthandler0c (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 637 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 67
+\mbox{\Hypertarget{bootpack_8h_abc45130af020e3d17361636094ba1619}\label{bootpack_8h_abc45130af020e3d17361636094ba1619}} 
+\index{bootpack.h@{bootpack.h}!inthandler0d@{inthandler0d}}
+\index{inthandler0d@{inthandler0d}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{inthandler0d()}{inthandler0d()}}
+{\footnotesize\ttfamily int$\ast$ inthandler0d (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 648 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 68
+\mbox{\Hypertarget{bootpack_8h_a79570c81cf0a60bde51271245ac85897}\label{bootpack_8h_a79570c81cf0a60bde51271245ac85897}} 
+\index{bootpack.h@{bootpack.h}!inthandler20@{inthandler20}}
+\index{inthandler20@{inthandler20}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{inthandler20()}{inthandler20()}}
+{\footnotesize\ttfamily void inthandler20 (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 90 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 69
+\mbox{\Hypertarget{bootpack_8h_a6bf05bd24f3dc98e872a0653a13a3e3b}\label{bootpack_8h_a6bf05bd24f3dc98e872a0653a13a3e3b}} 
+\index{bootpack.h@{bootpack.h}!inthandler21@{inthandler21}}
+\index{inthandler21@{inthandler21}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{inthandler21()}{inthandler21()}}
+{\footnotesize\ttfamily void inthandler21 (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ keyboard.\+c の 8 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 70
+\mbox{\Hypertarget{bootpack_8h_aa89ae3554e7c9ac3e95fee1a96d3f56a}\label{bootpack_8h_aa89ae3554e7c9ac3e95fee1a96d3f56a}} 
+\index{bootpack.h@{bootpack.h}!inthandler2c@{inthandler2c}}
+\index{inthandler2c@{inthandler2c}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{inthandler2c()}{inthandler2c()}}
+{\footnotesize\ttfamily void inthandler2c (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ mouse.\+c の 8 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 71
+\mbox{\Hypertarget{bootpack_8h_a8efff3df95d8ca5965876fe8949f99ae}\label{bootpack_8h_a8efff3df95d8ca5965876fe8949f99ae}} 
+\index{bootpack.h@{bootpack.h}!io\_cli@{io\_cli}}
+\index{io\_cli@{io\_cli}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{io\_cli()}{io\_cli()}}
+{\footnotesize\ttfamily void io\+\_\+cli (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 72
+\mbox{\Hypertarget{bootpack_8h_a222d3c048b8f4192d8ef949249849aa0}\label{bootpack_8h_a222d3c048b8f4192d8ef949249849aa0}} 
+\index{bootpack.h@{bootpack.h}!io\_hlt@{io\_hlt}}
+\index{io\_hlt@{io\_hlt}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{io\_hlt()}{io\_hlt()}}
+{\footnotesize\ttfamily void io\+\_\+hlt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 73
+\mbox{\Hypertarget{bootpack_8h_abe410220cdaf6d701275a5d75f07acd0}\label{bootpack_8h_abe410220cdaf6d701275a5d75f07acd0}} 
+\index{bootpack.h@{bootpack.h}!io\_in8@{io\_in8}}
+\index{io\_in8@{io\_in8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{io\_in8()}{io\_in8()}}
+{\footnotesize\ttfamily int io\+\_\+in8 (\begin{DoxyParamCaption}\item[{int}]{port }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 74
+\mbox{\Hypertarget{bootpack_8h_acf007bdb6d8bea64314996b7d7b01470}\label{bootpack_8h_acf007bdb6d8bea64314996b7d7b01470}} 
+\index{bootpack.h@{bootpack.h}!io\_load\_eflags@{io\_load\_eflags}}
+\index{io\_load\_eflags@{io\_load\_eflags}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{io\_load\_eflags()}{io\_load\_eflags()}}
+{\footnotesize\ttfamily int io\+\_\+load\+\_\+eflags (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 75
+\mbox{\Hypertarget{bootpack_8h_a23ae700e52c0cde96d20fc539826d532}\label{bootpack_8h_a23ae700e52c0cde96d20fc539826d532}} 
+\index{bootpack.h@{bootpack.h}!io\_out8@{io\_out8}}
+\index{io\_out8@{io\_out8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{io\_out8()}{io\_out8()}}
+{\footnotesize\ttfamily void io\+\_\+out8 (\begin{DoxyParamCaption}\item[{int}]{port,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 76
+\mbox{\Hypertarget{bootpack_8h_a2c79d0d7b1caa7fe6260a55e5136872e}\label{bootpack_8h_a2c79d0d7b1caa7fe6260a55e5136872e}} 
+\index{bootpack.h@{bootpack.h}!io\_sti@{io\_sti}}
+\index{io\_sti@{io\_sti}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{io\_sti()}{io\_sti()}}
+{\footnotesize\ttfamily void io\+\_\+sti (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 77
+\mbox{\Hypertarget{bootpack_8h_ac8abfd05dc0cedb7d36cc9975ce04d65}\label{bootpack_8h_ac8abfd05dc0cedb7d36cc9975ce04d65}} 
+\index{bootpack.h@{bootpack.h}!io\_stihlt@{io\_stihlt}}
+\index{io\_stihlt@{io\_stihlt}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{io\_stihlt()}{io\_stihlt()}}
+{\footnotesize\ttfamily void io\+\_\+stihlt (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{bootpack_8h_aac4f8e3e6b71a465592bdf1f5d4202ac}\label{bootpack_8h_aac4f8e3e6b71a465592bdf1f5d4202ac}} 
+\index{bootpack.h@{bootpack.h}!io\_store\_eflags@{io\_store\_eflags}}
+\index{io\_store\_eflags@{io\_store\_eflags}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{io\_store\_eflags()}{io\_store\_eflags()}}
+{\footnotesize\ttfamily void io\+\_\+store\+\_\+eflags (\begin{DoxyParamCaption}\item[{int}]{eflags }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 78
+\mbox{\Hypertarget{bootpack_8h_a5af6367bea7c14ca17c3956914276d64}\label{bootpack_8h_a5af6367bea7c14ca17c3956914276d64}} 
+\index{bootpack.h@{bootpack.h}!load\_cr0@{load\_cr0}}
+\index{load\_cr0@{load\_cr0}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{load\_cr0()}{load\_cr0()}}
+{\footnotesize\ttfamily int load\+\_\+cr0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 79
+\mbox{\Hypertarget{bootpack_8h_a90cc934e88e02161c8d0a52cc39025f3}\label{bootpack_8h_a90cc934e88e02161c8d0a52cc39025f3}} 
+\index{bootpack.h@{bootpack.h}!load\_gdtr@{load\_gdtr}}
+\index{load\_gdtr@{load\_gdtr}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{load\_gdtr()}{load\_gdtr()}}
+{\footnotesize\ttfamily void load\+\_\+gdtr (\begin{DoxyParamCaption}\item[{int}]{limit,  }\item[{int}]{addr }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 80
+\mbox{\Hypertarget{bootpack_8h_a97b93121cbb4ac660389d9943e7a6928}\label{bootpack_8h_a97b93121cbb4ac660389d9943e7a6928}} 
+\index{bootpack.h@{bootpack.h}!load\_idtr@{load\_idtr}}
+\index{load\_idtr@{load\_idtr}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{load\_idtr()}{load\_idtr()}}
+{\footnotesize\ttfamily void load\+\_\+idtr (\begin{DoxyParamCaption}\item[{int}]{limit,  }\item[{int}]{addr }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 81
+\mbox{\Hypertarget{bootpack_8h_af86d882069635e9f7c41451cf77b0422}\label{bootpack_8h_af86d882069635e9f7c41451cf77b0422}} 
+\index{bootpack.h@{bootpack.h}!load\_tr@{load\_tr}}
+\index{load\_tr@{load\_tr}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{load\_tr()}{load\_tr()}}
+{\footnotesize\ttfamily void load\+\_\+tr (\begin{DoxyParamCaption}\item[{int}]{tr }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 82
+\mbox{\Hypertarget{bootpack_8h_aa8d3e4458a5d7b5318dfb3cdf2010a58}\label{bootpack_8h_aa8d3e4458a5d7b5318dfb3cdf2010a58}} 
+\index{bootpack.h@{bootpack.h}!make\_textbox8@{make\_textbox8}}
+\index{make\_textbox8@{make\_textbox8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{make\_textbox8()}{make\_textbox8()}}
+{\footnotesize\ttfamily void make\+\_\+textbox8 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{sx,  }\item[{int}]{sy,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+ window.\+c の 81 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 83
+被呼び出し関係図\+:
+% FIG 84
+\mbox{\Hypertarget{bootpack_8h_aa2e5c7ff789a55c98bf695241272bc16}\label{bootpack_8h_aa2e5c7ff789a55c98bf695241272bc16}} 
+\index{bootpack.h@{bootpack.h}!make\_window8@{make\_window8}}
+\index{make\_window8@{make\_window8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{make\_window8()}{make\_window8()}}
+{\footnotesize\ttfamily void make\+\_\+window8 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{xsize,  }\item[{int}]{ysize,  }\item[{char $\ast$}]{title,  }\item[{char}]{act }\end{DoxyParamCaption})}
+
+
+
+ window.\+c の 5 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 85
+被呼び出し関係図\+:
+% FIG 86
+\mbox{\Hypertarget{bootpack_8h_a7624d2de5f9aef85e89e2a12375cf40d}\label{bootpack_8h_a7624d2de5f9aef85e89e2a12375cf40d}} 
+\index{bootpack.h@{bootpack.h}!make\_wtitle8@{make\_wtitle8}}
+\index{make\_wtitle8@{make\_wtitle8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{make\_wtitle8()}{make\_wtitle8()}}
+{\footnotesize\ttfamily void make\+\_\+wtitle8 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{xsize,  }\item[{char $\ast$}]{title,  }\item[{char}]{act }\end{DoxyParamCaption})}
+
+
+
+ window.\+c の 20 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 87
+被呼び出し関係図\+:
+% FIG 88
+\mbox{\Hypertarget{bootpack_8h_a3a44e2ae3c434e982c7b906e00af831a}\label{bootpack_8h_a3a44e2ae3c434e982c7b906e00af831a}} 
+\index{bootpack.h@{bootpack.h}!memman\_alloc@{memman\_alloc}}
+\index{memman\_alloc@{memman\_alloc}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{memman\_alloc()}{memman\_alloc()}}
+{\footnotesize\ttfamily unsigned int memman\+\_\+alloc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 60 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 89
+\mbox{\Hypertarget{bootpack_8h_a0b2b807ae567c0c3a0f5878b6ea95383}\label{bootpack_8h_a0b2b807ae567c0c3a0f5878b6ea95383}} 
+\index{bootpack.h@{bootpack.h}!memman\_alloc\_4k@{memman\_alloc\_4k}}
+\index{memman\_alloc\_4k@{memman\_alloc\_4k}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{memman\_alloc\_4k()}{memman\_alloc\_4k()}}
+{\footnotesize\ttfamily unsigned int memman\+\_\+alloc\+\_\+4k (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 146 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 90
+被呼び出し関係図\+:
+% FIG 91
+\mbox{\Hypertarget{bootpack_8h_a4d14a01ac8b137a266aafe80c5102a52}\label{bootpack_8h_a4d14a01ac8b137a266aafe80c5102a52}} 
+\index{bootpack.h@{bootpack.h}!memman\_free@{memman\_free}}
+\index{memman\_free@{memman\_free}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{memman\_free()}{memman\_free()}}
+{\footnotesize\ttfamily int memman\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man,  }\item[{unsigned int}]{addr,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 83 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 92
+\mbox{\Hypertarget{bootpack_8h_acad1337e14f758731d8241ee094d1a86}\label{bootpack_8h_acad1337e14f758731d8241ee094d1a86}} 
+\index{bootpack.h@{bootpack.h}!memman\_free\_4k@{memman\_free\_4k}}
+\index{memman\_free\_4k@{memman\_free\_4k}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{memman\_free\_4k()}{memman\_free\_4k()}}
+{\footnotesize\ttfamily int memman\+\_\+free\+\_\+4k (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man,  }\item[{unsigned int}]{addr,  }\item[{unsigned int}]{size }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 154 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 93
+被呼び出し関係図\+:
+% FIG 94
+\mbox{\Hypertarget{bootpack_8h_a8b80d84323d02134be3ecc3f5d7cbcd2}\label{bootpack_8h_a8b80d84323d02134be3ecc3f5d7cbcd2}} 
+\index{bootpack.h@{bootpack.h}!memman\_init@{memman\_init}}
+\index{memman\_init@{memman\_init}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{memman\_init()}{memman\_init()}}
+{\footnotesize\ttfamily void memman\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 41 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 95
+\mbox{\Hypertarget{bootpack_8h_ac82886c8091f3a36903241216bc48ace}\label{bootpack_8h_ac82886c8091f3a36903241216bc48ace}} 
+\index{bootpack.h@{bootpack.h}!memman\_total@{memman\_total}}
+\index{memman\_total@{memman\_total}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{memman\_total()}{memman\_total()}}
+{\footnotesize\ttfamily unsigned int memman\+\_\+total (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{man }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 50 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 96
+\mbox{\Hypertarget{bootpack_8h_a457da672ff618c99ae94b1227d45119b}\label{bootpack_8h_a457da672ff618c99ae94b1227d45119b}} 
+\index{bootpack.h@{bootpack.h}!memtest@{memtest}}
+\index{memtest@{memtest}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{memtest()}{memtest()}}
+{\footnotesize\ttfamily unsigned int memtest (\begin{DoxyParamCaption}\item[{unsigned int}]{start,  }\item[{unsigned int}]{end }\end{DoxyParamCaption})}
+
+
+
+ memory.\+c の 8 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 97
+被呼び出し関係図\+:
+% FIG 98
+\mbox{\Hypertarget{bootpack_8h_abe4d8e01aed1f1d87ab91d9be984b6d5}\label{bootpack_8h_abe4d8e01aed1f1d87ab91d9be984b6d5}} 
+\index{bootpack.h@{bootpack.h}!memtest\_sub@{memtest\_sub}}
+\index{memtest\_sub@{memtest\_sub}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{memtest\_sub()}{memtest\_sub()}}
+{\footnotesize\ttfamily unsigned int memtest\+\_\+sub (\begin{DoxyParamCaption}\item[{unsigned int}]{start,  }\item[{unsigned int}]{end }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 99
+\mbox{\Hypertarget{bootpack_8h_a4da7c7903cdc3169e5b21f70236d76d5}\label{bootpack_8h_a4da7c7903cdc3169e5b21f70236d76d5}} 
+\index{bootpack.h@{bootpack.h}!mouse\_decode@{mouse\_decode}}
+\index{mouse\_decode@{mouse\_decode}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{mouse\_decode()}{mouse\_decode()}}
+{\footnotesize\ttfamily int mouse\+\_\+decode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_o_u_s_e___d_e_c}{M\+O\+U\+S\+E\+\_\+\+D\+EC}} $\ast$}]{mdec,  }\item[{unsigned char}]{dat }\end{DoxyParamCaption})}
+
+
+
+ mouse.\+c の 37 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 100
+\mbox{\Hypertarget{bootpack_8h_a6a7720c122ae0f96494e98c38c6e365e}\label{bootpack_8h_a6a7720c122ae0f96494e98c38c6e365e}} 
+\index{bootpack.h@{bootpack.h}!open\_console@{open\_console}}
+\index{open\_console@{open\_console}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{open\_console()}{open\_console()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}}$\ast$ open\+\_\+console (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$}]{shtctl,  }\item[{unsigned int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 383 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 101
+被呼び出し関係図\+:
+% FIG 102
+\mbox{\Hypertarget{bootpack_8h_a79280c7e465953eeaa972574fce486ed}\label{bootpack_8h_a79280c7e465953eeaa972574fce486ed}} 
+\index{bootpack.h@{bootpack.h}!open\_constask@{open\_constask}}
+\index{open\_constask@{open\_constask}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{open\_constask()}{open\_constask()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ open\+\_\+constask (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{unsigned int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 362 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 103
+被呼び出し関係図\+:
+% FIG 104
+\mbox{\Hypertarget{bootpack_8h_a373c3523045a675d4e322aaa8ac68f4f}\label{bootpack_8h_a373c3523045a675d4e322aaa8ac68f4f}} 
+\index{bootpack.h@{bootpack.h}!putblock8\_8@{putblock8\_8}}
+\index{putblock8\_8@{putblock8\_8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{putblock8\_8()}{putblock8\_8()}}
+{\footnotesize\ttfamily void putblock8\+\_\+8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{vram,  }\item[{int}]{vxsize,  }\item[{int}]{pxsize,  }\item[{int}]{pysize,  }\item[{int}]{px0,  }\item[{int}]{py0,  }\item[{char $\ast$}]{buf,  }\item[{int}]{bxsize }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 211 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_a1a869fa1f63a9363adbd268a4453ee65}\label{bootpack_8h_a1a869fa1f63a9363adbd268a4453ee65}} 
+\index{bootpack.h@{bootpack.h}!putfont8@{putfont8}}
+\index{putfont8@{putfont8}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{putfont8()}{putfont8()}}
+{\footnotesize\ttfamily void putfont8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{vram,  }\item[{int}]{xsize,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{char}]{c,  }\item[{char $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 88 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 105
+\mbox{\Hypertarget{bootpack_8h_aa7cde0dce2ebf81ad62c6be604c4007e}\label{bootpack_8h_aa7cde0dce2ebf81ad62c6be604c4007e}} 
+\index{bootpack.h@{bootpack.h}!putfonts8\_asc@{putfonts8\_asc}}
+\index{putfonts8\_asc@{putfonts8\_asc}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{putfonts8\_asc()}{putfonts8\_asc()}}
+{\footnotesize\ttfamily void putfonts8\+\_\+asc (\begin{DoxyParamCaption}\item[{char $\ast$}]{vram,  }\item[{int}]{xsize,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{char}]{c,  }\item[{unsigned char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 107 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 106
+被呼び出し関係図\+:
+% FIG 107
+\mbox{\Hypertarget{bootpack_8h_a67ab2e7cce8565ab4247b2a4ec063a18}\label{bootpack_8h_a67ab2e7cce8565ab4247b2a4ec063a18}} 
+\index{bootpack.h@{bootpack.h}!putfonts8\_asc\_sht@{putfonts8\_asc\_sht}}
+\index{putfonts8\_asc\_sht@{putfonts8\_asc\_sht}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{putfonts8\_asc\_sht()}{putfonts8\_asc\_sht()}}
+{\footnotesize\ttfamily void putfonts8\+\_\+asc\+\_\+sht (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{c,  }\item[{int}]{b,  }\item[{char $\ast$}]{s,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+ window.\+c の 67 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 108
+被呼び出し関係図\+:
+% FIG 109
+\mbox{\Hypertarget{bootpack_8h_ac34fd5deede8babe82f6f858378bc3b5}\label{bootpack_8h_ac34fd5deede8babe82f6f858378bc3b5}} 
+\index{bootpack.h@{bootpack.h}!set\_gatedesc@{set\_gatedesc}}
+\index{set\_gatedesc@{set\_gatedesc}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{set\_gatedesc()}{set\_gatedesc()}}
+{\footnotesize\ttfamily void set\+\_\+gatedesc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_g_a_t_e___d_e_s_c_r_i_p_t_o_r}{G\+A\+T\+E\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}} $\ast$}]{gd,  }\item[{int}]{offset,  }\item[{int}]{selector,  }\item[{int}]{ar }\end{DoxyParamCaption})}
+
+
+
+ dsctbl.\+c の 51 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 110
+\mbox{\Hypertarget{bootpack_8h_a78bbb55ac088109aba6d34f9ffc0523a}\label{bootpack_8h_a78bbb55ac088109aba6d34f9ffc0523a}} 
+\index{bootpack.h@{bootpack.h}!set\_palette@{set\_palette}}
+\index{set\_palette@{set\_palette}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{set\_palette()}{set\_palette()}}
+{\footnotesize\ttfamily void set\+\_\+palette (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end,  }\item[{unsigned char $\ast$}]{rgb }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 41 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 111
+被呼び出し関係図\+:
+% FIG 112
+\mbox{\Hypertarget{bootpack_8h_a3d51340647ade1a89f63e7b841e48176}\label{bootpack_8h_a3d51340647ade1a89f63e7b841e48176}} 
+\index{bootpack.h@{bootpack.h}!set\_segmdesc@{set\_segmdesc}}
+\index{set\_segmdesc@{set\_segmdesc}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{set\_segmdesc()}{set\_segmdesc()}}
+{\footnotesize\ttfamily void set\+\_\+segmdesc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r}{S\+E\+G\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}} $\ast$}]{sd,  }\item[{unsigned int}]{limit,  }\item[{int}]{base,  }\item[{int}]{ar }\end{DoxyParamCaption})}
+
+
+
+ dsctbl.\+c の 36 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 113
+\mbox{\Hypertarget{bootpack_8h_a543661af64ed9055c819e0dd7b61d01e}\label{bootpack_8h_a543661af64ed9055c819e0dd7b61d01e}} 
+\index{bootpack.h@{bootpack.h}!sheet\_alloc@{sheet\_alloc}}
+\index{sheet\_alloc@{sheet\_alloc}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{sheet\_alloc()}{sheet\_alloc()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}}$\ast$ sheet\+\_\+alloc (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$}]{ctl }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 32 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 114
+\mbox{\Hypertarget{bootpack_8h_ac3586d30712a7294662c6588175348e0}\label{bootpack_8h_ac3586d30712a7294662c6588175348e0}} 
+\index{bootpack.h@{bootpack.h}!sheet\_free@{sheet\_free}}
+\index{sheet\_free@{sheet\_free}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{sheet\_free()}{sheet\_free()}}
+{\footnotesize\ttfamily void sheet\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 284 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 115
+被呼び出し関係図\+:
+% FIG 116
+\mbox{\Hypertarget{bootpack_8h_a8befd8f5c365aec65bfa164d00e140ca}\label{bootpack_8h_a8befd8f5c365aec65bfa164d00e140ca}} 
+\index{bootpack.h@{bootpack.h}!sheet\_refresh@{sheet\_refresh}}
+\index{sheet\_refresh@{sheet\_refresh}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{sheet\_refresh()}{sheet\_refresh()}}
+{\footnotesize\ttfamily void sheet\+\_\+refresh (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{bx0,  }\item[{int}]{by0,  }\item[{int}]{bx1,  }\item[{int}]{by1 }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 261 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 117
+被呼び出し関係図\+:
+% FIG 118
+\mbox{\Hypertarget{bootpack_8h_a6c14343c7c0566620635e9ccd17e21e0}\label{bootpack_8h_a6c14343c7c0566620635e9ccd17e21e0}} 
+\index{bootpack.h@{bootpack.h}!sheet\_setbuf@{sheet\_setbuf}}
+\index{sheet\_setbuf@{sheet\_setbuf}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{sheet\_setbuf()}{sheet\_setbuf()}}
+{\footnotesize\ttfamily void sheet\+\_\+setbuf (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{unsigned char $\ast$}]{buf,  }\item[{int}]{xsize,  }\item[{int}]{ysize,  }\item[{int}]{col\+\_\+inv }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 48 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 119
+\mbox{\Hypertarget{bootpack_8h_aca08bb322ec0c2110e2a071e383832de}\label{bootpack_8h_aca08bb322ec0c2110e2a071e383832de}} 
+\index{bootpack.h@{bootpack.h}!sheet\_slide@{sheet\_slide}}
+\index{sheet\_slide@{sheet\_slide}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{sheet\_slide()}{sheet\_slide()}}
+{\footnotesize\ttfamily void sheet\+\_\+slide (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{vx0,  }\item[{int}]{vy0 }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 269 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 120
+被呼び出し関係図\+:
+% FIG 121
+\mbox{\Hypertarget{bootpack_8h_ad590bf68e2aa06a5fe99c03ad4c56785}\label{bootpack_8h_ad590bf68e2aa06a5fe99c03ad4c56785}} 
+\index{bootpack.h@{bootpack.h}!sheet\_updown@{sheet\_updown}}
+\index{sheet\_updown@{sheet\_updown}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{sheet\_updown()}{sheet\_updown()}}
+{\footnotesize\ttfamily void sheet\+\_\+updown (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+ sheet.\+c の 201 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 122
+被呼び出し関係図\+:
+% FIG 123
+\mbox{\Hypertarget{bootpack_8h_a36f9284550ad0030f5dd64154a04a7d8}\label{bootpack_8h_a36f9284550ad0030f5dd64154a04a7d8}} 
+\index{bootpack.h@{bootpack.h}!shtctl\_init@{shtctl\_init}}
+\index{shtctl\_init@{shtctl\_init}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{shtctl\_init()}{shtctl\_init()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}}$\ast$ shtctl\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{memman,  }\item[{unsigned char $\ast$}]{vram,  }\item[{int}]{xsize,  }\item[{int}]{ysize }\end{DoxyParamCaption})}
+
+
+
+シートコントロールの初期化を行います 
+
+
+\begin{DoxyParams}{引数}
+{\em memman} & メモリマネージャのポインタ \\
+\hline
+{\em vram} & vramのポインタ \\
+\hline
+{\em xsize} & x方向の大きさ \\
+\hline
+{\em ysize} & y方向の大きさ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+S\+H\+T\+C\+T\+L$\ast$ シートコントロールポインタ 
+\end{DoxyReturn}
+
+
+ sheet.\+c の 7 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 124
+被呼び出し関係図\+:
+% FIG 125
+\mbox{\Hypertarget{bootpack_8h_a568f37f8f793128215d42dbf50d88229}\label{bootpack_8h_a568f37f8f793128215d42dbf50d88229}} 
+\index{bootpack.h@{bootpack.h}!start\_app@{start\_app}}
+\index{start\_app@{start\_app}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{start\_app()}{start\_app()}}
+{\footnotesize\ttfamily void start\+\_\+app (\begin{DoxyParamCaption}\item[{int}]{eip,  }\item[{int}]{cs,  }\item[{int}]{esp,  }\item[{int}]{ds,  }\item[{int $\ast$}]{tss\+\_\+esp0 }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 126
+\mbox{\Hypertarget{bootpack_8h_aa03f03af26a7eb548dfae56f16423a17}\label{bootpack_8h_aa03f03af26a7eb548dfae56f16423a17}} 
+\index{bootpack.h@{bootpack.h}!store\_cr0@{store\_cr0}}
+\index{store\_cr0@{store\_cr0}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{store\_cr0()}{store\_cr0()}}
+{\footnotesize\ttfamily void store\+\_\+cr0 (\begin{DoxyParamCaption}\item[{int}]{cr0 }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+% FIG 127
+\mbox{\Hypertarget{bootpack_8h_a97fa93dab5b91ea18765b460e3b81663}\label{bootpack_8h_a97fa93dab5b91ea18765b460e3b81663}} 
+\index{bootpack.h@{bootpack.h}!task\_alloc@{task\_alloc}}
+\index{task\_alloc@{task\_alloc}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{task\_alloc()}{task\_alloc()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ task\+\_\+alloc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 118 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 128
+\mbox{\Hypertarget{bootpack_8h_a9f9404be472fb9fc3aa79501f67190a1}\label{bootpack_8h_a9f9404be472fb9fc3aa79501f67190a1}} 
+\index{bootpack.h@{bootpack.h}!task\_init@{task\_init}}
+\index{task\_init@{task\_init}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{task\_init()}{task\_init()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ task\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{memman }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 75 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 129
+被呼び出し関係図\+:
+% FIG 130
+\mbox{\Hypertarget{bootpack_8h_a72a85d580d503d9c2743398e78ab612b}\label{bootpack_8h_a72a85d580d503d9c2743398e78ab612b}} 
+\index{bootpack.h@{bootpack.h}!task\_now@{task\_now}}
+\index{task\_now@{task\_now}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{task\_now()}{task\_now()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ task\+\_\+now (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 8 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 131
+\mbox{\Hypertarget{bootpack_8h_a579117953072527527cd89b4ebc929ef}\label{bootpack_8h_a579117953072527527cd89b4ebc929ef}} 
+\index{bootpack.h@{bootpack.h}!task\_run@{task\_run}}
+\index{task\_run@{task\_run}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{task\_run()}{task\_run()}}
+{\footnotesize\ttfamily void task\+\_\+run (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task,  }\item[{int}]{level,  }\item[{int}]{priority }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 146 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 132
+被呼び出し関係図\+:
+% FIG 133
+\mbox{\Hypertarget{bootpack_8h_ad8d41e312627e0054a1a9d61ca173ff1}\label{bootpack_8h_ad8d41e312627e0054a1a9d61ca173ff1}} 
+\index{bootpack.h@{bootpack.h}!task\_sleep@{task\_sleep}}
+\index{task\_sleep@{task\_sleep}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{task\_sleep()}{task\_sleep()}}
+{\footnotesize\ttfamily void task\+\_\+sleep (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 168 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 134
+被呼び出し関係図\+:
+% FIG 135
+\mbox{\Hypertarget{bootpack_8h_a729b1ba05c140e25a5aae86006e709fe}\label{bootpack_8h_a729b1ba05c140e25a5aae86006e709fe}} 
+\index{bootpack.h@{bootpack.h}!task\_switch@{task\_switch}}
+\index{task\_switch@{task\_switch}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{task\_switch()}{task\_switch()}}
+{\footnotesize\ttfamily void task\+\_\+switch (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 185 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 136
+被呼び出し関係図\+:
+% FIG 137
+\mbox{\Hypertarget{bootpack_8h_a65ad1e05ea04302ba9c7a2b8b2b2bf99}\label{bootpack_8h_a65ad1e05ea04302ba9c7a2b8b2b2bf99}} 
+\index{bootpack.h@{bootpack.h}!tek\_decomp@{tek\_decomp}}
+\index{tek\_decomp@{tek\_decomp}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{tek\_decomp()}{tek\_decomp()}}
+{\footnotesize\ttfamily int tek\+\_\+decomp (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{p,  }\item[{char $\ast$}]{q,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+ tek.\+c の 41 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 138
+被呼び出し関係図\+:
+% FIG 139
+\mbox{\Hypertarget{bootpack_8h_aa88ef0b8b73e80fbcdf4e9a3d5da3844}\label{bootpack_8h_aa88ef0b8b73e80fbcdf4e9a3d5da3844}} 
+\index{bootpack.h@{bootpack.h}!tek\_getsize@{tek\_getsize}}
+\index{tek\_getsize@{tek\_getsize}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{tek\_getsize()}{tek\_getsize()}}
+{\footnotesize\ttfamily int tek\+\_\+getsize (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{p }\end{DoxyParamCaption})}
+
+
+
+ tek.\+c の 28 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 140
+被呼び出し関係図\+:
+% FIG 141
+\mbox{\Hypertarget{bootpack_8h_ab0f52af01219a71c6f77624f30ca0a0f}\label{bootpack_8h_ab0f52af01219a71c6f77624f30ca0a0f}} 
+\index{bootpack.h@{bootpack.h}!timer\_alloc@{timer\_alloc}}
+\index{timer\_alloc@{timer\_alloc}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{timer\_alloc()}{timer\_alloc()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}}$\ast$ timer\+\_\+alloc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 33 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 142
+\mbox{\Hypertarget{bootpack_8h_ac6cae52d128dc87c24e060c6b4ba6e58}\label{bootpack_8h_ac6cae52d128dc87c24e060c6b4ba6e58}} 
+\index{bootpack.h@{bootpack.h}!timer\_cancel@{timer\_cancel}}
+\index{timer\_cancel@{timer\_cancel}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{timer\_cancel()}{timer\_cancel()}}
+{\footnotesize\ttfamily int timer\+\_\+cancel (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$}]{timer }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 122 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 143
+被呼び出し関係図\+:
+% FIG 144
+\mbox{\Hypertarget{bootpack_8h_a9e8c4c0b106b605665e385fb682aac16}\label{bootpack_8h_a9e8c4c0b106b605665e385fb682aac16}} 
+\index{bootpack.h@{bootpack.h}!timer\_cancelall@{timer\_cancelall}}
+\index{timer\_cancelall@{timer\_cancelall}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{timer\_cancelall()}{timer\_cancelall()}}
+{\footnotesize\ttfamily void timer\+\_\+cancelall (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 154 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 145
+被呼び出し関係図\+:
+% FIG 146
+\mbox{\Hypertarget{bootpack_8h_a7450be2dc8158869f3e10567e7c18af6}\label{bootpack_8h_a7450be2dc8158869f3e10567e7c18af6}} 
+\index{bootpack.h@{bootpack.h}!timer\_free@{timer\_free}}
+\index{timer\_free@{timer\_free}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{timer\_free()}{timer\_free()}}
+{\footnotesize\ttfamily void timer\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$}]{timer }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 46 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 147
+\mbox{\Hypertarget{bootpack_8h_a5c90527d6444de7f7aaf2aaa9e41a55c}\label{bootpack_8h_a5c90527d6444de7f7aaf2aaa9e41a55c}} 
+\index{bootpack.h@{bootpack.h}!timer\_init@{timer\_init}}
+\index{timer\_init@{timer\_init}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{timer\_init()}{timer\_init()}}
+{\footnotesize\ttfamily void timer\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$}]{timer,  }\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 52 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 148
+\mbox{\Hypertarget{bootpack_8h_ac5f2d07311b1c8c2a0e050060cbd4570}\label{bootpack_8h_ac5f2d07311b1c8c2a0e050060cbd4570}} 
+\index{bootpack.h@{bootpack.h}!timer\_settime@{timer\_settime}}
+\index{timer\_settime@{timer\_settime}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{timer\_settime()}{timer\_settime()}}
+{\footnotesize\ttfamily void timer\+\_\+settime (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$}]{timer,  }\item[{unsigned int}]{timeout }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 59 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 149
+被呼び出し関係図\+:
+% FIG 150
+\mbox{\Hypertarget{bootpack_8h_a04ae938de161573bab61a7d806704cd8}\label{bootpack_8h_a04ae938de161573bab61a7d806704cd8}} 
+\index{bootpack.h@{bootpack.h}!wait\_KBC\_sendready@{wait\_KBC\_sendready}}
+\index{wait\_KBC\_sendready@{wait\_KBC\_sendready}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{wait\_KBC\_sendready()}{wait\_KBC\_sendready()}}
+{\footnotesize\ttfamily void wait\+\_\+\+K\+B\+C\+\_\+sendready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ keyboard.\+c の 22 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 151
+被呼び出し関係図\+:
+% FIG 152
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{bootpack_8h_ab9aec37224286b959e292ae540a5c06c}\label{bootpack_8h_ab9aec37224286b959e292ae540a5c06c}} 
+\index{bootpack.h@{bootpack.h}!task\_timer@{task\_timer}}
+\index{task\_timer@{task\_timer}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{task\_timer}{task\_timer}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}}$\ast$ task\+\_\+timer}
+
+
+
+ mtask.\+c の 6 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_adf35d00bd0784095d09912fb2a58b879}\label{bootpack_8h_adf35d00bd0784095d09912fb2a58b879}} 
+\index{bootpack.h@{bootpack.h}!taskctl@{taskctl}}
+\index{taskctl@{taskctl}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{taskctl}{taskctl}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k_c_t_l}{T\+A\+S\+K\+C\+TL}}$\ast$ taskctl}
+
+
+
+ mtask.\+c の 5 行目に定義があります。
+
+\mbox{\Hypertarget{bootpack_8h_af3246f199811ad6fdc6d9cb1cfe33c68}\label{bootpack_8h_af3246f199811ad6fdc6d9cb1cfe33c68}} 
+\index{bootpack.h@{bootpack.h}!timerctl@{timerctl}}
+\index{timerctl@{timerctl}!bootpack.h@{bootpack.h}}
+\doxysubsubsection{\texorpdfstring{timerctl}{timerctl}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_i_m_e_r_c_t_l}{T\+I\+M\+E\+R\+C\+TL}} timerctl}
+
+
+
+ timer.\+c の 1 行目に定義があります。
+

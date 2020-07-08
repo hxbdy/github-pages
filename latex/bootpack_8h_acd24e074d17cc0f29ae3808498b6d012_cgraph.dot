@@ -1,0 +1,14 @@
+digraph "init_keyboard"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="init_keyboard",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="io_out8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a23ae700e52c0cde96d20fc539826d532",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="wait_KBC_sendready",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$keyboard_8c.html#a04ae938de161573bab61a7d806704cd8",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="io_in8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#abe410220cdaf6d701275a5d75f07acd0",tooltip=" "];
+}

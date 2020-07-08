@@ -1,0 +1,39 @@
+digraph "decode0_JPEG"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="decode0_JPEG",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="jpeg_decode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#ac729f2057265bb901ddf65cc027250aa",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="jpeg_decode_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a2b2c79c816f7c1d55b1521ff227876b1",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="jpeg_decode_mcu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a399a92d992352ac542f103d2a7563456",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="jpeg_decode_huff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#aca23fc32257a1e5319c28a6c4759801c",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="jpeg_get_value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#af26bd2b95cb2e237382509718ebaeb4b",tooltip=" "];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="get_bits",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a5e5f2c953e7c9d3bbd8d1b245be937e6",tooltip=" "];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="jpeg_huff_decode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#ac8d38b1bdc16675a81d34df57ff80b03",tooltip=" "];
+  Node8 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="jpeg_idct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a1649d2a0a66453a0ba60c272c9168c65",tooltip=" "];
+  Node4 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="jpeg_mcu_bitblt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a9e09240185c87c51b0a584e0342ecd85",tooltip=" "];
+  Node2 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="jpeg_decode_yuv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#ab8993dd486f5921708720053e0c1101b",tooltip=" "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="jpeg_idct_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#af85865d3501ff7e4f5ebf979c0d40ceb",tooltip=" "];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="jpeg_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#ac9661fc9579081c3d1e51504aae7cfdc",tooltip=" "];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="jpeg_dht",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#ae8b721d3ab2f23c9f6b6717a9eb2f3e1",tooltip=" "];
+  Node13 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="jpeg_dqt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a95b1daac36e4cafa54f028934996a4bf",tooltip=" "];
+  Node13 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="jpeg_sof",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#aeee495fc3d68cda768a72c0a5a1ff2ae",tooltip=" "];
+}

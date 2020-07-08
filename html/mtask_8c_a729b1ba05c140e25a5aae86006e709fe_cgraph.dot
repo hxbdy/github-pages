@@ -1,0 +1,20 @@
+digraph "task_switch"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="task_switch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="farjmp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a0c42a9b5531e7052d27e7389223cdf98",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="task_switchsub",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a5b13fad918e89f8ffa77326ea1989773",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="timer_settime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#ac5f2d07311b1c8c2a0e050060cbd4570",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="io_cli",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8efff3df95d8ca5965876fe8949f99ae",tooltip=" "];
+  Node4 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="io_load_eflags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#acf007bdb6d8bea64314996b7d7b01470",tooltip=" "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="io_store_eflags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#aac4f8e3e6b71a465592bdf1f5d4202ac",tooltip=" "];
+}

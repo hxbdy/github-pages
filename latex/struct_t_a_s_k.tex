@@ -1,0 +1,208 @@
+\hypertarget{struct_t_a_s_k}{}\doxysection{T\+A\+SK 構造体}
+\label{struct_t_a_s_k}\index{TASK@{TASK}}
+
+
+{\ttfamily \#include $<$bootpack.\+h$>$}
+
+
+
+T\+A\+SK 連携図
+% FIG 0
+\doxysubsection*{フィールド}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_t_a_s_k_a7afcac3447636c03934613716685bbc8}{sel}}
+\item 
+int \mbox{\hyperlink{struct_t_a_s_k_ac8bf36fe0577cba66bccda3a6f7e80a4}{flags}}
+\item 
+int \mbox{\hyperlink{struct_t_a_s_k_acf4d33ee4cff36f69b924471174dcb11}{level}}
+\item 
+int \mbox{\hyperlink{struct_t_a_s_k_acec9ce2df15222151ad66fcb1d74eb9f}{priority}}
+\item 
+struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} \mbox{\hyperlink{struct_t_a_s_k_a4ec38bfe7ec286882342a1ac31c0c8bf}{fifo}}
+\item 
+struct \mbox{\hyperlink{struct_t_s_s32}{T\+S\+S32}} \mbox{\hyperlink{struct_t_a_s_k_a83744b0c0679445d57f963823d8e2e77}{tss}}
+\item 
+struct \mbox{\hyperlink{struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r}{S\+E\+G\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}} \mbox{\hyperlink{struct_t_a_s_k_a4bbaa8be89b6920249dfae0e0f167d9f}{ldt}} \mbox{[}2\mbox{]}
+\item 
+struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$ \mbox{\hyperlink{struct_t_a_s_k_acb052821475b51960e056ced16bb9297}{cons}}
+\item 
+int \mbox{\hyperlink{struct_t_a_s_k_afc345ce3ae9fc3734ea283a7ee00768e}{ds\+\_\+base}}
+\item 
+int \mbox{\hyperlink{struct_t_a_s_k_a686e0b86763b9ec6cb06a59479453a15}{cons\+\_\+stack}}
+\item 
+struct \mbox{\hyperlink{struct_f_i_l_e_h_a_n_d_l_e}{F\+I\+L\+E\+H\+A\+N\+D\+LE}} $\ast$ \mbox{\hyperlink{struct_t_a_s_k_aa97916ab0c437546f02760b1d097402e}{fhandle}}
+\item 
+int $\ast$ \mbox{\hyperlink{struct_t_a_s_k_a107ede150ecefb8594f3c0969503852b}{fat}}
+\item 
+char $\ast$ \mbox{\hyperlink{struct_t_a_s_k_a07d4d69e3b8a6390fe4e833851386b5b}{cmdline}}
+\item 
+unsigned char \mbox{\hyperlink{struct_t_a_s_k_ae78f071bb40612cedaf1f54d5c42b7ff}{langmode}}
+\item 
+unsigned char \mbox{\hyperlink{struct_t_a_s_k_a639564ae59e9c35710a67d0750123477}{langbyte1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{詳解}
+
+
+ bootpack.\+h の 253 行目に定義があります。
+
+
+
+\doxysubsection{フィールド詳解}
+\mbox{\Hypertarget{struct_t_a_s_k_a07d4d69e3b8a6390fe4e833851386b5b}\label{struct_t_a_s_k_a07d4d69e3b8a6390fe4e833851386b5b}} 
+\index{TASK@{TASK}!cmdline@{cmdline}}
+\index{cmdline@{cmdline}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{cmdline}{cmdline}}
+{\footnotesize\ttfamily char$\ast$ cmdline}
+
+
+
+ bootpack.\+h の 263 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_acb052821475b51960e056ced16bb9297}\label{struct_t_a_s_k_acb052821475b51960e056ced16bb9297}} 
+\index{TASK@{TASK}!cons@{cons}}
+\index{cons@{cons}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{cons}{cons}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}}$\ast$ cons}
+
+
+
+ bootpack.\+h の 259 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_a686e0b86763b9ec6cb06a59479453a15}\label{struct_t_a_s_k_a686e0b86763b9ec6cb06a59479453a15}} 
+\index{TASK@{TASK}!cons\_stack@{cons\_stack}}
+\index{cons\_stack@{cons\_stack}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{cons\_stack}{cons\_stack}}
+{\footnotesize\ttfamily int cons\+\_\+stack}
+
+
+
+ bootpack.\+h の 260 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_afc345ce3ae9fc3734ea283a7ee00768e}\label{struct_t_a_s_k_afc345ce3ae9fc3734ea283a7ee00768e}} 
+\index{TASK@{TASK}!ds\_base@{ds\_base}}
+\index{ds\_base@{ds\_base}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{ds\_base}{ds\_base}}
+{\footnotesize\ttfamily int ds\+\_\+base}
+
+
+
+ bootpack.\+h の 260 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_a107ede150ecefb8594f3c0969503852b}\label{struct_t_a_s_k_a107ede150ecefb8594f3c0969503852b}} 
+\index{TASK@{TASK}!fat@{fat}}
+\index{fat@{fat}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{fat}{fat}}
+{\footnotesize\ttfamily int$\ast$ fat}
+
+
+
+ bootpack.\+h の 262 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_aa97916ab0c437546f02760b1d097402e}\label{struct_t_a_s_k_aa97916ab0c437546f02760b1d097402e}} 
+\index{TASK@{TASK}!fhandle@{fhandle}}
+\index{fhandle@{fhandle}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{fhandle}{fhandle}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_f_i_l_e_h_a_n_d_l_e}{F\+I\+L\+E\+H\+A\+N\+D\+LE}}$\ast$ fhandle}
+
+
+
+ bootpack.\+h の 261 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_a4ec38bfe7ec286882342a1ac31c0c8bf}\label{struct_t_a_s_k_a4ec38bfe7ec286882342a1ac31c0c8bf}} 
+\index{TASK@{TASK}!fifo@{fifo}}
+\index{fifo@{fifo}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{fifo}{fifo}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} fifo}
+
+
+
+ bootpack.\+h の 255 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_ac8bf36fe0577cba66bccda3a6f7e80a4}\label{struct_t_a_s_k_ac8bf36fe0577cba66bccda3a6f7e80a4}} 
+\index{TASK@{TASK}!flags@{flags}}
+\index{flags@{flags}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{flags}{flags}}
+{\footnotesize\ttfamily int flags}
+
+
+
+ bootpack.\+h の 254 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_a639564ae59e9c35710a67d0750123477}\label{struct_t_a_s_k_a639564ae59e9c35710a67d0750123477}} 
+\index{TASK@{TASK}!langbyte1@{langbyte1}}
+\index{langbyte1@{langbyte1}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{langbyte1}{langbyte1}}
+{\footnotesize\ttfamily unsigned char langbyte1}
+
+
+
+ bootpack.\+h の 264 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_ae78f071bb40612cedaf1f54d5c42b7ff}\label{struct_t_a_s_k_ae78f071bb40612cedaf1f54d5c42b7ff}} 
+\index{TASK@{TASK}!langmode@{langmode}}
+\index{langmode@{langmode}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{langmode}{langmode}}
+{\footnotesize\ttfamily unsigned char langmode}
+
+
+
+ bootpack.\+h の 264 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_a4bbaa8be89b6920249dfae0e0f167d9f}\label{struct_t_a_s_k_a4bbaa8be89b6920249dfae0e0f167d9f}} 
+\index{TASK@{TASK}!ldt@{ldt}}
+\index{ldt@{ldt}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{ldt}{ldt}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_e_g_m_e_n_t___d_e_s_c_r_i_p_t_o_r}{S\+E\+G\+M\+E\+N\+T\+\_\+\+D\+E\+S\+C\+R\+I\+P\+T\+OR}} ldt\mbox{[}2\mbox{]}}
+
+
+
+ bootpack.\+h の 255 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_acf4d33ee4cff36f69b924471174dcb11}\label{struct_t_a_s_k_acf4d33ee4cff36f69b924471174dcb11}} 
+\index{TASK@{TASK}!level@{level}}
+\index{level@{level}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{level}{level}}
+{\footnotesize\ttfamily int level}
+
+
+
+ bootpack.\+h の 255 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_acec9ce2df15222151ad66fcb1d74eb9f}\label{struct_t_a_s_k_acec9ce2df15222151ad66fcb1d74eb9f}} 
+\index{TASK@{TASK}!priority@{priority}}
+\index{priority@{priority}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily int priority}
+
+
+
+ bootpack.\+h の 255 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_a7afcac3447636c03934613716685bbc8}\label{struct_t_a_s_k_a7afcac3447636c03934613716685bbc8}} 
+\index{TASK@{TASK}!sel@{sel}}
+\index{sel@{sel}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{sel}{sel}}
+{\footnotesize\ttfamily int sel}
+
+
+
+ bootpack.\+h の 254 行目に定義があります。
+
+\mbox{\Hypertarget{struct_t_a_s_k_a83744b0c0679445d57f963823d8e2e77}\label{struct_t_a_s_k_a83744b0c0679445d57f963823d8e2e77}} 
+\index{TASK@{TASK}!tss@{tss}}
+\index{tss@{tss}!TASK@{TASK}}
+\doxysubsubsection{\texorpdfstring{tss}{tss}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_s_s32}{T\+S\+S32}} tss}
+
+
+
+ bootpack.\+h の 255 行目に定義があります。
+
+
+
+この構造体詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+E\+:/\+Documents/emu84/\+Src/haribote/\mbox{\hyperlink{bootpack_8h}{bootpack.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,32 @@
+digraph "set_segmdesc"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="set_segmdesc",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="cmd_app",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#ac543899ee5ce9621fa024d0ee3098f3d",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="cons_runcmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#a7be2f98778674111de60be8c7f0a3e62",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="console_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#acf7b570f866fb6b0880a9fb988393e69",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="open_constask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a79280c7e465953eeaa972574fce486ed",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="cmd_ncst",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#a3f08f092f66404d51c2af42f76237980",tooltip=" "];
+  Node6 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="open_console",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a6a7720c122ae0f96494e98c38c6e365e",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="cmd_start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#af8d7dae21f111aecc555ba5e14df4265",tooltip=" "];
+  Node8 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="init_gdtidt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dsctbl_8c.html#ad5b36851d779bf52f1398e31f55ddc9d",tooltip=" "];
+  Node10 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="task_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a9f9404be472fb9fc3aa79501f67190a1",tooltip=" "];
+  Node11 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

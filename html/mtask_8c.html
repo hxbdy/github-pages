@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/haribote/mtask.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('mtask_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">mtask.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bootpack_8h_source.html">bootpack.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+mtask.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c__incl.png" border="0" usemap="#_e_1_2_documents_2emu84_2_src_2haribote_2mtask_8c" alt=""/></div>
+</div>
+</div>
+<p><a href="mtask_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a72a85d580d503d9c2743398e78ab612b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#a72a85d580d503d9c2743398e78ab612b">task_now</a> (void)</td></tr>
+<tr class="separator:a72a85d580d503d9c2743398e78ab612b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a402b7583d2459d4a08561dcc5d493f4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#a402b7583d2459d4a08561dcc5d493f4a">task_add</a> (struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *task)</td></tr>
+<tr class="separator:a402b7583d2459d4a08561dcc5d493f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11f14489f9989d977a88064d02e682ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#a11f14489f9989d977a88064d02e682ae">task_remove</a> (struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *task)</td></tr>
+<tr class="separator:a11f14489f9989d977a88064d02e682ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b13fad918e89f8ffa77326ea1989773"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#a5b13fad918e89f8ffa77326ea1989773">task_switchsub</a> (void)</td></tr>
+<tr class="separator:a5b13fad918e89f8ffa77326ea1989773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97fd16c2e90a12f5265d1c2728102c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#ad97fd16c2e90a12f5265d1c2728102c8">task_idle</a> (void)</td></tr>
+<tr class="separator:ad97fd16c2e90a12f5265d1c2728102c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f9404be472fb9fc3aa79501f67190a1"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#a9f9404be472fb9fc3aa79501f67190a1">task_init</a> (struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *memman)</td></tr>
+<tr class="separator:a9f9404be472fb9fc3aa79501f67190a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97fa93dab5b91ea18765b460e3b81663"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#a97fa93dab5b91ea18765b460e3b81663">task_alloc</a> (void)</td></tr>
+<tr class="separator:a97fa93dab5b91ea18765b460e3b81663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579117953072527527cd89b4ebc929ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#a579117953072527527cd89b4ebc929ef">task_run</a> (struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *task, int level, int priority)</td></tr>
+<tr class="separator:a579117953072527527cd89b4ebc929ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8d41e312627e0054a1a9d61ca173ff1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#ad8d41e312627e0054a1a9d61ca173ff1">task_sleep</a> (struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *task)</td></tr>
+<tr class="separator:ad8d41e312627e0054a1a9d61ca173ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729b1ba05c140e25a5aae86006e709fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#a729b1ba05c140e25a5aae86006e709fe">task_switch</a> (void)</td></tr>
+<tr class="separator:a729b1ba05c140e25a5aae86006e709fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:adf35d00bd0784095d09912fb2a58b879"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_t_a_s_k_c_t_l.html">TASKCTL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#adf35d00bd0784095d09912fb2a58b879">taskctl</a></td></tr>
+<tr class="separator:adf35d00bd0784095d09912fb2a58b879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9aec37224286b959e292ae540a5c06c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_t_i_m_e_r.html">TIMER</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mtask_8c.html#ab9aec37224286b959e292ae540a5c06c">task_timer</a></td></tr>
+<tr class="separator:ab9aec37224286b959e292ae540a5c06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a402b7583d2459d4a08561dcc5d493f4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a402b7583d2459d4a08561dcc5d493f4a">&#9670;&nbsp;</a></span>task_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_add </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00014">14</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a402b7583d2459d4a08561dcc5d493f4a_icgraph.png" border="0" usemap="#mtask_8c_a402b7583d2459d4a08561dcc5d493f4a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a97fa93dab5b91ea18765b460e3b81663"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97fa93dab5b91ea18765b460e3b81663">&#9670;&nbsp;</a></span>task_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_t_a_s_k.html">TASK</a>* task_alloc </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00118">118</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a97fa93dab5b91ea18765b460e3b81663_icgraph.png" border="0" usemap="#mtask_8c_a97fa93dab5b91ea18765b460e3b81663_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad97fd16c2e90a12f5265d1c2728102c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97fd16c2e90a12f5265d1c2728102c8">&#9670;&nbsp;</a></span>task_idle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_idle </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00068">68</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_ad97fd16c2e90a12f5265d1c2728102c8_cgraph.png" border="0" usemap="#mtask_8c_ad97fd16c2e90a12f5265d1c2728102c8_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_ad97fd16c2e90a12f5265d1c2728102c8_icgraph.png" border="0" usemap="#mtask_8c_ad97fd16c2e90a12f5265d1c2728102c8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9f9404be472fb9fc3aa79501f67190a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f9404be472fb9fc3aa79501f67190a1">&#9670;&nbsp;</a></span>task_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_t_a_s_k.html">TASK</a>* task_init </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *&#160;</td>
+          <td class="paramname"><em>memman</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00075">75</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a9f9404be472fb9fc3aa79501f67190a1_cgraph.png" border="0" usemap="#mtask_8c_a9f9404be472fb9fc3aa79501f67190a1_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a9f9404be472fb9fc3aa79501f67190a1_icgraph.png" border="0" usemap="#mtask_8c_a9f9404be472fb9fc3aa79501f67190a1_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a72a85d580d503d9c2743398e78ab612b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a85d580d503d9c2743398e78ab612b">&#9670;&nbsp;</a></span>task_now()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_t_a_s_k.html">TASK</a>* task_now </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00008">8</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a72a85d580d503d9c2743398e78ab612b_icgraph.png" border="0" usemap="#mtask_8c_a72a85d580d503d9c2743398e78ab612b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a11f14489f9989d977a88064d02e682ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11f14489f9989d977a88064d02e682ae">&#9670;&nbsp;</a></span>task_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_remove </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00023">23</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a11f14489f9989d977a88064d02e682ae_icgraph.png" border="0" usemap="#mtask_8c_a11f14489f9989d977a88064d02e682ae_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a579117953072527527cd89b4ebc929ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579117953072527527cd89b4ebc929ef">&#9670;&nbsp;</a></span>task_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_run </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *&#160;</td>
+          <td class="paramname"><em>task</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00146">146</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a579117953072527527cd89b4ebc929ef_cgraph.png" border="0" usemap="#mtask_8c_a579117953072527527cd89b4ebc929ef_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a579117953072527527cd89b4ebc929ef_icgraph.png" border="0" usemap="#mtask_8c_a579117953072527527cd89b4ebc929ef_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad8d41e312627e0054a1a9d61ca173ff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8d41e312627e0054a1a9d61ca173ff1">&#9670;&nbsp;</a></span>task_sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_sleep </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_t_a_s_k.html">TASK</a> *&#160;</td>
+          <td class="paramname"><em>task</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00168">168</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_ad8d41e312627e0054a1a9d61ca173ff1_cgraph.png" border="0" usemap="#mtask_8c_ad8d41e312627e0054a1a9d61ca173ff1_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_ad8d41e312627e0054a1a9d61ca173ff1_icgraph.png" border="0" usemap="#mtask_8c_ad8d41e312627e0054a1a9d61ca173ff1_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a729b1ba05c140e25a5aae86006e709fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a729b1ba05c140e25a5aae86006e709fe">&#9670;&nbsp;</a></span>task_switch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_switch </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00185">185</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a729b1ba05c140e25a5aae86006e709fe_cgraph.png" border="0" usemap="#mtask_8c_a729b1ba05c140e25a5aae86006e709fe_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a729b1ba05c140e25a5aae86006e709fe_icgraph.png" border="0" usemap="#mtask_8c_a729b1ba05c140e25a5aae86006e709fe_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5b13fad918e89f8ffa77326ea1989773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b13fad918e89f8ffa77326ea1989773">&#9670;&nbsp;</a></span>task_switchsub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void task_switchsub </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00054">54</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="mtask_8c_a5b13fad918e89f8ffa77326ea1989773_icgraph.png" border="0" usemap="#mtask_8c_a5b13fad918e89f8ffa77326ea1989773_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="ab9aec37224286b959e292ae540a5c06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9aec37224286b959e292ae540a5c06c">&#9670;&nbsp;</a></span>task_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_t_i_m_e_r.html">TIMER</a>* task_timer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00006">6</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="adf35d00bd0784095d09912fb2a58b879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf35d00bd0784095d09912fb2a58b879">&#9670;&nbsp;</a></span>taskctl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_t_a_s_k_c_t_l.html">TASKCTL</a>* taskctl</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="mtask_8c_source.html">mtask.c</a> の <a class="el" href="mtask_8c_source.html#l00005">5</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_5ac131f68e424deb31069477f492d10b.html">haribote</a></li><li class="navelem"><a class="el" href="mtask_8c.html">mtask.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

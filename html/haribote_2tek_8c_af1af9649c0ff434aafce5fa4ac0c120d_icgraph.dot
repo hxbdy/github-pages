@@ -1,0 +1,14 @@
+digraph "tek_decmain5"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="tek_decmain5",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="tek_lzrestore_tek5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#adf0a0994681380da1f81b7bfb5ca44db",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="tek_decode5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#aeae25a1f7899cfaee256d7ebd0f53d82",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="tek_decomp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$haribote_2tek_8c.html#a65ad1e05ea04302ba9c7a2b8b2b2bf99",tooltip=" "];
+}

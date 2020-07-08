@@ -1,0 +1,49 @@
+digraph "HariMain"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="api_alloctimer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a7281fa22543ded51848051b846503a4a",tooltip="タイマを取得します"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="api_beep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a6720e7ce2a56bf3453a951bda7e1c8c5",tooltip="BEEPサウンドを使用して音を鳴らします QEMUにはBEEPサウンドエミュレーション機能はないことに注意してください PITクロックは1.19318[MHz]を前提としています"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="api_boxfilwin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#aeb90139a38ff3dcdc979ba44ad1837b9",tooltip="指定ウインドウに四角形を描画する"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="api_cmdline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#ac8bc75d7141e66f2637c025f84047776",tooltip="コマンドラインの取得を行います"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="api_fclose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a18d60de48f71d49a1a27e773efedbd02",tooltip="ファイルをクローズします"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="api_fopen",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a155758bfd8c2b64c8e6d765143be6c84",tooltip="ファイルをオープンします"];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="api_fread",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a7d1641cc295ecdcb06e69af9391a6b85",tooltip="ファイルを読み込みます"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="api_fsize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#ad3b6b9b3cca8d46f06862b8cd7820ed2",tooltip="ファイルサイズを取得します"];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="api_inittimer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#ad3724dfdc6e74ecd81e767d46f83ea95",tooltip="タイマの送信データ設定を行います タイムアウト時に送信データを送信します"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="api_openwin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#afdd7af308e25e9174f9a5d8544a5874a",tooltip="ウインドウを生成する"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="api_putstrwin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a0f22d2c11b8765707b2f30f188eb659c",tooltip="指定ウインドウに文字列を表示する"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="api_refreshwin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a18d54e0d52c16733738a357e44c4e22c",tooltip="ウインドウのリフレッシュを行う オートリフレッシュ無効時にはこの関数でマニュアルリフレッシュを行ってください オートリフレッシュ無効化の方法はウインドウIDをインクリメントしてください"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="end",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mmlplay_8c.html#a0834e80e6e6a203821e54e48a1ddeeff",tooltip=" "];
+  Node14 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="api_end",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#ad75f3bbaa1d5c628c07566f9eba2dba3",tooltip="終了API"];
+  Node14 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="api_putstr0",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#af73b71034391b78e6e7973d201eca509",tooltip="文字列表示する"];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="strtol",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mmlplay_8c.html#a7418ba78f60266251451ba514438fb26",tooltip=" "];
+  Node1 -> Node18 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="waittimer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mmlplay_8c.html#a1038afdfce1ca1b4e8a53320ea1a0d25",tooltip=" "];
+  Node18 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 -> Node19 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node19 [label="api_getkey",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#a3140d6ff11e61bca4fb683b070bfd836",tooltip="キー入力を受け付けます"];
+  Node18 -> Node20 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node20 [label="api_settimer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$apilib_8h.html#adad7e0777138ab2d73e913e837823576",tooltip="タイマの発火時間を設定します"];
+}

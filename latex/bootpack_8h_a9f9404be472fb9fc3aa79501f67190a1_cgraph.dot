@@ -1,0 +1,41 @@
+digraph "task_init"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="task_init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="load_tr",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#af86d882069635e9f7c41451cf77b0422",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="memman_alloc_4k",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a0b2b807ae567c0c3a0f5878b6ea95383",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="memman_alloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory_8c.html#a3a44e2ae3c434e982c7b906e00af831a",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="set_segmdesc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a3d51340647ade1a89f63e7b841e48176",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="task_add",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a402b7583d2459d4a08561dcc5d493f4a",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="task_alloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a97fa93dab5b91ea18765b460e3b81663",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="task_idle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#ad97fd16c2e90a12f5265d1c2728102c8",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="io_hlt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a222d3c048b8f4192d8ef949249849aa0",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="task_run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a579117953072527527cd89b4ebc929ef",tooltip=" "];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="task_remove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a11f14489f9989d977a88064d02e682ae",tooltip=" "];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="task_switchsub",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a5b13fad918e89f8ffa77326ea1989773",tooltip=" "];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="timer_alloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#ab0f52af01219a71c6f77624f30ca0a0f",tooltip=" "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="timer_settime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#ac5f2d07311b1c8c2a0e050060cbd4570",tooltip=" "];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="io_cli",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8efff3df95d8ca5965876fe8949f99ae",tooltip=" "];
+  Node14 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="io_load_eflags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#acf007bdb6d8bea64314996b7d7b01470",tooltip=" "];
+  Node14 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="io_store_eflags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#aac4f8e3e6b71a465592bdf1f5d4202ac",tooltip=" "];
+}

@@ -1,0 +1,129 @@
+\hypertarget{graphic_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/graphic.c ファイル}
+\label{graphic_8c}\index{E:/Documents/emu84/Src/haribote/graphic.c@{E:/Documents/emu84/Src/haribote/graphic.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+graphic.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{graphic_8c_a42a564ae1340c89e85f7ef58c6f8e46e}{init\+\_\+palette}} (void)
+\item 
+void \mbox{\hyperlink{graphic_8c_a78bbb55ac088109aba6d34f9ffc0523a}{set\+\_\+palette}} (int start, int \mbox{\hyperlink{mmlplay_8c_a0834e80e6e6a203821e54e48a1ddeeff}{end}}, unsigned char $\ast$rgb)
+\item 
+void \mbox{\hyperlink{graphic_8c_a8db7fb68501f39701e4b0801364a2e1c}{boxfill8}} (unsigned char $\ast$vram, int xsize, unsigned char c, int x0, int y0, int x1, int y1)
+\item 
+void \mbox{\hyperlink{graphic_8c_a080c9dc05b60bc16c1b06437e995b970}{init\+\_\+screen8}} (char $\ast$vram, int x, int y)
+\item 
+void \mbox{\hyperlink{graphic_8c_a1a869fa1f63a9363adbd268a4453ee65}{putfont8}} (char $\ast$vram, int xsize, int x, int y, char c, char $\ast$font)
+\item 
+void \mbox{\hyperlink{graphic_8c_aa7cde0dce2ebf81ad62c6be604c4007e}{putfonts8\+\_\+asc}} (char $\ast$vram, int xsize, int x, int y, char c, unsigned char $\ast$s)
+\item 
+void \mbox{\hyperlink{graphic_8c_a335989fd7a070b4772b6640dcf82d23e}{init\+\_\+mouse\+\_\+cursor8}} (char $\ast$mouse, char bc)
+\item 
+void \mbox{\hyperlink{graphic_8c_a373c3523045a675d4e322aaa8ac68f4f}{putblock8\+\_\+8}} (char $\ast$vram, int vxsize, int pxsize, int pysize, int px0, int py0, char $\ast$buf, int bxsize)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{graphic_8c_a8db7fb68501f39701e4b0801364a2e1c}\label{graphic_8c_a8db7fb68501f39701e4b0801364a2e1c}} 
+\index{graphic.c@{graphic.c}!boxfill8@{boxfill8}}
+\index{boxfill8@{boxfill8}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{boxfill8()}{boxfill8()}}
+{\footnotesize\ttfamily void boxfill8 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{vram,  }\item[{int}]{xsize,  }\item[{unsigned char}]{c,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1 }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 57 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{graphic_8c_a335989fd7a070b4772b6640dcf82d23e}\label{graphic_8c_a335989fd7a070b4772b6640dcf82d23e}} 
+\index{graphic.c@{graphic.c}!init\_mouse\_cursor8@{init\_mouse\_cursor8}}
+\index{init\_mouse\_cursor8@{init\_mouse\_cursor8}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{init\_mouse\_cursor8()}{init\_mouse\_cursor8()}}
+{\footnotesize\ttfamily void init\+\_\+mouse\+\_\+cursor8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{mouse,  }\item[{char}]{bc }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 172 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{graphic_8c_a42a564ae1340c89e85f7ef58c6f8e46e}\label{graphic_8c_a42a564ae1340c89e85f7ef58c6f8e46e}} 
+\index{graphic.c@{graphic.c}!init\_palette@{init\_palette}}
+\index{init\_palette@{init\_palette}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{init\_palette()}{init\_palette()}}
+{\footnotesize\ttfamily void init\+\_\+palette (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 5 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{graphic_8c_a080c9dc05b60bc16c1b06437e995b970}\label{graphic_8c_a080c9dc05b60bc16c1b06437e995b970}} 
+\index{graphic.c@{graphic.c}!init\_screen8@{init\_screen8}}
+\index{init\_screen8@{init\_screen8}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{init\_screen8()}{init\_screen8()}}
+{\footnotesize\ttfamily void init\+\_\+screen8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{vram,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 67 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{graphic_8c_a373c3523045a675d4e322aaa8ac68f4f}\label{graphic_8c_a373c3523045a675d4e322aaa8ac68f4f}} 
+\index{graphic.c@{graphic.c}!putblock8\_8@{putblock8\_8}}
+\index{putblock8\_8@{putblock8\_8}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{putblock8\_8()}{putblock8\_8()}}
+{\footnotesize\ttfamily void putblock8\+\_\+8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{vram,  }\item[{int}]{vxsize,  }\item[{int}]{pxsize,  }\item[{int}]{pysize,  }\item[{int}]{px0,  }\item[{int}]{py0,  }\item[{char $\ast$}]{buf,  }\item[{int}]{bxsize }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 211 行目に定義があります。
+
+\mbox{\Hypertarget{graphic_8c_a1a869fa1f63a9363adbd268a4453ee65}\label{graphic_8c_a1a869fa1f63a9363adbd268a4453ee65}} 
+\index{graphic.c@{graphic.c}!putfont8@{putfont8}}
+\index{putfont8@{putfont8}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{putfont8()}{putfont8()}}
+{\footnotesize\ttfamily void putfont8 (\begin{DoxyParamCaption}\item[{char $\ast$}]{vram,  }\item[{int}]{xsize,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{char}]{c,  }\item[{char $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 88 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{graphic_8c_aa7cde0dce2ebf81ad62c6be604c4007e}\label{graphic_8c_aa7cde0dce2ebf81ad62c6be604c4007e}} 
+\index{graphic.c@{graphic.c}!putfonts8\_asc@{putfonts8\_asc}}
+\index{putfonts8\_asc@{putfonts8\_asc}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{putfonts8\_asc()}{putfonts8\_asc()}}
+{\footnotesize\ttfamily void putfonts8\+\_\+asc (\begin{DoxyParamCaption}\item[{char $\ast$}]{vram,  }\item[{int}]{xsize,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{char}]{c,  }\item[{unsigned char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 107 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{graphic_8c_a78bbb55ac088109aba6d34f9ffc0523a}\label{graphic_8c_a78bbb55ac088109aba6d34f9ffc0523a}} 
+\index{graphic.c@{graphic.c}!set\_palette@{set\_palette}}
+\index{set\_palette@{set\_palette}!graphic.c@{graphic.c}}
+\doxysubsubsection{\texorpdfstring{set\_palette()}{set\_palette()}}
+{\footnotesize\ttfamily void set\+\_\+palette (\begin{DoxyParamCaption}\item[{int}]{start,  }\item[{int}]{end,  }\item[{unsigned char $\ast$}]{rgb }\end{DoxyParamCaption})}
+
+
+
+ graphic.\+c の 41 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 10
+被呼び出し関係図\+:
+% FIG 11

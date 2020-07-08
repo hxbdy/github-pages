@@ -1,0 +1,87 @@
+\hypertarget{fifo_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/fifo.c ファイル}
+\label{fifo_8c}\index{E:/Documents/emu84/Src/haribote/fifo.c@{E:/Documents/emu84/Src/haribote/fifo.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+fifo.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fifo_8c_aa5ad1b4cc9f7ba7c24626ccb60256d7e}{F\+L\+A\+G\+S\+\_\+\+O\+V\+E\+R\+R\+UN}}~0x0001
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{fifo_8c_a4eac38701a0d14f4ccd26e777acbb173}{fifo32\+\_\+init}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int size, int $\ast$buf, struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task)
+\item 
+int \mbox{\hyperlink{fifo_8c_a5c1bea596c94c2a89840d555c98abb84}{fifo32\+\_\+put}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int data)
+\item 
+int \mbox{\hyperlink{fifo_8c_aa5d8708f8d80c1950641ce7db6b846bd}{fifo32\+\_\+get}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo)
+\item 
+int \mbox{\hyperlink{fifo_8c_addecf769f44a7f17a964e2ce5ba3f255}{fifo32\+\_\+status}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{fifo_8c_aa5ad1b4cc9f7ba7c24626ccb60256d7e}\label{fifo_8c_aa5ad1b4cc9f7ba7c24626ccb60256d7e}} 
+\index{fifo.c@{fifo.c}!FLAGS\_OVERRUN@{FLAGS\_OVERRUN}}
+\index{FLAGS\_OVERRUN@{FLAGS\_OVERRUN}!fifo.c@{fifo.c}}
+\doxysubsubsection{\texorpdfstring{FLAGS\_OVERRUN}{FLAGS\_OVERRUN}}
+{\footnotesize\ttfamily \#define F\+L\+A\+G\+S\+\_\+\+O\+V\+E\+R\+R\+UN~0x0001}
+
+
+
+ fifo.\+c の 6 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{fifo_8c_aa5d8708f8d80c1950641ce7db6b846bd}\label{fifo_8c_aa5d8708f8d80c1950641ce7db6b846bd}} 
+\index{fifo.c@{fifo.c}!fifo32\_get@{fifo32\_get}}
+\index{fifo32\_get@{fifo32\_get}!fifo.c@{fifo.c}}
+\doxysubsubsection{\texorpdfstring{fifo32\_get()}{fifo32\_get()}}
+{\footnotesize\ttfamily int fifo32\+\_\+get (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo }\end{DoxyParamCaption})}
+
+
+
+ fifo.\+c の 42 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{fifo_8c_a4eac38701a0d14f4ccd26e777acbb173}\label{fifo_8c_a4eac38701a0d14f4ccd26e777acbb173}} 
+\index{fifo.c@{fifo.c}!fifo32\_init@{fifo32\_init}}
+\index{fifo32\_init@{fifo32\_init}!fifo.c@{fifo.c}}
+\doxysubsubsection{\texorpdfstring{fifo32\_init()}{fifo32\_init()}}
+{\footnotesize\ttfamily void fifo32\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{size,  }\item[{int $\ast$}]{buf,  }\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+
+ fifo.\+c の 7 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{fifo_8c_a5c1bea596c94c2a89840d555c98abb84}\label{fifo_8c_a5c1bea596c94c2a89840d555c98abb84}} 
+\index{fifo.c@{fifo.c}!fifo32\_put@{fifo32\_put}}
+\index{fifo32\_put@{fifo32\_put}!fifo.c@{fifo.c}}
+\doxysubsubsection{\texorpdfstring{fifo32\_put()}{fifo32\_put()}}
+{\footnotesize\ttfamily int fifo32\+\_\+put (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+ fifo.\+c の 20 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{fifo_8c_addecf769f44a7f17a964e2ce5ba3f255}\label{fifo_8c_addecf769f44a7f17a964e2ce5ba3f255}} 
+\index{fifo.c@{fifo.c}!fifo32\_status@{fifo32\_status}}
+\index{fifo32\_status@{fifo32\_status}!fifo.c@{fifo.c}}
+\doxysubsubsection{\texorpdfstring{fifo32\_status()}{fifo32\_status()}}
+{\footnotesize\ttfamily int fifo32\+\_\+status (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo }\end{DoxyParamCaption})}
+
+
+
+ fifo.\+c の 59 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5

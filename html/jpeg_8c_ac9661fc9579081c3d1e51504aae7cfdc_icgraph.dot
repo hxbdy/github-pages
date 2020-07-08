@@ -1,0 +1,12 @@
+digraph "jpeg_init"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="jpeg_init",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="decode0_JPEG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a32ac7167599fca6c65d46e1ffe1d6dfa",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="info_JPEG",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a8b131e24e842265c14236b5293550b76",tooltip=" "];
+}

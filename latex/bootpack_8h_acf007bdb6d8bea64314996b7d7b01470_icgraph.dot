@@ -1,0 +1,56 @@
+digraph "io_load_eflags"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="io_load_eflags",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="memtest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory_8c.html#a457da672ff618c99ae94b1227d45119b",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="set_palette",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic_8c.html#a78bbb55ac088109aba6d34f9ffc0523a",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="init_palette",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic_8c.html#a42a564ae1340c89e85f7ef58c6f8e46e",tooltip=" "];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="timer_cancel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$timer_8c.html#ac6cae52d128dc87c24e060c6b4ba6e58",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="cmd_exit",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#aa1ae787d73bbace090cbce5194ac0824",tooltip=" "];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="cons_runcmd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#a7be2f98778674111de60be8c7f0a3e62",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="console_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#acf7b570f866fb6b0880a9fb988393e69",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="open_constask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a79280c7e465953eeaa972574fce486ed",tooltip=" "];
+  Node10 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="cmd_ncst",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#a3f08f092f66404d51c2af42f76237980",tooltip=" "];
+  Node11 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="open_console",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a6a7720c122ae0f96494e98c38c6e365e",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="cmd_start",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#af8d7dae21f111aecc555ba5e14df4265",tooltip=" "];
+  Node13 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="hrb_api",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#ae3a2b95ac62166efc071caeb9e7b0db1",tooltip=" "];
+  Node6 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="timer_cancelall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$timer_8c.html#a9e8c4c0b106b605665e385fb682aac16",tooltip=" "];
+  Node15 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="cmd_app",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#ac543899ee5ce9621fa024d0ee3098f3d",tooltip=" "];
+  Node16 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="timer_settime",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$timer_8c.html#ac5f2d07311b1c8c2a0e050060cbd4570",tooltip=" "];
+  Node17 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="task_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a9f9404be472fb9fc3aa79501f67190a1",tooltip=" "];
+  Node18 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 -> Node19 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node19 [label="task_switch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mtask_8c.html#a729b1ba05c140e25a5aae86006e709fe",tooltip=" "];
+  Node19 -> Node20 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node20 [label="inthandler20",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$timer_8c.html#a79570c81cf0a60bde51271245ac85897",tooltip=" "];
+}

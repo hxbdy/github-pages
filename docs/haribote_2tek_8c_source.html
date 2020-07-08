@@ -1,0 +1,828 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/haribote/tek.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('haribote_2tek_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">tek.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="haribote_2tek_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bootpack_8h.html">bootpack.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;setjmp.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define NULL        0</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">    5</a></span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">    6</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="haribote_2tek_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">    7</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">    8</a></span>&#160;<span class="keyword">typedef</span> <a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#a33eeed225ccff7762e2dc545fcd50769">tek_decode1</a>(<span class="keywordtype">int</span> siz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#a97a1b097510e1fc930bbc999823b0579">tek_decode2</a>(<span class="keywordtype">int</span> siz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#aeae25a1f7899cfaee256d7ebd0f53d82">tek_decode5</a>(<span class="keywordtype">int</span> siz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">   14</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(<a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> **pp)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/* これは必ずbig-endian */</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">/* 下駄がないので中身をいじりやすい */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p = *pp;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        s = s &lt;&lt; 7 | *p++;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    } <span class="keywordflow">while</span> ((s &amp; 1) == 0);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    s &gt;&gt;= 1;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    *pp = p;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#aa88ef0b8b73e80fbcdf4e9a3d5da3844">   28</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#aa88ef0b8b73e80fbcdf4e9a3d5da3844">tek_getsize</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *p)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">char</span> header[15] = {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        0xff, 0xff, 0xff, 0x01, 0x00, 0x00, 0x00, 0x4f, 0x53, 0x41, 0x53, 0x4b, 0x43, 0x4d, 0x50</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> size = -1;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">if</span> (memcmp(p + 1, header, 15) == 0 &amp;&amp; (*p == 0x83 || *p == 0x85 || *p == 0x89)) {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        p += 16;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        size = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> size;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}     <span class="comment">/* （註）memcmpはstrncmpの仲間で、文字列中に0があっても指定された15文字まで比較する関数 */</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a65ad1e05ea04302ba9c7a2b8b2b2bf99">   41</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#a65ad1e05ea04302ba9c7a2b8b2b2bf99">tek_decomp</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *p, <span class="keywordtype">char</span> *q, <span class="keywordtype">int</span> size)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> err = -1;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">if</span> (*p == 0x83) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        err = <a class="code" href="haribote_2tek_8c.html#a33eeed225ccff7762e2dc545fcd50769">tek_decode1</a>(size, p, q);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*p == 0x85) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        err = <a class="code" href="haribote_2tek_8c.html#a97a1b097510e1fc930bbc999823b0579">tek_decode2</a>(size, p, q);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (*p == 0x89) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        err = <a class="code" href="haribote_2tek_8c.html#aeae25a1f7899cfaee256d7ebd0f53d82">tek_decode5</a>(size, p, q);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">if</span> (err != 0) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> -1;  <span class="comment">/* 失敗 */</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> 0;   <span class="comment">/* 成功 */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#aedfa1c45aeeb79cdd7b3c7c0edd3518d">   57</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#aedfa1c45aeeb79cdd7b3c7c0edd3518d">tek_lzrestore_stk1</a>(<span class="keywordtype">int</span> srcsiz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, <span class="keywordtype">int</span> outsiz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> by, lz, cp, ds;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q1 = q + outsiz, *s7ptr = src, *q0 = q;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">if</span> ((by = (lz = *s7ptr++) &amp; 0x0f) == 0)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            by = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;s7ptr);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">if</span> ((lz &gt;&gt;= 4) == 0)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            lz = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;s7ptr);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            *q++ = *s7ptr++;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        } <span class="keywordflow">while</span> (--by);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">if</span> (q &gt;= q1)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            ds = (cp = *s7ptr++) &amp; 0x0f;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordflow">if</span> ((ds &amp; 1) == 0) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    ds = ds &lt;&lt; 7 | *s7ptr++;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                } <span class="keywordflow">while</span> ((ds &amp; 1) == 0);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            ds = ~(ds &gt;&gt; 1);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> ((cp &gt;&gt;= 4) == 0) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    cp = cp &lt;&lt; 7 | *s7ptr++;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                } <span class="keywordflow">while</span> ((cp &amp; 1) == 0);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                cp &gt;&gt;= 1;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            } <span class="comment">/* 0がこないことをあてにする */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            cp++;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (q + ds &lt; q0)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keywordflow">goto</span> err;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">if</span> (q + cp &gt; q1)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                cp = q1 - q;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                *q = *(q + ds);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                q++;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            } <span class="keywordflow">while</span> (--cp);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        } <span class="keywordflow">while</span> (--lz);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    } <span class="keywordflow">while</span> (q &lt; q1);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;err:</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a33eeed225ccff7762e2dc545fcd50769">  101</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#a33eeed225ccff7762e2dc545fcd50769">tek_decode1</a>(<span class="keywordtype">int</span> siz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;{</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> dsiz, hed, bsiz;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p1 = p + siz;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    p += 16;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span> ((dsiz = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p)) &gt; 0) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        hed = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        bsiz = 1 &lt;&lt; (((hed &gt;&gt; 1) &amp; 0x0f) + 8);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">if</span> (dsiz &gt; bsiz || (hed &amp; 0x21) != 0x01)</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">if</span> (hed &amp; 0x40)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p); <span class="comment">/* オプション情報へのポインタを読み飛ばす */</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p) != 0)</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">return</span> 1; <span class="comment">/* 補助バッファ使用 */</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="haribote_2tek_8c.html#aedfa1c45aeeb79cdd7b3c7c0edd3518d">tek_lzrestore_stk1</a>(p1 - p, p, dsiz, q);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a6c0b499ae2034799059f68d80fb61d01">  120</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#a6c0b499ae2034799059f68d80fb61d01">tek_getnum_s7</a>(<a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> **pp)</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="comment">/* これは必ずbig-endian */</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s = 0, b = 0, a = 1;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p = *pp;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">for</span> (;;) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        s = s &lt;&lt; 7 | *p++;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">if</span> (s &amp; 1)</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        a &lt;&lt;= 7;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        b += a;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    s &gt;&gt;= 1;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    *pp = p;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">return</span> s + b;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#ac54cea4e34e29455707af40560399747">  137</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#ac54cea4e34e29455707af40560399747">tek_lzrestore_stk2</a>(<span class="keywordtype">int</span> srcsiz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, <span class="keywordtype">int</span> outsiz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keywordtype">int</span> cp, ds, repdis[4], i, j;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q1 = q + outsiz, *s7ptr = src, *q0 = q, bylz, cbylz;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">for</span> (j = 0; j &lt; 4; j++)</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        repdis[j] = -1 - j;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    bylz = cbylz = 0;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">if</span> (outsiz) {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;s7ptr))</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="comment">/* byフェーズ */</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            j = 0;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                j++;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">if</span> (j &gt;= 17) {</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    j += <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;s7ptr);</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordflow">if</span> (cbylz == 0) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    cbylz = 8;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                    bylz = *s7ptr++;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                cbylz--;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                i = bylz &amp; 1;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                bylz &gt;&gt;= 1;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            } <span class="keywordflow">while</span> (i == 0);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                *q++ = *s7ptr++;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            } <span class="keywordflow">while</span> (--j);</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">if</span> (q &gt;= q1)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            <span class="comment">/* lzフェーズ */</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            j = 0;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                j++;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">if</span> (j &gt;= 17) {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    j += <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;s7ptr);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">if</span> (cbylz == 0) {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                    cbylz = 8;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                    bylz = *s7ptr++;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                cbylz--;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                i = bylz &amp; 1;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                bylz &gt;&gt;= 1;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            } <span class="keywordflow">while</span> (i == 0);</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                i = *s7ptr++;</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                cp = i &gt;&gt; 4;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                i &amp;= 0x0f;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="keywordflow">if</span> ((i &amp; 1) == 0)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                    i |= (<a class="code" href="haribote_2tek_8c.html#a6c0b499ae2034799059f68d80fb61d01">tek_getnum_s7</a>(&amp;s7ptr) + 1) &lt;&lt; 4;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                i &gt;&gt;= 1;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                ds = ~(i - 6);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                <span class="keywordflow">if</span> (i &lt; 4)</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                    ds = repdis[i];</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keywordflow">if</span> (i == 4)</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    ds = repdis[0] - <a class="code" href="haribote_2tek_8c.html#a6c0b499ae2034799059f68d80fb61d01">tek_getnum_s7</a>(&amp;s7ptr) - 1;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">if</span> (i == 5)</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                    ds = repdis[0] + <a class="code" href="haribote_2tek_8c.html#a6c0b499ae2034799059f68d80fb61d01">tek_getnum_s7</a>(&amp;s7ptr) + 1;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                <span class="keywordflow">if</span> (cp == 0)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    cp = <a class="code" href="haribote_2tek_8c.html#a6c0b499ae2034799059f68d80fb61d01">tek_getnum_s7</a>(&amp;s7ptr) + 16;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                cp++;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                <span class="keywordflow">if</span> (i &gt; 0) {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                    <span class="keywordflow">if</span> (i &gt; 1) {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        <span class="keywordflow">if</span> (i &gt; 2)</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                            repdis[3] = repdis[2];</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        repdis[2] = repdis[1];</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    repdis[1] = repdis[0];</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                    repdis[0] = ds;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                <span class="keywordflow">if</span> (q + ds &lt; q0)</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                    <span class="keywordflow">goto</span> err;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="keywordflow">if</span> (q + cp &gt; q1)</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                    cp = q1 - q;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                    *q = *(q + ds);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                    q++;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                } <span class="keywordflow">while</span> (--cp);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            } <span class="keywordflow">while</span> (--j);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        } <span class="keywordflow">while</span> (q &lt; q1);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;err:</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a97a1b097510e1fc930bbc999823b0579">  228</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#a97a1b097510e1fc930bbc999823b0579">tek_decode2</a>(<span class="keywordtype">int</span> siz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p1 = p + siz;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">int</span> dsiz, hed, bsiz, st = 0;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    p += 16;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">if</span> ((dsiz = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p)) &gt; 0) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        hed = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p);</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        bsiz = 1 &lt;&lt; (((hed &gt;&gt; 1) &amp; 0x0f) + 8);</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">if</span> (dsiz &gt; bsiz || (hed &amp; 0x21) != 0x01)</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        <span class="keywordflow">if</span> (hed &amp; 0x40)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p); <span class="comment">/* オプション情報へのポインタを読み飛ばす */</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        st = <a class="code" href="haribote_2tek_8c.html#ac54cea4e34e29455707af40560399747">tek_lzrestore_stk2</a>(p1 - p, p, dsiz, q);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">return</span> st;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#af1af9649c0ff434aafce5fa4ac0c120d">tek_decmain5</a>(<span class="keywordtype">int</span> *work, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, <span class="keywordtype">int</span> osiz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q, <span class="keywordtype">int</span> lc, <span class="keywordtype">int</span> pb, <span class="keywordtype">int</span> lp, <span class="keywordtype">int</span> flags);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#adf0a0994681380da1f81b7bfb5ca44db">  247</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#adf0a0994681380da1f81b7bfb5ca44db">tek_lzrestore_tek5</a>(<span class="keywordtype">int</span> srcsiz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, <span class="keywordtype">int</span> outsiz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *outbuf)</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;{</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordtype">int</span> wrksiz, lc, lp, pb, flags, *work, prop0, fl;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">if</span> ((fl = (prop0 = *src) &amp; 0x0f) == 0x01) <span class="comment">/* 0001 */</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        flags |= -1;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fl == 0x05)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        flags = -2;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (fl == 0x09)</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        flags &amp;= 0;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    src++;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    prop0 &gt;&gt;= 4;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">if</span> (prop0 == 0)</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        prop0 = *src++;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keyword">static</span> <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> prop0_table[] = { 0x5d, 0x00 }, prop1_table[] = { 0x00 };</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">if</span> (flags == -1) {</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="keywordflow">if</span> (prop0 &gt;= 3)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            prop0 = prop0_table[prop0 - 1];</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordflow">if</span> (prop0 &gt;= 2)</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            prop0 = prop1_table[prop0 - 1];</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        }</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    lp = prop0 / (9 * 5);</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    prop0 %= 9 * 5;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;    pb = prop0 / 9;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    lc = prop0 % 9;</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">if</span> (flags == 0) <span class="comment">/* tek5:z2 */</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        flags = *src++;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    <span class="keywordflow">if</span> (flags == -1) { <span class="comment">/* stk5 */</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        wrksiz = lp;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        lp = pb;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        pb = wrksiz;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    wrksiz = 0x180 * <span class="keyword">sizeof</span> (<a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a>) + (0x840 + (0x300 &lt;&lt; (lc + lp))) * <span class="keyword">sizeof</span> (<a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a>); <span class="comment">/* 最低15KB, lc+lp=3なら、36KB */</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    work = (<span class="keywordtype">int</span> *) <a class="code" href="bootpack_8h.html#a0b2b807ae567c0c3a0f5878b6ea95383">memman_alloc_4k</a>((<span class="keyword">struct</span> <a class="code" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *) <a class="code" href="bootpack_8h.html#a0d0528cedf002a015b8e2d8b049c0e92">MEMMAN_ADDR</a>, wrksiz);</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">if</span> (work == <a class="code" href="haribote_2tek_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    flags = <a class="code" href="haribote_2tek_8c.html#af1af9649c0ff434aafce5fa4ac0c120d">tek_decmain5</a>(work, src, outsiz, outbuf, lc, pb, lp, flags);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="bootpack_8h.html#acad1337e14f758731d8241ee094d1a86">memman_free_4k</a>((<span class="keyword">struct</span> <a class="code" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *) <a class="code" href="bootpack_8h.html#a0d0528cedf002a015b8e2d8b049c0e92">MEMMAN_ADDR</a>, (<span class="keywordtype">int</span>) work, wrksiz);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">return</span> flags;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno"><a class="line" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">  295</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> {</div>
+<div class="line"><a name="l00296"></a><span class="lineno"><a class="line" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">  296</a></span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">t</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a158e36096ba4accde170ee60da2614ac">dmy</a>;</div>
+<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">  297</a></span>&#160;    <a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#ac867601039ca3c545e029a49f71e387b">prb0</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a24bee352ddf6f59a6738245a4d0b66d2">prb1</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tmsk</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a1464aa21d06ad5a454ec0bcc61f3910d">ntm</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a2c692d18376b9eea224faef01bfb5d7e">lt</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a65fb741ffe7f07f062ca4490e1e11e20">lt0</a>, <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a0f9a8a65dc8bfd5f6c17abd1b0e2c501">dmy4</a>;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;};</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
+<div class="line"><a name="l00300"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b.html">  300</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtek___s_t_r___p_r_b.html">tek_STR_PRB</a> {</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html">  301</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html">tek_STR_PRB_PB</a> {</div>
+<div class="line"><a name="l00302"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html">  302</a></span>&#160;        <span class="keyword">struct </span><a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html">tek_STR_PRB_PBST</a> {</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html#a54b04011a18de86c8d4d8abecc6a4954">  303</a></span>&#160;            <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html#a944aecb3159c11daacc9fb44865e59fb">mch</a>, <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html#a54b04011a18de86c8d4d8abecc6a4954">rep0l1</a>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a5bbea48c73437888944335da19305930">  304</a></span>&#160;        } <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a5bbea48c73437888944335da19305930">st</a>[12];</div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#af6d5d59aabd4ef401f8ac1e270bb3eab">  305</a></span>&#160;        <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a84428970236720e6f3f87c10e2c1f3c0">lenlow</a>[2][8], <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#af6d5d59aabd4ef401f8ac1e270bb3eab">lenmid</a>[2][8];</div>
+<div class="line"><a name="l00306"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">  306</a></span>&#160;    } <a class="code" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">pb</a>[16];</div>
+<div class="line"><a name="l00307"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html">  307</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html">tek_STR_PRB_ST</a> {</div>
+<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#ab940ede28e267475369d8552e89af103">  308</a></span>&#160;        <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a1995a1ab0947b43924c1c6943660b785">rep</a>, <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a73187268217c9edc98cb9c1a3c24540b">repg0</a>, <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a7b0312bfcbb20d8615a7d91ba3cf86db">repg1</a>, <a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#ab940ede28e267475369d8552e89af103">repg2</a>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b.html#a036930563a83d1d6b2e2001a0710d6b0">  309</a></span>&#160;    } <a class="code" href="structtek___s_t_r___p_r_b.html#a036930563a83d1d6b2e2001a0710d6b0">st</a>[12];</div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b.html#af3f1993dcdfb47bec333a637c442dda7">  310</a></span>&#160;    <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> <a class="code" href="structtek___s_t_r___p_r_b.html#a4e846667d1b7cb8e12c62eaa033fd536">lensel</a>[2][2], <a class="code" href="structtek___s_t_r___p_r_b.html#a3d871b5de9dce01a902bb354a71577e4">lenhigh</a>[2][256], <a class="code" href="structtek___s_t_r___p_r_b.html#af3f1993dcdfb47bec333a637c442dda7">pslot</a>[4][64], <a class="code" href="structtek___s_t_r___p_r_b.html#a1b3d6868e9c8cbb191c6a382e2be2a39">algn</a>[64];</div>
+<div class="line"><a name="l00311"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b.html#a02a2aba953cb5b1f544d19b7668cbcea">  311</a></span>&#160;    <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> <a class="code" href="structtek___s_t_r___p_r_b.html#a02a2aba953cb5b1f544d19b7668cbcea">spdis</a>[2][2+4+8+16+32], <a class="code" href="structtek___s_t_r___p_r_b.html#a0a46f2a334975236d2c2b5acbdf7ba85">lenext</a>[2+4+8+16+32];</div>
+<div class="line"><a name="l00312"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b.html#ae6f83fae83ba4d77436d4b96c44a828c">  312</a></span>&#160;    <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> <a class="code" href="structtek___s_t_r___p_r_b.html#ac830ff1c57d3188453febdae939d80f5">repg3</a>, <a class="code" href="structtek___s_t_r___p_r_b.html#a8f335bc0cddc26ff5e147e001147dcc5">fchgprm</a>[2 * 32], <a class="code" href="structtek___s_t_r___p_r_b.html#ae6f83fae83ba4d77436d4b96c44a828c">tbmt</a>[16], <a class="code" href="structtek___s_t_r___p_r_b.html#ae24d6b5aa394edb39ee6e7ed0df556eb">tbmm</a>[16], <a class="code" href="structtek___s_t_r___p_r_b.html#ad14f7a5cd8af8d58140219ae0d359d69">fchglt</a>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno"><a class="line" href="structtek___s_t_r___p_r_b.html#afd035b55be715f5c6c408b44d475f896">  313</a></span>&#160;    <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> <a class="code" href="structtek___s_t_r___p_r_b.html#afd035b55be715f5c6c408b44d475f896">lit</a>[1];</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;};</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno"><a class="line" href="structtek___s_t_r___r_n_g_d_e_c.html">  316</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> {</div>
+<div class="line"><a name="l00317"></a><span class="lineno"><a class="line" href="structtek___s_t_r___r_n_g_d_e_c.html#af6b15094b5ca4439cec64fd2dd95a165">  317</a></span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#af6b15094b5ca4439cec64fd2dd95a165">p</a>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno"><a class="line" href="structtek___s_t_r___r_n_g_d_e_c.html#a99ab0c38d310a79c649be4d8fe42daa9">  318</a></span>&#160;    <a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a>, <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a>, <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a99ab0c38d310a79c649be4d8fe42daa9">rmsk</a>;</div>
+<div class="line"><a name="l00319"></a><span class="lineno"><a class="line" href="structtek___s_t_r___r_n_g_d_e_c.html#a3e393354413140c15c7d042b07001ba4">  319</a></span>&#160;    jmp_buf <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a3e393354413140c15c7d042b07001ba4">errjmp</a>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">  320</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[32], *<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[16];</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keyword">struct </span><a class="code" href="structtek___s_t_r___p_r_b.html">tek_STR_PRB</a> <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;};</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a6dccddf1b7cc7d769e8074a44e204172">  324</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="haribote_2tek_8c.html#a6dccddf1b7cc7d769e8074a44e204172">tek_setbm5</a>(<span class="keyword">struct</span> <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> *bm, <span class="keywordtype">int</span> t, <span class="keywordtype">int</span> m)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;{</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">t</a> = t;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a> = m;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a24bee352ddf6f59a6738245a4d0b66d2">prb1</a> = -1 &lt;&lt; (m + t);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#ac867601039ca3c545e029a49f71e387b">prb0</a> = ~bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a24bee352ddf6f59a6738245a4d0b66d2">prb1</a>;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a24bee352ddf6f59a6738245a4d0b66d2">prb1</a> |= 1 &lt;&lt; t;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tmsk</a> = (-1 &lt;&lt; t) &amp; 0xffff;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#ac867601039ca3c545e029a49f71e387b">prb0</a> &amp;= bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tmsk</a>;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a24bee352ddf6f59a6738245a4d0b66d2">prb1</a> &amp;= bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tmsk</a>;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a1464aa21d06ad5a454ec0bcc61f3910d">ntm</a> = ~bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tmsk</a>;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;}</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160; </div>
+<div class="line"><a name="l00338"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#acbe7c667aa9821c570ff3f9f892c885d">  338</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#acbe7c667aa9821c570ff3f9f892c885d">tek_rdget0</a>(<span class="keyword">struct</span> <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *rd, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> i)</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;{</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keywordflow">while</span> (rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> &lt; (<a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a>) (1 &lt;&lt; 24)) {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> &lt;&lt;= 8;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> = rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> &lt;&lt; 8 | *rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#af6b15094b5ca4439cec64fd2dd95a165">p</a>++;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> &gt;&gt;= 1;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        i += i;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">if</span> (rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> &gt;= rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a>) {</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> -= rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a>;</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            i |= 1;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        }</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    } <span class="keywordflow">while</span> (--n);</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordflow">return</span> ~i;</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;}</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">  355</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(<span class="keyword">struct</span> <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *rd, <a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> *prob0, <span class="keywordtype">int</span> n, <span class="keywordtype">int</span> j, <span class="keyword">struct</span> <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> *bm)</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;{</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> p, i, *prob, nm = n &gt;&gt; 4;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    n &amp;= 0x0f;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    prob0 -= j;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        p = *(prob = prob0 + j);</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">if</span> (bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a2c692d18376b9eea224faef01bfb5d7e">lt</a> &gt; 0) {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordflow">if</span> (--bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a2c692d18376b9eea224faef01bfb5d7e">lt</a> == 0) {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="comment">/* 寿命切れ */</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#ad14f7a5cd8af8d58140219ae0d359d69">fchglt</a>, 0x71, 0, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[3]) == 0) {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                    <span class="comment">/* 寿命変更はまだサポートしてない */</span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;err:</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                    longjmp(rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a3e393354413140c15c7d042b07001ba4">errjmp</a>, 1);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                i = bm - rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>;</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <span class="keywordflow">if</span> ((bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a> = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#a8f335bc0cddc26ff5e147e001147dcc5">fchgprm</a>[i * 2 + bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a>], 0x71, 0, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[1])) == 0) {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                    i = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#ae6f83fae83ba4d77436d4b96c44a828c">tbmt</a>, 0x74, 1, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[2]) &amp; 15;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    <span class="keywordflow">if</span> (i == 15)</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                        <span class="keywordflow">goto</span> err;</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;                    <a class="code" href="haribote_2tek_8c.html#a6dccddf1b7cc7d769e8074a44e204172">tek_setbm5</a>(bm, i, ((<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#ae24d6b5aa394edb39ee6e7ed0df556eb">tbmm</a>, 0x74, 1, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[2]) - 1) &amp; 15) + 1);</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;                bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a2c692d18376b9eea224faef01bfb5d7e">lt</a> = bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a65fb741ffe7f07f062ca4490e1e11e20">lt0</a>;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            }</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="keywordflow">if</span> (p &lt; bm-&gt;prb0) {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                p = bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#ac867601039ca3c545e029a49f71e387b">prb0</a>;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;                <span class="keywordflow">goto</span> fixprob;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="keywordflow">if</span> (p &gt; bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a24bee352ddf6f59a6738245a4d0b66d2">prb1</a>) {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                p = bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a24bee352ddf6f59a6738245a4d0b66d2">prb1</a>;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                <span class="keywordflow">goto</span> fixprob;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            }</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;            <span class="keywordflow">if</span> (p &amp; bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a1464aa21d06ad5a454ec0bcc61f3910d">ntm</a>) {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                p &amp;= bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tmsk</a>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    fixprob:</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                *prob = p;</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            }</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        }</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        <span class="keywordflow">while</span> (rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> &lt; (<a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a>) (1 &lt;&lt; 24)) {</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> &lt;&lt;= 8;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> = rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> &lt;&lt; 8 | *rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#af6b15094b5ca4439cec64fd2dd95a165">p</a>++;</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        }</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        j += j;</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        i = ((<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> long) (rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> &amp; rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a99ab0c38d310a79c649be4d8fe42daa9">rmsk</a>) * p) &gt;&gt; 16;</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keywordflow">if</span> (rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> &lt; i) {</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            j |= 1;</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> = i;</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            *prob += ((0x10000 - p) &gt;&gt; bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a>) &amp; bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tmsk</a>;</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> -= i;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> -= i;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            *prob -= (p &gt;&gt; bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a>) &amp; bm-&gt;<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tmsk</a>;</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        }</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        --n;</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">if</span> ((n &amp; nm) == 0)</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            bm++;</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    } <span class="keywordflow">while</span> (n);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">return</span> j;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
+<div class="line"><a name="l00416"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#aef039e6537565330cab9657b27960b23">  416</a></span>&#160;<span class="keyword">static</span> <a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> <a class="code" href="haribote_2tek_8c.html#aef039e6537565330cab9657b27960b23">tek_revbit</a>(<a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> data, <span class="keywordtype">int</span> len)</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;{</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> rev = 0;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        rev += rev + (data &amp; 1);</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        data &gt;&gt;= 1;</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    } <span class="keywordflow">while</span> (--len);</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;    <span class="keywordflow">return</span> rev;</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160; </div>
+<div class="line"><a name="l00426"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#a62bff5997b4c8b44edd54cde4d0ed647">  426</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#a62bff5997b4c8b44edd54cde4d0ed647">tek_getlen5</a>(<span class="keyword">struct</span> <a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *rd, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> s_pos, <span class="keywordtype">int</span> stk)</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;{</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#a4e846667d1b7cb8e12c62eaa033fd536">lensel</a>[m][0], 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[3]) ^ stk) <span class="comment">/* low */</span></div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        i = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">pb</a>[s_pos].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a84428970236720e6f3f87c10e2c1f3c0">lenlow</a>[m], 0x73, 1, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[4]) &amp; 7;</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#a4e846667d1b7cb8e12c62eaa033fd536">lensel</a>[m][1], 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[3]) ^ stk) <span class="comment">/* mid */</span></div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        i = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">pb</a>[s_pos].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#af6d5d59aabd4ef401f8ac1e270bb3eab">lenmid</a>[m], 0x73, 1, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[5]);</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <span class="comment">/* high */</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        i = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#a3d871b5de9dce01a902bb354a71577e4">lenhigh</a>[m], 0x78, 1, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[6]) - (256 + 256 - 8);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        <span class="keywordflow">if</span> (i &gt; 0) {</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            <span class="keywordflow">if</span> (i &lt; 6 &amp;&amp; stk == 0)</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;                i = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>.<a class="code" href="structtek___s_t_r___p_r_b.html#a0a46f2a334975236d2c2b5acbdf7ba85">lenext</a>[(1 &lt;&lt; i) - 2], i | 0x70, 1, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[7]) - 1;</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;                i = <a class="code" href="haribote_2tek_8c.html#acbe7c667aa9821c570ff3f9f892c885d">tek_rdget0</a>(rd, i, ~1) - 1;</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            i = <a class="code" href="haribote_2tek_8c.html#acbe7c667aa9821c570ff3f9f892c885d">tek_rdget0</a>(rd, i, ~1) - 1;</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        }</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;        i += 256 - 8 + 16;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;    }</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">return</span> i;</div>
+<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;}</div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
+<div class="line"><a name="l00448"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#af1af9649c0ff434aafce5fa4ac0c120d">  448</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#af1af9649c0ff434aafce5fa4ac0c120d">tek_decmain5</a>(<span class="keywordtype">int</span> *work, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *src, <span class="keywordtype">int</span> osiz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q, <span class="keywordtype">int</span> lc, <span class="keywordtype">int</span> <a class="code" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">pb</a>, <span class="keywordtype">int</span> lp, <span class="keywordtype">int</span> flags)</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;{</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> state_table[] = { 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 4, 5 };</div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordtype">int</span> i, j, k, pmch, rep[4], s, pos, m_pos = (1 &lt;&lt; <a class="code" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">pb</a>) - 1, m_lp = (1 &lt;&lt; lp) - 1;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;    <span class="keywordtype">int</span> stk = (flags == -1), lcr = 8 - lc, s_pos, lit0cntmsk = 0x78;</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <a class="code" href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a> *lit1;</div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;    <span class="keyword">struct </span><a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *rd = (<span class="keyword">struct </span><a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a> *) work;</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;    <span class="keyword">struct </span><a class="code" href="structtek___s_t_r___p_r_b.html">tek_STR_PRB</a> *prb = &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">probs</a>;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160; </div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;    rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#af6b15094b5ca4439cec64fd2dd95a165">p</a> = &amp;src[4];</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">range</a> |= -1;</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">code</a> = src[0] &lt;&lt; 24 | src[1] &lt;&lt; 16 | src[2] &lt;&lt; 8 | src[3];</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; 4; i++)</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        rep[i] = ~i;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;    <span class="keywordflow">if</span> (setjmp(rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a3e393354413140c15c7d042b07001ba4">errjmp</a>))</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <span class="keywordflow">goto</span> err;</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    <span class="keywordflow">for</span> (i = <span class="keyword">sizeof</span> (<span class="keyword">struct</span> <a class="code" href="structtek___s_t_r___p_r_b.html">tek_STR_PRB</a>) / <span class="keyword">sizeof</span> (<a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a>) + (0x300 &lt;&lt; (lc + lp)) - 2; i &gt;= 0; i--)</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        ((<a class="code" href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a> *) prb)[i] = 1 &lt;&lt; 15;</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; 32; i++) {</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a2c692d18376b9eea224faef01bfb5d7e">lt</a> = (i &gt;= 4); <span class="comment">/* 0..3は寿命なし */</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a65fb741ffe7f07f062ca4490e1e11e20">lt0</a> = (i &lt; 24) ? 16 * 1024 : 8 * 1024;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a> &amp;= 0;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">t</a> = rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a> = 5;</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    }</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    lit1 = prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#afd035b55be715f5c6c408b44d475f896">lit</a> + ((256 &lt;&lt; (lc + lp)) - 2);</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;    <span class="keywordflow">if</span> (stk) {</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a99ab0c38d310a79c649be4d8fe42daa9">rmsk</a> = -1 &lt;&lt; 11;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; 32; i++)</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a2c692d18376b9eea224faef01bfb5d7e">lt</a> = 0; <span class="comment">/* 全て寿命なし */</span></div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;        for (i = 0; i &lt; 14; i++)</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[i] = &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[0];</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> pt[14];</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;        <span class="keyword">static</span> <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> pt1[14] = {</div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;             8,  8,  8,  8,  8,  8,  8,  8,</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;             8,  8, 18, 18, 18,  8</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;        };</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;        <span class="keyword">static</span> <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> pt2[14] = {</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;             8,  8, 10, 11, 12, 12, 14, 15,</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;            16, 16, 18, 18, 20, 21</div>
+<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        };</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        <span class="comment">/*</span></div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;<span class="comment">             0- 7:mch, mch, lit1, lensel, lenlow, lenmid, lenhigh, lenext</span></div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="comment">             8-15:pslot, pslot, sdis, sdis, align, rep-repg2</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;<span class="comment">        */</span></div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a99ab0c38d310a79c649be4d8fe42daa9">rmsk</a> |= -1;</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[1].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">t</a> = 5; rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[1].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a> = 3; <span class="comment">/* for fchgprm */</span></div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[2].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">t</a> = 9; rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[2].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a> = 2; <span class="comment">/* for tbmt, tbmm */</span></div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        <span class="keywordflow">if</span> (flags &amp; 0x40) { <span class="comment">/* lt-flag */</span></div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[3].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">t</a> = 0; rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[3].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a> = 1;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#ad14f7a5cd8af8d58140219ae0d359d69">fchglt</a> = 0xffff;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;        }</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[22].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">t</a> = 0; rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[22].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a> = 1;</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#ac830ff1c57d3188453febdae939d80f5">repg3</a> = 0xffff;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        <span class="keywordflow">if</span> (flags == -2) { <span class="comment">/* z1 */</span></div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[22].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a2c692d18376b9eea224faef01bfb5d7e">lt</a> = 0; <span class="comment">/* repg3のltを0に */</span></div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;            <span class="keywordflow">for</span> (i = 0; i &lt; 14; i++)</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                pt[i] = pt1[i];</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;            <span class="keywordflow">for</span> (i = 0; i &lt; 14; i++)</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                pt[i] = pt2[i];</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;            lit0cntmsk = (7 &gt;&gt; (flags &amp; 3)) &lt;&lt; 4 | 8;</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;            pt[ 1] =  8 + ((flags &amp; 0x04) != 0); <span class="comment">/* mch */</span></div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;            pt[ 5] = 12 + ((flags &amp; 0x08) != 0); <span class="comment">/* llm */</span></div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;            pt[ 9] = 16 + ((flags &amp; 0x10) != 0); <span class="comment">/* pst */</span></div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;            pt[11] = 18 + ((flags &amp; 0x20) != 0); <span class="comment">/* sds */</span></div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        }</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <span class="keywordflow">for</span> (i = 0; i &lt; 14; i++)</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;            rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[i] = &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[pt[i]];</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;    }</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <span class="keywordflow">for</span> (i = 0; i &lt; 32; i++)</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <a class="code" href="haribote_2tek_8c.html#a6dccddf1b7cc7d769e8074a44e204172">tek_setbm5</a>(&amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i], rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">t</a>, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[i].<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">m</a>);</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160; </div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;    <span class="keywordflow">if</span> ((<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">pb</a>[0].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a5bbea48c73437888944335da19305930">st</a>[0].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html#a944aecb3159c11daacc9fb44865e59fb">mch</a>, 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[0]) ^ stk) == 0)</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="keywordflow">goto</span> err;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    *q++ = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#afd035b55be715f5c6c408b44d475f896">lit</a>, lit0cntmsk, 1, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[24]) &amp; 0xff;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    pmch &amp;= 0; s &amp;= 0; pos = 1;</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;    <span class="keywordflow">while</span> (pos &lt; osiz) {</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        s_pos = pos &amp; m_pos;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">pb</a>[s_pos].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a5bbea48c73437888944335da19305930">st</a>[s].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html#a944aecb3159c11daacc9fb44865e59fb">mch</a>, 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[s &gt; 0]) ^ stk) { <span class="comment">/* 非lz */</span></div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;            i = (q[-1] &gt;&gt; lcr | (pos &amp; m_lp) &lt;&lt; lc) &lt;&lt; 8;</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;            s = state_table[s];</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;            <span class="keywordflow">if</span> (pmch == 0)</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                *q = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#afd035b55be715f5c6c408b44d475f896">lit</a>[i], lit0cntmsk, 1, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[24]) &amp; 0xff;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                <span class="keyword">struct </span><a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a> *bm = &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[24];</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                j = 1; <span class="comment">/* lit1は最初から2を減じてある */</span></div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                k = 8;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                pmch = q[rep[0]];</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                    j += j + <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;lit1[(i + j) &lt;&lt; 1 | pmch &gt;&gt; 7], 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[2]);</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                    k--;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                    <span class="keywordflow">if</span> ((k &amp; (lit0cntmsk &gt;&gt; 4)) == 0)</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                        bm++;</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                    <span class="keywordflow">if</span> ((((pmch &gt;&gt; 7) ^ j) &amp; 1) != 0 &amp;&amp; k != 0) {</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                        j = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#afd035b55be715f5c6c408b44d475f896">lit</a>[i + j - 1], k | (lit0cntmsk &amp; 0x70), j, bm);</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;                    }</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                    pmch &lt;&lt;= 1;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                } <span class="keywordflow">while</span> (k);</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;                *q = j &amp; 0xff;</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;                pmch &amp;= 0;</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;            }</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;            pos++;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;            q++;</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        } <span class="keywordflow">else</span> { <span class="comment">/* lz */</span></div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;            pmch |= 1;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a036930563a83d1d6b2e2001a0710d6b0">st</a>[<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a>].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a1995a1ab0947b43924c1c6943660b785">rep</a>, 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[13]) ^ stk) { <span class="comment">/* len/dis */</span></div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;                rep[3] = rep[2];</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;                rep[2] = rep[1];</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;                rep[1] = rep[0];</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;                j = i = <a class="code" href="haribote_2tek_8c.html#a62bff5997b4c8b44edd54cde4d0ed647">tek_getlen5</a>(rd, 0, s_pos, stk);</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a> = <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a> &lt; 7 ? 7 : 10;</div>
+<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                <span class="keywordflow">if</span> (j &gt;= 4)</div>
+<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;                    j = 3;</div>
+<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;                rep[0] = j = <a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#af3f1993dcdfb47bec333a637c442dda7">pslot</a>[j], 0x76, 1, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[8 + (j == 3)]) &amp; 0x3f;</div>
+<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;                <span class="keywordflow">if</span> (j &gt;= 4) {</div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;                    k = (j &gt;&gt; 1) - 1; <span class="comment">/* k = [1, 30] */</span></div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;                    rep[0] = (2 | (j &amp; 1)) &lt;&lt; k;</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;                    <span class="keywordflow">if</span> (j &lt; 14) <span class="comment">/* k &lt; 6 */</span></div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;                        rep[0] |= <a class="code" href="haribote_2tek_8c.html#aef039e6537565330cab9657b27960b23">tek_revbit</a>(<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a02a2aba953cb5b1f544d19b7668cbcea">spdis</a>[j &amp; 1][(1 &lt;&lt; k) - 2], k | 0x70, 1, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[10 + (k &gt;= 4)]), k);</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;                    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;                        <span class="keywordflow">if</span> (stk == 0) {</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;                            <span class="keywordflow">if</span> (k -= 6)</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;                                rep[0] |= <a class="code" href="haribote_2tek_8c.html#acbe7c667aa9821c570ff3f9f892c885d">tek_rdget0</a>(rd, k, ~0) &lt;&lt; 6;</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;                            rep[0] |= <a class="code" href="haribote_2tek_8c.html#aef039e6537565330cab9657b27960b23">tek_revbit</a>(<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a1b3d6868e9c8cbb191c6a382e2be2a39">algn</a>, 0x76, 1, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[12]), 6);</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;                        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;                            rep[0] |= <a class="code" href="haribote_2tek_8c.html#acbe7c667aa9821c570ff3f9f892c885d">tek_rdget0</a>(rd, k - 4, ~0) &lt;&lt; 4;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;                            rep[0] |= <a class="code" href="haribote_2tek_8c.html#aef039e6537565330cab9657b27960b23">tek_revbit</a>(<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a1b3d6868e9c8cbb191c6a382e2be2a39">algn</a>, 0x74, 1, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[12]), 4);</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;                        }</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;                    }</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;                }</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;                rep[0] = ~rep[0];</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;            } <span class="keywordflow">else</span> { <span class="comment">/* repeat-dis */</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a036930563a83d1d6b2e2001a0710d6b0">st</a>[<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a>].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a73187268217c9edc98cb9c1a3c24540b">repg0</a>, 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[13]) ^ stk) { <span class="comment">/* rep0 */</span></div>
+<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;                    i |= -1;</div>
+<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">pb</a>[s_pos].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a5bbea48c73437888944335da19305930">st</a>[<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a>].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html#a54b04011a18de86c8d4d8abecc6a4954">rep0l1</a>, 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[13]) == 0) {</div>
+<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;                        <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a> = <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a> &lt; 7 ? 9 : 11;</div>
+<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                        <span class="keywordflow">goto</span> skip;</div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;                    }</div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;                } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a036930563a83d1d6b2e2001a0710d6b0">st</a>[<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a>].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a7b0312bfcbb20d8615a7d91ba3cf86db">repg1</a>, 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[13]) ^ stk) <span class="comment">/* rep1 */</span></div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;                        i = rep[1];</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;                    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                        <span class="keywordflow">if</span> (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#a036930563a83d1d6b2e2001a0710d6b0">st</a>[<a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a>].<a class="code" href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#ab940ede28e267475369d8552e89af103">repg2</a>, 0x71, 0, rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">ptbm</a>[13]) ^ stk) <span class="comment">/* rep2 */</span></div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                            i = rep[2];</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;                        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                            <span class="keywordflow">if</span> (stk == 0) {</div>
+<div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                                <span class="keywordflow">if</span>  (<a class="code" href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a>(rd, &amp;prb-&gt;<a class="code" href="structtek___s_t_r___p_r_b.html#ac830ff1c57d3188453febdae939d80f5">repg3</a>, 0x71, 0, &amp;rd-&gt;<a class="code" href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">bm</a>[22]) == 0)</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;                                    <span class="keywordflow">goto</span> err;</div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                            }</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;                            i = rep[3]; <span class="comment">/* rep3 */</span></div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                            rep[3] = rep[2];</div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;                        }</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;                        rep[2] = rep[1];</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;                    }</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;                    rep[1] = rep[0];</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;                    rep[0] = i;</div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;                }</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;                i = <a class="code" href="haribote_2tek_8c.html#a62bff5997b4c8b44edd54cde4d0ed647">tek_getlen5</a>(rd, 1, s_pos, stk);</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;                <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a> = <a class="code" href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">s</a> &lt; 7 ? 8 : 11;</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;            }</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;skip:</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;            i += 2;</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;            <span class="keywordflow">if</span> (pos + rep[0] &lt; 0)</div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                <span class="keywordflow">goto</span> err;</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;            <span class="keywordflow">if</span> (pos + i &gt; osiz)</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                i = osiz - pos;</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;            pos += i;</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;            <span class="keywordflow">do</span> {</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;                *q = q[rep[0]];</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;                q++;</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;            } <span class="keywordflow">while</span> (--i);</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        }</div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;    }</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;err:</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;}</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160; </div>
+<div class="line"><a name="l00628"></a><span class="lineno"><a class="line" href="haribote_2tek_8c.html#aeae25a1f7899cfaee256d7ebd0f53d82">  628</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="haribote_2tek_8c.html#aeae25a1f7899cfaee256d7ebd0f53d82">tek_decode5</a>(<span class="keywordtype">int</span> siz, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p, <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *q)</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;{</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <a class="code" href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a> *p1 = p + siz;</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;    <span class="keywordtype">int</span> dsiz, hed, bsiz, st = 0;</div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    p += 16;</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <span class="keywordflow">if</span> ((dsiz = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p)) &gt; 0) {</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;        hed = <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p);</div>
+<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        <span class="keywordflow">if</span> ((hed &amp; 1) == 0)</div>
+<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;            st = <a class="code" href="haribote_2tek_8c.html#adf0a0994681380da1f81b7bfb5ca44db">tek_lzrestore_tek5</a>(p1 - p + 1, p - 1, dsiz, q);</div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;            bsiz = 1 &lt;&lt; (((hed &gt;&gt; 1) &amp; 0x0f) + 8);</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;            <span class="keywordflow">if</span> (hed &amp; 0x20)</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;                <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;            <span class="keywordflow">if</span> (bsiz == 256)</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;                st = <a class="code" href="haribote_2tek_8c.html#adf0a0994681380da1f81b7bfb5ca44db">tek_lzrestore_tek5</a>(p1 - p, p, dsiz, q);</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                <span class="keywordflow">if</span> (dsiz &gt; bsiz)</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;                    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;                <span class="keywordflow">if</span> (hed &amp; 0x40)</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;                    <a class="code" href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a>(&amp;p); <span class="comment">/* オプション情報へのポインタを読み飛ばす */</span></div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;                st = <a class="code" href="haribote_2tek_8c.html#adf0a0994681380da1f81b7bfb5ca44db">tek_lzrestore_tek5</a>(p1 - p, p, dsiz, q);</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;            }</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        }</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    }</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="keywordflow">return</span> st;</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_aa09d803a6b3c45af4e1d73102fb9c3b5"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#aa09d803a6b3c45af4e1d73102fb9c3b5">tek_STR_BITMODEL::m</a></div><div class="ttdeci">UCHAR m</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00296">tek.c:296</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_af3f1993dcdfb47bec333a637c442dda7"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#af3f1993dcdfb47bec333a637c442dda7">tek_STR_PRB::pslot</a></div><div class="ttdeci">tek_TPRB pslot[4][64]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00310">tek.c:310</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_html_a5bbea48c73437888944335da19305930"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a5bbea48c73437888944335da19305930">tek_STR_PRB::tek_STR_PRB_PB::st</a></div><div class="ttdeci">struct tek_STR_PRB::tek_STR_PRB_PB::tek_STR_PRB_PBST st[12]</div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_ad47117a8e15ddb593559472bfd1a913f"><div class="ttname"><a href="haribote_2tek_8c.html#ad47117a8e15ddb593559472bfd1a913f">tek_rdget1</a></div><div class="ttdeci">static int tek_rdget1(struct tek_STR_RNGDEC *rd, tek_TPRB *prob0, int n, int j, struct tek_STR_BITMODEL *bm)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00355">tek.c:355</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html_a0f1fd8b57a52b21dc050c28c7e188d8c"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html#a0f1fd8b57a52b21dc050c28c7e188d8c">tek_STR_RNGDEC::ptbm</a></div><div class="ttdeci">struct tek_STR_BITMODEL * ptbm[16]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00320">tek.c:320</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a65ad1e05ea04302ba9c7a2b8b2b2bf99"><div class="ttname"><a href="haribote_2tek_8c.html#a65ad1e05ea04302ba9c7a2b8b2b2bf99">tek_decomp</a></div><div class="ttdeci">int tek_decomp(unsigned char *p, char *q, int size)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00041">tek.c:41</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a24bee352ddf6f59a6738245a4d0b66d2"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a24bee352ddf6f59a6738245a4d0b66d2">tek_STR_BITMODEL::prb1</a></div><div class="ttdeci">UINT32 prb1</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00297">tek.c:297</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a4f4bb67531a9bf6f0b9c6ad76aeba587"><div class="ttname"><a href="haribote_2tek_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a></div><div class="ttdeci">unsigned char UCHAR</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00006">tek.c:6</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_ae1e6edbbc26d6fbc71a90190d0266018"><div class="ttname"><a href="haribote_2tek_8c.html#ae1e6edbbc26d6fbc71a90190d0266018">UINT32</a></div><div class="ttdeci">unsigned int UINT32</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00007">tek.c:7</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t_html_a54b04011a18de86c8d4d8abecc6a4954"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html#a54b04011a18de86c8d4d8abecc6a4954">tek_STR_PRB::tek_STR_PRB_PB::tek_STR_PRB_PBST::rep0l1</a></div><div class="ttdeci">tek_TPRB rep0l1</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00303">tek.c:303</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_a1b3d6868e9c8cbb191c6a382e2be2a39"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#a1b3d6868e9c8cbb191c6a382e2be2a39">tek_STR_PRB::algn</a></div><div class="ttdeci">tek_TPRB algn[64]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00310">tek.c:310</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html">tek_STR_RNGDEC</a></div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00316">tek.c:316</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a2c692d18376b9eea224faef01bfb5d7e"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a2c692d18376b9eea224faef01bfb5d7e">tek_STR_BITMODEL::lt</a></div><div class="ttdeci">UINT32 lt</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00297">tek.c:297</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t_html"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html">tek_STR_PRB::tek_STR_PRB_PB::tek_STR_PRB_PBST</a></div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00302">tek.c:302</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a0d0528cedf002a015b8e2d8b049c0e92"><div class="ttname"><a href="bootpack_8h.html#a0d0528cedf002a015b8e2d8b049c0e92">MEMMAN_ADDR</a></div><div class="ttdeci">#define MEMMAN_ADDR</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00142">bootpack.h:141</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html_a3e393354413140c15c7d042b07001ba4"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html#a3e393354413140c15c7d042b07001ba4">tek_STR_RNGDEC::errjmp</a></div><div class="ttdeci">jmp_buf errjmp</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00319">tek.c:319</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_ae6f83fae83ba4d77436d4b96c44a828c"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#ae6f83fae83ba4d77436d4b96c44a828c">tek_STR_PRB::tbmt</a></div><div class="ttdeci">tek_TPRB tbmt[16]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00312">tek.c:312</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a8e156422247e1d3afd919072b65d8a43"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a8e156422247e1d3afd919072b65d8a43">tek_STR_BITMODEL::tmsk</a></div><div class="ttdeci">UINT32 tmsk</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00297">tek.c:297</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t_html_a1995a1ab0947b43924c1c6943660b785"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a1995a1ab0947b43924c1c6943660b785">tek_STR_PRB::tek_STR_PRB_ST::rep</a></div><div class="ttdeci">tek_TPRB rep</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00308">tek.c:308</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_ac54cea4e34e29455707af40560399747"><div class="ttname"><a href="haribote_2tek_8c.html#ac54cea4e34e29455707af40560399747">tek_lzrestore_stk2</a></div><div class="ttdeci">static int tek_lzrestore_stk2(int srcsiz, UCHAR *src, int outsiz, UCHAR *q)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00137">tek.c:137</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html_a8065a9776f7ae311c8b7a873ccb24d67"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html#a8065a9776f7ae311c8b7a873ccb24d67">tek_STR_RNGDEC::range</a></div><div class="ttdeci">UINT32 range</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00318">tek.c:318</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html_a99ab0c38d310a79c649be4d8fe42daa9"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html#a99ab0c38d310a79c649be4d8fe42daa9">tek_STR_RNGDEC::rmsk</a></div><div class="ttdeci">UINT32 rmsk</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00318">tek.c:318</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_a3d871b5de9dce01a902bb354a71577e4"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#a3d871b5de9dce01a902bb354a71577e4">tek_STR_PRB::lenhigh</a></div><div class="ttdeci">tek_TPRB lenhigh[2][256]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00310">tek.c:310</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a0b2b807ae567c0c3a0f5878b6ea95383"><div class="ttname"><a href="bootpack_8h.html#a0b2b807ae567c0c3a0f5878b6ea95383">memman_alloc_4k</a></div><div class="ttdeci">unsigned int memman_alloc_4k(struct MEMMAN *man, unsigned int size)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00146">memory.c:146</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a97a1b097510e1fc930bbc999823b0579"><div class="ttname"><a href="haribote_2tek_8c.html#a97a1b097510e1fc930bbc999823b0579">tek_decode2</a></div><div class="ttdeci">static int tek_decode2(int siz, UCHAR *p, UCHAR *q)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00228">tek.c:228</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_adf0a0994681380da1f81b7bfb5ca44db"><div class="ttname"><a href="haribote_2tek_8c.html#adf0a0994681380da1f81b7bfb5ca44db">tek_lzrestore_tek5</a></div><div class="ttdeci">static int tek_lzrestore_tek5(int srcsiz, UCHAR *src, int outsiz, UCHAR *outbuf)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00247">tek.c:247</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html_ac5619d82929b7ef3f450afd7c492e3a0"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html#ac5619d82929b7ef3f450afd7c492e3a0">tek_STR_RNGDEC::probs</a></div><div class="ttdeci">struct tek_STR_PRB probs</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00320">tek.c:321</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_html"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html">tek_STR_PRB::tek_STR_PRB_PB</a></div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00301">tek.c:301</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_aa88ef0b8b73e80fbcdf4e9a3d5da3844"><div class="ttname"><a href="haribote_2tek_8c.html#aa88ef0b8b73e80fbcdf4e9a3d5da3844">tek_getsize</a></div><div class="ttdeci">int tek_getsize(unsigned char *p)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00028">tek.c:28</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html">tek_STR_PRB</a></div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00300">tek.c:300</a></div></div>
+<div class="ttc" id="abootpack_8h_html_acad1337e14f758731d8241ee094d1a86"><div class="ttname"><a href="bootpack_8h.html#acad1337e14f758731d8241ee094d1a86">memman_free_4k</a></div><div class="ttdeci">int memman_free_4k(struct MEMMAN *man, unsigned int addr, unsigned int size)</div><div class="ttdef"><b>Definition:</b> <a href="memory_8c_source.html#l00154">memory.c:154</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a5faa80891359abc566502563e97e6761"><div class="ttname"><a href="haribote_2tek_8c.html#a5faa80891359abc566502563e97e6761">tek_getnum_s7s</a></div><div class="ttdeci">static unsigned int tek_getnum_s7s(UCHAR **pp)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00014">tek.c:14</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_ad14f7a5cd8af8d58140219ae0d359d69"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#ad14f7a5cd8af8d58140219ae0d359d69">tek_STR_PRB::fchglt</a></div><div class="ttdeci">tek_TPRB fchglt</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00312">tek.c:312</a></div></div>
+<div class="ttc" id="ajpeg_8c_html_a4f4bb67531a9bf6f0b9c6ad76aeba587"><div class="ttname"><a href="jpeg_8c.html#a4f4bb67531a9bf6f0b9c6ad76aeba587">UCHAR</a></div><div class="ttdeci">unsigned char UCHAR</div><div class="ttdef"><b>Definition:</b> <a href="jpeg_8c_source.html#l00015">jpeg.c:15</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_ac867601039ca3c545e029a49f71e387b"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#ac867601039ca3c545e029a49f71e387b">tek_STR_BITMODEL::prb0</a></div><div class="ttdeci">UINT32 prb0</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00297">tek.c:297</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_af1af9649c0ff434aafce5fa4ac0c120d"><div class="ttname"><a href="haribote_2tek_8c.html#af1af9649c0ff434aafce5fa4ac0c120d">tek_decmain5</a></div><div class="ttdeci">static int tek_decmain5(int *work, UCHAR *src, int osiz, UCHAR *q, int lc, int pb, int lp, int flags)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00448">tek.c:448</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t_html_a7b0312bfcbb20d8615a7d91ba3cf86db"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a7b0312bfcbb20d8615a7d91ba3cf86db">tek_STR_PRB::tek_STR_PRB_ST::repg1</a></div><div class="ttdeci">tek_TPRB repg1</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00308">tek.c:308</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t_html_ab940ede28e267475369d8552e89af103"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#ab940ede28e267475369d8552e89af103">tek_STR_PRB::tek_STR_PRB_ST::repg2</a></div><div class="ttdeci">tek_TPRB repg2</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00308">tek.c:308</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t_html_a944aecb3159c11daacc9fb44865e59fb"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_1_1tek___s_t_r___p_r_b___p_b_s_t.html#a944aecb3159c11daacc9fb44865e59fb">tek_STR_PRB::tek_STR_PRB_PB::tek_STR_PRB_PBST::mch</a></div><div class="ttdeci">tek_TPRB mch</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00303">tek.c:303</a></div></div>
+<div class="ttc" id="abootpack_8h_html"><div class="ttname"><a href="bootpack_8h.html">bootpack.h</a></div><div class="ttdoc">OS本体</div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a6c0b499ae2034799059f68d80fb61d01"><div class="ttname"><a href="haribote_2tek_8c.html#a6c0b499ae2034799059f68d80fb61d01">tek_getnum_s7</a></div><div class="ttdeci">static unsigned int tek_getnum_s7(UCHAR **pp)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00120">tek.c:120</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a6dccddf1b7cc7d769e8074a44e204172"><div class="ttname"><a href="haribote_2tek_8c.html#a6dccddf1b7cc7d769e8074a44e204172">tek_setbm5</a></div><div class="ttdeci">static void tek_setbm5(struct tek_STR_BITMODEL *bm, int t, int m)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00324">tek.c:324</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_acbe7c667aa9821c570ff3f9f892c885d"><div class="ttname"><a href="haribote_2tek_8c.html#acbe7c667aa9821c570ff3f9f892c885d">tek_rdget0</a></div><div class="ttdeci">static int tek_rdget0(struct tek_STR_RNGDEC *rd, int n, int i)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00338">tek.c:338</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_a036930563a83d1d6b2e2001a0710d6b0"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#a036930563a83d1d6b2e2001a0710d6b0">tek_STR_PRB::st</a></div><div class="ttdeci">struct tek_STR_PRB::tek_STR_PRB_ST st[12]</div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_ac830ff1c57d3188453febdae939d80f5"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#ac830ff1c57d3188453febdae939d80f5">tek_STR_PRB::repg3</a></div><div class="ttdeci">tek_TPRB repg3</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00312">tek.c:312</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_a8f335bc0cddc26ff5e147e001147dcc5"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#a8f335bc0cddc26ff5e147e001147dcc5">tek_STR_PRB::fchgprm</a></div><div class="ttdeci">tek_TPRB fchgprm[2 *32]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00312">tek.c:312</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_html_a84428970236720e6f3f87c10e2c1f3c0"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#a84428970236720e6f3f87c10e2c1f3c0">tek_STR_PRB::tek_STR_PRB_PB::lenlow</a></div><div class="ttdeci">tek_TPRB lenlow[2][8]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00305">tek.c:305</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html_af6b15094b5ca4439cec64fd2dd95a165"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html#af6b15094b5ca4439cec64fd2dd95a165">tek_STR_RNGDEC::p</a></div><div class="ttdeci">UCHAR * p</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00317">tek.c:317</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_a0c74074e55376768581ade9542b14056"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#a0c74074e55376768581ade9542b14056">tek_STR_PRB::pb</a></div><div class="ttdeci">struct tek_STR_PRB::tek_STR_PRB_PB pb[16]</div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b_html_af6d5d59aabd4ef401f8ac1e270bb3eab"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___p_b.html#af6d5d59aabd4ef401f8ac1e270bb3eab">tek_STR_PRB::tek_STR_PRB_PB::lenmid</a></div><div class="ttdeci">tek_TPRB lenmid[2][8]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00305">tek.c:305</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a158e36096ba4accde170ee60da2614ac"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a158e36096ba4accde170ee60da2614ac">tek_STR_BITMODEL::dmy</a></div><div class="ttdeci">UCHAR dmy</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00296">tek.c:296</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_a4e846667d1b7cb8e12c62eaa033fd536"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#a4e846667d1b7cb8e12c62eaa033fd536">tek_STR_PRB::lensel</a></div><div class="ttdeci">tek_TPRB lensel[2][2]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00310">tek.c:310</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html_aeb77daebafd502cd46c734e5cdd2b8d4"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html#aeb77daebafd502cd46c734e5cdd2b8d4">tek_STR_RNGDEC::bm</a></div><div class="ttdeci">struct tek_STR_BITMODEL bm[32]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00319">tek.c:320</a></div></div>
+<div class="ttc" id="astruct_m_e_m_m_a_n_html"><div class="ttname"><a href="struct_m_e_m_m_a_n.html">MEMMAN</a></div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00145">bootpack.h:145</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_aef039e6537565330cab9657b27960b23"><div class="ttname"><a href="haribote_2tek_8c.html#aef039e6537565330cab9657b27960b23">tek_revbit</a></div><div class="ttdeci">static UINT32 tek_revbit(UINT32 data, int len)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00416">tek.c:416</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a65fb741ffe7f07f062ca4490e1e11e20"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a65fb741ffe7f07f062ca4490e1e11e20">tek_STR_BITMODEL::lt0</a></div><div class="ttdeci">UINT32 lt0</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00297">tek.c:297</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_ae24d6b5aa394edb39ee6e7ed0df556eb"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#ae24d6b5aa394edb39ee6e7ed0df556eb">tek_STR_PRB::tbmm</a></div><div class="ttdeci">tek_TPRB tbmm[16]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00312">tek.c:312</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t_html"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html">tek_STR_PRB::tek_STR_PRB_ST</a></div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00307">tek.c:307</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a1464aa21d06ad5a454ec0bcc61f3910d"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a1464aa21d06ad5a454ec0bcc61f3910d">tek_STR_BITMODEL::ntm</a></div><div class="ttdeci">UINT32 ntm</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00297">tek.c:297</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_afd035b55be715f5c6c408b44d475f896"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#afd035b55be715f5c6c408b44d475f896">tek_STR_PRB::lit</a></div><div class="ttdeci">tek_TPRB lit[1]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00313">tek.c:313</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html">tek_STR_BITMODEL</a></div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00295">tek.c:295</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_a02a2aba953cb5b1f544d19b7668cbcea"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#a02a2aba953cb5b1f544d19b7668cbcea">tek_STR_PRB::spdis</a></div><div class="ttdeci">tek_TPRB spdis[2][2+4+8+16+32]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00311">tek.c:311</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t_html_a73187268217c9edc98cb9c1a3c24540b"><div class="ttname"><a href="structtek___s_t_r___p_r_b_1_1tek___s_t_r___p_r_b___s_t.html#a73187268217c9edc98cb9c1a3c24540b">tek_STR_PRB::tek_STR_PRB_ST::repg0</a></div><div class="ttdeci">tek_TPRB repg0</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00308">tek.c:308</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___r_n_g_d_e_c_html_a1c652bb55ac9581613ac12ecb9441181"><div class="ttname"><a href="structtek___s_t_r___r_n_g_d_e_c.html#a1c652bb55ac9581613ac12ecb9441181">tek_STR_RNGDEC::code</a></div><div class="ttdeci">UINT32 code</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00318">tek.c:318</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a62bff5997b4c8b44edd54cde4d0ed647"><div class="ttname"><a href="haribote_2tek_8c.html#a62bff5997b4c8b44edd54cde4d0ed647">tek_getlen5</a></div><div class="ttdeci">static int tek_getlen5(struct tek_STR_RNGDEC *rd, int m, int s_pos, int stk)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00426">tek.c:426</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a71a39743146c66c9261271cfca82a12d"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a71a39743146c66c9261271cfca82a12d">tek_STR_BITMODEL::t</a></div><div class="ttdeci">UCHAR t</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00296">tek.c:296</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="haribote_2tek_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00005">tek.c:4</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_aedfa1c45aeeb79cdd7b3c7c0edd3518d"><div class="ttname"><a href="haribote_2tek_8c.html#aedfa1c45aeeb79cdd7b3c7c0edd3518d">tek_lzrestore_stk1</a></div><div class="ttdeci">static int tek_lzrestore_stk1(int srcsiz, UCHAR *src, int outsiz, UCHAR *q)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00057">tek.c:57</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_a33eeed225ccff7762e2dc545fcd50769"><div class="ttname"><a href="haribote_2tek_8c.html#a33eeed225ccff7762e2dc545fcd50769">tek_decode1</a></div><div class="ttdeci">static int tek_decode1(int siz, UCHAR *p, UCHAR *q)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00101">tek.c:101</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a0f9a8a65dc8bfd5f6c17abd1b0e2c501"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a0f9a8a65dc8bfd5f6c17abd1b0e2c501">tek_STR_BITMODEL::dmy4</a></div><div class="ttdeci">UINT32 dmy4</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00297">tek.c:297</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_ade9db6e3c24e2cf05a8cb1be281736b5"><div class="ttname"><a href="haribote_2tek_8c.html#ade9db6e3c24e2cf05a8cb1be281736b5">tek_TPRB</a></div><div class="ttdeci">UINT32 tek_TPRB</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00008">tek.c:8</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___p_r_b_html_a0a46f2a334975236d2c2b5acbdf7ba85"><div class="ttname"><a href="structtek___s_t_r___p_r_b.html#a0a46f2a334975236d2c2b5acbdf7ba85">tek_STR_PRB::lenext</a></div><div class="ttdeci">tek_TPRB lenext[2+4+8+16+32]</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00311">tek.c:311</a></div></div>
+<div class="ttc" id="astructtek___s_t_r___b_i_t_m_o_d_e_l_html_a055f816b5fc0a21ae5bc03386c42151e"><div class="ttname"><a href="structtek___s_t_r___b_i_t_m_o_d_e_l.html#a055f816b5fc0a21ae5bc03386c42151e">tek_STR_BITMODEL::s</a></div><div class="ttdeci">UCHAR s</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00296">tek.c:296</a></div></div>
+<div class="ttc" id="aharibote_2tek_8c_html_aeae25a1f7899cfaee256d7ebd0f53d82"><div class="ttname"><a href="haribote_2tek_8c.html#aeae25a1f7899cfaee256d7ebd0f53d82">tek_decode5</a></div><div class="ttdeci">static int tek_decode5(int siz, UCHAR *p, UCHAR *q)</div><div class="ttdef"><b>Definition:</b> <a href="haribote_2tek_8c_source.html#l00628">tek.c:628</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_5ac131f68e424deb31069477f492d10b.html">haribote</a></li><li class="navelem"><a class="el" href="haribote_2tek_8c.html">tek.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

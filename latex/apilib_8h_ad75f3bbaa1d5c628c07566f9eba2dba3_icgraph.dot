@@ -1,0 +1,30 @@
+digraph "api_end"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="api_end",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="終了API"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="end",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mmlplay_8c.html#a0834e80e6e6a203821e54e48a1ddeeff",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mmlplay_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="memtest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$memory_8c.html#a457da672ff618c99ae94b1227d45119b",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="set_palette",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic_8c.html#a78bbb55ac088109aba6d34f9ffc0523a",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="init_palette",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphic_8c.html#a42a564ae1340c89e85f7ef58c6f8e46e",tooltip=" "];
+  Node7 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="error",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gview_8c.html#a42c6b1edc1bd763019f0eb5edce18793",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gview_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="HariMain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$a_8c.html#a3bfd04b86eb41bd7301c75a3df6a89e0",tooltip=" "];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="waittimer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$mmlplay_8c.html#a1038afdfce1ca1b4e8a53320ea1a0d25",tooltip=" "];
+  Node11 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+}

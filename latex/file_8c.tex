@@ -1,0 +1,69 @@
+\hypertarget{file_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/file.c ファイル}
+\label{file_8c}\index{E:/Documents/emu84/Src/haribote/file.c@{E:/Documents/emu84/Src/haribote/file.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+file.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{file_8c_a53fcda0d66b498de64fda0ddfd041002}{file\+\_\+readfat}} (int $\ast$fat, unsigned char $\ast$img)
+\item 
+void \mbox{\hyperlink{file_8c_a42bc90f073a4c6e4402de1ccbf1747bd}{file\+\_\+loadfile}} (int clustno, int size, char $\ast$buf, int $\ast$fat, char $\ast$img)
+\item 
+struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}} $\ast$ \mbox{\hyperlink{file_8c_a351fe46d5dd8d8fa194636c54ff2acaf}{file\+\_\+search}} (char $\ast$name, struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}} $\ast$finfo, int max)
+\item 
+char $\ast$ \mbox{\hyperlink{file_8c_a33cd1c9ec67b310356d3e8a71868c156}{file\+\_\+loadfile2}} (int clustno, int $\ast$psize, int $\ast$fat)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{file_8c_a42bc90f073a4c6e4402de1ccbf1747bd}\label{file_8c_a42bc90f073a4c6e4402de1ccbf1747bd}} 
+\index{file.c@{file.c}!file\_loadfile@{file\_loadfile}}
+\index{file\_loadfile@{file\_loadfile}!file.c@{file.c}}
+\doxysubsubsection{\texorpdfstring{file\_loadfile()}{file\_loadfile()}}
+{\footnotesize\ttfamily void file\+\_\+loadfile (\begin{DoxyParamCaption}\item[{int}]{clustno,  }\item[{int}]{size,  }\item[{char $\ast$}]{buf,  }\item[{int $\ast$}]{fat,  }\item[{char $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ file.\+c の 17 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{file_8c_a33cd1c9ec67b310356d3e8a71868c156}\label{file_8c_a33cd1c9ec67b310356d3e8a71868c156}} 
+\index{file.c@{file.c}!file\_loadfile2@{file\_loadfile2}}
+\index{file\_loadfile2@{file\_loadfile2}!file.c@{file.c}}
+\doxysubsubsection{\texorpdfstring{file\_loadfile2()}{file\_loadfile2()}}
+{\footnotesize\ttfamily char$\ast$ file\+\_\+loadfile2 (\begin{DoxyParamCaption}\item[{int}]{clustno,  }\item[{int $\ast$}]{psize,  }\item[{int $\ast$}]{fat }\end{DoxyParamCaption})}
+
+
+
+ file.\+c の 76 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 2
+被呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{file_8c_a53fcda0d66b498de64fda0ddfd041002}\label{file_8c_a53fcda0d66b498de64fda0ddfd041002}} 
+\index{file.c@{file.c}!file\_readfat@{file\_readfat}}
+\index{file\_readfat@{file\_readfat}!file.c@{file.c}}
+\doxysubsubsection{\texorpdfstring{file\_readfat()}{file\_readfat()}}
+{\footnotesize\ttfamily void file\+\_\+readfat (\begin{DoxyParamCaption}\item[{int $\ast$}]{fat,  }\item[{unsigned char $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+ file.\+c の 5 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{file_8c_a351fe46d5dd8d8fa194636c54ff2acaf}\label{file_8c_a351fe46d5dd8d8fa194636c54ff2acaf}} 
+\index{file.c@{file.c}!file\_search@{file\_search}}
+\index{file\_search@{file\_search}!file.c@{file.c}}
+\doxysubsubsection{\texorpdfstring{file\_search()}{file\_search()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}}$\ast$ file\+\_\+search (\begin{DoxyParamCaption}\item[{char $\ast$}]{name,  }\item[{struct \mbox{\hyperlink{struct_f_i_l_e_i_n_f_o}{F\+I\+L\+E\+I\+N\+FO}} $\ast$}]{finfo,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+ file.\+c の 37 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 5

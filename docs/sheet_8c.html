@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/haribote/sheet.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('sheet_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">sheet.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bootpack_8h_source.html">bootpack.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+sheet.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c__incl.png" border="0" usemap="#_e_1_2_documents_2emu84_2_src_2haribote_2sheet_8c" alt=""/></div>
+</div>
+</div>
+<p><a href="sheet_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:af6fd9945ea407e2d6c2d9a87d8528490"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#af6fd9945ea407e2d6c2d9a87d8528490">SHEET_USE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:af6fd9945ea407e2d6c2d9a87d8528490"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a36f9284550ad0030f5dd64154a04a7d8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a36f9284550ad0030f5dd64154a04a7d8">shtctl_init</a> (struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *memman, unsigned char *vram, int xsize, int ysize)</td></tr>
+<tr class="memdesc:a36f9284550ad0030f5dd64154a04a7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">シートコントロールの初期化を行います  <a href="sheet_8c.html#a36f9284550ad0030f5dd64154a04a7d8">[詳解]</a><br /></td></tr>
+<tr class="separator:a36f9284550ad0030f5dd64154a04a7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a543661af64ed9055c819e0dd7b61d01e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a543661af64ed9055c819e0dd7b61d01e">sheet_alloc</a> (struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *ctl)</td></tr>
+<tr class="separator:a543661af64ed9055c819e0dd7b61d01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c14343c7c0566620635e9ccd17e21e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a6c14343c7c0566620635e9ccd17e21e0">sheet_setbuf</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, unsigned char *buf, int xsize, int ysize, int col_inv)</td></tr>
+<tr class="separator:a6c14343c7c0566620635e9ccd17e21e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb2b9d999b1c516858b5a0d1bfdd55c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a5fb2b9d999b1c516858b5a0d1bfdd55c">sheet_refreshmap</a> (struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *ctl, int vx0, int vy0, int vx1, int vy1, int h0)</td></tr>
+<tr class="separator:a5fb2b9d999b1c516858b5a0d1bfdd55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0016600e2d7feeb0a12089156b9307a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a0016600e2d7feeb0a12089156b9307a4">sheet_refreshsub</a> (struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *ctl, int vx0, int vy0, int vx1, int vy1, int h0, int h1)</td></tr>
+<tr class="separator:a0016600e2d7feeb0a12089156b9307a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad590bf68e2aa06a5fe99c03ad4c56785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#ad590bf68e2aa06a5fe99c03ad4c56785">sheet_updown</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, int height)</td></tr>
+<tr class="separator:ad590bf68e2aa06a5fe99c03ad4c56785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8befd8f5c365aec65bfa164d00e140ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a8befd8f5c365aec65bfa164d00e140ca">sheet_refresh</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, int bx0, int by0, int bx1, int by1)</td></tr>
+<tr class="separator:a8befd8f5c365aec65bfa164d00e140ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca08bb322ec0c2110e2a071e383832de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#aca08bb322ec0c2110e2a071e383832de">sheet_slide</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, int vx0, int vy0)</td></tr>
+<tr class="separator:aca08bb322ec0c2110e2a071e383832de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3586d30712a7294662c6588175348e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#ac3586d30712a7294662c6588175348e0">sheet_free</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht)</td></tr>
+<tr class="separator:ac3586d30712a7294662c6588175348e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="af6fd9945ea407e2d6c2d9a87d8528490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6fd9945ea407e2d6c2d9a87d8528490">&#9670;&nbsp;</a></span>SHEET_USE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SHEET_USE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00006">6</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a543661af64ed9055c819e0dd7b61d01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543661af64ed9055c819e0dd7b61d01e">&#9670;&nbsp;</a></span>sheet_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a>* sheet_alloc </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *&#160;</td>
+          <td class="paramname"><em>ctl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00032">32</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_a543661af64ed9055c819e0dd7b61d01e_icgraph.png" border="0" usemap="#sheet_8c_a543661af64ed9055c819e0dd7b61d01e_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac3586d30712a7294662c6588175348e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3586d30712a7294662c6588175348e0">&#9670;&nbsp;</a></span>sheet_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sheet_free </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td>
+          <td class="paramname"><em>sht</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00284">284</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_ac3586d30712a7294662c6588175348e0_cgraph.png" border="0" usemap="#sheet_8c_ac3586d30712a7294662c6588175348e0_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_ac3586d30712a7294662c6588175348e0_icgraph.png" border="0" usemap="#sheet_8c_ac3586d30712a7294662c6588175348e0_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a8befd8f5c365aec65bfa164d00e140ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8befd8f5c365aec65bfa164d00e140ca">&#9670;&nbsp;</a></span>sheet_refresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sheet_refresh </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td>
+          <td class="paramname"><em>sht</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bx0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>by0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bx1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>by1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00261">261</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_a8befd8f5c365aec65bfa164d00e140ca_cgraph.png" border="0" usemap="#sheet_8c_a8befd8f5c365aec65bfa164d00e140ca_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_a8befd8f5c365aec65bfa164d00e140ca_icgraph.png" border="0" usemap="#sheet_8c_a8befd8f5c365aec65bfa164d00e140ca_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5fb2b9d999b1c516858b5a0d1bfdd55c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb2b9d999b1c516858b5a0d1bfdd55c">&#9670;&nbsp;</a></span>sheet_refreshmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sheet_refreshmap </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *&#160;</td>
+          <td class="paramname"><em>ctl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vx0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vy0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vx1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vy1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00057">57</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_a5fb2b9d999b1c516858b5a0d1bfdd55c_icgraph.png" border="0" usemap="#sheet_8c_a5fb2b9d999b1c516858b5a0d1bfdd55c_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a0016600e2d7feeb0a12089156b9307a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0016600e2d7feeb0a12089156b9307a4">&#9670;&nbsp;</a></span>sheet_refreshsub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sheet_refreshsub </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *&#160;</td>
+          <td class="paramname"><em>ctl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vx0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vy0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vx1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vy1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h1</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00117">117</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_a0016600e2d7feeb0a12089156b9307a4_icgraph.png" border="0" usemap="#sheet_8c_a0016600e2d7feeb0a12089156b9307a4_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6c14343c7c0566620635e9ccd17e21e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c14343c7c0566620635e9ccd17e21e0">&#9670;&nbsp;</a></span>sheet_setbuf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sheet_setbuf </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td>
+          <td class="paramname"><em>sht</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ysize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col_inv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00048">48</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_a6c14343c7c0566620635e9ccd17e21e0_icgraph.png" border="0" usemap="#sheet_8c_a6c14343c7c0566620635e9ccd17e21e0_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aca08bb322ec0c2110e2a071e383832de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca08bb322ec0c2110e2a071e383832de">&#9670;&nbsp;</a></span>sheet_slide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sheet_slide </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td>
+          <td class="paramname"><em>sht</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vx0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vy0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00269">269</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_aca08bb322ec0c2110e2a071e383832de_cgraph.png" border="0" usemap="#sheet_8c_aca08bb322ec0c2110e2a071e383832de_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_aca08bb322ec0c2110e2a071e383832de_icgraph.png" border="0" usemap="#sheet_8c_aca08bb322ec0c2110e2a071e383832de_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ad590bf68e2aa06a5fe99c03ad4c56785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad590bf68e2aa06a5fe99c03ad4c56785">&#9670;&nbsp;</a></span>sheet_updown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sheet_updown </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td>
+          <td class="paramname"><em>sht</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00201">201</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_ad590bf68e2aa06a5fe99c03ad4c56785_cgraph.png" border="0" usemap="#sheet_8c_ad590bf68e2aa06a5fe99c03ad4c56785_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_ad590bf68e2aa06a5fe99c03ad4c56785_icgraph.png" border="0" usemap="#sheet_8c_ad590bf68e2aa06a5fe99c03ad4c56785_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a36f9284550ad0030f5dd64154a04a7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36f9284550ad0030f5dd64154a04a7d8">&#9670;&nbsp;</a></span>shtctl_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a>* shtctl_init </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *&#160;</td>
+          <td class="paramname"><em>memman</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>vram</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ysize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>シートコントロールの初期化を行います </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">memman</td><td>メモリマネージャのポインタ </td></tr>
+    <tr><td class="paramname">vram</td><td>vramのポインタ </td></tr>
+    <tr><td class="paramname">xsize</td><td>x方向の大きさ </td></tr>
+    <tr><td class="paramname">ysize</td><td>y方向の大きさ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>SHTCTL* シートコントロールポインタ </dd></dl>
+
+<p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00007">7</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_a36f9284550ad0030f5dd64154a04a7d8_cgraph.png" border="0" usemap="#sheet_8c_a36f9284550ad0030f5dd64154a04a7d8_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="sheet_8c_a36f9284550ad0030f5dd64154a04a7d8_icgraph.png" border="0" usemap="#sheet_8c_a36f9284550ad0030f5dd64154a04a7d8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_5ac131f68e424deb31069477f492d10b.html">haribote</a></li><li class="navelem"><a class="el" href="sheet_8c.html">sheet.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

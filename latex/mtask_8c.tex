@@ -1,0 +1,191 @@
+\hypertarget{mtask_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/mtask.c ファイル}
+\label{mtask_8c}\index{E:/Documents/emu84/Src/haribote/mtask.c@{E:/Documents/emu84/Src/haribote/mtask.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+mtask.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{mtask_8c_a72a85d580d503d9c2743398e78ab612b}{task\+\_\+now}} (void)
+\item 
+void \mbox{\hyperlink{mtask_8c_a402b7583d2459d4a08561dcc5d493f4a}{task\+\_\+add}} (struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task)
+\item 
+void \mbox{\hyperlink{mtask_8c_a11f14489f9989d977a88064d02e682ae}{task\+\_\+remove}} (struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task)
+\item 
+void \mbox{\hyperlink{mtask_8c_a5b13fad918e89f8ffa77326ea1989773}{task\+\_\+switchsub}} (void)
+\item 
+void \mbox{\hyperlink{mtask_8c_ad97fd16c2e90a12f5265d1c2728102c8}{task\+\_\+idle}} (void)
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{mtask_8c_a9f9404be472fb9fc3aa79501f67190a1}{task\+\_\+init}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$memman)
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{mtask_8c_a97fa93dab5b91ea18765b460e3b81663}{task\+\_\+alloc}} (void)
+\item 
+void \mbox{\hyperlink{mtask_8c_a579117953072527527cd89b4ebc929ef}{task\+\_\+run}} (struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task, int level, int priority)
+\item 
+void \mbox{\hyperlink{mtask_8c_ad8d41e312627e0054a1a9d61ca173ff1}{task\+\_\+sleep}} (struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task)
+\item 
+void \mbox{\hyperlink{mtask_8c_a729b1ba05c140e25a5aae86006e709fe}{task\+\_\+switch}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k_c_t_l}{T\+A\+S\+K\+C\+TL}} $\ast$ \mbox{\hyperlink{mtask_8c_adf35d00bd0784095d09912fb2a58b879}{taskctl}}
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$ \mbox{\hyperlink{mtask_8c_ab9aec37224286b959e292ae540a5c06c}{task\+\_\+timer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{mtask_8c_a402b7583d2459d4a08561dcc5d493f4a}\label{mtask_8c_a402b7583d2459d4a08561dcc5d493f4a}} 
+\index{mtask.c@{mtask.c}!task\_add@{task\_add}}
+\index{task\_add@{task\_add}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_add()}{task\_add()}}
+{\footnotesize\ttfamily void task\+\_\+add (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 14 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 1
+\mbox{\Hypertarget{mtask_8c_a97fa93dab5b91ea18765b460e3b81663}\label{mtask_8c_a97fa93dab5b91ea18765b460e3b81663}} 
+\index{mtask.c@{mtask.c}!task\_alloc@{task\_alloc}}
+\index{task\_alloc@{task\_alloc}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_alloc()}{task\_alloc()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ task\+\_\+alloc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 118 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{mtask_8c_ad97fd16c2e90a12f5265d1c2728102c8}\label{mtask_8c_ad97fd16c2e90a12f5265d1c2728102c8}} 
+\index{mtask.c@{mtask.c}!task\_idle@{task\_idle}}
+\index{task\_idle@{task\_idle}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_idle()}{task\_idle()}}
+{\footnotesize\ttfamily void task\+\_\+idle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 68 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{mtask_8c_a9f9404be472fb9fc3aa79501f67190a1}\label{mtask_8c_a9f9404be472fb9fc3aa79501f67190a1}} 
+\index{mtask.c@{mtask.c}!task\_init@{task\_init}}
+\index{task\_init@{task\_init}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_init()}{task\_init()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ task\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$}]{memman }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 75 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{mtask_8c_a72a85d580d503d9c2743398e78ab612b}\label{mtask_8c_a72a85d580d503d9c2743398e78ab612b}} 
+\index{mtask.c@{mtask.c}!task\_now@{task\_now}}
+\index{task\_now@{task\_now}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_now()}{task\_now()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ task\+\_\+now (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 8 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{mtask_8c_a11f14489f9989d977a88064d02e682ae}\label{mtask_8c_a11f14489f9989d977a88064d02e682ae}} 
+\index{mtask.c@{mtask.c}!task\_remove@{task\_remove}}
+\index{task\_remove@{task\_remove}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_remove()}{task\_remove()}}
+{\footnotesize\ttfamily void task\+\_\+remove (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 23 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{mtask_8c_a579117953072527527cd89b4ebc929ef}\label{mtask_8c_a579117953072527527cd89b4ebc929ef}} 
+\index{mtask.c@{mtask.c}!task\_run@{task\_run}}
+\index{task\_run@{task\_run}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_run()}{task\_run()}}
+{\footnotesize\ttfamily void task\+\_\+run (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task,  }\item[{int}]{level,  }\item[{int}]{priority }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 146 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{mtask_8c_ad8d41e312627e0054a1a9d61ca173ff1}\label{mtask_8c_ad8d41e312627e0054a1a9d61ca173ff1}} 
+\index{mtask.c@{mtask.c}!task\_sleep@{task\_sleep}}
+\index{task\_sleep@{task\_sleep}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_sleep()}{task\_sleep()}}
+{\footnotesize\ttfamily void task\+\_\+sleep (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 168 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{mtask_8c_a729b1ba05c140e25a5aae86006e709fe}\label{mtask_8c_a729b1ba05c140e25a5aae86006e709fe}} 
+\index{mtask.c@{mtask.c}!task\_switch@{task\_switch}}
+\index{task\_switch@{task\_switch}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_switch()}{task\_switch()}}
+{\footnotesize\ttfamily void task\+\_\+switch (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 185 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 13
+被呼び出し関係図\+:
+% FIG 14
+\mbox{\Hypertarget{mtask_8c_a5b13fad918e89f8ffa77326ea1989773}\label{mtask_8c_a5b13fad918e89f8ffa77326ea1989773}} 
+\index{mtask.c@{mtask.c}!task\_switchsub@{task\_switchsub}}
+\index{task\_switchsub@{task\_switchsub}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_switchsub()}{task\_switchsub()}}
+{\footnotesize\ttfamily void task\+\_\+switchsub (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ mtask.\+c の 54 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 15
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{mtask_8c_ab9aec37224286b959e292ae540a5c06c}\label{mtask_8c_ab9aec37224286b959e292ae540a5c06c}} 
+\index{mtask.c@{mtask.c}!task\_timer@{task\_timer}}
+\index{task\_timer@{task\_timer}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{task\_timer}{task\_timer}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}}$\ast$ task\+\_\+timer}
+
+
+
+ mtask.\+c の 6 行目に定義があります。
+
+\mbox{\Hypertarget{mtask_8c_adf35d00bd0784095d09912fb2a58b879}\label{mtask_8c_adf35d00bd0784095d09912fb2a58b879}} 
+\index{mtask.c@{mtask.c}!taskctl@{taskctl}}
+\index{taskctl@{taskctl}!mtask.c@{mtask.c}}
+\doxysubsubsection{\texorpdfstring{taskctl}{taskctl}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k_c_t_l}{T\+A\+S\+K\+C\+TL}}$\ast$ taskctl}
+
+
+
+ mtask.\+c の 5 行目に定義があります。
+

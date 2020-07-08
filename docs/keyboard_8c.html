@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/haribote/keyboard.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('keyboard_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a> &#124;
+<a href="#var-members">変数</a>  </div>
+  <div class="headertitle">
+<div class="title">keyboard.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bootpack_8h_source.html">bootpack.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+keyboard.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="keyboard_8c__incl.png" border="0" usemap="#_e_1_2_documents_2emu84_2_src_2haribote_2keyboard_8c" alt=""/></div>
+</div>
+</div>
+<p><a href="keyboard_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:aecbeb49435311e470e44e1ef33e1e0dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#aecbeb49435311e470e44e1ef33e1e0dc">PORT_KEYSTA</a>&#160;&#160;&#160;0x0064</td></tr>
+<tr class="separator:aecbeb49435311e470e44e1ef33e1e0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76542314fe11eb39b22f93ff8187b08f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#a76542314fe11eb39b22f93ff8187b08f">KEYSTA_SEND_NOTREADY</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a76542314fe11eb39b22f93ff8187b08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c7cab517e1c1b2f4c280715c07d6df2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#a1c7cab517e1c1b2f4c280715c07d6df2">KEYCMD_WRITE_MODE</a>&#160;&#160;&#160;0x60</td></tr>
+<tr class="separator:a1c7cab517e1c1b2f4c280715c07d6df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b408031943644b59d1a7f94218477b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#a4b408031943644b59d1a7f94218477b6">KBC_MODE</a>&#160;&#160;&#160;0x47</td></tr>
+<tr class="separator:a4b408031943644b59d1a7f94218477b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a6bf05bd24f3dc98e872a0653a13a3e3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#a6bf05bd24f3dc98e872a0653a13a3e3b">inthandler21</a> (int *esp)</td></tr>
+<tr class="separator:a6bf05bd24f3dc98e872a0653a13a3e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04ae938de161573bab61a7d806704cd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#a04ae938de161573bab61a7d806704cd8">wait_KBC_sendready</a> (void)</td></tr>
+<tr class="separator:a04ae938de161573bab61a7d806704cd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd24e074d17cc0f29ae3808498b6d012"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#acd24e074d17cc0f29ae3808498b6d012">init_keyboard</a> (struct <a class="el" href="struct_f_i_f_o32.html">FIFO32</a> *fifo, int data0)</td></tr>
+<tr class="separator:acd24e074d17cc0f29ae3808498b6d012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+変数</h2></td></tr>
+<tr class="memitem:a986fa656e412a3f692a4a9f2ff071f50"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_f_i_f_o32.html">FIFO32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#a986fa656e412a3f692a4a9f2ff071f50">keyfifo</a></td></tr>
+<tr class="separator:a986fa656e412a3f692a4a9f2ff071f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb9b53f331177823bdd6dfaabb34aaf6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="keyboard_8c.html#afb9b53f331177823bdd6dfaabb34aaf6">keydata0</a></td></tr>
+<tr class="separator:afb9b53f331177823bdd6dfaabb34aaf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a4b408031943644b59d1a7f94218477b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b408031943644b59d1a7f94218477b6">&#9670;&nbsp;</a></span>KBC_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KBC_MODE&#160;&#160;&#160;0x47</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00021">21</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1c7cab517e1c1b2f4c280715c07d6df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c7cab517e1c1b2f4c280715c07d6df2">&#9670;&nbsp;</a></span>KEYCMD_WRITE_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KEYCMD_WRITE_MODE&#160;&#160;&#160;0x60</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00020">20</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a76542314fe11eb39b22f93ff8187b08f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76542314fe11eb39b22f93ff8187b08f">&#9670;&nbsp;</a></span>KEYSTA_SEND_NOTREADY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KEYSTA_SEND_NOTREADY&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00019">19</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aecbeb49435311e470e44e1ef33e1e0dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecbeb49435311e470e44e1ef33e1e0dc">&#9670;&nbsp;</a></span>PORT_KEYSTA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PORT_KEYSTA&#160;&#160;&#160;0x0064</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00018">18</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="acd24e074d17cc0f29ae3808498b6d012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd24e074d17cc0f29ae3808498b6d012">&#9670;&nbsp;</a></span>init_keyboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init_keyboard </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_f_i_f_o32.html">FIFO32</a> *&#160;</td>
+          <td class="paramname"><em>fifo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>data0</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00033">33</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="keyboard_8c_acd24e074d17cc0f29ae3808498b6d012_cgraph.png" border="0" usemap="#keyboard_8c_acd24e074d17cc0f29ae3808498b6d012_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="keyboard_8c_acd24e074d17cc0f29ae3808498b6d012_icgraph.png" border="0" usemap="#keyboard_8c_acd24e074d17cc0f29ae3808498b6d012_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6bf05bd24f3dc98e872a0653a13a3e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bf05bd24f3dc98e872a0653a13a3e3b">&#9670;&nbsp;</a></span>inthandler21()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void inthandler21 </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>esp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00008">8</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="keyboard_8c_a6bf05bd24f3dc98e872a0653a13a3e3b_cgraph.png" border="0" usemap="#keyboard_8c_a6bf05bd24f3dc98e872a0653a13a3e3b_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a04ae938de161573bab61a7d806704cd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04ae938de161573bab61a7d806704cd8">&#9670;&nbsp;</a></span>wait_KBC_sendready()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void wait_KBC_sendready </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00022">22</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="keyboard_8c_a04ae938de161573bab61a7d806704cd8_cgraph.png" border="0" usemap="#keyboard_8c_a04ae938de161573bab61a7d806704cd8_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="keyboard_8c_a04ae938de161573bab61a7d806704cd8_icgraph.png" border="0" usemap="#keyboard_8c_a04ae938de161573bab61a7d806704cd8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">変数詳解</h2>
+<a id="afb9b53f331177823bdd6dfaabb34aaf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb9b53f331177823bdd6dfaabb34aaf6">&#9670;&nbsp;</a></span>keydata0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int keydata0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00006">6</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a986fa656e412a3f692a4a9f2ff071f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a986fa656e412a3f692a4a9f2ff071f50">&#9670;&nbsp;</a></span>keyfifo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="struct_f_i_f_o32.html">FIFO32</a>* keyfifo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="keyboard_8c_source.html">keyboard.c</a> の <a class="el" href="keyboard_8c_source.html#l00005">5</a> 行目に定義があります。</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_5ac131f68e424deb31069477f492d10b.html">haribote</a></li><li class="navelem"><a class="el" href="keyboard_8c.html">keyboard.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+digraph "jpeg_decode"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="jpeg_decode",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="jpeg_decode_init",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a2b2c79c816f7c1d55b1521ff227876b1",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="jpeg_decode_mcu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a399a92d992352ac542f103d2a7563456",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="jpeg_decode_huff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#aca23fc32257a1e5319c28a6c4759801c",tooltip=" "];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="jpeg_get_value",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#af26bd2b95cb2e237382509718ebaeb4b",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="get_bits",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a5e5f2c953e7c9d3bbd8d1b245be937e6",tooltip=" "];
+  Node4 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="jpeg_huff_decode",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#ac8d38b1bdc16675a81d34df57ff80b03",tooltip=" "];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="jpeg_idct",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a1649d2a0a66453a0ba60c272c9168c65",tooltip=" "];
+  Node3 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="jpeg_mcu_bitblt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#a9e09240185c87c51b0a584e0342ecd85",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="jpeg_decode_yuv",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$jpeg_8c.html#ab8993dd486f5921708720053e0c1101b",tooltip=" "];
+}

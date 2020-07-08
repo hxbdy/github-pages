@@ -1,0 +1,293 @@
+\hypertarget{console_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/console.c ファイル}
+\label{console_8c}\index{E:/Documents/emu84/Src/haribote/console.c@{E:/Documents/emu84/Src/haribote/console.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+console.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{console_8c_acf7b570f866fb6b0880a9fb988393e69}{console\+\_\+task}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sheet, int memtotal)
+\item 
+void \mbox{\hyperlink{console_8c_a4197ccd3ce2053ca0c778fed7da81252}{cons\+\_\+putchar}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int chr, char move)
+\item 
+void \mbox{\hyperlink{console_8c_ac3fc0a555ac1405cc89bc6eb62641b54}{cons\+\_\+newline}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons)
+\item 
+void \mbox{\hyperlink{console_8c_a6a3da535464b8bd88457538ad73058e1}{cons\+\_\+putstr0}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$s)
+\item 
+void \mbox{\hyperlink{console_8c_a5793ef68f2d9b7f6767c51112109fdf9}{cons\+\_\+putstr1}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$s, int l)
+\item 
+void \mbox{\hyperlink{console_8c_a7be2f98778674111de60be8c7f0a3e62}{cons\+\_\+runcmd}} (char $\ast$cmdline, struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int $\ast$fat, int memtotal)
+\item 
+void \mbox{\hyperlink{console_8c_a7beea0ecae31c20285e08ce9c992c24d}{cmd\+\_\+mem}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int memtotal)
+\item 
+void \mbox{\hyperlink{console_8c_a2cfd9d5784f0117d7e54462ee9cd62d6}{cmd\+\_\+cls}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons)
+\item 
+void \mbox{\hyperlink{console_8c_a6fae3dc411d4d283fd16ef02602475a4}{cmd\+\_\+dir}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons)
+\item 
+void \mbox{\hyperlink{console_8c_aa1ae787d73bbace090cbce5194ac0824}{cmd\+\_\+exit}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int $\ast$fat)
+\item 
+void \mbox{\hyperlink{console_8c_af8d7dae21f111aecc555ba5e14df4265}{cmd\+\_\+start}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$cmdline, int memtotal)
+\item 
+void \mbox{\hyperlink{console_8c_a3f08f092f66404d51c2af42f76237980}{cmd\+\_\+ncst}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$cmdline, int memtotal)
+\item 
+void \mbox{\hyperlink{console_8c_ae4b5e634ac4512b6cbc40729a6732bc1}{cmd\+\_\+langmode}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, char $\ast$cmdline)
+\item 
+int \mbox{\hyperlink{console_8c_ac543899ee5ce9621fa024d0ee3098f3d}{cmd\+\_\+app}} (struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$cons, int $\ast$fat, char $\ast$cmdline)
+\item 
+int $\ast$ \mbox{\hyperlink{console_8c_ae3a2b95ac62166efc071caeb9e7b0db1}{hrb\+\_\+api}} (int edi, int esi, int ebp, int esp, int ebx, int edx, int ecx, int eax)
+\item 
+int $\ast$ \mbox{\hyperlink{console_8c_ab1e502d332a2ad9588075aed1aca1541}{inthandler0c}} (int $\ast$esp)
+\item 
+int $\ast$ \mbox{\hyperlink{console_8c_abc45130af020e3d17361636094ba1619}{inthandler0d}} (int $\ast$esp)
+\item 
+void \mbox{\hyperlink{console_8c_a3ad481c373bdda4ed8e6c74affa44099}{hrb\+\_\+api\+\_\+linewin}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int x0, int y0, int x1, int y1, int col)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{console_8c_ac543899ee5ce9621fa024d0ee3098f3d}\label{console_8c_ac543899ee5ce9621fa024d0ee3098f3d}} 
+\index{console.c@{console.c}!cmd\_app@{cmd\_app}}
+\index{cmd\_app@{cmd\_app}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_app()}{cmd\_app()}}
+{\footnotesize\ttfamily int cmd\+\_\+app (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int $\ast$}]{fat,  }\item[{char $\ast$}]{cmdline }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 345 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{console_8c_a2cfd9d5784f0117d7e54462ee9cd62d6}\label{console_8c_a2cfd9d5784f0117d7e54462ee9cd62d6}} 
+\index{console.c@{console.c}!cmd\_cls@{cmd\_cls}}
+\index{cmd\_cls@{cmd\_cls}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_cls()}{cmd\_cls()}}
+{\footnotesize\ttfamily void cmd\+\_\+cls (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 239 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{console_8c_a6fae3dc411d4d283fd16ef02602475a4}\label{console_8c_a6fae3dc411d4d283fd16ef02602475a4}} 
+\index{console.c@{console.c}!cmd\_dir@{cmd\_dir}}
+\index{cmd\_dir@{cmd\_dir}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_dir()}{cmd\_dir()}}
+{\footnotesize\ttfamily void cmd\+\_\+dir (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 253 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{console_8c_aa1ae787d73bbace090cbce5194ac0824}\label{console_8c_aa1ae787d73bbace090cbce5194ac0824}} 
+\index{console.c@{console.c}!cmd\_exit@{cmd\_exit}}
+\index{cmd\_exit@{cmd\_exit}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_exit()}{cmd\_exit()}}
+{\footnotesize\ttfamily void cmd\+\_\+exit (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int $\ast$}]{fat }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 279 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{console_8c_ae4b5e634ac4512b6cbc40729a6732bc1}\label{console_8c_ae4b5e634ac4512b6cbc40729a6732bc1}} 
+\index{console.c@{console.c}!cmd\_langmode@{cmd\_langmode}}
+\index{cmd\_langmode@{cmd\_langmode}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_langmode()}{cmd\_langmode()}}
+{\footnotesize\ttfamily void cmd\+\_\+langmode (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{cmdline }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 332 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 9
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{console_8c_a7beea0ecae31c20285e08ce9c992c24d}\label{console_8c_a7beea0ecae31c20285e08ce9c992c24d}} 
+\index{console.c@{console.c}!cmd\_mem@{cmd\_mem}}
+\index{cmd\_mem@{cmd\_mem}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_mem()}{cmd\_mem()}}
+{\footnotesize\ttfamily void cmd\+\_\+mem (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 230 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
+\mbox{\Hypertarget{console_8c_a3f08f092f66404d51c2af42f76237980}\label{console_8c_a3f08f092f66404d51c2af42f76237980}} 
+\index{console.c@{console.c}!cmd\_ncst@{cmd\_ncst}}
+\index{cmd\_ncst@{cmd\_ncst}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_ncst()}{cmd\_ncst()}}
+{\footnotesize\ttfamily void cmd\+\_\+ncst (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{cmdline,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 318 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 13
+被呼び出し関係図\+:
+% FIG 14
+\mbox{\Hypertarget{console_8c_af8d7dae21f111aecc555ba5e14df4265}\label{console_8c_af8d7dae21f111aecc555ba5e14df4265}} 
+\index{console.c@{console.c}!cmd\_start@{cmd\_start}}
+\index{cmd\_start@{cmd\_start}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cmd\_start()}{cmd\_start()}}
+{\footnotesize\ttfamily void cmd\+\_\+start (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{cmdline,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 301 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 15
+被呼び出し関係図\+:
+% FIG 16
+\mbox{\Hypertarget{console_8c_ac3fc0a555ac1405cc89bc6eb62641b54}\label{console_8c_ac3fc0a555ac1405cc89bc6eb62641b54}} 
+\index{console.c@{console.c}!cons\_newline@{cons\_newline}}
+\index{cons\_newline@{cons\_newline}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cons\_newline()}{cons\_newline()}}
+{\footnotesize\ttfamily void cons\+\_\+newline (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 158 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 17
+被呼び出し関係図\+:
+% FIG 18
+\mbox{\Hypertarget{console_8c_a4197ccd3ce2053ca0c778fed7da81252}\label{console_8c_a4197ccd3ce2053ca0c778fed7da81252}} 
+\index{console.c@{console.c}!cons\_putchar@{cons\_putchar}}
+\index{cons\_putchar@{cons\_putchar}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cons\_putchar()}{cons\_putchar()}}
+{\footnotesize\ttfamily void cons\+\_\+putchar (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int}]{chr,  }\item[{char}]{move }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 121 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 19
+被呼び出し関係図\+:
+% FIG 20
+\mbox{\Hypertarget{console_8c_a6a3da535464b8bd88457538ad73058e1}\label{console_8c_a6a3da535464b8bd88457538ad73058e1}} 
+\index{console.c@{console.c}!cons\_putstr0@{cons\_putstr0}}
+\index{cons\_putstr0@{cons\_putstr0}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cons\_putstr0()}{cons\_putstr0()}}
+{\footnotesize\ttfamily void cons\+\_\+putstr0 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 188 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 21
+被呼び出し関係図\+:
+% FIG 22
+\mbox{\Hypertarget{console_8c_a5793ef68f2d9b7f6767c51112109fdf9}\label{console_8c_a5793ef68f2d9b7f6767c51112109fdf9}} 
+\index{console.c@{console.c}!cons\_putstr1@{cons\_putstr1}}
+\index{cons\_putstr1@{cons\_putstr1}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cons\_putstr1()}{cons\_putstr1()}}
+{\footnotesize\ttfamily void cons\+\_\+putstr1 (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{char $\ast$}]{s,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 196 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 23
+被呼び出し関係図\+:
+% FIG 24
+\mbox{\Hypertarget{console_8c_a7be2f98778674111de60be8c7f0a3e62}\label{console_8c_a7be2f98778674111de60be8c7f0a3e62}} 
+\index{console.c@{console.c}!cons\_runcmd@{cons\_runcmd}}
+\index{cons\_runcmd@{cons\_runcmd}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{cons\_runcmd()}{cons\_runcmd()}}
+{\footnotesize\ttfamily void cons\+\_\+runcmd (\begin{DoxyParamCaption}\item[{char $\ast$}]{cmdline,  }\item[{struct \mbox{\hyperlink{struct_c_o_n_s_o_l_e}{C\+O\+N\+S\+O\+LE}} $\ast$}]{cons,  }\item[{int $\ast$}]{fat,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 205 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 25
+被呼び出し関係図\+:
+% FIG 26
+\mbox{\Hypertarget{console_8c_acf7b570f866fb6b0880a9fb988393e69}\label{console_8c_acf7b570f866fb6b0880a9fb988393e69}} 
+\index{console.c@{console.c}!console\_task@{console\_task}}
+\index{console\_task@{console\_task}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{console\_task()}{console\_task()}}
+{\footnotesize\ttfamily void console\+\_\+task (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sheet,  }\item[{int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 7 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 27
+被呼び出し関係図\+:
+% FIG 28
+\mbox{\Hypertarget{console_8c_ae3a2b95ac62166efc071caeb9e7b0db1}\label{console_8c_ae3a2b95ac62166efc071caeb9e7b0db1}} 
+\index{console.c@{console.c}!hrb\_api@{hrb\_api}}
+\index{hrb\_api@{hrb\_api}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{hrb\_api()}{hrb\_api()}}
+{\footnotesize\ttfamily int$\ast$ hrb\+\_\+api (\begin{DoxyParamCaption}\item[{int}]{edi,  }\item[{int}]{esi,  }\item[{int}]{ebp,  }\item[{int}]{esp,  }\item[{int}]{ebx,  }\item[{int}]{edx,  }\item[{int}]{ecx,  }\item[{int}]{eax }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 421 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 29
+\mbox{\Hypertarget{console_8c_a3ad481c373bdda4ed8e6c74affa44099}\label{console_8c_a3ad481c373bdda4ed8e6c74affa44099}} 
+\index{console.c@{console.c}!hrb\_api\_linewin@{hrb\_api\_linewin}}
+\index{hrb\_api\_linewin@{hrb\_api\_linewin}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{hrb\_api\_linewin()}{hrb\_api\_linewin()}}
+{\footnotesize\ttfamily void hrb\+\_\+api\+\_\+linewin (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{x0,  }\item[{int}]{y0,  }\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 659 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 30
+\mbox{\Hypertarget{console_8c_ab1e502d332a2ad9588075aed1aca1541}\label{console_8c_ab1e502d332a2ad9588075aed1aca1541}} 
+\index{console.c@{console.c}!inthandler0c@{inthandler0c}}
+\index{inthandler0c@{inthandler0c}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{inthandler0c()}{inthandler0c()}}
+{\footnotesize\ttfamily int$\ast$ inthandler0c (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 637 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 31
+\mbox{\Hypertarget{console_8c_abc45130af020e3d17361636094ba1619}\label{console_8c_abc45130af020e3d17361636094ba1619}} 
+\index{console.c@{console.c}!inthandler0d@{inthandler0d}}
+\index{inthandler0d@{inthandler0d}!console.c@{console.c}}
+\doxysubsubsection{\texorpdfstring{inthandler0d()}{inthandler0d()}}
+{\footnotesize\ttfamily int$\ast$ inthandler0d (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ console.\+c の 648 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 32

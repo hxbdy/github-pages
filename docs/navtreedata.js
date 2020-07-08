@@ -25,11 +25,22 @@
 var NAVTREE =
 [
   [ "emu84", "index.html", [
+    [ "データ構造", "annotated.html", [
+      [ "データ構造", "annotated.html", "annotated_dup" ],
+      [ "データ構造索引", "classes.html", null ],
+      [ "データフィールド", "functions.html", [
+        [ "全て", "functions.html", "functions_dup" ],
+        [ "変数", "functions_vars.html", "functions_vars" ]
+      ] ]
+    ] ],
     [ "ファイル", "files.html", [
       [ "ファイル一覧", "files.html", "files_dup" ],
       [ "大域各種", "globals.html", [
-        [ "全て", "globals.html", null ],
-        [ "関数", "globals_func.html", null ]
+        [ "全て", "globals.html", "globals_dup" ],
+        [ "関数", "globals_func.html", "globals_func" ],
+        [ "変数", "globals_vars.html", null ],
+        [ "型定義", "globals_type.html", null ],
+        [ "マクロ定義", "globals_defs.html", null ]
       ] ]
     ] ]
   ] ]
@@ -37,7 +48,10 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"apilib_8h.html"
+"a_8c.html",
+"console_8c.html#a3ad481c373bdda4ed8e6c74affa44099",
+"keyboard_8c.html#a986fa656e412a3f692a4a9f2ff071f50",
+"struct_t_i_m_e_r_c_t_l.html"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';

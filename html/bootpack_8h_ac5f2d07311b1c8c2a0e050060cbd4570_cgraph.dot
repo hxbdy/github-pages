@@ -1,0 +1,14 @@
+digraph "timer_settime"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="timer_settime",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="io_cli",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8efff3df95d8ca5965876fe8949f99ae",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="io_load_eflags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#acf007bdb6d8bea64314996b7d7b01470",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="io_store_eflags",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#aac4f8e3e6b71a465592bdf1f5d4202ac",tooltip=" "];
+}

@@ -1,0 +1,10 @@
+digraph "E:/Documents/emu84" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_b5913fa7d5d52c34244b4f9203cd0aba {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_b5913fa7d5d52c34244b4f9203cd0aba.html"];
+    dir_b5913fa7d5d52c34244b4f9203cd0aba [shape=plaintext label="emu84"];
+    dir_70617a7689e3ba1052ef75efeabd00df [shape=box label="Src" color="red" fillcolor="white" style="filled" URL="dir_70617a7689e3ba1052ef75efeabd00df.html"];
+  }
+}

@@ -1,0 +1,140 @@
+\hypertarget{bootpack_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/bootpack.c ファイル}
+\label{bootpack_8c}\index{E:/Documents/emu84/Src/haribote/bootpack.c@{E:/Documents/emu84/Src/haribote/bootpack.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+bootpack.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{bootpack_8c_a50c9bc14d66361dbd6f833ff252ab427}{K\+E\+Y\+C\+M\+D\+\_\+\+L\+ED}}~0xed
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bootpack_8c_a3291fa635de41b5787cb1dad02220bfc}{keywin\+\_\+off}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$key\+\_\+win)
+\item 
+void \mbox{\hyperlink{bootpack_8c_a324c7ef71ec40c7c4eead398ecabbce5}{keywin\+\_\+on}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$key\+\_\+win)
+\item 
+void \mbox{\hyperlink{bootpack_8c_ad95faecce92c7b2cb5919ddf459beb63}{close\+\_\+console}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht)
+\item 
+void \mbox{\hyperlink{bootpack_8c_a6231f60d8937908a5c86e4901701c060}{close\+\_\+constask}} (struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$task)
+\item 
+void \mbox{\hyperlink{bootpack_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}{Hari\+Main}} (void)
+\item 
+struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$ \mbox{\hyperlink{bootpack_8c_a79280c7e465953eeaa972574fce486ed}{open\+\_\+constask}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, unsigned int memtotal)
+\item 
+struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$ \mbox{\hyperlink{bootpack_8c_a6a7720c122ae0f96494e98c38c6e365e}{open\+\_\+console}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$shtctl, unsigned int memtotal)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{bootpack_8c_a50c9bc14d66361dbd6f833ff252ab427}\label{bootpack_8c_a50c9bc14d66361dbd6f833ff252ab427}} 
+\index{bootpack.c@{bootpack.c}!KEYCMD\_LED@{KEYCMD\_LED}}
+\index{KEYCMD\_LED@{KEYCMD\_LED}!bootpack.c@{bootpack.c}}
+\doxysubsubsection{\texorpdfstring{KEYCMD\_LED}{KEYCMD\_LED}}
+{\footnotesize\ttfamily \#define K\+E\+Y\+C\+M\+D\+\_\+\+L\+ED~0xed}
+
+
+
+ bootpack.\+c の 7 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{bootpack_8c_ad95faecce92c7b2cb5919ddf459beb63}\label{bootpack_8c_ad95faecce92c7b2cb5919ddf459beb63}} 
+\index{bootpack.c@{bootpack.c}!close\_console@{close\_console}}
+\index{close\_console@{close\_console}!bootpack.c@{bootpack.c}}
+\doxysubsubsection{\texorpdfstring{close\_console()}{close\_console()}}
+{\footnotesize\ttfamily void close\+\_\+console (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 406 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{bootpack_8c_a6231f60d8937908a5c86e4901701c060}\label{bootpack_8c_a6231f60d8937908a5c86e4901701c060}} 
+\index{bootpack.c@{bootpack.c}!close\_constask@{close\_constask}}
+\index{close\_constask@{close\_constask}!bootpack.c@{bootpack.c}}
+\doxysubsubsection{\texorpdfstring{close\_constask()}{close\_constask()}}
+{\footnotesize\ttfamily void close\+\_\+constask (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}} $\ast$}]{task }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 396 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{bootpack_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}\label{bootpack_8c_a3bfd04b86eb41bd7301c75a3df6a89e0}} 
+\index{bootpack.c@{bootpack.c}!HariMain@{HariMain}}
+\index{HariMain@{HariMain}!bootpack.c@{bootpack.c}}
+\doxysubsubsection{\texorpdfstring{HariMain()}{HariMain()}}
+{\footnotesize\ttfamily void Hari\+Main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 13 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+\mbox{\Hypertarget{bootpack_8c_a3291fa635de41b5787cb1dad02220bfc}\label{bootpack_8c_a3291fa635de41b5787cb1dad02220bfc}} 
+\index{bootpack.c@{bootpack.c}!keywin\_off@{keywin\_off}}
+\index{keywin\_off@{keywin\_off}!bootpack.c@{bootpack.c}}
+\doxysubsubsection{\texorpdfstring{keywin\_off()}{keywin\_off()}}
+{\footnotesize\ttfamily void keywin\+\_\+off (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{key\+\_\+win }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 344 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 6
+被呼び出し関係図\+:
+% FIG 7
+\mbox{\Hypertarget{bootpack_8c_a324c7ef71ec40c7c4eead398ecabbce5}\label{bootpack_8c_a324c7ef71ec40c7c4eead398ecabbce5}} 
+\index{bootpack.c@{bootpack.c}!keywin\_on@{keywin\_on}}
+\index{keywin\_on@{keywin\_on}!bootpack.c@{bootpack.c}}
+\doxysubsubsection{\texorpdfstring{keywin\_on()}{keywin\_on()}}
+{\footnotesize\ttfamily void keywin\+\_\+on (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{key\+\_\+win }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 353 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 8
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{bootpack_8c_a6a7720c122ae0f96494e98c38c6e365e}\label{bootpack_8c_a6a7720c122ae0f96494e98c38c6e365e}} 
+\index{bootpack.c@{bootpack.c}!open\_console@{open\_console}}
+\index{open\_console@{open\_console}!bootpack.c@{bootpack.c}}
+\doxysubsubsection{\texorpdfstring{open\_console()}{open\_console()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}}$\ast$ open\+\_\+console (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$}]{shtctl,  }\item[{unsigned int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 383 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 10
+被呼び出し関係図\+:
+% FIG 11
+\mbox{\Hypertarget{bootpack_8c_a79280c7e465953eeaa972574fce486ed}\label{bootpack_8c_a79280c7e465953eeaa972574fce486ed}} 
+\index{bootpack.c@{bootpack.c}!open\_constask@{open\_constask}}
+\index{open\_constask@{open\_constask}!bootpack.c@{bootpack.c}}
+\doxysubsubsection{\texorpdfstring{open\_constask()}{open\_constask()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_a_s_k}{T\+A\+SK}}$\ast$ open\+\_\+constask (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{unsigned int}]{memtotal }\end{DoxyParamCaption})}
+
+
+
+ bootpack.\+c の 362 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 12
+被呼び出し関係図\+:
+% FIG 13

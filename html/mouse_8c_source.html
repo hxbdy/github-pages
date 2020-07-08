@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/haribote/mouse.c ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('mouse_8c_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">mouse.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="mouse_8c.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* マウス関係 */</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bootpack_8h.html">bootpack.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="mouse_8c.html#a08c2412ba9bd01c17de956594c7ca3b7">    5</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_f_i_f_o32.html">FIFO32</a> *<a class="code" href="mouse_8c.html#a08c2412ba9bd01c17de956594c7ca3b7">mousefifo</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="mouse_8c.html#a8c6023b6e16f329e3ab8417e659da34c">    6</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="mouse_8c.html#a8c6023b6e16f329e3ab8417e659da34c">mousedata0</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="mouse_8c.html#aa89ae3554e7c9ac3e95fee1a96d3f56a">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mouse_8c.html#aa89ae3554e7c9ac3e95fee1a96d3f56a">inthandler2c</a>(<span class="keywordtype">int</span> *esp)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">/* PS/2マウスからの割り込み */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> data;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="bootpack_8h.html#a23ae700e52c0cde96d20fc539826d532">io_out8</a>(<a class="code" href="bootpack_8h.html#a13c1baed1a4823c4f568e25b062310cd">PIC1_OCW2</a>, 0x64);   <span class="comment">/* IRQ-12受付完了をPIC1に通知 */</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="bootpack_8h.html#a23ae700e52c0cde96d20fc539826d532">io_out8</a>(<a class="code" href="bootpack_8h.html#ad634cb61f109eb41b718c8002dc1415c">PIC0_OCW2</a>, 0x62);   <span class="comment">/* IRQ-02受付完了をPIC0に通知 */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    data = <a class="code" href="bootpack_8h.html#abe410220cdaf6d701275a5d75f07acd0">io_in8</a>(<a class="code" href="bootpack_8h.html#a26e8797f8769f99f2e3d1d23807b9681">PORT_KEYDAT</a>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="bootpack_8h.html#a5c1bea596c94c2a89840d555c98abb84">fifo32_put</a>(<a class="code" href="mouse_8c.html#a08c2412ba9bd01c17de956594c7ca3b7">mousefifo</a>, data + <a class="code" href="mouse_8c.html#a8c6023b6e16f329e3ab8417e659da34c">mousedata0</a>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define KEYCMD_SENDTO_MOUSE     0xd4</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="mouse_8c.html#a57804c5d20761a9c150e76e4007e88e0">   20</a></span>&#160;<span class="preprocessor">#define MOUSECMD_ENABLE         0xf4</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="mouse_8c.html#adb0b2b20b6a3796574c3fd7c3c22f549">   21</a></span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="mouse_8c.html#a42740b291ad8258327a7334c89f1fe6a">   22</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="mouse_8c.html#a42740b291ad8258327a7334c89f1fe6a">enable_mouse</a>(<span class="keyword">struct</span> <a class="code" href="struct_f_i_f_o32.html">FIFO32</a> *fifo, <span class="keywordtype">int</span> data0, <span class="keyword">struct</span> <a class="code" href="struct_m_o_u_s_e___d_e_c.html">MOUSE_DEC</a> *mdec)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="comment">/* 書き込み先のFIFOバッファを記憶 */</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="mouse_8c.html#a08c2412ba9bd01c17de956594c7ca3b7">mousefifo</a> = fifo;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="mouse_8c.html#a8c6023b6e16f329e3ab8417e659da34c">mousedata0</a> = data0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="comment">/* マウス有効 */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="bootpack_8h.html#a04ae938de161573bab61a7d806704cd8">wait_KBC_sendready</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="bootpack_8h.html#a23ae700e52c0cde96d20fc539826d532">io_out8</a>(<a class="code" href="bootpack_8h.html#a4284ba61f1d5d637083da21127ee4bff">PORT_KEYCMD</a>, <a class="code" href="mouse_8c.html#a57804c5d20761a9c150e76e4007e88e0">KEYCMD_SENDTO_MOUSE</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="bootpack_8h.html#a04ae938de161573bab61a7d806704cd8">wait_KBC_sendready</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="bootpack_8h.html#a23ae700e52c0cde96d20fc539826d532">io_out8</a>(<a class="code" href="bootpack_8h.html#a26e8797f8769f99f2e3d1d23807b9681">PORT_KEYDAT</a>, <a class="code" href="mouse_8c.html#adb0b2b20b6a3796574c3fd7c3c22f549">MOUSECMD_ENABLE</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">/* うまくいくとACK(0xfa)が送信されてくる */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> = 0; <span class="comment">/* マウスの0xfaを待っている段階 */</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="mouse_8c.html#a4da7c7903cdc3169e5b21f70236d76d5">   37</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="mouse_8c.html#a4da7c7903cdc3169e5b21f70236d76d5">mouse_decode</a>(<span class="keyword">struct</span> <a class="code" href="struct_m_o_u_s_e___d_e_c.html">MOUSE_DEC</a> *mdec, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> dat)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> == 0) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">/* マウスの0xfaを待っている段階 */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">if</span> (dat == 0xfa) {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> = 1;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">if</span> (mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> == 1) {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">/* マウスの1バイト目を待っている段階 */</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> ((dat &amp; 0xc8) == 0x08) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">/* 正しい1バイト目だった */</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">buf</a>[0] = dat;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> = 2;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span> (mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> == 2) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">/* マウスの2バイト目を待っている段階 */</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">buf</a>[1] = dat;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> = 3;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordflow">if</span> (mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> == 3) {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">/* マウスの3バイト目を待っている段階 */</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">buf</a>[2] = dat;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">phase</a> = 1;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a221aa75f82cb39ff1d10b15980fd281f">btn</a> = mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">buf</a>[0] &amp; 0x07;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a> = mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">buf</a>[1];</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> = mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">buf</a>[2];</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span> ((mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">buf</a>[0] &amp; 0x10) != 0) {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a6150e0515f7202e2fb518f7206ed97dc">x</a> |= 0xffffff00;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> ((mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">buf</a>[0] &amp; 0x20) != 0) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> |= 0xffffff00;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a> = - mdec-&gt;<a class="code" href="struct_m_o_u_s_e___d_e_c.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>; <span class="comment">/* マウスではy方向の符号が画面と反対 */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span> -1; <span class="comment">/* ここに来ることはないはず */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="amouse_8c_html_a4da7c7903cdc3169e5b21f70236d76d5"><div class="ttname"><a href="mouse_8c.html#a4da7c7903cdc3169e5b21f70236d76d5">mouse_decode</a></div><div class="ttdeci">int mouse_decode(struct MOUSE_DEC *mdec, unsigned char dat)</div><div class="ttdef"><b>Definition:</b> <a href="mouse_8c_source.html#l00037">mouse.c:37</a></div></div>
+<div class="ttc" id="amouse_8c_html_a08c2412ba9bd01c17de956594c7ca3b7"><div class="ttname"><a href="mouse_8c.html#a08c2412ba9bd01c17de956594c7ca3b7">mousefifo</a></div><div class="ttdeci">struct FIFO32 * mousefifo</div><div class="ttdef"><b>Definition:</b> <a href="mouse_8c_source.html#l00005">mouse.c:5</a></div></div>
+<div class="ttc" id="amouse_8c_html_adb0b2b20b6a3796574c3fd7c3c22f549"><div class="ttname"><a href="mouse_8c.html#adb0b2b20b6a3796574c3fd7c3c22f549">MOUSECMD_ENABLE</a></div><div class="ttdeci">#define MOUSECMD_ENABLE</div><div class="ttdef"><b>Definition:</b> <a href="mouse_8c_source.html#l00021">mouse.c:20</a></div></div>
+<div class="ttc" id="amouse_8c_html_a8c6023b6e16f329e3ab8417e659da34c"><div class="ttname"><a href="mouse_8c.html#a8c6023b6e16f329e3ab8417e659da34c">mousedata0</a></div><div class="ttdeci">int mousedata0</div><div class="ttdef"><b>Definition:</b> <a href="mouse_8c_source.html#l00006">mouse.c:6</a></div></div>
+<div class="ttc" id="astruct_m_o_u_s_e___d_e_c_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="struct_m_o_u_s_e___d_e_c.html#a6150e0515f7202e2fb518f7206ed97dc">MOUSE_DEC::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00133">bootpack.h:133</a></div></div>
+<div class="ttc" id="amouse_8c_html_a42740b291ad8258327a7334c89f1fe6a"><div class="ttname"><a href="mouse_8c.html#a42740b291ad8258327a7334c89f1fe6a">enable_mouse</a></div><div class="ttdeci">void enable_mouse(struct FIFO32 *fifo, int data0, struct MOUSE_DEC *mdec)</div><div class="ttdef"><b>Definition:</b> <a href="mouse_8c_source.html#l00022">mouse.c:22</a></div></div>
+<div class="ttc" id="astruct_m_o_u_s_e___d_e_c_html_a221aa75f82cb39ff1d10b15980fd281f"><div class="ttname"><a href="struct_m_o_u_s_e___d_e_c.html#a221aa75f82cb39ff1d10b15980fd281f">MOUSE_DEC::btn</a></div><div class="ttdeci">int btn</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00133">bootpack.h:133</a></div></div>
+<div class="ttc" id="astruct_m_o_u_s_e___d_e_c_html_a6b715b6b7dd860db8440672a0ca1327a"><div class="ttname"><a href="struct_m_o_u_s_e___d_e_c.html#a6b715b6b7dd860db8440672a0ca1327a">MOUSE_DEC::phase</a></div><div class="ttdeci">unsigned char phase</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00132">bootpack.h:132</a></div></div>
+<div class="ttc" id="abootpack_8h_html_ad634cb61f109eb41b718c8002dc1415c"><div class="ttname"><a href="bootpack_8h.html#ad634cb61f109eb41b718c8002dc1415c">PIC0_OCW2</a></div><div class="ttdeci">#define PIC0_OCW2</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00112">bootpack.h:111</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a13c1baed1a4823c4f568e25b062310cd"><div class="ttname"><a href="bootpack_8h.html#a13c1baed1a4823c4f568e25b062310cd">PIC1_OCW2</a></div><div class="ttdeci">#define PIC1_OCW2</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00118">bootpack.h:117</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a04ae938de161573bab61a7d806704cd8"><div class="ttname"><a href="bootpack_8h.html#a04ae938de161573bab61a7d806704cd8">wait_KBC_sendready</a></div><div class="ttdeci">void wait_KBC_sendready(void)</div><div class="ttdef"><b>Definition:</b> <a href="keyboard_8c_source.html#l00022">keyboard.c:22</a></div></div>
+<div class="ttc" id="abootpack_8h_html"><div class="ttname"><a href="bootpack_8h.html">bootpack.h</a></div><div class="ttdoc">OS本体</div></div>
+<div class="ttc" id="amouse_8c_html_aa89ae3554e7c9ac3e95fee1a96d3f56a"><div class="ttname"><a href="mouse_8c.html#aa89ae3554e7c9ac3e95fee1a96d3f56a">inthandler2c</a></div><div class="ttdeci">void inthandler2c(int *esp)</div><div class="ttdef"><b>Definition:</b> <a href="mouse_8c_source.html#l00008">mouse.c:8</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a4284ba61f1d5d637083da21127ee4bff"><div class="ttname"><a href="bootpack_8h.html#a4284ba61f1d5d637083da21127ee4bff">PORT_KEYCMD</a></div><div class="ttdeci">#define PORT_KEYCMD</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00129">bootpack.h:128</a></div></div>
+<div class="ttc" id="astruct_m_o_u_s_e___d_e_c_html_a7d2f0f43b68b586ddd605bc961d2c9bb"><div class="ttname"><a href="struct_m_o_u_s_e___d_e_c.html#a7d2f0f43b68b586ddd605bc961d2c9bb">MOUSE_DEC::buf</a></div><div class="ttdeci">unsigned char buf[3]</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00132">bootpack.h:132</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a26e8797f8769f99f2e3d1d23807b9681"><div class="ttname"><a href="bootpack_8h.html#a26e8797f8769f99f2e3d1d23807b9681">PORT_KEYDAT</a></div><div class="ttdeci">#define PORT_KEYDAT</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00128">bootpack.h:127</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a23ae700e52c0cde96d20fc539826d532"><div class="ttname"><a href="bootpack_8h.html#a23ae700e52c0cde96d20fc539826d532">io_out8</a></div><div class="ttdeci">void io_out8(int port, int data)</div></div>
+<div class="ttc" id="astruct_f_i_f_o32_html"><div class="ttname"><a href="struct_f_i_f_o32.html">FIFO32</a></div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00045">bootpack.h:45</a></div></div>
+<div class="ttc" id="abootpack_8h_html_a5c1bea596c94c2a89840d555c98abb84"><div class="ttname"><a href="bootpack_8h.html#a5c1bea596c94c2a89840d555c98abb84">fifo32_put</a></div><div class="ttdeci">int fifo32_put(struct FIFO32 *fifo, int data)</div><div class="ttdef"><b>Definition:</b> <a href="fifo_8c_source.html#l00020">fifo.c:20</a></div></div>
+<div class="ttc" id="abootpack_8h_html_abe410220cdaf6d701275a5d75f07acd0"><div class="ttname"><a href="bootpack_8h.html#abe410220cdaf6d701275a5d75f07acd0">io_in8</a></div><div class="ttdeci">int io_in8(int port)</div></div>
+<div class="ttc" id="astruct_m_o_u_s_e___d_e_c_html"><div class="ttname"><a href="struct_m_o_u_s_e___d_e_c.html">MOUSE_DEC</a></div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00131">bootpack.h:131</a></div></div>
+<div class="ttc" id="astruct_m_o_u_s_e___d_e_c_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="struct_m_o_u_s_e___d_e_c.html#a0a2f84ed7838f07779ae24c5a9086d33">MOUSE_DEC::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="bootpack_8h_source.html#l00133">bootpack.h:133</a></div></div>
+<div class="ttc" id="amouse_8c_html_a57804c5d20761a9c150e76e4007e88e0"><div class="ttname"><a href="mouse_8c.html#a57804c5d20761a9c150e76e4007e88e0">KEYCMD_SENDTO_MOUSE</a></div><div class="ttdeci">#define KEYCMD_SENDTO_MOUSE</div><div class="ttdef"><b>Definition:</b> <a href="mouse_8c_source.html#l00020">mouse.c:19</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_5ac131f68e424deb31069477f492d10b.html">haribote</a></li><li class="navelem"><a class="el" href="mouse_8c.html">mouse.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

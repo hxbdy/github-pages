@@ -1,0 +1,906 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/haribote/console.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('console_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">console.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bootpack_8h_source.html">bootpack.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+console.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c__incl.png" border="0" usemap="#_e_1_2_documents_2emu84_2_src_2haribote_2console_8c" alt=""/></div>
+</div>
+</div>
+<p><a href="console_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:acf7b570f866fb6b0880a9fb988393e69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#acf7b570f866fb6b0880a9fb988393e69">console_task</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sheet, int memtotal)</td></tr>
+<tr class="separator:acf7b570f866fb6b0880a9fb988393e69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4197ccd3ce2053ca0c778fed7da81252"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a4197ccd3ce2053ca0c778fed7da81252">cons_putchar</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, int chr, char move)</td></tr>
+<tr class="separator:a4197ccd3ce2053ca0c778fed7da81252"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3fc0a555ac1405cc89bc6eb62641b54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#ac3fc0a555ac1405cc89bc6eb62641b54">cons_newline</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons)</td></tr>
+<tr class="separator:ac3fc0a555ac1405cc89bc6eb62641b54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3da535464b8bd88457538ad73058e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a6a3da535464b8bd88457538ad73058e1">cons_putstr0</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, char *s)</td></tr>
+<tr class="separator:a6a3da535464b8bd88457538ad73058e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5793ef68f2d9b7f6767c51112109fdf9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a5793ef68f2d9b7f6767c51112109fdf9">cons_putstr1</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, char *s, int l)</td></tr>
+<tr class="separator:a5793ef68f2d9b7f6767c51112109fdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be2f98778674111de60be8c7f0a3e62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a7be2f98778674111de60be8c7f0a3e62">cons_runcmd</a> (char *cmdline, struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, int *fat, int memtotal)</td></tr>
+<tr class="separator:a7be2f98778674111de60be8c7f0a3e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7beea0ecae31c20285e08ce9c992c24d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a7beea0ecae31c20285e08ce9c992c24d">cmd_mem</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, int memtotal)</td></tr>
+<tr class="separator:a7beea0ecae31c20285e08ce9c992c24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cfd9d5784f0117d7e54462ee9cd62d6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a2cfd9d5784f0117d7e54462ee9cd62d6">cmd_cls</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons)</td></tr>
+<tr class="separator:a2cfd9d5784f0117d7e54462ee9cd62d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fae3dc411d4d283fd16ef02602475a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a6fae3dc411d4d283fd16ef02602475a4">cmd_dir</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons)</td></tr>
+<tr class="separator:a6fae3dc411d4d283fd16ef02602475a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1ae787d73bbace090cbce5194ac0824"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#aa1ae787d73bbace090cbce5194ac0824">cmd_exit</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, int *fat)</td></tr>
+<tr class="separator:aa1ae787d73bbace090cbce5194ac0824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d7dae21f111aecc555ba5e14df4265"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#af8d7dae21f111aecc555ba5e14df4265">cmd_start</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, char *cmdline, int memtotal)</td></tr>
+<tr class="separator:af8d7dae21f111aecc555ba5e14df4265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f08f092f66404d51c2af42f76237980"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a3f08f092f66404d51c2af42f76237980">cmd_ncst</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, char *cmdline, int memtotal)</td></tr>
+<tr class="separator:a3f08f092f66404d51c2af42f76237980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4b5e634ac4512b6cbc40729a6732bc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#ae4b5e634ac4512b6cbc40729a6732bc1">cmd_langmode</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, char *cmdline)</td></tr>
+<tr class="separator:ae4b5e634ac4512b6cbc40729a6732bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac543899ee5ce9621fa024d0ee3098f3d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#ac543899ee5ce9621fa024d0ee3098f3d">cmd_app</a> (struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *cons, int *fat, char *cmdline)</td></tr>
+<tr class="separator:ac543899ee5ce9621fa024d0ee3098f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3a2b95ac62166efc071caeb9e7b0db1"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#ae3a2b95ac62166efc071caeb9e7b0db1">hrb_api</a> (int edi, int esi, int ebp, int esp, int ebx, int edx, int ecx, int eax)</td></tr>
+<tr class="separator:ae3a2b95ac62166efc071caeb9e7b0db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1e502d332a2ad9588075aed1aca1541"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#ab1e502d332a2ad9588075aed1aca1541">inthandler0c</a> (int *esp)</td></tr>
+<tr class="separator:ab1e502d332a2ad9588075aed1aca1541"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc45130af020e3d17361636094ba1619"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#abc45130af020e3d17361636094ba1619">inthandler0d</a> (int *esp)</td></tr>
+<tr class="separator:abc45130af020e3d17361636094ba1619"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ad481c373bdda4ed8e6c74affa44099"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="console_8c.html#a3ad481c373bdda4ed8e6c74affa44099">hrb_api_linewin</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, int x0, int y0, int x1, int y1, int col)</td></tr>
+<tr class="separator:a3ad481c373bdda4ed8e6c74affa44099"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">関数詳解</h2>
+<a id="ac543899ee5ce9621fa024d0ee3098f3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac543899ee5ce9621fa024d0ee3098f3d">&#9670;&nbsp;</a></span>cmd_app()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cmd_app </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>fat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>cmdline</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00345">345</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_ac543899ee5ce9621fa024d0ee3098f3d_cgraph.png" border="0" usemap="#console_8c_ac543899ee5ce9621fa024d0ee3098f3d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_ac543899ee5ce9621fa024d0ee3098f3d_icgraph.png" border="0" usemap="#console_8c_ac543899ee5ce9621fa024d0ee3098f3d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a2cfd9d5784f0117d7e54462ee9cd62d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cfd9d5784f0117d7e54462ee9cd62d6">&#9670;&nbsp;</a></span>cmd_cls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd_cls </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00239">239</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a2cfd9d5784f0117d7e54462ee9cd62d6_cgraph.png" border="0" usemap="#console_8c_a2cfd9d5784f0117d7e54462ee9cd62d6_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a2cfd9d5784f0117d7e54462ee9cd62d6_icgraph.png" border="0" usemap="#console_8c_a2cfd9d5784f0117d7e54462ee9cd62d6_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6fae3dc411d4d283fd16ef02602475a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fae3dc411d4d283fd16ef02602475a4">&#9670;&nbsp;</a></span>cmd_dir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd_dir </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00253">253</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a6fae3dc411d4d283fd16ef02602475a4_cgraph.png" border="0" usemap="#console_8c_a6fae3dc411d4d283fd16ef02602475a4_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a6fae3dc411d4d283fd16ef02602475a4_icgraph.png" border="0" usemap="#console_8c_a6fae3dc411d4d283fd16ef02602475a4_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="aa1ae787d73bbace090cbce5194ac0824"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1ae787d73bbace090cbce5194ac0824">&#9670;&nbsp;</a></span>cmd_exit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd_exit </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>fat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00279">279</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_aa1ae787d73bbace090cbce5194ac0824_cgraph.png" border="0" usemap="#console_8c_aa1ae787d73bbace090cbce5194ac0824_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_aa1ae787d73bbace090cbce5194ac0824_icgraph.png" border="0" usemap="#console_8c_aa1ae787d73bbace090cbce5194ac0824_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae4b5e634ac4512b6cbc40729a6732bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b5e634ac4512b6cbc40729a6732bc1">&#9670;&nbsp;</a></span>cmd_langmode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd_langmode </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>cmdline</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00332">332</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_ae4b5e634ac4512b6cbc40729a6732bc1_cgraph.png" border="0" usemap="#console_8c_ae4b5e634ac4512b6cbc40729a6732bc1_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_ae4b5e634ac4512b6cbc40729a6732bc1_icgraph.png" border="0" usemap="#console_8c_ae4b5e634ac4512b6cbc40729a6732bc1_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a7beea0ecae31c20285e08ce9c992c24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7beea0ecae31c20285e08ce9c992c24d">&#9670;&nbsp;</a></span>cmd_mem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd_mem </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>memtotal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00230">230</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a7beea0ecae31c20285e08ce9c992c24d_cgraph.png" border="0" usemap="#console_8c_a7beea0ecae31c20285e08ce9c992c24d_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a7beea0ecae31c20285e08ce9c992c24d_icgraph.png" border="0" usemap="#console_8c_a7beea0ecae31c20285e08ce9c992c24d_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a3f08f092f66404d51c2af42f76237980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f08f092f66404d51c2af42f76237980">&#9670;&nbsp;</a></span>cmd_ncst()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd_ncst </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>cmdline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>memtotal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00318">318</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a3f08f092f66404d51c2af42f76237980_cgraph.png" border="0" usemap="#console_8c_a3f08f092f66404d51c2af42f76237980_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a3f08f092f66404d51c2af42f76237980_icgraph.png" border="0" usemap="#console_8c_a3f08f092f66404d51c2af42f76237980_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="af8d7dae21f111aecc555ba5e14df4265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d7dae21f111aecc555ba5e14df4265">&#9670;&nbsp;</a></span>cmd_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cmd_start </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>cmdline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>memtotal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00301">301</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_af8d7dae21f111aecc555ba5e14df4265_cgraph.png" border="0" usemap="#console_8c_af8d7dae21f111aecc555ba5e14df4265_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_af8d7dae21f111aecc555ba5e14df4265_icgraph.png" border="0" usemap="#console_8c_af8d7dae21f111aecc555ba5e14df4265_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac3fc0a555ac1405cc89bc6eb62641b54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3fc0a555ac1405cc89bc6eb62641b54">&#9670;&nbsp;</a></span>cons_newline()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cons_newline </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00158">158</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_ac3fc0a555ac1405cc89bc6eb62641b54_cgraph.png" border="0" usemap="#console_8c_ac3fc0a555ac1405cc89bc6eb62641b54_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_ac3fc0a555ac1405cc89bc6eb62641b54_icgraph.png" border="0" usemap="#console_8c_ac3fc0a555ac1405cc89bc6eb62641b54_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4197ccd3ce2053ca0c778fed7da81252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4197ccd3ce2053ca0c778fed7da81252">&#9670;&nbsp;</a></span>cons_putchar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cons_putchar </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>chr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>move</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00121">121</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a4197ccd3ce2053ca0c778fed7da81252_cgraph.png" border="0" usemap="#console_8c_a4197ccd3ce2053ca0c778fed7da81252_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a4197ccd3ce2053ca0c778fed7da81252_icgraph.png" border="0" usemap="#console_8c_a4197ccd3ce2053ca0c778fed7da81252_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a6a3da535464b8bd88457538ad73058e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a3da535464b8bd88457538ad73058e1">&#9670;&nbsp;</a></span>cons_putstr0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cons_putstr0 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00188">188</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a6a3da535464b8bd88457538ad73058e1_cgraph.png" border="0" usemap="#console_8c_a6a3da535464b8bd88457538ad73058e1_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a6a3da535464b8bd88457538ad73058e1_icgraph.png" border="0" usemap="#console_8c_a6a3da535464b8bd88457538ad73058e1_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a5793ef68f2d9b7f6767c51112109fdf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5793ef68f2d9b7f6767c51112109fdf9">&#9670;&nbsp;</a></span>cons_putstr1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cons_putstr1 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00196">196</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a5793ef68f2d9b7f6767c51112109fdf9_cgraph.png" border="0" usemap="#console_8c_a5793ef68f2d9b7f6767c51112109fdf9_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a5793ef68f2d9b7f6767c51112109fdf9_icgraph.png" border="0" usemap="#console_8c_a5793ef68f2d9b7f6767c51112109fdf9_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a7be2f98778674111de60be8c7f0a3e62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be2f98778674111de60be8c7f0a3e62">&#9670;&nbsp;</a></span>cons_runcmd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cons_runcmd </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>cmdline</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="struct_c_o_n_s_o_l_e.html">CONSOLE</a> *&#160;</td>
+          <td class="paramname"><em>cons</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>fat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>memtotal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00205">205</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a7be2f98778674111de60be8c7f0a3e62_cgraph.png" border="0" usemap="#console_8c_a7be2f98778674111de60be8c7f0a3e62_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a7be2f98778674111de60be8c7f0a3e62_icgraph.png" border="0" usemap="#console_8c_a7be2f98778674111de60be8c7f0a3e62_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="acf7b570f866fb6b0880a9fb988393e69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7b570f866fb6b0880a9fb988393e69">&#9670;&nbsp;</a></span>console_task()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void console_task </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td>
+          <td class="paramname"><em>sheet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>memtotal</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00007">7</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_acf7b570f866fb6b0880a9fb988393e69_cgraph.png" border="0" usemap="#console_8c_acf7b570f866fb6b0880a9fb988393e69_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_acf7b570f866fb6b0880a9fb988393e69_icgraph.png" border="0" usemap="#console_8c_acf7b570f866fb6b0880a9fb988393e69_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae3a2b95ac62166efc071caeb9e7b0db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3a2b95ac62166efc071caeb9e7b0db1">&#9670;&nbsp;</a></span>hrb_api()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* hrb_api </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>edi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>esi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ebp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>esp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ebx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>edx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ecx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>eax</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00421">421</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_ae3a2b95ac62166efc071caeb9e7b0db1_cgraph.png" border="0" usemap="#console_8c_ae3a2b95ac62166efc071caeb9e7b0db1_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a3ad481c373bdda4ed8e6c74affa44099"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ad481c373bdda4ed8e6c74affa44099">&#9670;&nbsp;</a></span>hrb_api_linewin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hrb_api_linewin </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td>
+          <td class="paramname"><em>sht</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>col</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00659">659</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_a3ad481c373bdda4ed8e6c74affa44099_icgraph.png" border="0" usemap="#console_8c_a3ad481c373bdda4ed8e6c74affa44099_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ab1e502d332a2ad9588075aed1aca1541"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1e502d332a2ad9588075aed1aca1541">&#9670;&nbsp;</a></span>inthandler0c()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* inthandler0c </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>esp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00637">637</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_ab1e502d332a2ad9588075aed1aca1541_cgraph.png" border="0" usemap="#console_8c_ab1e502d332a2ad9588075aed1aca1541_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="abc45130af020e3d17361636094ba1619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc45130af020e3d17361636094ba1619">&#9670;&nbsp;</a></span>inthandler0d()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int* inthandler0d </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>esp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="console_8c_source.html">console.c</a> の <a class="el" href="console_8c_source.html#l00648">648</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="console_8c_abc45130af020e3d17361636094ba1619_cgraph.png" border="0" usemap="#console_8c_abc45130af020e3d17361636094ba1619_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_5ac131f68e424deb31069477f492d10b.html">haribote</a></li><li class="navelem"><a class="el" href="console_8c.html">console.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

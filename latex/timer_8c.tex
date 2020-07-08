@@ -1,0 +1,203 @@
+\hypertarget{timer_8c}{}\doxysection{E\+:/\+Documents/emu84/\+Src/haribote/timer.c ファイル}
+\label{timer_8c}\index{E:/Documents/emu84/Src/haribote/timer.c@{E:/Documents/emu84/Src/haribote/timer.c}}
+{\ttfamily \#include \char`\"{}bootpack.\+h\char`\"{}}\newline
+timer.\+c の依存先関係図\+:
+% FIG 0
+\doxysubsection*{マクロ定義}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{timer_8c_a92ff76b55680dfe73f95c2031d122c88}{P\+I\+T\+\_\+\+C\+T\+RL}}~0x0043
+\item 
+\#define \mbox{\hyperlink{timer_8c_a09e4f04647b9697c00fd5c4a20b73c2a}{P\+I\+T\+\_\+\+C\+N\+T0}}~0x0040
+\item 
+\#define \mbox{\hyperlink{timer_8c_a353f32621fad4a36cf65a1b6a035b02b}{T\+I\+M\+E\+R\+\_\+\+F\+L\+A\+G\+S\+\_\+\+A\+L\+L\+OC}}~1	/$\ast$ 確保した状態 $\ast$/
+\item 
+\#define \mbox{\hyperlink{timer_8c_adaee1eceb22f269c34705b3111dbf6bd}{T\+I\+M\+E\+R\+\_\+\+F\+L\+A\+G\+S\+\_\+\+U\+S\+I\+NG}}~2	/$\ast$ タイマ作動中 $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{timer_8c_afb4e76c5cfcf522b4cf2949cc2d5539f}{init\+\_\+pit}} (void)
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$ \mbox{\hyperlink{timer_8c_ab0f52af01219a71c6f77624f30ca0a0f}{timer\+\_\+alloc}} (void)
+\item 
+void \mbox{\hyperlink{timer_8c_a7450be2dc8158869f3e10567e7c18af6}{timer\+\_\+free}} (struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$timer)
+\item 
+void \mbox{\hyperlink{timer_8c_a5c90527d6444de7f7aaf2aaa9e41a55c}{timer\+\_\+init}} (struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$timer, struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo, int data)
+\item 
+void \mbox{\hyperlink{timer_8c_ac5f2d07311b1c8c2a0e050060cbd4570}{timer\+\_\+settime}} (struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$timer, unsigned int timeout)
+\item 
+void \mbox{\hyperlink{timer_8c_a79570c81cf0a60bde51271245ac85897}{inthandler20}} (int $\ast$esp)
+\item 
+int \mbox{\hyperlink{timer_8c_ac6cae52d128dc87c24e060c6b4ba6e58}{timer\+\_\+cancel}} (struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$timer)
+\item 
+void \mbox{\hyperlink{timer_8c_a9e8c4c0b106b605665e385fb682aac16}{timer\+\_\+cancelall}} (struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$fifo)
+\end{DoxyCompactItemize}
+\doxysubsection*{変数}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_t_i_m_e_r_c_t_l}{T\+I\+M\+E\+R\+C\+TL}} \mbox{\hyperlink{timer_8c_af3246f199811ad6fdc6d9cb1cfe33c68}{timerctl}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{マクロ定義詳解}
+\mbox{\Hypertarget{timer_8c_a09e4f04647b9697c00fd5c4a20b73c2a}\label{timer_8c_a09e4f04647b9697c00fd5c4a20b73c2a}} 
+\index{timer.c@{timer.c}!PIT\_CNT0@{PIT\_CNT0}}
+\index{PIT\_CNT0@{PIT\_CNT0}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{PIT\_CNT0}{PIT\_CNT0}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+C\+N\+T0~0x0040}
+
+
+
+ timer.\+c の 7 行目に定義があります。
+
+\mbox{\Hypertarget{timer_8c_a92ff76b55680dfe73f95c2031d122c88}\label{timer_8c_a92ff76b55680dfe73f95c2031d122c88}} 
+\index{timer.c@{timer.c}!PIT\_CTRL@{PIT\_CTRL}}
+\index{PIT\_CTRL@{PIT\_CTRL}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{PIT\_CTRL}{PIT\_CTRL}}
+{\footnotesize\ttfamily \#define P\+I\+T\+\_\+\+C\+T\+RL~0x0043}
+
+
+
+ timer.\+c の 6 行目に定義があります。
+
+\mbox{\Hypertarget{timer_8c_a353f32621fad4a36cf65a1b6a035b02b}\label{timer_8c_a353f32621fad4a36cf65a1b6a035b02b}} 
+\index{timer.c@{timer.c}!TIMER\_FLAGS\_ALLOC@{TIMER\_FLAGS\_ALLOC}}
+\index{TIMER\_FLAGS\_ALLOC@{TIMER\_FLAGS\_ALLOC}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{TIMER\_FLAGS\_ALLOC}{TIMER\_FLAGS\_ALLOC}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+F\+L\+A\+G\+S\+\_\+\+A\+L\+L\+OC~1	/$\ast$ 確保した状態 $\ast$/}
+
+
+
+ timer.\+c の 11 行目に定義があります。
+
+\mbox{\Hypertarget{timer_8c_adaee1eceb22f269c34705b3111dbf6bd}\label{timer_8c_adaee1eceb22f269c34705b3111dbf6bd}} 
+\index{timer.c@{timer.c}!TIMER\_FLAGS\_USING@{TIMER\_FLAGS\_USING}}
+\index{TIMER\_FLAGS\_USING@{TIMER\_FLAGS\_USING}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{TIMER\_FLAGS\_USING}{TIMER\_FLAGS\_USING}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+F\+L\+A\+G\+S\+\_\+\+U\+S\+I\+NG~2	/$\ast$ タイマ作動中 $\ast$/}
+
+
+
+ timer.\+c の 12 行目に定義があります。
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{timer_8c_afb4e76c5cfcf522b4cf2949cc2d5539f}\label{timer_8c_afb4e76c5cfcf522b4cf2949cc2d5539f}} 
+\index{timer.c@{timer.c}!init\_pit@{init\_pit}}
+\index{init\_pit@{init\_pit}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{init\_pit()}{init\_pit()}}
+{\footnotesize\ttfamily void init\+\_\+pit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 13 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 1
+被呼び出し関係図\+:
+% FIG 2
+\mbox{\Hypertarget{timer_8c_a79570c81cf0a60bde51271245ac85897}\label{timer_8c_a79570c81cf0a60bde51271245ac85897}} 
+\index{timer.c@{timer.c}!inthandler20@{inthandler20}}
+\index{inthandler20@{inthandler20}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{inthandler20()}{inthandler20()}}
+{\footnotesize\ttfamily void inthandler20 (\begin{DoxyParamCaption}\item[{int $\ast$}]{esp }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 90 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 3
+\mbox{\Hypertarget{timer_8c_ab0f52af01219a71c6f77624f30ca0a0f}\label{timer_8c_ab0f52af01219a71c6f77624f30ca0a0f}} 
+\index{timer.c@{timer.c}!timer\_alloc@{timer\_alloc}}
+\index{timer\_alloc@{timer\_alloc}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_alloc()}{timer\_alloc()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}}$\ast$ timer\+\_\+alloc (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 33 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 4
+\mbox{\Hypertarget{timer_8c_ac6cae52d128dc87c24e060c6b4ba6e58}\label{timer_8c_ac6cae52d128dc87c24e060c6b4ba6e58}} 
+\index{timer.c@{timer.c}!timer\_cancel@{timer\_cancel}}
+\index{timer\_cancel@{timer\_cancel}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_cancel()}{timer\_cancel()}}
+{\footnotesize\ttfamily int timer\+\_\+cancel (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$}]{timer }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 122 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 5
+被呼び出し関係図\+:
+% FIG 6
+\mbox{\Hypertarget{timer_8c_a9e8c4c0b106b605665e385fb682aac16}\label{timer_8c_a9e8c4c0b106b605665e385fb682aac16}} 
+\index{timer.c@{timer.c}!timer\_cancelall@{timer\_cancelall}}
+\index{timer\_cancelall@{timer\_cancelall}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_cancelall()}{timer\_cancelall()}}
+{\footnotesize\ttfamily void timer\+\_\+cancelall (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 154 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 7
+被呼び出し関係図\+:
+% FIG 8
+\mbox{\Hypertarget{timer_8c_a7450be2dc8158869f3e10567e7c18af6}\label{timer_8c_a7450be2dc8158869f3e10567e7c18af6}} 
+\index{timer.c@{timer.c}!timer\_free@{timer\_free}}
+\index{timer\_free@{timer\_free}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_free()}{timer\_free()}}
+{\footnotesize\ttfamily void timer\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$}]{timer }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 46 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 9
+\mbox{\Hypertarget{timer_8c_a5c90527d6444de7f7aaf2aaa9e41a55c}\label{timer_8c_a5c90527d6444de7f7aaf2aaa9e41a55c}} 
+\index{timer.c@{timer.c}!timer\_init@{timer\_init}}
+\index{timer\_init@{timer\_init}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_init()}{timer\_init()}}
+{\footnotesize\ttfamily void timer\+\_\+init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$}]{timer,  }\item[{struct \mbox{\hyperlink{struct_f_i_f_o32}{F\+I\+F\+O32}} $\ast$}]{fifo,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 52 行目に定義があります。
+
+被呼び出し関係図\+:
+% FIG 10
+\mbox{\Hypertarget{timer_8c_ac5f2d07311b1c8c2a0e050060cbd4570}\label{timer_8c_ac5f2d07311b1c8c2a0e050060cbd4570}} 
+\index{timer.c@{timer.c}!timer\_settime@{timer\_settime}}
+\index{timer\_settime@{timer\_settime}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timer\_settime()}{timer\_settime()}}
+{\footnotesize\ttfamily void timer\+\_\+settime (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_t_i_m_e_r}{T\+I\+M\+ER}} $\ast$}]{timer,  }\item[{unsigned int}]{timeout }\end{DoxyParamCaption})}
+
+
+
+ timer.\+c の 59 行目に定義があります。
+
+呼び出し関係図\+:
+% FIG 11
+被呼び出し関係図\+:
+% FIG 12
+
+
+\doxysubsection{変数詳解}
+\mbox{\Hypertarget{timer_8c_af3246f199811ad6fdc6d9cb1cfe33c68}\label{timer_8c_af3246f199811ad6fdc6d9cb1cfe33c68}} 
+\index{timer.c@{timer.c}!timerctl@{timerctl}}
+\index{timerctl@{timerctl}!timer.c@{timer.c}}
+\doxysubsubsection{\texorpdfstring{timerctl}{timerctl}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_t_i_m_e_r_c_t_l}{T\+I\+M\+E\+R\+C\+TL}} timerctl}
+
+
+
+ timer.\+c の 1 行目に定義があります。
+

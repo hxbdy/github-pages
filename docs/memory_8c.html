@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>emu84: E:/Documents/emu84/Src/haribote/memory.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">emu84
+   &#160;<span id="projectnumber">1.0.0.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('memory_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">マクロ定義</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">memory.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="bootpack_8h_source.html">bootpack.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+memory.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c__incl.png" border="0" usemap="#_e_1_2_documents_2emu84_2_src_2haribote_2memory_8c" alt=""/></div>
+</div>
+</div>
+<p><a href="memory_8c_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr class="memitem:ae69f0d6aa30520463a508eb1f9bab3d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#ae69f0d6aa30520463a508eb1f9bab3d3">EFLAGS_AC_BIT</a>&#160;&#160;&#160;0x00040000</td></tr>
+<tr class="separator:ae69f0d6aa30520463a508eb1f9bab3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4f66a4fbbc03e7c8ce7dfe56d3184a7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#aa4f66a4fbbc03e7c8ce7dfe56d3184a7">CR0_CACHE_DISABLE</a>&#160;&#160;&#160;0x60000000</td></tr>
+<tr class="separator:aa4f66a4fbbc03e7c8ce7dfe56d3184a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:a457da672ff618c99ae94b1227d45119b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#a457da672ff618c99ae94b1227d45119b">memtest</a> (unsigned int start, unsigned int <a class="el" href="mmlplay_8c.html#a0834e80e6e6a203821e54e48a1ddeeff">end</a>)</td></tr>
+<tr class="separator:a457da672ff618c99ae94b1227d45119b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b80d84323d02134be3ecc3f5d7cbcd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#a8b80d84323d02134be3ecc3f5d7cbcd2">memman_init</a> (struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *man)</td></tr>
+<tr class="separator:a8b80d84323d02134be3ecc3f5d7cbcd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac82886c8091f3a36903241216bc48ace"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#ac82886c8091f3a36903241216bc48ace">memman_total</a> (struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *man)</td></tr>
+<tr class="separator:ac82886c8091f3a36903241216bc48ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a44e2ae3c434e982c7b906e00af831a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#a3a44e2ae3c434e982c7b906e00af831a">memman_alloc</a> (struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *man, unsigned int size)</td></tr>
+<tr class="separator:a3a44e2ae3c434e982c7b906e00af831a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d14a01ac8b137a266aafe80c5102a52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#a4d14a01ac8b137a266aafe80c5102a52">memman_free</a> (struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *man, unsigned int addr, unsigned int size)</td></tr>
+<tr class="separator:a4d14a01ac8b137a266aafe80c5102a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b2b807ae567c0c3a0f5878b6ea95383"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#a0b2b807ae567c0c3a0f5878b6ea95383">memman_alloc_4k</a> (struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *man, unsigned int size)</td></tr>
+<tr class="separator:a0b2b807ae567c0c3a0f5878b6ea95383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad1337e14f758731d8241ee094d1a86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="memory_8c.html#acad1337e14f758731d8241ee094d1a86">memman_free_4k</a> (struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *man, unsigned int addr, unsigned int size)</td></tr>
+<tr class="separator:acad1337e14f758731d8241ee094d1a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">マクロ定義詳解</h2>
+<a id="aa4f66a4fbbc03e7c8ce7dfe56d3184a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4f66a4fbbc03e7c8ce7dfe56d3184a7">&#9670;&nbsp;</a></span>CR0_CACHE_DISABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CR0_CACHE_DISABLE&#160;&#160;&#160;0x60000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00007">7</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae69f0d6aa30520463a508eb1f9bab3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69f0d6aa30520463a508eb1f9bab3d3">&#9670;&nbsp;</a></span>EFLAGS_AC_BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EFLAGS_AC_BIT&#160;&#160;&#160;0x00040000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00006">6</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a3a44e2ae3c434e982c7b906e00af831a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a44e2ae3c434e982c7b906e00af831a">&#9670;&nbsp;</a></span>memman_alloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int memman_alloc </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *&#160;</td>
+          <td class="paramname"><em>man</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00060">60</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_a3a44e2ae3c434e982c7b906e00af831a_icgraph.png" border="0" usemap="#memory_8c_a3a44e2ae3c434e982c7b906e00af831a_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a0b2b807ae567c0c3a0f5878b6ea95383"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2b807ae567c0c3a0f5878b6ea95383">&#9670;&nbsp;</a></span>memman_alloc_4k()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int memman_alloc_4k </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *&#160;</td>
+          <td class="paramname"><em>man</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00146">146</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_a0b2b807ae567c0c3a0f5878b6ea95383_cgraph.png" border="0" usemap="#memory_8c_a0b2b807ae567c0c3a0f5878b6ea95383_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_a0b2b807ae567c0c3a0f5878b6ea95383_icgraph.png" border="0" usemap="#memory_8c_a0b2b807ae567c0c3a0f5878b6ea95383_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a4d14a01ac8b137a266aafe80c5102a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d14a01ac8b137a266aafe80c5102a52">&#9670;&nbsp;</a></span>memman_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int memman_free </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *&#160;</td>
+          <td class="paramname"><em>man</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00083">83</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_a4d14a01ac8b137a266aafe80c5102a52_icgraph.png" border="0" usemap="#memory_8c_a4d14a01ac8b137a266aafe80c5102a52_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="acad1337e14f758731d8241ee094d1a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad1337e14f758731d8241ee094d1a86">&#9670;&nbsp;</a></span>memman_free_4k()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int memman_free_4k </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *&#160;</td>
+          <td class="paramname"><em>man</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00154">154</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_acad1337e14f758731d8241ee094d1a86_cgraph.png" border="0" usemap="#memory_8c_acad1337e14f758731d8241ee094d1a86_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_acad1337e14f758731d8241ee094d1a86_icgraph.png" border="0" usemap="#memory_8c_acad1337e14f758731d8241ee094d1a86_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a8b80d84323d02134be3ecc3f5d7cbcd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b80d84323d02134be3ecc3f5d7cbcd2">&#9670;&nbsp;</a></span>memman_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void memman_init </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *&#160;</td>
+          <td class="paramname"><em>man</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00041">41</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_a8b80d84323d02134be3ecc3f5d7cbcd2_icgraph.png" border="0" usemap="#memory_8c_a8b80d84323d02134be3ecc3f5d7cbcd2_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ac82886c8091f3a36903241216bc48ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac82886c8091f3a36903241216bc48ace">&#9670;&nbsp;</a></span>memman_total()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int memman_total </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="struct_m_e_m_m_a_n.html">MEMMAN</a> *&#160;</td>
+          <td class="paramname"><em>man</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00050">50</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_ac82886c8091f3a36903241216bc48ace_icgraph.png" border="0" usemap="#memory_8c_ac82886c8091f3a36903241216bc48ace_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a457da672ff618c99ae94b1227d45119b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a457da672ff618c99ae94b1227d45119b">&#9670;&nbsp;</a></span>memtest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int memtest </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>end</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="memory_8c_source.html">memory.c</a> の <a class="el" href="memory_8c_source.html#l00008">8</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_a457da672ff618c99ae94b1227d45119b_cgraph.png" border="0" usemap="#memory_8c_a457da672ff618c99ae94b1227d45119b_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="memory_8c_a457da672ff618c99ae94b1227d45119b_icgraph.png" border="0" usemap="#memory_8c_a457da672ff618c99ae94b1227d45119b_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b5913fa7d5d52c34244b4f9203cd0aba.html">emu84</a></li><li class="navelem"><a class="el" href="dir_70617a7689e3ba1052ef75efeabd00df.html">Src</a></li><li class="navelem"><a class="el" href="dir_5ac131f68e424deb31069477f492d10b.html">haribote</a></li><li class="navelem"><a class="el" href="memory_8c.html">memory.c</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>
