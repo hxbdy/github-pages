@@ -8,7 +8,7 @@ digraph "keywin_on"
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="change_wtitle8",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a6e510ccd9bc95ae7e7e0adbd39e4b512",tooltip=" "];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip=" "];
+  Node3 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip="変化したウインドウから上のウインドウを再描画します"];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node4 [label="sheet_refreshsub",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#a0016600e2d7feeb0a12089156b9307a4",tooltip=" "];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
