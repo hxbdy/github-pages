@@ -6,7 +6,7 @@ digraph "cmd_cls"
   rankdir="LR";
   Node1 [label="cmd_cls",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip=" "];
+  Node2 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip="変化したウインドウから上のウインドウを再描画します"];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
   Node3 [label="sheet_refreshsub",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#a0016600e2d7feeb0a12089156b9307a4",tooltip=" "];
 }

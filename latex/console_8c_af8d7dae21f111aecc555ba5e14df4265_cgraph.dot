@@ -8,7 +8,7 @@ digraph "cmd_start"
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
   Node2 [label="cons_newline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#ac3fc0a555ac1405cc89bc6eb62641b54",tooltip=" "];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
-  Node3 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip=" "];
+  Node3 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip="変化したウインドウから上のウインドウを再描画します"];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
   Node4 [label="sheet_refreshsub",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#a0016600e2d7feeb0a12089156b9307a4",tooltip=" "];
   Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
@@ -135,16 +135,16 @@ digraph "cmd_start"
   Node78 [label="task_alloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a97fa93dab5b91ea18765b460e3b81663",tooltip=" "];
   Node19 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
   Node10 -> Node79 [color="midnightblue",fontsize="10",style="solid"];
-  Node79 [label="sheet_alloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a543661af64ed9055c819e0dd7b61d01e",tooltip=" "];
+  Node79 [label="sheet_alloc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a543661af64ed9055c819e0dd7b61d01e",tooltip="sheets0[]の中から未使用ウインドウを探します 見つかったら使用中マークをつけてその番地を返します 高さ-1は未設定なので非表示にします"];
   Node10 -> Node80 [color="midnightblue",fontsize="10",style="solid"];
-  Node80 [label="sheet_setbuf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a6c14343c7c0566620635e9ccd17e21e0",tooltip=" "];
+  Node80 [label="sheet_setbuf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a6c14343c7c0566620635e9ccd17e21e0",tooltip="ウインドウのバッファや大きさ、透明色を設定します"];
   Node1 -> Node81 [color="midnightblue",fontsize="10",style="solid"];
-  Node81 [label="sheet_slide",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#aca08bb322ec0c2110e2a071e383832de",tooltip=" "];
+  Node81 [label="sheet_slide",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#aca08bb322ec0c2110e2a071e383832de",tooltip="ウインドウの高さを変えずに上下左右に移動します"];
   Node81 -> Node60 [color="midnightblue",fontsize="10",style="solid"];
   Node60 [label="sheet_refreshmap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#a5fb2b9d999b1c516858b5a0d1bfdd55c",tooltip=" "];
   Node81 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
   Node1 -> Node82 [color="midnightblue",fontsize="10",style="solid"];
-  Node82 [label="sheet_updown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#ad590bf68e2aa06a5fe99c03ad4c56785",tooltip=" "];
+  Node82 [label="sheet_updown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#ad590bf68e2aa06a5fe99c03ad4c56785",tooltip="指定された高さにウインドウを設定します"];
   Node82 -> Node60 [color="midnightblue",fontsize="10",style="solid"];
   Node82 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
 }

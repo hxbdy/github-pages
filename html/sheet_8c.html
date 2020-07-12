@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">emu84
-   &#160;<span id="projectnumber">1.0.0.2</span>
+   &#160;<span id="projectnumber">1.0.0.3</span>
    </div>
   </td>
  </tr>
@@ -109,20 +109,26 @@ sheet.c の依存先関係図:</div>
 <tr class="memdesc:a36f9284550ad0030f5dd64154a04a7d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">シートコントロールの初期化を行います  <a href="sheet_8c.html#a36f9284550ad0030f5dd64154a04a7d8">[詳解]</a><br /></td></tr>
 <tr class="separator:a36f9284550ad0030f5dd64154a04a7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a543661af64ed9055c819e0dd7b61d01e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a543661af64ed9055c819e0dd7b61d01e">sheet_alloc</a> (struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *ctl)</td></tr>
+<tr class="memdesc:a543661af64ed9055c819e0dd7b61d01e"><td class="mdescLeft">&#160;</td><td class="mdescRight">sheets0[]の中から未使用ウインドウを探します 見つかったら使用中マークをつけてその番地を返します 高さ-1は未設定なので非表示にします  <a href="sheet_8c.html#a543661af64ed9055c819e0dd7b61d01e">[詳解]</a><br /></td></tr>
 <tr class="separator:a543661af64ed9055c819e0dd7b61d01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c14343c7c0566620635e9ccd17e21e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a6c14343c7c0566620635e9ccd17e21e0">sheet_setbuf</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, unsigned char *buf, int xsize, int ysize, int col_inv)</td></tr>
+<tr class="memdesc:a6c14343c7c0566620635e9ccd17e21e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウインドウのバッファや大きさ、透明色を設定します  <a href="sheet_8c.html#a6c14343c7c0566620635e9ccd17e21e0">[詳解]</a><br /></td></tr>
 <tr class="separator:a6c14343c7c0566620635e9ccd17e21e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fb2b9d999b1c516858b5a0d1bfdd55c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a5fb2b9d999b1c516858b5a0d1bfdd55c">sheet_refreshmap</a> (struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *ctl, int vx0, int vy0, int vx1, int vy1, int h0)</td></tr>
 <tr class="separator:a5fb2b9d999b1c516858b5a0d1bfdd55c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0016600e2d7feeb0a12089156b9307a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a0016600e2d7feeb0a12089156b9307a4">sheet_refreshsub</a> (struct <a class="el" href="struct_s_h_t_c_t_l.html">SHTCTL</a> *ctl, int vx0, int vy0, int vx1, int vy1, int h0, int h1)</td></tr>
 <tr class="separator:a0016600e2d7feeb0a12089156b9307a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad590bf68e2aa06a5fe99c03ad4c56785"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#ad590bf68e2aa06a5fe99c03ad4c56785">sheet_updown</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, int height)</td></tr>
+<tr class="memdesc:ad590bf68e2aa06a5fe99c03ad4c56785"><td class="mdescLeft">&#160;</td><td class="mdescRight">指定された高さにウインドウを設定します  <a href="sheet_8c.html#ad590bf68e2aa06a5fe99c03ad4c56785">[詳解]</a><br /></td></tr>
 <tr class="separator:ad590bf68e2aa06a5fe99c03ad4c56785"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8befd8f5c365aec65bfa164d00e140ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#a8befd8f5c365aec65bfa164d00e140ca">sheet_refresh</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, int bx0, int by0, int bx1, int by1)</td></tr>
+<tr class="memdesc:a8befd8f5c365aec65bfa164d00e140ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">変化したウインドウから上のウインドウを再描画します  <a href="sheet_8c.html#a8befd8f5c365aec65bfa164d00e140ca">[詳解]</a><br /></td></tr>
 <tr class="separator:a8befd8f5c365aec65bfa164d00e140ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca08bb322ec0c2110e2a071e383832de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#aca08bb322ec0c2110e2a071e383832de">sheet_slide</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht, int vx0, int vy0)</td></tr>
+<tr class="memdesc:aca08bb322ec0c2110e2a071e383832de"><td class="mdescLeft">&#160;</td><td class="mdescRight">ウインドウの高さを変えずに上下左右に移動します  <a href="sheet_8c.html#aca08bb322ec0c2110e2a071e383832de">[詳解]</a><br /></td></tr>
 <tr class="separator:aca08bb322ec0c2110e2a071e383832de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3586d30712a7294662c6588175348e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sheet_8c.html#ac3586d30712a7294662c6588175348e0">sheet_free</a> (struct <a class="el" href="struct_s_h_e_e_t.html">SHEET</a> *sht)</td></tr>
+<tr class="memdesc:ac3586d30712a7294662c6588175348e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">使い終わったウインドウを開放します  <a href="sheet_8c.html#ac3586d30712a7294662c6588175348e0">[詳解]</a><br /></td></tr>
 <tr class="separator:ac3586d30712a7294662c6588175348e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">マクロ定義詳解</h2>
@@ -159,6 +165,15 @@ sheet.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
+<p>sheets0[]の中から未使用ウインドウを探します 見つかったら使用中マークをつけてその番地を返します 高さ-1は未設定なので非表示にします </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ctl</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>struct SHEET* </dd></dl>
+
 <p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00032">32</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
@@ -183,6 +198,14 @@ sheet.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>使い終わったウインドウを開放します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sht</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00284">284</a> 行目に定義があります。</p>
 <div class="dynheader">
@@ -241,6 +264,18 @@ sheet.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>変化したウインドウから上のウインドウを再描画します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sht</td><td>ウインドウのアドレス </td></tr>
+    <tr><td class="paramname">bx0</td><td>ローカルx座標始点 </td></tr>
+    <tr><td class="paramname">by0</td><td>ローカルy座標始点 </td></tr>
+    <tr><td class="paramname">bx1</td><td>ローカルx座標終点 </td></tr>
+    <tr><td class="paramname">by1</td><td>ローカルy座標終点 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00261">261</a> 行目に定義があります。</p>
 <div class="dynheader">
@@ -424,6 +459,18 @@ sheet.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
+<p>ウインドウのバッファや大きさ、透明色を設定します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sht</td><td></td></tr>
+    <tr><td class="paramname">buf</td><td></td></tr>
+    <tr><td class="paramname">xsize</td><td></td></tr>
+    <tr><td class="paramname">ysize</td><td></td></tr>
+    <tr><td class="paramname">col_inv</td><td>透明色 </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00048">48</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
@@ -465,6 +512,16 @@ sheet.c の依存先関係図:</div>
       </table>
 </div><div class="memdoc">
 
+<p>ウインドウの高さを変えずに上下左右に移動します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sht</td><td></td></tr>
+    <tr><td class="paramname">vx0</td><td></td></tr>
+    <tr><td class="paramname">vy0</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00269">269</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
@@ -504,6 +561,15 @@ sheet.c の依存先関係図:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>指定された高さにウインドウを設定します </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sht</td><td>ウインドウのポインタ </td></tr>
+    <tr><td class="paramname">height</td><td>ウインドウの高さ </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00201">201</a> 行目に定義があります。</p>
 <div class="dynheader">
@@ -567,7 +633,7 @@ sheet.c の依存先関係図:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>戻り値</dt><dd>SHTCTL* シートコントロールポインタ </dd></dl>
+<dl class="section return"><dt>戻り値</dt><dd>struct SHTCTL* シートコントロールポインタ </dd></dl>
 
 <p class="definition"> <a class="el" href="sheet_8c_source.html">sheet.c</a> の <a class="el" href="sheet_8c_source.html#l00007">7</a> 行目に定義があります。</p>
 <div class="dynheader">

@@ -10,7 +10,7 @@ digraph "cons_runcmd"
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
   Node3 [label="cons_newline",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$console_8c.html#ac3fc0a555ac1405cc89bc6eb62641b54",tooltip=" "];
   Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
-  Node4 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip=" "];
+  Node4 [label="sheet_refresh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a8befd8f5c365aec65bfa164d00e140ca",tooltip="変化したウインドウから上のウインドウを再描画します"];
   Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
   Node5 [label="sheet_refreshsub",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#a0016600e2d7feeb0a12089156b9307a4",tooltip=" "];
   Node3 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
@@ -43,9 +43,9 @@ digraph "cons_runcmd"
   Node2 -> Node36 [color="midnightblue",fontsize="10",style="solid"];
   Node36 [label="set_segmdesc",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a3d51340647ade1a89f63e7b841e48176",tooltip=" "];
   Node2 -> Node37 [color="midnightblue",fontsize="10",style="solid"];
-  Node37 [label="sheet_free",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#ac3586d30712a7294662c6588175348e0",tooltip=" "];
+  Node37 [label="sheet_free",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#ac3586d30712a7294662c6588175348e0",tooltip="使い終わったウインドウを開放します"];
   Node37 -> Node38 [color="midnightblue",fontsize="10",style="solid"];
-  Node38 [label="sheet_updown",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$sheet_8c.html#ad590bf68e2aa06a5fe99c03ad4c56785",tooltip=" "];
+  Node38 [label="sheet_updown",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$sheet_8c.html#ad590bf68e2aa06a5fe99c03ad4c56785",tooltip="指定された高さにウインドウを設定します"];
   Node38 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
   Node2 -> Node40 [color="midnightblue",fontsize="10",style="solid"];
   Node40 [label="start_app",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$bootpack_8h.html#a568f37f8f793128215d42dbf50d88229",tooltip=" "];
@@ -139,10 +139,10 @@ digraph "cons_runcmd"
   Node68 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
   Node68 -> Node64 [color="midnightblue",fontsize="10",style="solid"];
   Node67 -> Node74 [color="midnightblue",fontsize="10",style="solid"];
-  Node74 [label="sheet_slide",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$bootpack_8h.html#aca08bb322ec0c2110e2a071e383832de",tooltip=" "];
+  Node74 [label="sheet_slide",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$bootpack_8h.html#aca08bb322ec0c2110e2a071e383832de",tooltip="ウインドウの高さを変えずに上下左右に移動します"];
   Node74 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
   Node67 -> Node75 [color="midnightblue",fontsize="10",style="solid"];
-  Node75 [label="sheet_updown",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$bootpack_8h.html#ad590bf68e2aa06a5fe99c03ad4c56785",tooltip=" "];
+  Node75 [label="sheet_updown",height=0.2,width=0.4,color="red", fillcolor="white", style="filled",URL="$bootpack_8h.html#ad590bf68e2aa06a5fe99c03ad4c56785",tooltip="指定された高さにウインドウを設定します"];
   Node75 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
   Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
 }

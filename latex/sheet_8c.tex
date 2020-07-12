@@ -14,21 +14,21 @@ sheet.\+c の依存先関係図\+:
 struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ \mbox{\hyperlink{sheet_8c_a36f9284550ad0030f5dd64154a04a7d8}{shtctl\+\_\+init}} (struct \mbox{\hyperlink{struct_m_e_m_m_a_n}{M\+E\+M\+M\+AN}} $\ast$memman, unsigned char $\ast$vram, int xsize, int ysize)
 \begin{DoxyCompactList}\small\item\em シートコントロールの初期化を行います \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$ \mbox{\hyperlink{sheet_8c_a543661af64ed9055c819e0dd7b61d01e}{sheet\+\_\+alloc}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ctl)
-\item 
+\begin{DoxyCompactList}\small\item\em sheets0\mbox{[}\mbox{]}の中から未使用ウインドウを探します 見つかったら使用中マークをつけてその番地を返します 高さ-\/1は未設定なので非表示にします \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sheet_8c_a6c14343c7c0566620635e9ccd17e21e0}{sheet\+\_\+setbuf}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, unsigned char $\ast$buf, int xsize, int ysize, int col\+\_\+inv)
-\item 
+\begin{DoxyCompactList}\small\item\em ウインドウのバッファや大きさ、透明色を設定します \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sheet_8c_a5fb2b9d999b1c516858b5a0d1bfdd55c}{sheet\+\_\+refreshmap}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ctl, int vx0, int vy0, int vx1, int vy1, int h0)
 \item 
 void \mbox{\hyperlink{sheet_8c_a0016600e2d7feeb0a12089156b9307a4}{sheet\+\_\+refreshsub}} (struct \mbox{\hyperlink{struct_s_h_t_c_t_l}{S\+H\+T\+C\+TL}} $\ast$ctl, int vx0, int vy0, int vx1, int vy1, int h0, int h1)
 \item 
 void \mbox{\hyperlink{sheet_8c_ad590bf68e2aa06a5fe99c03ad4c56785}{sheet\+\_\+updown}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int height)
-\item 
+\begin{DoxyCompactList}\small\item\em 指定された高さにウインドウを設定します \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sheet_8c_a8befd8f5c365aec65bfa164d00e140ca}{sheet\+\_\+refresh}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int bx0, int by0, int bx1, int by1)
-\item 
+\begin{DoxyCompactList}\small\item\em 変化したウインドウから上のウインドウを再描画します \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sheet_8c_aca08bb322ec0c2110e2a071e383832de}{sheet\+\_\+slide}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht, int vx0, int vy0)
-\item 
+\begin{DoxyCompactList}\small\item\em ウインドウの高さを変えずに上下左右に移動します \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+free}} (struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$sht)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 使い終わったウインドウを開放します \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{マクロ定義詳解}
@@ -53,6 +53,18 @@ void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+fre
 
 
 
+sheets0\mbox{[}\mbox{]}の中から未使用ウインドウを探します 見つかったら使用中マークをつけてその番地を返します 高さ-\/1は未設定なので非表示にします 
+
+
+\begin{DoxyParams}{引数}
+{\em ctl} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+struct S\+H\+E\+E\+T$\ast$ 
+\end{DoxyReturn}
+
+
  sheet.\+c の 32 行目に定義があります。
 
 被呼び出し関係図\+:
@@ -63,6 +75,15 @@ void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+fre
 \doxysubsubsection{\texorpdfstring{sheet\_free()}{sheet\_free()}}
 {\footnotesize\ttfamily void sheet\+\_\+free (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht }\end{DoxyParamCaption})}
 
+
+
+使い終わったウインドウを開放します 
+
+
+\begin{DoxyParams}{引数}
+{\em sht} & \\
+\hline
+\end{DoxyParams}
 
 
  sheet.\+c の 284 行目に定義があります。
@@ -77,6 +98,23 @@ void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+fre
 \doxysubsubsection{\texorpdfstring{sheet\_refresh()}{sheet\_refresh()}}
 {\footnotesize\ttfamily void sheet\+\_\+refresh (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{bx0,  }\item[{int}]{by0,  }\item[{int}]{bx1,  }\item[{int}]{by1 }\end{DoxyParamCaption})}
 
+
+
+変化したウインドウから上のウインドウを再描画します 
+
+
+\begin{DoxyParams}{引数}
+{\em sht} & ウインドウのアドレス \\
+\hline
+{\em bx0} & ローカルx座標始点 \\
+\hline
+{\em by0} & ローカルy座標始点 \\
+\hline
+{\em bx1} & ローカルx座標終点 \\
+\hline
+{\em by1} & ローカルy座標終点 \\
+\hline
+\end{DoxyParams}
 
 
  sheet.\+c の 261 行目に定義があります。
@@ -117,6 +155,23 @@ void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+fre
 
 
 
+ウインドウのバッファや大きさ、透明色を設定します 
+
+
+\begin{DoxyParams}{引数}
+{\em sht} & \\
+\hline
+{\em buf} & \\
+\hline
+{\em xsize} & \\
+\hline
+{\em ysize} & \\
+\hline
+{\em col\+\_\+inv} & 透明色 \\
+\hline
+\end{DoxyParams}
+
+
  sheet.\+c の 48 行目に定義があります。
 
 被呼び出し関係図\+:
@@ -127,6 +182,19 @@ void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+fre
 \doxysubsubsection{\texorpdfstring{sheet\_slide()}{sheet\_slide()}}
 {\footnotesize\ttfamily void sheet\+\_\+slide (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{vx0,  }\item[{int}]{vy0 }\end{DoxyParamCaption})}
 
+
+
+ウインドウの高さを変えずに上下左右に移動します 
+
+
+\begin{DoxyParams}{引数}
+{\em sht} & \\
+\hline
+{\em vx0} & \\
+\hline
+{\em vy0} & \\
+\hline
+\end{DoxyParams}
 
 
  sheet.\+c の 269 行目に定義があります。
@@ -141,6 +209,17 @@ void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+fre
 \doxysubsubsection{\texorpdfstring{sheet\_updown()}{sheet\_updown()}}
 {\footnotesize\ttfamily void sheet\+\_\+updown (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_s_h_e_e_t}{S\+H\+E\+ET}} $\ast$}]{sht,  }\item[{int}]{height }\end{DoxyParamCaption})}
 
+
+
+指定された高さにウインドウを設定します 
+
+
+\begin{DoxyParams}{引数}
+{\em sht} & ウインドウのポインタ \\
+\hline
+{\em height} & ウインドウの高さ \\
+\hline
+\end{DoxyParams}
 
 
  sheet.\+c の 201 行目に定義があります。
@@ -171,7 +250,7 @@ void \mbox{\hyperlink{sheet_8c_ac3586d30712a7294662c6588175348e0}{sheet\+\_\+fre
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{戻り値}
-S\+H\+T\+C\+T\+L$\ast$ シートコントロールポインタ 
+struct S\+H\+T\+C\+T\+L$\ast$ シートコントロールポインタ 
 \end{DoxyReturn}
 
 

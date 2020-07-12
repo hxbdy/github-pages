@@ -4,9 +4,9 @@ digraph "sheet_free"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="sheet_free",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="sheet_free",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="使い終わったウインドウを開放します"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="sheet_updown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#ad590bf68e2aa06a5fe99c03ad4c56785",tooltip=" "];
+  Node2 [label="sheet_updown",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#ad590bf68e2aa06a5fe99c03ad4c56785",tooltip="指定された高さにウインドウを設定します"];
   Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="sheet_refreshmap",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$sheet_8c.html#a5fb2b9d999b1c516858b5a0d1bfdd55c",tooltip=" "];
   Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
